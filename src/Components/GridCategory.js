@@ -15,7 +15,7 @@ const GridCategory = () => {
       <Grid container spacing={6} flexWrap>
         <Grid
           item
-          //Firsr Grid box
+          //First Grid box
         >
           <Box
             sx={{
@@ -94,8 +94,8 @@ const GridCategory = () => {
             >
               Photography
             </Typography>
-
-            <Button
+            
+            <Button href="/photography"
               sx={{
                 backgroundColor: 'white',
                 ':hover': { backgroundColor: 'white' },
@@ -105,8 +105,8 @@ const GridCategory = () => {
                 marginBottom: 2,
               }}
               size='small'
-            >
-              Learn More
+            >Learn More
+              
             </Button>
           </Box>
         </Grid>
