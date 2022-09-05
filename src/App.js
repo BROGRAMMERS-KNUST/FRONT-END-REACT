@@ -13,14 +13,25 @@ import 'slick-carousel/slick/slick-theme.css';
 import Background from './Components/Background';
 import Main from './Components/Main';
 import Header from './Components/Header';
+import PhotograhyPage from './pages/PhotograhyPage';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
+    <Router>
     <div>
       <Header />
-      <Background />
-      <Main />
+      <Switch>
+        <Route exact path = "/">
+          <Background />
+          <Main />
+        </Route>
+        <Route exact path="/photography">
+          <PhotograhyPage/>
+        </Route>
+      </Switch> 
     </div>
+    </Router>
   );
 }
 
