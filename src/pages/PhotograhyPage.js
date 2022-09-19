@@ -1,21 +1,24 @@
-import { Typography,Button,ButtonGroup } from '@mui/material'
-import React from 'react'
+import { Typography, Box, Breadcrumbs, Link } from "@mui/material";
+import React from "react";
+import Navbar from "../Components/Navbar";
+import PhotographyPageCards from "../Components/PhotographyPageCards";
+import StulancersAvailable from "../Components/StulancersAvailable";
 
 export default function PhotograhyPage() {
   return (
-    <div>
-        <Typography variant = "h2">
-            Photography
-        </Typography>
-        <ButtonGroup>
-             <Button variant='contained' color='primary'>
-            Hmm
-        </Button>
-        <Button variant='contained' color='primary'>
-            Tsww
-        </Button>
-        </ButtonGroup>
-       
-    </div>
-  )
+    <Box sx={{ marginTop: 10, marginLeft: 4, marginRight: 4 }}>
+      <Navbar />
+      <Breadcrumbs>
+        <Link href="/" underline="hover">
+          STULANCER
+        </Link>
+        <Link underline="hover">PHOTOGRAPHY</Link>
+      </Breadcrumbs>
+      <Typography variant="h4" sx={{ marginTop: 1, marginBottom: 2 }}>
+        Photography
+      </Typography>
+      <PhotographyPageCards />
+      <StulancersAvailable />
+    </Box>
+  );
 }

@@ -19,19 +19,19 @@ function Header() {
   return (
     <Box>
       <AppBar
-        color='transparent'
+        color="transparent"
         sx={{ backdropFilter: "blur(20px)" }}
-        elevation={0}
+        elevation={1}
       >
         <Toolbar>
           <Typography
             marginLeft={2}
-            color='primary'
-            variant='h2'
+            color="primary"
+            variant="h2"
             fontSize={30}
             sx={{ flexGrow: 1 }}
-            fontFamily='Nunito'
-            fontWeight='700'
+            fontFamily="Nunito"
+            fontWeight="700"
             letterSpacing={2}
           >
             STULANCER
@@ -51,8 +51,8 @@ function Header() {
               fontFamily: "Nunito",
               fontWeight: "700",
             }}
-            size='large'
-            variant='contained'
+            size="large"
+            variant="contained"
           >
             Join
           </Button>
@@ -62,26 +62,26 @@ function Header() {
             onClick={() => {
               setOpenLogin(true);
             }}
-            color='secondary'
+            color="secondary"
             sx={{
               borderRadius: 5,
               marginRight: 2,
               fontFamily: "Nunito",
               fontWeight: "700",
             }}
-            size='large'
-            variant='outlined'
+            size="large"
+            variant="outlined"
           >
             Login
           </Button>
 
-          <Tabs textColor='secondary'>
+          <Tabs textColor="secondary">
             <Tab
               sx={{
                 fontFamily: "Nunito",
                 fontWeight: "700",
               }}
-              label='About us'
+              label="About us"
             />
           </Tabs>
         </Toolbar>
