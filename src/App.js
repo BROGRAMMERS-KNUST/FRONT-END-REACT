@@ -8,7 +8,6 @@ import React from "react";
 import "./App.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React from "react";
 import Background from "./Components/Main/Background";
 import Main from "./Components/Main/Main";
 import Header from "./Components/Header/Header";
