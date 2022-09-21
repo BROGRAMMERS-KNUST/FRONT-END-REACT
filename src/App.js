@@ -8,45 +8,10 @@ import "@fontsource/roboto/700.css";
 import "./App.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-//Components
-import Background from "./Components/Background";
-import Main from "./Components/Main";
-import Header from "./Components/Header";
-import PhotograhyPage from "./pages/PhotograhyPage";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Footer from "./Components/Footer";
-import GraphicDesignPage from "./pages/GraphicDesignPage";
-import FoodServicesPage from "./pages/FoodServicesPage";
-import WritingAndTranslationPage from "./pages/WritingAndTranslationPage";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <Router>
-      <div>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Background />
-            <Main />
-          </Route>
-          <Route exact path="/photography">
-            <PhotograhyPage />
-          </Route>
-          <Route exact path="/graphic-design">
-            <GraphicDesignPage />
-          </Route>
-          <Route exact path="/food-services">
-            <FoodServicesPage />
-          </Route>
-          <Route exact path="/writing&translation">
-            <WritingAndTranslationPage />
-          </Route>
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
-  );
+  return <Home />;
 }
 
 export default App;

@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Link, Breadcrumbs, Typography } from "@mui/material";
 import StulancersAvailable from "../Components/StulancersAvailable";
-import Navbar from "../Components/Navbar";
-import FoodServicesPageCards from "../Components/FoodServicesPageCards";
+import Navbar from "../Components/Header/Navbar";
+import FoodServicesPageCards from "../Components/PageCards/FoodServicesPageCards";
 
 function FoodServicesPage() {
   return (

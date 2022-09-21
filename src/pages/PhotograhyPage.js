@@ -1,7 +1,7 @@
 import { Typography, Box, Breadcrumbs, Link } from "@mui/material";
 import React from "react";
-import Navbar from "../Components/Navbar";
-import PhotographyPageCards from "../Components/PhotographyPageCards";
+import Navbar from "../Components/Header/Navbar";
+import PhotographyPageCards from "../Components/PageCards/PhotographyPageCards";
 import StulancersAvailable from "../Components/StulancersAvailable";
 
 export default function PhotograhyPage() {

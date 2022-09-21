@@ -1,8 +1,8 @@
 import React from "react";
-import GraphicDesignPageCards from "../Components/GraphicDesignPageCards";
+import GraphicDesignPageCards from "../Components/PageCards/GraphicDesignPageCards";
 import { Box, Link, Breadcrumbs, Typography } from "@mui/material";
 import StulancersAvailable from "../Components/StulancersAvailable";
-import Navbar from "../Components/Navbar";
+import Navbar from "../Components/Header/Navbar";
 
 function GraphicDesignPage() {
   return (
