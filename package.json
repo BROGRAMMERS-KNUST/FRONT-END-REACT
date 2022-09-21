@@ -50,5 +50,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Front-End of StuLancer with React Js and Material UI",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BROGRAMMERS-KNUST/FRONT-END-REACT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BROGRAMMERS-KNUST/FRONT-END-REACT/issues"
+  },
+  "homepage": "https://github.com/BROGRAMMERS-KNUST/FRONT-END-REACT#readme"
 }
