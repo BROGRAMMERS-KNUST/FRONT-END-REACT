@@ -9,7 +9,7 @@ function FoodServicesPageCards() {
           <Card
             sx={{
               background:
-                "url('https://www.ghanayello.com/img/gh/j/1623446783-57-pixxxy-photography.jpg') ",
+                "url('https://www.lacademie.com/wp-content/uploads/2022/02/ghanaian-food.jpg') ",
               backgroundSize: "cover",
               width: "300px",
               height: 200,
@@ -33,7 +33,7 @@ function FoodServicesPageCards() {
           <Card
             sx={{
               background:
-                "url('https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=964&q=80') ",
+                "url('https://cdn.modernghana.com/images/content/422202223908-txobredq5l-gob3.jpg') ",
               backgroundSize: "cover",
               width: 300,
               height: 200,
@@ -57,7 +57,7 @@ function FoodServicesPageCards() {
           <Card
             sx={{
               background:
-                "url('https://imgs.search.brave.com/pGWN2s3OA4uEJTASyBvEpcigcsFSM1H_cR-IhuJN3UI/rs:fit:678:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC4y/MjF3ZUxtenBWVlNw/QU5iaTI3UUx3SGFG/TCZwaWQ9QXBp') ",
+                "url('https://telandeworld.com/wp-content/uploads/2021/01/Telande-Coconut-Oil-Shito.jpg') ",
               backgroundSize: "cover",
               width: "300px",
               height: 200,
@@ -70,7 +70,7 @@ function FoodServicesPageCards() {
               fontFamily: "Nunito",
             }}
           >
-            Graduation and Matriculation
+            Get Your Shito Delivered at your Door Step
           </Typography>
           <Typography variant="body" width="300px">
             Get the best pictures of your academic milestones.

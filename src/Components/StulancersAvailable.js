@@ -5,8 +5,19 @@ function StulancersAvailable() {
   return (
     <div>
         <Box sx={{marginTop:2}}>
-            <Typography variant='h5'>
-                StuLancers Available
+            <Typography variant="body" width="300px" color="Primary">
+                StuLancers Available <br/>
+                Wassem<br/>
+                Kusi<br/>
+                Lord<br/>
+                Timothy<br/>
+                Albert <br/>
+                Maxwell<br/>
+                Wallace <br/>
+                Emmanuel<br/>
+                Moses <br/>
+                Barnes<br/>
+
             </Typography>
         </Box>
     </div>

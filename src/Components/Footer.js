@@ -15,37 +15,37 @@ import Link from '@mui/material/Link';
               <Grid item xs={12} sm={4}>
                 <Box borderBottom={1}>Categoriess</Box>
                 <Box>
-                  <Link underline="hover" href="/" color ="inherit">Web development</Link>                  
+                  <Link underline="none" href="/" color ="inherit">Web development</Link>                  
                 </Box>
                 <Box>
-                  <Link underline="hover" href="/" color="inherit"> Photogragphy</Link>
+                  <Link underline="none" href="/" color="inherit"> Photogragphy</Link>
                 </Box>
                 <Box>
-                  <Link underline="hover" href="/" color="inherit">Catering Services</Link>
+                  <Link underline="none" href="/" color="inherit">Catering Services</Link>
                 </Box>
                 <Box>
-                  <Link underline="hover" href="/" color="inherit"> Writing</Link>
+                  <Link underline="none" href="/" color="inherit"> Writing</Link>
                 </Box>
                 <Box>
-                  <Link underline="hover" href="/" color="inherit">Graphic Design</Link>
+                  <Link underline="none" href="/" color="inherit">Graphic Design</Link>
                 </Box>
               </Grid>
               <Grid item xs={12} sm={4}>
                 <Box borderBottom={1}>Account</Box>
                 <Box>
-                  <Link underline="hover" href="/" color="inherit">Login</Link>                  
+                  <Link underline="none" href="/" color="inherit">Login</Link>                  
                 </Box>
                 <Box>
-                  <Link underline="hover" href="/" color="inherit"> Register</Link>
+                  <Link underline="none" href="/" color="inherit"> Register</Link>
                 </Box>
               </Grid>     
                <Grid item xs={12} sm={4}>
                 <Box borderBottom={1}>Support</Box>
                 <Box>
-                  <Link underline="hover" href="/" color="inherit">Help</Link>              
+                  <Link underline="none" href="/" color="inherit">Help</Link>              
                 </Box>
                 <Box>
-                  <Link underline="hover" href="/" color="inherit"> How to Sell on Stulancer</Link>
+                  <Link underline="none" href="/" color="inherit"> How to Sell on Stulancer</Link>
                 </Box>
               </Grid>
               </Grid>
