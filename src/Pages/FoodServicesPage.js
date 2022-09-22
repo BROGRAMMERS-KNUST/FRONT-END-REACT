@@ -1,10 +1,10 @@
 import React from "react";
-import GraphicDesignPageCards from "../Components/GraphicDesignPageCards";
 import { Box, Link, Breadcrumbs, Typography } from "@mui/material";
 import StulancersAvailable from "../Components/StulancersAvailable";
-import Navbar from "../Components/Navbar";
+import Navbar from "../Components/Header/Navbar";
+import FoodServicesPageCards from "../Components/PageCards/FoodServicesPageCards";
 
-function GraphicDesignPage() {
+function FoodServicesPage() {
   return (
     <div>
       <Box sx={{ marginTop: 10, marginLeft: 4, marginRight: 4 }}>
@@ -13,19 +13,19 @@ function GraphicDesignPage() {
           <Link href="/" underline="hover">
             STULANCER
           </Link>
-          <Link underline="hover">GRAPHIC DESIGN</Link>
+          <Link underline="hover">Explore Food Services</Link>
         </Breadcrumbs>
         <Typography
           variant="h4"
           sx={{ marginTop: 1, marginBottom: 2, fontFamily: "Nunito" }}
         >
-          Graphic Design
+          Food Services
         </Typography>
-        <GraphicDesignPageCards />
+        <FoodServicesPageCards />
         <StulancersAvailable />
       </Box>
     </div>
   );
 }
 
-export default GraphicDesignPage;
+export default FoodServicesPage;

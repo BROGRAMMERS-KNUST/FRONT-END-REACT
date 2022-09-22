@@ -14,8 +14,8 @@ const Main = () => {
       }}
     >
       <Typography
-        variant='h4'
-        fontFamily='Nunito'
+        variant="h4"
+        fontFamily="Nunito"
         marginTop={20}
         marginBottom={3}
         gutterBottom

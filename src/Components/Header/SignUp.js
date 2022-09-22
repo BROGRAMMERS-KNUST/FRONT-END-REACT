@@ -3,6 +3,7 @@ import {
   Checkbox,
   FormControlLabel,
   Grid,
+  InputAdornment,
   Paper,
   TextField,
   Typography,
@@ -23,10 +24,10 @@ const SignUp = () => {
   return (
     <Grid>
       <Paper style={paperStyle}>
-        <Grid item align='center'>
+        <Grid item align="center">
           <Typography
-            variant='h5'
-            color='primary'
+            variant="h5"
+            color="primary"
             sx={{ fontFamily: "Nunito", fontWeight: "700" }}
           >
             StuLancer
@@ -34,40 +35,41 @@ const SignUp = () => {
         </Grid>
 
         <TextField
-          label='Full Name'
-          placeholder='Enter full name'
-          variant='standard'
+          label="Full Name"
+          placeholder="Enter full name"
+          variant="standard"
           required
           fullWidth
-          helperText='Enter first name first'
+          helperText="Enter first name first"
           sx={{ marginBottom: 2, fontFamily: "Nunito" }}
         />
 
         <TextField
-          label='Username'
-          placeholder='Enter username'
-          variant='standard'
+          label="Username"
+          placeholder="Enter username"
+          variant="standard"
           required
           fullWidth
           sx={{ marginBottom: 3 }}
         />
 
         <TextField
-          label='Password'
-          placeholder='Enter password'
-          variant='standard'
+          label="Password"
+          placeholder="Enter password"
+          variant="standard"
           fullWidth
           required
-          type='password'
+          type="password"
           sx={{ marginBottom: 3 }}
+          InputProps={<InputAdornment position="end">dgsd</InputAdornment>}
         />
 
         <FormControlLabel
-          control={<Checkbox name='checkedB' color='primary' />}
+          control={<Checkbox name="checkedB" color="primary" />}
           label={
             <Typography
               gutterBottom
-              variant='caption'
+              variant="caption"
               sx={{ fontFamily: "Nunito" }}
             >
               I agree to the Terms of Service, General Terms and Conditions and
@@ -76,10 +78,10 @@ const SignUp = () => {
           }
         />
 
-        <Button sx={{ marginBottom: 1 }} variant='contained' fullWidth>
+        <Button sx={{ marginBottom: 1 }} variant="contained" fullWidth>
           Sign up
         </Button>
-        <Typography sx={{ fontFamily: "Nunito" }} variant='caption'>
+        <Typography sx={{ fontFamily: "Nunito" }} variant="caption">
           By joining I agree to receive emails from StuLancer.
         </Typography>
       </Paper>

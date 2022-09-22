@@ -1,8 +1,8 @@
-import { Paper, Tab, Tabs, Typography } from '@mui/material';
-import { Box } from '@mui/system';
-import React, { useState } from 'react';
-import SignUp from './SignUp';
-import SignUpService from './SignUpService';
+import { Paper, Tab, Tabs, Typography } from "@mui/material";
+import { Box } from "@mui/system";
+import React, { useState } from "react";
+import SignUp from "./SignUp";
+import SignUpService from "./SignUpService";
 
 //Modal for Sign in and Sign up page
 const SignInOut = () => {
@@ -12,20 +12,21 @@ const SignInOut = () => {
     setValue(newValue);
   };
   const paperStyle = {
-    width: '400px',
-    margin: '60px auto',
+    width: "400px",
+    margin: "60px auto",
   };
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
     return (
       <div
-        role='tabpanel'
+        role="tabpanel"
         hidden={value !== index}
         id={`simple-tabpanel-${index}`}
         aria-labelledby={`simple-tab-${index}`}
         {...other}
       >
+        StuLancer
         {value === index && (
           <Box>
             <Typography>{children}</Typography>
@@ -38,18 +39,18 @@ const SignInOut = () => {
     <Paper style={paperStyle} elevation={10}>
       <Tabs
         value={value}
-        indicatorColor='primary'
-        textColor='primary'
+        indicatorColor="primary"
+        textColor="primary"
         onChange={handleChange}
         centered
       >
         <Tab
-          sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
-          label='Hire a StuLancer'
+          sx={{ fontFamily: "Nunito", fontWeight: "700" }}
+          label="Hire a StuLancer"
         />
         <Tab
-          sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
-          label='Be a StuLancer'
+          sx={{ fontFamily: "Nunito", fontWeight: "700" }}
+          label="Be a StuLancer"
         />
       </Tabs>
 
