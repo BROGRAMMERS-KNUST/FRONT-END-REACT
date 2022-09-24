@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { ThemeProvider } from "@mui/material";
-import { theme } from "./Components/theme";
+import { theme } from "./components/theme";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from "react-redux";
 import {

@@ -1,8 +1,8 @@
 import { Paper, Tab, Tabs, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
-import SignUp from "./SignUp";
-import SignUpService from "./SignUpService";
+import SignUp from "../Auth/SignUp";
+import SignUpService from "../Auth/SignUpService";
 
 //Modal for Sign in and Sign up page
 const SignInOut = () => {

@@ -8,17 +8,25 @@ import React from "react";
 import "./App.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Background from "./Components/Main/Background";
-import Main from "./Components/Main/Main";
-import Header from "./Components/Header/Header";
+import Background from "./components/Main/Background";
+import Main from "./components/Main/Main";
+import Header from "./components/Header/Header";
 import PhotograhyPage from "./Pages/PhotograhyPage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Footer from "./Components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import GraphicDesignPage from "./Pages/GraphicDesignPage";
 import FoodServicesPage from "./Pages/FoodServicesPage";
 import WritingAndTranslationPage from "./Pages/WritingAndTranslationPage";
+// import { useDispatch } from "react-redux";
+// import { getPosts } from "./action/posts";
 
 function App() {
+  // const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   dispatch(getPosts);
+  // }, [dispatch]);
+
   return (
     <div>
       <Router>

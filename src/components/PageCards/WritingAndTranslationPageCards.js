@@ -1,6 +1,5 @@
-
 import React from "react";
-import { Box, Card, Stack, Typography,Link,Button,Tooltip } from "@mui/material";
+import { Box, Card, Stack, Typography } from "@mui/material";
 
 function WritingAndTranslationPageCards() {
   return (
@@ -25,19 +24,9 @@ function WritingAndTranslationPageCards() {
           >
             Content Writing and Editing
           </Typography>
-          
           <Typography variant="body" width="300px">
-          <Link underline="none" href="/" color ="inherit">
-          <Button color ="inherit" >Articles & Blog Posts</Button>
-         </Link>
-              <br />
-               <Link underline="none" href="/" color ="inherit"><Button color ="inherit" >Book Writing & Editing</Button></Link>
-              <br />
-              <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Proofreading & Editing</Button></Link>
-              <br />
-              <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Website Content</Button></Link>
-              <br />
-               
+            Articles & Blog Posts <br /> Proofreading & Editing <br /> Website
+            Content <br /> Book Writing & Editing
           </Typography>
         </Stack>
 
@@ -61,11 +50,7 @@ function WritingAndTranslationPageCards() {
             Career Writing
           </Typography>
           <Typography variant="body" width="300px">
-          <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Resume Writing</Button> </Link>
-              <br />
-               <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Cover Letters</Button></Link>
-              <br />
-              <Link underline="none" href="/" color ="inherit"><Button color ="inherit">LinkedIn Profiles</Button></Link>           
+            Resume Writing <br /> Cover Letters <br /> LinkedIn Profiles
           </Typography>
         </Stack>
 
@@ -89,10 +74,7 @@ function WritingAndTranslationPageCards() {
             Translation & Transcription
           </Typography>
           <Typography variant="body" width="300px">
-          <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Translation </Button> </Link>
-              <br />
-               <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Transcription</Button></Link>
-            
+            Translation <br /> Transcription
           </Typography>
         </Stack>
       </Stack>

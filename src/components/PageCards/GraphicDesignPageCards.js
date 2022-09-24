@@ -1,7 +1,5 @@
 import React from "react";
-import { Box, Stack,Card,Typography,Link,Button} from "@mui/material";
-
-
+import { Box, Stack, Card, Typography } from "@mui/material";
 
 function GraphicDesignPageCards() {
   return (
@@ -32,11 +30,11 @@ function GraphicDesignPageCards() {
               Stand out from the crowd with a logo that fits your business and
               ideas.
               <br />
-              <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Logo Design</Button> </Link>
+              Logo Design
               <br />
-               <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Brand Style Guides</Button></Link>
+              Brand Style Guides
               <br />
-              <Link underline="none" href="/" color ="inherit"> <Button color ="inherit">Business Cards & Stationaries</Button></Link>
+              Business Cards & Stationaries
               <br />
             </Typography>
           </Stack>
@@ -62,8 +60,8 @@ function GraphicDesignPageCards() {
               Visual Design
             </Typography>
             <Typography variant="body" width="300px">
-            <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Image Editing</Button> </Link> <br /> <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Presentation Design</Button> </Link> <br /> <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Infographic Design{" "}</Button> </Link>
-              <br />  <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Resume Design</Button></Link>
+              Image Editing <br /> Presentation Design <br /> Infographic Design{" "}
+              <br /> Resume Design
             </Typography>
           </Stack>
 
@@ -88,14 +86,12 @@ function GraphicDesignPageCards() {
               Print Design
             </Typography>
             <Typography variant="body" width="300px">
-            <Link underline="none" href="/" color ="inherit"><Button color ="inherit">T-Shirts & Merchandise</Button> </Link><br/>
-            <Link underline="none" href="/" color ="inherit"> <Button color ="inherit">Flyer Design</Button></Link><br/>
-            <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Brochure Design</Button> </Link><br/>
-            <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Poster Design</Button> </Link><br/>
-            <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Catalog Design </Button> </Link><br/>
-            <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Menu Design</Button> </Link><br/>
-              <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Invitation Design</Button> </Link><br/>
-              
+              T-Shirts & Merchandise <br />
+              Flyer Design <br /> Brochure Design
+              <br /> Poster Design <br />
+              Catalog Design <br />
+              Menu Design <br />
+              Invitation Design
             </Typography>
           </Stack>
 
@@ -120,10 +116,9 @@ function GraphicDesignPageCards() {
               Packaging & Covers
             </Typography>
             <Typography variant="body" width="300px">
-               <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Packaging & Label Design </Button></Link><br/>
-               <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Image Editing </Button></Link><br/>
-               <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Laptop Stickers1</Button></Link><br/>
-               <Link underline="none" href="/" color ="inherit"><Button color ="inherit">Album Cover</Button> </Link><br/>
+              Packaging & Label Design <br />
+              Book Design <br /> Laptop Stickers <br /> Album Cover <br /> Cover
+              Art
             </Typography>
           </Stack>
         </Stack>

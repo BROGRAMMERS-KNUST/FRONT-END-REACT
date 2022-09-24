@@ -1,8 +1,8 @@
 import React from "react";
-import WritingAndTranslationPageCards from "../Components/PageCards/WritingAndTranslationPageCards";
+import WritingAndTranslationPageCards from "../components/PageCards/WritingAndTranslationPageCards";
 import { Box, Link, Breadcrumbs, Typography } from "@mui/material";
-import StulancersAvailable from "../Components/StulancersAvailable";
-import Navbar from "../Components/Header/Navbar";
+import StulancersAvailable from "../components/StulancersAvailable";
+import Navbar from "../components/Header/Navbar";
 
 function WritingAndTranslationPage() {
   return (
