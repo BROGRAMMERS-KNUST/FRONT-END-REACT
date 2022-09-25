@@ -3,27 +3,37 @@ import {
   Avatar,
   Box,
   Button,
+  Chip,
   Divider,
   Modal,
+  Stack,
   Tab,
   Tabs,
   Toolbar,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { Redirect, useHistory } from "react-router-dom";
 import Login from "../Auth/Login";
 import SignInOut from "./SignInOut";
 
 function Header() {
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
-  const user = null;
-
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+  const history = useHistory();
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+    history.push("/");
+    setUser(null);
+  };
   return (
     <Box>
       <AppBar
         color="transparent"
-        sx={{ backdropFilter: "blur(20px)" }}
+        sx={{ backdropFilter: "blur(30px)" }}
         elevation={1}
       >
         <Toolbar>
@@ -43,25 +53,37 @@ function Header() {
           {/*CHECKS IF USER IS LOGGED IN AND DECIDES TYPE OF HEADER*/}
           {user ? (
             <div>
-              <Avatar alt={user.result.name} src={user.result.imageUrl}>
-                {user.result.name.charAt(0)}
-              </Avatar>
-              <Typography variant="h6">{user.result.name}</Typography>
-              <Button
-                disableElevation
-                onClick={() => {}}
-                color="secondary"
-                sx={{
-                  borderRadius: 5,
-                  marginRight: 2,
-                  fontFamily: "Nunito",
-                  fontWeight: "700",
-                }}
-                size="large"
-                variant="outlined"
-              >
-                Log out
-              </Button>
+              <Stack direction="row" spacing={2}>
+                <Avatar>
+                  {/* alt={user.result.username.charAt(0)} src={user.result.imageUrl} */}
+                </Avatar>
+                <Tabs textColor="secondary">
+                  <Tab
+                    sx={{
+                      fontFamily: "Nunito",
+                      fontWeight: "700",
+                    }}
+                    label={user.result.fullName}
+                  />
+                </Tabs>
+                <Button
+                  disableElevation
+                  onClick={() => {
+                    handleLogout();
+                  }}
+                  color="secondary"
+                  sx={{
+                    borderRadius: 5,
+                    marginRight: 2,
+                    fontFamily: "Nunito",
+                    fontWeight: "700",
+                  }}
+                  size="large"
+                  variant="outlined"
+                >
+                  Log out
+                </Button>
+              </Stack>
             </div>
           ) : (
             <div>

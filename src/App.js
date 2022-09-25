@@ -17,6 +17,9 @@ import Footer from "./components/Footer/Footer";
 import GraphicDesignPage from "./Pages/GraphicDesignPage";
 import FoodServicesPage from "./Pages/FoodServicesPage";
 import WritingAndTranslationPage from "./Pages/WritingAndTranslationPage";
+import Dashboard from "./Pages/Dashboard";
+import { Redirect } from "react-router-dom";
+const user = JSON.parse(localStorage.getItem("profile"));
 // import { useDispatch } from "react-redux";
 // import { getPosts } from "./action/posts";
 
@@ -49,6 +52,11 @@ function App() {
             <Route exact path="/writing&translation">
               <WritingAndTranslationPage />
             </Route>
+            <Route
+              path="/profile"
+              exact
+              component={() => (user ? <Dashboard /> : <Redirect to="/" />)}
+            />
           </Switch>
           <Footer />
         </div>
