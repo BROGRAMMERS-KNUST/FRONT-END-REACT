@@ -1,7 +1,7 @@
 import React from "react";
 import GraphicDesignPageCards from "../components/PageCards/GraphicDesignPageCards";
 import { Box, Link, Breadcrumbs, Typography } from "@mui/material";
-import StulancersAvailable from "../components/StulancersAvailable";
+import StulancersAvailable from "../Pages/StulancersAvailable";
 import Navbar from "../components/Header/Navbar";
 
 function GraphicDesignPage() {
