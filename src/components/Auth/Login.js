@@ -3,6 +3,7 @@ import {
   Checkbox,
   FormControlLabel,
   Grid,
+  Link,
   Paper,
   TextField,
   Typography,
@@ -73,7 +74,18 @@ const Login = () => {
             Sign in
           </Button>
         </form>
-        <Typography sx={{ fontFamily: 'Nunito' }} variant='caption'>
+        <Link
+          href='/forgotpassword'
+          sx={{ marginLeft: 12.5, marginBottom: 2, marginTop: 2 }}
+          underline='hover'
+        >
+          Forgot password ?
+        </Link>
+        <br />
+        <Typography
+          sx={{ fontFamily: 'Nunito', marginLeft: 3.5 }}
+          variant='caption'
+        >
           By joining I agree to receive emails from StuLancer.
         </Typography>
       </Paper>
