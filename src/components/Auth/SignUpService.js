@@ -28,7 +28,7 @@ const SignUpService = () => {
     fullName: "",
     username: "",
     password: "",
-    studentId: "",
+    email: "",
     serviceType: "servicer",
   };
 
@@ -64,14 +64,14 @@ const SignUpService = () => {
             }}
           />
           <TextField
-            label="Student Id"
-            placeholder="Enter Student Id"
+            label="Email"
+            placeholder="Enter Email"
             variant="standard"
             required
             fullWidth
             sx={{ marginBottom: 3 }}
             onChange={(e) => {
-              userData.studentId = e.target.value;
+              userData.email = e.target.value;
             }}
           />
           <TextField

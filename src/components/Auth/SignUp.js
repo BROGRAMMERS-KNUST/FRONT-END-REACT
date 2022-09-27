@@ -68,7 +68,17 @@ const SignUp = () => {
             variant="standard"
             required
             fullWidth
-            sx={{ marginBottom: 3 }}
+            sx={{ marginBottom: 2, fontFamily: "Nunito" }}
+            onChange={(e) => (userData.username = e.target.value)}
+          />
+
+          <TextField
+            label="Username"
+            placeholder="Enter username"
+            variant="standard"
+            required
+            fullWidth
+            sx={{ marginBottom: 2}}
             onChange={(e) => {
               userData.username = e.target.value;
             }}
@@ -81,7 +91,7 @@ const SignUp = () => {
             variant="standard"
             fullWidth
             required
-            sx={{ marginBottom: 3 }}
+            sx={{ marginBottom: 2 }}
             onChange={(e) => {
               userData.password = e.target.value;
             }}

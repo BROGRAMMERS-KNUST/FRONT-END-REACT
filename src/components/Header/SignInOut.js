@@ -26,7 +26,7 @@ const SignInOut = () => {
         aria-labelledby={`simple-tab-${index}`}
         {...other}
       >
-        StuLancer
+        
         {value === index && (
           <Box>
             <Typography>{children}</Typography>

@@ -44,15 +44,16 @@ const Login = () => {
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
-            label="Email/Username"
-            placeholder="Enter email/username"
+            label="Email"
+            placeholder="Enter email"
             variant="standard"
             required
             fullWidth
-            helperText="Enter first name first"
             sx={{ marginTop: 4, marginBottom: 2, fontFamily: "Nunito" }}
             onChange={(e) => (loginData.username = e.target.value)}
           />
+
+          
 
           <TextField
             label="Password"
