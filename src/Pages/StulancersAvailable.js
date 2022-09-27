@@ -2,33 +2,42 @@ import StulancerComp from "../components/StulancerComp";
 import { useSelector } from "react-redux";
 
 import React, { useEffect } from "react";
-import { CircularProgress, Grid, Typography } from "@mui/material";
+import { CircularProgress, Grid, Typography, Box } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { getPosts } from "../action/posts";
 
 function StulancersAvailable() {
-  const posts = useSelector((state) => state.posts);
+  const { stulancers } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getPosts());
   }, [dispatch]);
 
-  return !posts.length ? (
-    <div>
-      <Typography>Loading Stulancers</Typography>
+  return !stulancers ? (
+    <Box sx={{ marginTop: 4 }}>
+      <Typography variant="h5" sx={{ fontFamily: "Nunito" }}>
+        Loading Stulancers...
+      </Typography>
       <CircularProgress />
-    </div>
+    </Box>
   ) : (
-    <div>
-      <Grid alignItems="stretch" spacing={3}>
-        {posts.map((post) => (
-          <Grid item key={post._id} xs={12} sm={6}>
-            <StulancerComp stulancer={post} />
+    <Box sx={{ marginTop: 4, marginBottom: 4 }}>
+      <Typography
+        color="primary"
+        variant="h5"
+        sx={{ marginTop: 1, marginBottom: 2, fontFamily: "Nunito" }}
+      >
+        Stulancers Available
+      </Typography>
+      <Grid container alignItems="stretch" spacing={2} flexWrap>
+        {stulancers.map((stulancer) => (
+          <Grid item key={stulancer._id} xs={12} sm={2}>
+            <StulancerComp stulancer={stulancer} />
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Box>
   );
 }
 

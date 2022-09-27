@@ -7,11 +7,11 @@ import {
   Rating,
 } from "@mui/material";
 
-const Postcomp = (stulancer) => {
+const StulancerComp = ({ stulancer }) => {
   console.log(stulancer);
   return (
     <div>
-      <Card>
+      <Card sx={{ width: 200 }}>
         <CardMedia title={stulancer.username} image={stulancer.profilepic} />
         <div>
           <Typography variant="h6">{stulancer.fullName}</Typography>
@@ -19,7 +19,7 @@ const Postcomp = (stulancer) => {
         </div>
         <div>
           <Typography variant="body2" color="textSecondary">
-            {stulancer.tags.map((tag) => `${tag} `)}
+            {stulancer.serviceTags.map((tag) => `${tag} `)}
           </Typography>
         </div>
         <div>
@@ -28,11 +28,10 @@ const Postcomp = (stulancer) => {
           </CardContent>
         </div>
         <Rating name="read-only" value={stulancer.rating} readOnly />
-        Rating
         {stulancer.rating}
       </Card>
     </div>
   );
 };
 
-export default Postcomp;
+export default StulancerComp;
