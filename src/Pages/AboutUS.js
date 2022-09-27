@@ -8,15 +8,14 @@ function AboutUsPage(){
          <Box sx={{ 
                     bgcolor: 'primary.main',
                     color: 'white',
-                    width: '100px',
-                    height: '100px',
+                    height: '80vh',
                     padding: '15px',
                     '&:hover': {
                                 bgcolor: 'primary.light',
                                },
-                  }}
+                  }} 
               >
-                
+                <Typography> </Typography>  
          </Box>
 
         )   
