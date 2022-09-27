@@ -26,8 +26,9 @@ const SignUpService = () => {
   const history = useHistory();
   const userData = {
     fullName: '',
-    email: '',
+    username: '',
     password: '',
+    email: '',
     serviceType: 'servicer',
   };
 
@@ -64,8 +65,8 @@ const SignUpService = () => {
           />
 
           <TextField
-            label='Username'
-            placeholder='Enter username'
+            label='Email'
+            placeholder='Enter Email'
             variant='standard'
             required
             fullWidth

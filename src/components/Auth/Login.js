@@ -49,9 +49,8 @@ const Login = () => {
             variant='standard'
             required
             fullWidth
-            helperText='Enter your email'
             sx={{ marginTop: 4, marginBottom: 2, fontFamily: 'Nunito' }}
-            onChange={(e) => (loginData.email = e.target.value)}
+            onChange={(e) => (loginData.username = e.target.value)}
           />
 
           <TextField
