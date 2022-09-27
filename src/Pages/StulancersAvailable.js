@@ -6,12 +6,13 @@ import { CircularProgress, Grid, Typography, Box } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { getPosts } from "../action/posts";
 
-function StulancersAvailable() {
+function StulancersAvailable(field) {
   const { stulancers } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
+  console.log(field);
 
   useEffect(() => {
-    dispatch(getPosts());
+    dispatch(getPosts(field));
   }, [dispatch]);
 
   return !stulancers ? (
@@ -33,7 +34,7 @@ function StulancersAvailable() {
       <Grid container alignItems="stretch" spacing={2} flexWrap>
         {stulancers.map((stulancer) => (
           <Grid item key={stulancer._id} xs={12} sm={2}>
-            <StulancerComp stulancer={stulancer} />
+            <StulancerComp stulancer={stulancer} field={field} />
           </Grid>
         ))}
       </Grid>
