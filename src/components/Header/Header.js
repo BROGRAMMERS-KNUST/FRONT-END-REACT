@@ -3,18 +3,18 @@ import {
   Avatar,
   Box,
   Button,
-  Chip,
   Divider,
   Modal,
   Stack,
   Tab,
   Tabs,
   Toolbar,
+  Tooltip,
   Typography,
 } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Login from "../Auth/Login";
 import SignInOut from "./SignInOut";
 
@@ -24,11 +24,14 @@ function Header() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
   const history = useHistory();
   const dispatch = useDispatch();
+
+  //FUNCTION FOR LOGGING OUT
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
     history.push("/");
     setUser(null);
   };
+
   return (
     <Box>
       <AppBar
@@ -58,13 +61,15 @@ function Header() {
                   {/* alt={user.result.username.charAt(0)} src={user.result.imageUrl} */}
                 </Avatar>
                 <Tabs textColor="secondary">
-                  <Tab
-                    sx={{
-                      fontFamily: "Nunito",
-                      fontWeight: "700",
-                    }}
-                    label={user.result.fullName}
-                  />
+                  <Tooltip title="Click to visit your account page">
+                    <Tab
+                      sx={{
+                        fontFamily: "Nunito",
+                        fontWeight: "700",
+                      }}
+                      label={user.result.fullName}
+                    />
+                  </Tooltip>
                 </Tabs>
                 <Button
                   disableElevation
@@ -127,7 +132,7 @@ function Header() {
             </div>
           )}
           <Tabs textColor="secondary">
-            <Tab
+            <Tab href="/about-us" 
               sx={{
                 fontFamily: "Nunito",
                 fontWeight: "700",

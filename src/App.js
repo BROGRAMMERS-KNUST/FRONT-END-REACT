@@ -3,7 +3,7 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import React from "react";
+import React, { useEffect } from "react";
 //css files
 import "./App.css";
 import "slick-carousel/slick/slick.css";
@@ -19,18 +19,10 @@ import GraphicDesignPage from "./Pages/GraphicDesignPage";
 import FoodServicesPage from "./Pages/FoodServicesPage";
 import WritingAndTranslationPage from "./Pages/WritingAndTranslationPage";
 import Dashboard from "./Pages/Dashboard";
-import { Redirect } from "react-router-dom";
+import AboutUS from "./Pages/AboutUS";
 const user = JSON.parse(localStorage.getItem("profile"));
-// import { useDispatch } from "react-redux";
-// import { getPosts } from "./action/posts";
 
 function App() {
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(getPosts);
-  // }, [dispatch]);
-
   return (
     <div>
       <Router>
@@ -56,11 +48,9 @@ function App() {
             <Route exact path="/writing&translation">
               <WritingAndTranslationPage />
             </Route>
-            <Route
-              path="/profile"
-              exact
-              component={() => (user ? <Dashboard /> : <Redirect to="/" />)}
-            />
+            <Route exact path="/about-us">
+              <AboutUS />
+            </Route>
           </Switch>
           <Footer />
         </div>
