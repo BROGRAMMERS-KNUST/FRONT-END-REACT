@@ -18,6 +18,7 @@ import GraphicDesignPage from "./Pages/GraphicDesignPage";
 import FoodServicesPage from "./Pages/FoodServicesPage";
 import WritingAndTranslationPage from "./Pages/WritingAndTranslationPage";
 import Dashboard from "./Pages/Dashboard";
+import AboutUS from "./Pages/AboutUS";
 const user = JSON.parse(localStorage.getItem("profile"));
 
 function App() {
@@ -42,6 +43,9 @@ function App() {
             </Route>
             <Route exact path="/writing&translation">
               <WritingAndTranslationPage />
+            </Route>
+            <Route exact path="/about-us">
+              <AboutUS />
             </Route>
           </Switch>
           <Footer />
