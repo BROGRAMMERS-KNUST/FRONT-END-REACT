@@ -16,7 +16,7 @@ import GraphicDesignPage from "./Pages/GraphicDesignPage";
 import FoodServicesPage from "./Pages/FoodServicesPage";
 import WritingAndTranslationPage from "./Pages/WritingAndTranslationPage";
 import FooterMain from "./components/Footer/FooterMain";
-
+import ImageSlider from "./components/Carousel/ImageSlider";
 
 
 function App() {
