@@ -11,7 +11,7 @@ import TextSnippetIcon from "@mui/icons-material/TextSnippet";
 
 const GridCategory = () => {
   return (
-    <Box sx={{ margin: "solid", color: "red" }}>
+    <Box sx={{ margin: "solid", color: "red" , paddingTop: 10,}}>
       <Grid container spacing={6} flexWrap>
         <Grid
           item
@@ -23,6 +23,7 @@ const GridCategory = () => {
               width: 250,
               borderRadius: 2,
               boxShadow: 4,
+             
             }}
           >
             <LanguageIcon
@@ -49,7 +50,7 @@ const GridCategory = () => {
             <Button
               sx={{
                 backgroundColor: "white",
-                ":hover": { backgroundColor: "white" },
+                "&:hover": { backgroundColor: "white" },
                 fontFamily: "Nunito",
                 fontWeight: "700",
                 margin: 1.5,
@@ -99,7 +100,7 @@ const GridCategory = () => {
               href="/photography"
               sx={{
                 backgroundColor: "white",
-                ":hover": { backgroundColor: "white" },
+                "&:hover": { backgroundColor: "white" },
                 fontFamily: "Nunito",
                 fontWeight: "700",
                 margin: 1.5,
@@ -149,7 +150,7 @@ const GridCategory = () => {
               href="/food-services"
               sx={{
                 backgroundColor: "white",
-                ":hover": { backgroundColor: "white" },
+                "&:hover": { backgroundColor: "purple" },
                 fontFamily: "Nunito",
                 fontWeight: "700",
                 margin: 1.5,
@@ -199,7 +200,7 @@ const GridCategory = () => {
               href="/graphic-design"
               sx={{
                 backgroundColor: "white",
-                ":hover": { backgroundColor: "white" },
+                "&:hover": { backgroundColor: "white" },
                 fontFamily: "Nunito",
                 fontWeight: "700",
                 margin: 1.5,
@@ -249,7 +250,7 @@ const GridCategory = () => {
               href="/writing&translation"
               sx={{
                 backgroundColor: "white",
-                ":hover": { backgroundColor: "white" },
+                "&:hover": { backgroundColor: "white" },
                 fontFamily: "Nunito",
                 fontWeight: "700",
                 margin: 1.5,

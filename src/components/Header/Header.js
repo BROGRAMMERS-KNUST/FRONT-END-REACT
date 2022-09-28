@@ -41,14 +41,15 @@ function Header() {
       >
         <Toolbar>
           <Typography
-            marginLeft={2}
-            color="primary"
-            variant="h2"
+             marginLeft={2}
+            color='primary'
+            variant='h2'
             fontSize={30}
-            sx={{ flexGrow: 1 }}
-            fontFamily="Nunito"
-            fontWeight="700"
-            letterSpacing={2}
+            sx={{ flexGrow: 0.5 }}
+            fontFamily='Nunito'
+            fontWeight='900'
+            letterSpacing={1.5}
+            paddingRight='300px'
           >
             STULANCER
           </Typography>
@@ -101,7 +102,7 @@ function Header() {
                 sx={{
                   borderRadius: 5,
                   backgroundColor: "#ffc400",
-                  ":hover": { backgroundColor: "#DFAE0C" },
+                  "&:hover": { backgroundColor: "#DFAE0C" },
                   marginRight: 2,
                   fontFamily: "Nunito",
                   fontWeight: "700",

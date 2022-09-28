@@ -1,18 +1,133 @@
 
 img {
-  position: absolute;
+  position:absolute;
   max-height: 42rem;
-  left:55.5%;
-  top:10%;
+  left:55%;
+  top:5%;
+
 }
 
 .highlight{
   color: #e5b411;
   font-weight: 700;
 }
+.LandingPic{
+  align-self: auto;
+  width: 40vw;
+  height: 80vh;
+  opacity: 100%;
+}
+
+.HeaderClicks{
+  color: blue;
+}
+  .social-container {
+  
+  padding: 25px 50px;
+  border-spacing: 2em;
+}
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram social {
+  color: black;
+}
 
 
+.Apple {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #000133;
+}
 
+.header,
+.footer {
+  background: #00022e;
+  height: 50px;
+  color: #fc86aa;
+}
 
+.container {
+  display: flex;
+  flex: 1;
+}
 
+.drawer {
+  background: #d8dcd6;
+  width: 240px;
+}
 
+.main {
+  flex: 1;
+  background: #f7f5f5;
+}
+.drawer {
+  background: #d8dcd6;
+  width: 0px;
+  transition: width 0.7s;
+}
+
+.opened {
+  width: 240px;
+}
+
+.social-container{
+  margin:-20px;
+  padding-left: 600px;
+  align-items: flex-end;
+  position: relative;
+  
+
+}
+
+.Cards{
+  width:100%;
+  background: transparent;
+  color:#fff;
+  height:200px;
+  display: flex;
+  justify-content: center;
+  align-items:center; 
+}
+
+.App {
+    text-align: center;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    background-color: green;
+}
+  
+.tag {
+    text-align: center;
+}
+  
+.slick-slide img {
+    margin: auto;
+    width: 50%;
+    height: 50%;
+}

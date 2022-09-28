@@ -21,7 +21,7 @@ function Navbar() {
           underline="hover"
           sx={{ fontFamily: "Nunito" }}
           style={{
-            textDecorationColor: "gold",
+            textDecorationColor: "goldrod",
             textDecorationThickness: "3px",
           }}
         >
