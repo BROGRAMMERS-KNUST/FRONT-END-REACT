@@ -6,9 +6,7 @@ import {
   Typography,
   Rating,
 } from "@mui/material";
-
 const StulancerComp = ({ stulancer }) => {
-  console.log(stulancer);
   return (
     <div>
       <Card sx={{ width: 200 }}>

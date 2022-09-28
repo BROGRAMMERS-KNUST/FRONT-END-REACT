@@ -22,7 +22,7 @@ export default function PhotograhyPage() {
         Photography
       </Typography>
       <PhotographyPageCards />
-      <StulancersAvailable />
+      <StulancersAvailable field="photography" />
     </Box>
   );
 }
