@@ -12,7 +12,9 @@ export default function PhotograhyPage() {
         <Link href="/" underline="hover">
           STULANCER
         </Link>
-        <Link underline="hover">PHOTOGRAPHY</Link>
+        <Link underline="hover" href="/photography">
+          PHOTOGRAPHY
+        </Link>
       </Breadcrumbs>
       <Typography
         variant="h4"
