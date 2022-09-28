@@ -12,6 +12,7 @@ import Background from "./components/Main/Background";
 import Main from "./components/Main/Main";
 import Header from "./components/Header/Header";
 import PhotograhyPage from "./Pages/PhotograhyPage";
+import WebDevelopment from "./Pages/WebDevelopment";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import GraphicDesignPage from "./Pages/GraphicDesignPage";
@@ -37,11 +38,14 @@ function App() {
           <Header />
           <Switch>
             <Route exact path="/">
-              <Background />
+              <Background />   
               <Main />
             </Route>
             <Route exact path="/photography">
               <PhotograhyPage />
+            </Route>
+            <Route exact path="/webdevelopment">
+              <WebDevelopment />
             </Route>
             <Route exact path="/graphic-design">
               <GraphicDesignPage />

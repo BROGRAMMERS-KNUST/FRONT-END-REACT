@@ -4,6 +4,7 @@ import { Box, Link, Breadcrumbs, Typography } from "@mui/material";
 import StulancersAvailable from "../components/StulancersAvailable";
 import Navbar from "../components/Header/Navbar";
 
+
 function GraphicDesignPage() {
   return (
     <div>
@@ -14,13 +15,7 @@ function GraphicDesignPage() {
             STULANCER
           </Link>
           <Link underline="hover">GRAPHIC DESIGN</Link>
-        </Breadcrumbs>
-        <Typography
-          variant="h4"
-          sx={{ marginTop: 1, marginBottom: 2, fontFamily: "Nunito" }}
-        >
-          Graphic Design
-        </Typography>
+        </Breadcrumbs>        
         <GraphicDesignPageCards />
         <StulancersAvailable />
       </Box>
