@@ -97,24 +97,5 @@ a.instagram social {
   padding-left: 600px;
   align-items: flex-end;
   position: relative;
-  
+  }
 
-}
-
-.Cards{
-  width:100%;
-  background: transparent;
-  color:#fff;
-  height:200px;
-  display: flex;
-  justify-content: center;
-  align-items:center; 
-}
-
-.App {
-    text-align: center;
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
