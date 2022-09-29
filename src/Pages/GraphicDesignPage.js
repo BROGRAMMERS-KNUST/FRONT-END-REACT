@@ -4,6 +4,7 @@ import { Box, Link, Breadcrumbs, Typography } from "@mui/material";
 import StulancersAvailable from "../Pages/StulancersAvailable";
 import Navbar from "../components/Header/Navbar";
 
+
 function GraphicDesignPage() {
   return (
     <div>

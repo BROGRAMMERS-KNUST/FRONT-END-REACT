@@ -1,10 +1,36 @@
 import React from "react";
-import { Box, Stack, Card, Typography } from "@mui/material";
+import { Box, Stack, Typography, Button } from "@mui/material";
+import Card from "@mui/material/Card";
 
 function GraphicDesignPageCards() {
   return (
     <div>
-      <Box>
+      <Box marginLeft="30px" marginRight="40px">
+        <Box
+          sx={{
+            background: "#0D4114",
+            color: "white",
+            height: "200px",
+            width: "1350px",
+            borderRadius: "10px",
+            marginTop: 3
+            // padding:'16px',
+          }}
+        >
+          <Typography align="center" variant="h4" paddingTop="15px" fontFamily={ "Nunito"}>
+            Graphics & Design
+          </Typography>
+          <Typography align="center" fontFamily={ "Nunito"}>Design to make you standout</Typography>
+
+          <Button
+            style={{ marginTop: 25, marginLeft: 570 }}
+            variant="contained"
+          >
+            {" "}
+            How Stulancer Works
+          </Button>
+        </Box>
+        <br />
         <Stack direction="row" spacing={6} sx={{ flexWrap: "wrap" }}>
           <Stack>
             <Card
@@ -30,11 +56,11 @@ function GraphicDesignPageCards() {
               Stand out from the crowd with a logo that fits your business and
               ideas.
               <br />
-              Logo Design
+              <Button variant="text">Brand Style Guides</Button>
               <br />
-              Brand Style Guides
+              <Button variant="text">Logo Design</Button>
               <br />
-              Business Cards & Stationaries
+              <Button variant="text">Business Cards & Stationaries</Button>
               <br />
             </Typography>
           </Stack>
@@ -60,8 +86,10 @@ function GraphicDesignPageCards() {
               Visual Design
             </Typography>
             <Typography variant="body" width="300px">
-              Image Editing <br /> Presentation Design <br /> Infographic Design{" "}
-              <br /> Resume Design
+              <Button variant="text">Image Editing</Button> <br />{" "}
+              <Button variant="text">Presentation Design</Button> <br />{" "}
+              <Button variant="text">Infographic Design </Button>
+              <br /> <Button variant="text">Resume Design</Button>
             </Typography>
           </Stack>
 
@@ -86,12 +114,15 @@ function GraphicDesignPageCards() {
               Print Design
             </Typography>
             <Typography variant="body" width="300px">
-              T-Shirts & Merchandise <br />
-              Flyer Design <br /> Brochure Design
-              <br /> Poster Design <br />
-              Catalog Design <br />
-              Menu Design <br />
-              Invitation Design
+              <Button variant="text">T-Shirts & Merchandise</Button> <br />
+              <Button variant="text">Flyer Design</Button> <br />{" "}
+              <Button variant="text">Brochure Design </Button>
+              <br /> <Button variant="text">Poster Design</Button> <br />
+              <Button variant="text">Catalog Design </Button>
+              <br />
+              <Button variant="text">Menu Design</Button>
+              <br />
+              <Button variant="text">Invitation Design</Button>
             </Typography>
           </Stack>
 
@@ -116,9 +147,41 @@ function GraphicDesignPageCards() {
               Packaging & Covers
             </Typography>
             <Typography variant="body" width="300px">
-              Packaging & Label Design <br />
-              Book Design <br /> Laptop Stickers <br /> Album Cover <br /> Cover
-              Art
+              <Button variant="text">Packaging & Label Design </Button> <br />
+              <Button variant="text">Book Design</Button> <br />{" "}
+              <Button variant="text">Laptop Stickers</Button> <br />{" "}
+              <Button variant="text">Album Cover </Button>
+              <br /> <Button variant="text">Menu Design</Button> <br />{" "}
+              <Button variant="text">Cover Art</Button>
+            </Typography>
+          </Stack>
+        </Stack>
+        <Stack direction="row" spacing={6} sx={{ flexWrap: "wrap" }}>
+          <Stack>
+            <Card
+              sx={{
+                background:
+                  "url('https://cdn.dribbble.com/users/77598/screenshots/7958090/media/9dfda44bd1e8b288602cd465655e7a36.png?compress=1&resize=400x300') ",
+                backgroundSize: "cover",
+                width: 300,
+                height: 200,
+              }}
+            ></Card>
+            <Typography
+              variant="h5"
+              width="300px"
+              sx={{
+                fontFamily: "Nunito",
+                marginTop: 1,
+              }}
+            >
+              Miscellaneous
+            </Typography>
+            <Typography variant="body" width="300px">
+              <Button variant="text">Logo Maker</Button> <br />{" "}
+              <Button variant="text">Game Art </Button> <br />{" "}
+              <Button variant="text">Infographic Design </Button>
+              <br /> <Button variant="text">Social Media Design</Button>
             </Typography>
           </Stack>
         </Stack>

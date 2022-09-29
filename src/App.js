@@ -14,6 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Background from "./components/Main/Background";
 import Header from "./components/Header/Header";
 import PhotograhyPage from "./Pages/PhotograhyPage";
+import WebDevelopment from "./Pages/WebDevelopment";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import GraphicDesignPage from "./Pages/GraphicDesignPage";
 import FoodServicesPage from "./Pages/FoodServicesPage";
@@ -32,13 +33,26 @@ function App() {
         <div>
           <Header />
           <Switch>
+<<<<<<< HEAD
             <Route exact path='/'>
               <Background />
+=======
+            <Route exact path="/">
+              <Background />   
+              <Main />
+>>>>>>> 95a1c1b133cad27b79bd150e7cd532fce8978a4c
             </Route>
             <Route exact path='/photography'>
               <PhotograhyPage />
             </Route>
+<<<<<<< HEAD
             <Route exact path='/graphic-design'>
+=======
+            <Route exact path="/webdevelopment">
+              <WebDevelopment />
+            </Route>
+            <Route exact path="/graphic-design">
+>>>>>>> 95a1c1b133cad27b79bd150e7cd532fce8978a4c
               <GraphicDesignPage />
             </Route>
             <Route exact path='/food-services'>
@@ -47,11 +61,17 @@ function App() {
             <Route exact path='/writing&translation'>
               <WritingAndTranslationPage />
             </Route>
+<<<<<<< HEAD
 
             <Route exact path="/about-us">
               <AboutUS />
             </Route>
             <Route exact path='/forgetpassword'></Route>
+=======
+            <Route exact path="/about-us">
+              <AboutUS />
+            </Route>
+>>>>>>> 95a1c1b133cad27b79bd150e7cd532fce8978a4c
           </Switch>
          <FooterMain/>
         </div>
