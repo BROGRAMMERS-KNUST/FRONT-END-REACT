@@ -1,5 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
+
 import {
   Box,
   Link,
@@ -152,19 +152,7 @@ const AboutUS = () => {
         </Stack>
       </Box>
     </Box>
-=======
-import BoxOne from "../components/AboutUs/BoxOne";
-import BoxThree from "../components/AboutUs/BoxThree";
-import BoxTwo from "../components/AboutUs/BoxTwo";
 
-const AboutUS = () => {
-  return (
-    <div>
-      <BoxOne />
-      <BoxTwo />
-      <BoxThree />
-    </div>
->>>>>>> 95a1c1b133cad27b79bd150e7cd532fce8978a4c
   );
 };
 export default AboutUS;

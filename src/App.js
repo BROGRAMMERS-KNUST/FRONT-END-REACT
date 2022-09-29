@@ -33,26 +33,17 @@ function App() {
         <div>
           <Header />
           <Switch>
-<<<<<<< HEAD
             <Route exact path='/'>
               <Background />
-=======
-            <Route exact path="/">
-              <Background />   
-              <Main />
->>>>>>> 95a1c1b133cad27b79bd150e7cd532fce8978a4c
+
             </Route>
             <Route exact path='/photography'>
               <PhotograhyPage />
             </Route>
-<<<<<<< HEAD
-            <Route exact path='/graphic-design'>
-=======
             <Route exact path="/webdevelopment">
               <WebDevelopment />
             </Route>
             <Route exact path="/graphic-design">
->>>>>>> 95a1c1b133cad27b79bd150e7cd532fce8978a4c
               <GraphicDesignPage />
             </Route>
             <Route exact path='/food-services'>
@@ -61,22 +52,15 @@ function App() {
             <Route exact path='/writing&translation'>
               <WritingAndTranslationPage />
             </Route>
-<<<<<<< HEAD
 
             <Route exact path="/about-us">
               <AboutUS />
             </Route>
             <Route exact path='/forgetpassword'></Route>
-=======
-            <Route exact path="/about-us">
-              <AboutUS />
-            </Route>
->>>>>>> 95a1c1b133cad27b79bd150e7cd532fce8978a4c
           </Switch>
          <FooterMain/>
         </div>
       </Router>
-   
     </div>
   );
 }
