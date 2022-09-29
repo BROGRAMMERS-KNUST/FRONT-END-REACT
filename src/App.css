@@ -118,16 +118,3 @@ a.instagram social {
     justify-content: center;
     align-items: center;
 }
-body {
-    background-color: green;
-}
-  
-.tag {
-    text-align: center;
-}
-  
-.slick-slide img {
-    margin: auto;
-    width: 50%;
-    height: 50%;
-}
