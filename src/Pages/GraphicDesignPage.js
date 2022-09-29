@@ -13,7 +13,9 @@ function GraphicDesignPage() {
           <Link href="/" underline="hover">
             STULANCER
           </Link>
-          <Link underline="hover">GRAPHIC DESIGN</Link>
+          <Link underline="hover" href="/graphic-design">
+            GRAPHIC DESIGN
+          </Link>
         </Breadcrumbs>
         <Typography
           variant="h4"

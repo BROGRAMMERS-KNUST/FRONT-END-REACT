@@ -133,7 +133,7 @@ function Header() {
             </div>
           )}
           <Tabs textColor="secondary">
-            <Tab
+            <Tab href="/about-us" 
               sx={{
                 fontFamily: "Nunito",
                 fontWeight: "700",
