@@ -49,7 +49,7 @@ function Header() {
             fontFamily='Nunito'
             fontWeight='900'
             letterSpacing={1.5}
-            paddingRight='300px'
+            paddingRight='900px'
           >
             STULANCER
           </Typography>
