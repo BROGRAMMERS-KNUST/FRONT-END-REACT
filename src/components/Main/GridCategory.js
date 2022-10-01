@@ -256,6 +256,7 @@ const GridCategory = () => {
                 fontWeight: "700",
                 margin: 1.5,
                 marginBottom: 2,
+              
               }}
               size="small"
             >
