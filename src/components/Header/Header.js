@@ -11,61 +11,63 @@ import {
   Toolbar,
   Tooltip,
   Typography,
-} from "@mui/material";
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
-import Login from "../Auth/Login";
-import SignInOut from "./SignInOut";
+} from '@mui/material';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import Login from '../Auth/Login';
+import SignInOut from './SignInOut';
 
 function Header() {
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const history = useHistory();
   const dispatch = useDispatch();
 
   //FUNCTION FOR LOGGING OUT
   const handleLogout = () => {
-    dispatch({ type: "LOGOUT" });
-    history.push("/");
+    dispatch({ type: 'LOGOUT' });
+    history.push('/');
     setUser(null);
   };
 
   return (
     <Box>
       <AppBar
-        color="transparent"
-        sx={{ backdropFilter: "blur(30px)" }}
+        color='transparent'
+        sx={{ backdropFilter: 'blur(30px)' }}
         elevation={1}
       >
         <Toolbar>
           <Typography
             marginLeft={2}
-            color="primary"
-            variant="h2"
+            color='primary'
+            variant='h2'
             fontSize={30}
-            sx={{ flexGrow: 0.5 }}
-            fontFamily="Nunito"
-            fontWeight="900"
-            letterSpacing={1.5}
-            paddingRight="900px"
+            sx={{ flexGrow: 1 }}
+            fontFamily='Nunito'
+            fontWeight='700'
+            letterSpacing={2}
           >
             STULANCER
           </Typography>
+
           {/*CHECKS IF USER IS LOGGED IN AND DECIDES TYPE OF HEADER*/}
           {user ? (
             <div>
-              <Stack direction="row" spacing={2}>
-                <Avatar>
+              <Stack direction='row' spacing={2}>
+                <Avatar sx={{ marginTop: 0.5, bgcolor: 'orange' }}>
+                  {user.result.fullName.charAt(0)}
+
                   {/* alt={user.result.username.charAt(0)} src={user.result.imageUrl} */}
                 </Avatar>
-                <Tabs textColor="secondary">
-                  <Tooltip title="Click to visit your account page">
+                <Tabs textColor='secondary'>
+                  <Tooltip title='Click to visit your account page'>
                     <Tab
                       sx={{
-                        fontFamily: "Nunito",
-                        fontWeight: "700",
+                        fontFamily: 'Nunito',
+                        fontWeight: '700',
                       }}
                       label={user.result.fullName}
                     />
@@ -76,15 +78,15 @@ function Header() {
                   onClick={() => {
                     handleLogout();
                   }}
-                  color="secondary"
+                  color='secondary'
                   sx={{
                     borderRadius: 5,
                     marginRight: 2,
-                    fontFamily: "Nunito",
-                    fontWeight: "700",
+                    fontFamily: 'Nunito',
+                    fontWeight: '700',
                   }}
-                  size="large"
-                  variant="outlined"
+                  size='large'
+                  variant='outlined'
                 >
                   Log out
                 </Button>
@@ -93,55 +95,52 @@ function Header() {
           ) : (
             <div>
               {/**Join Button */}
-              <Stack direction>
-                <Button
-                  onClick={() => {
-                    setOpen(true);
-                  }}
-                  disableElevation
-                  sx={{
-                    borderRadius: 5,
-                    backgroundColor: "#ffc400",
-                    "&:hover": { backgroundColor: "#DFAE0C" },
-                    marginRight: 3,
-                    fontFamily: "Nunito",
-                    fontWeight: "700",
-                  }}
-                  size="large"
-                  variant="contained"
-                >
-                  Join
-                </Button>
+              <Button
+                onClick={() => {
+                  setOpen(true);
+                }}
+                disableElevation
+                sx={{
+                  borderRadius: 5,
+                  backgroundColor: '#ffc400',
+                  ':hover': { backgroundColor: '#DFAE0C' },
+                  marginRight: 2,
+                  fontFamily: 'Nunito',
+                  fontWeight: '700',
+                }}
+                size='large'
+                variant='contained'
+              >
+                Join
+              </Button>
 
-                <Button
-                  disableElevation
-                  onClick={() => {
-                    setOpenLogin(true);
-                  }}
-                  color="secondary"
-                  sx={{
-                    borderRadius: 5,
-                    marginRight: 2,
-                    fontFamily: "Nunito",
-                    fontWeight: "700",
-                  }}
-                  size="large"
-                  variant="outlined"
-                >
-                  Login
-                </Button>
-              </Stack>
+              <Button
+                disableElevation
+                onClick={() => {
+                  setOpenLogin(true);
+                }}
+                color='secondary'
+                sx={{
+                  borderRadius: 5,
+                  marginRight: 2,
+                  fontFamily: 'Nunito',
+                  fontWeight: '700',
+                }}
+                size='large'
+                variant='outlined'
+              >
+                Login
+              </Button>
             </div>
           )}
-          <Tabs textColor="secondary">
+          <Tabs textColor='secondary'>
             <Tab
-              href="/about-us"
+              href='/about-us'
               sx={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                marginRight: 100,
+                fontFamily: 'Nunito',
+                fontWeight: '700',
               }}
-              label="About us"
+              label='About us'
             />
           </Tabs>
         </Toolbar>

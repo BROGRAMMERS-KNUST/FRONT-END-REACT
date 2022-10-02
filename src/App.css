@@ -1,109 +1,16 @@
-
-img {
-  position:absolute;
+.LandingPic {
+  position: absolute;
   max-height: 42rem;
-  left:55%;
-  top:5%;
-
+  left: 55.5%;
+  top: 10%;
 }
 
-.highlight{
+.highlight {
   color: #e5b411;
   font-weight: 700;
 }
-.LandingPic{
-  align-self: auto;
-  width: 40vw;
-  height: 80vh;
-  opacity: 100%;
-}
 
-.HeaderClicks{
-  color: blue;
+img {
+  position: absolute;
+  max-height: 42rem;
 }
-  .social-container {
-  
-  padding: 25px 50px;
-  border-spacing: 2em;
-}
-a.social {
-  margin: 0 1rem;
-  transition: transform 250ms;
-  display: inline-block;
-}
-
-a.social:hover {
-  transform: translateY(-2px);
-}
-
-a.youtube {
-  color: #eb3223;
-}
-
-a.facebook {
-  color: #4968ad;
-}
-
-a.twitter {
-  color: #49a1eb;
-}
-
-a.instagram social {
-  color: black;
-}
-a.google social{
-  color:antiquewhite;
-
-}
-a.whatsapp icon{
-  color:darkslategrey
-}
-
-
-
-.Apple {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  color: #000133;
-}
-
-/* .header, */
-.footer {
-  background: #00022e;
-  height: 40px;
-  color: #fc86aa;
-}
-
-.container {
-  display: flex;
-  flex: 1;
-}
-
-.drawer {
-  background: #d8dcd6;
-  width: 240px;
-}
-
-.main {
-  flex: 1;
-  background: #f7f5f5;
-}
-.drawer {
-  background: #d8dcd6;
-  width: 0px;
-  transition: width 0.7s;
-}
-
-.opened {
-  width: 240px;
-}
-
-.social-container{
-  margin:-20px;
-  padding-left: 600px;
-  align-items: flex-end;
-  position: relative;
-  }
-
