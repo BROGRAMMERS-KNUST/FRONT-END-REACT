@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
-import SocialFollow from './SocialFollow'
+import SocialFollow from "./SocialFollow";
 
 export default function Footer() {
   return (
@@ -13,12 +13,13 @@ export default function Footer() {
         py={{ xs: 1, sm: 3 }}
         bgcolor="text.secondary"
         color="white"
+        marginTop={8}
       >
         <Container maxWidth="lg">
           <Grid container spacing={5}>
             <Grid item xs={12} sm={4}>
               <Box borderBottom={1}>Categories</Box>
-              <Box >
+              <Box>
                 <Link underline="none" href="/" color="inherit">
                   Web development
                 </Link>
@@ -81,39 +82,13 @@ export default function Footer() {
               &copy;{new Date().getFullYear()} Brogrammers | All right reserved
               | Terms of Service | Privacy
             </p>
-            <SocialFollow/>
+            <SocialFollow />
           </div>
-          
         </Container>
       </Box>
     </footer>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 import React from "react";

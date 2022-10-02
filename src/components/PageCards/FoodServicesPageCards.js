@@ -4,7 +4,7 @@ import { Typography, Box, Stack, Card } from "@mui/material";
 function FoodServicesPageCards() {
   return (
     <Box>
-      <Stack direction="row" spacing={4} sx={{ flexWrap: "wrap" }}>
+      <Stack direction="row" spacing={8} sx={{ flexWrap: "wrap" }}>
         <Stack>
           <Card
             sx={{

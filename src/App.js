@@ -1,10 +1,10 @@
 //fonts imports
 
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import React, { useEffect } from 'react';
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import React from "react";
 
 //css files
 
@@ -21,23 +21,20 @@ import FoodServicesPage from "./Pages/FoodServicesPage";
 import WritingAndTranslationPage from "./Pages/WritingAndTranslationPage";
 
 import FooterMain from "./components/Footer/FooterMain";
-import Dashboard from "./Pages/Dashboard";
-import AboutUS from "./Pages/AboutUS";
-const user = JSON.parse(localStorage.getItem("profile"));
 
+import AboutUS from "./Pages/AboutUS";
 
 function App() {
   return (
     <div>
-      <Router>        
+      <Router>
         <div>
           <Header />
           <Switch>
-            <Route exact path='/'>
+            <Route exact path="/">
               <Background />
-
             </Route>
-            <Route exact path='/photography'>
+            <Route exact path="/photography">
               <PhotograhyPage />
             </Route>
             <Route exact path="/webdevelopment">
@@ -46,19 +43,19 @@ function App() {
             <Route exact path="/graphic-design">
               <GraphicDesignPage />
             </Route>
-            <Route exact path='/food-services'>
+            <Route exact path="/food-services">
               <FoodServicesPage />
             </Route>
-            <Route exact path='/writing&translation'>
+            <Route exact path="/writing&translation">
               <WritingAndTranslationPage />
             </Route>
 
             <Route exact path="/about-us">
               <AboutUS />
             </Route>
-            <Route exact path='/forgetpassword'></Route>
+            <Route exact path="/forgetpassword"></Route>
           </Switch>
-         <FooterMain/>
+          <FooterMain />
         </div>
       </Router>
     </div>

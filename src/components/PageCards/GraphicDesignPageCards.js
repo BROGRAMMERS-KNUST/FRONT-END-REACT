@@ -5,40 +5,47 @@ import Card from "@mui/material/Card";
 function GraphicDesignPageCards() {
   return (
     <div>
-      <Box marginLeft="30px" marginRight="40px">
+      <Box marginLeft={1}>
         <Box
           sx={{
             background: "#0D4114",
             color: "white",
             height: "200px",
-            width: "1350px",
+            width: "95vw",
             borderRadius: "10px",
-            marginTop: 3
-            // padding:'16px',
+            marginTop: 3,
+            margin: "auto",
+            marginBottom: 5,
+            marginLeft: 0,
           }}
         >
-          <Typography align="center" variant="h4" paddingTop="15px" fontFamily={ "Nunito"}>
+          <Typography
+            align="center"
+            variant="h4"
+            paddingTop={3}
+            fontFamily={"Nunito"}
+          >
             Graphics & Design
           </Typography>
-          <Typography align="center" fontFamily={ "Nunito"}>Design to make you standout</Typography>
-
-          <Button
-            style={{ marginTop: 25, marginLeft: 570 }}
-            variant="contained"
-          >
-            {" "}
-            How Stulancer Works
-          </Button>
+          <Typography align="center" fontFamily={"Nunito"}>
+            Design to make you standout
+            <br />
+            <br />
+            <Button style={{ margin: "auto" }} variant="contained">
+              {" "}
+              How Stulancer Works
+            </Button>
+          </Typography>
         </Box>
         <br />
-        <Stack direction="row" spacing={6} sx={{ flexWrap: "wrap" }}>
+        <Stack direction="row" spacing={4} sx={{ flexWrap: "nowrap" }}>
           <Stack>
             <Card
               sx={{
                 background:
                   "url('https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600') ",
                 backgroundSize: "cover",
-                width: "300px",
+                width: 300,
                 height: 200,
               }}
             ></Card>
@@ -99,7 +106,7 @@ function GraphicDesignPageCards() {
                 background:
                   "url('https://imgs.search.brave.com/ZciqV_ZdFAB0hySTBTwf9Ki2WU8Czor17NrosD2FsYI/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5x/VjZUMXotVzRwS0FH/QWpBNWlMc3RnSGFI/YSZwaWQ9QXBp') ",
                 backgroundSize: "cover",
-                width: "300px",
+                width: 300,
                 height: 200,
               }}
             ></Card>
@@ -132,7 +139,7 @@ function GraphicDesignPageCards() {
                 background:
                   "url('https://imgs.search.brave.com/JJ9EyQU-Cl35bIX79vpEhk4hFAYWG5Q3nnkLQibaq60/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5U/ZnlVa2oxR0xfNU1H/RndaZ2pHbmpRSGFI/YSZwaWQ9QXBp') ",
                 backgroundSize: "cover",
-                width: "300px",
+                width: 300,
                 height: 200,
               }}
             ></Card>

@@ -1,19 +1,6 @@
 import React from "react";
 
-import {
-  Box,
-  Link,
-  Breadcrumbs,
-  Typography,
-  Card,
-  Stack,
-  Container,
-  Grid,
-} from "@mui/material";
-import Navbar from "../components/Header/Navbar";
-import { StayPrimaryLandscape } from "@mui/icons-material";
-import { hover } from "@testing-library/user-event/dist/hover";
-import { CheckCircleOutline } from "@mui/icons-material";
+import { Box, Typography, Card, Stack, Container, Grid } from "@mui/material";
 
 const AboutUS = () => {
   return (
@@ -152,7 +139,6 @@ const AboutUS = () => {
         </Stack>
       </Box>
     </Box>
-
   );
 };
 export default AboutUS;

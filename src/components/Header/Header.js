@@ -41,19 +41,18 @@ function Header() {
       >
         <Toolbar>
           <Typography
-             marginLeft={2}
-            color='primary'
-            variant='h2'
+            marginLeft={2}
+            color="primary"
+            variant="h2"
             fontSize={30}
             sx={{ flexGrow: 0.5 }}
-            fontFamily='Nunito'
-            fontWeight='900'
+            fontFamily="Nunito"
+            fontWeight="900"
             letterSpacing={1.5}
-            paddingRight='900px'
+            paddingRight="900px"
           >
             STULANCER
           </Typography>
-
           {/*CHECKS IF USER IS LOGGED IN AND DECIDES TYPE OF HEADER*/}
           {user ? (
             <div>
@@ -94,49 +93,53 @@ function Header() {
           ) : (
             <div>
               {/**Join Button */}
-              <Button
-                onClick={() => {
-                  setOpen(true);
-                }}
-                disableElevation
-                sx={{
-                  borderRadius: 5,
-                  backgroundColor: "#ffc400",
-                  "&:hover": { backgroundColor: "#DFAE0C" },
-                  marginRight: 2,
-                  fontFamily: "Nunito",
-                  fontWeight: "700",
-                }}
-                size="large"
-                variant="contained"
-              >
-                Join
-              </Button>
+              <Stack direction>
+                <Button
+                  onClick={() => {
+                    setOpen(true);
+                  }}
+                  disableElevation
+                  sx={{
+                    borderRadius: 5,
+                    backgroundColor: "#ffc400",
+                    "&:hover": { backgroundColor: "#DFAE0C" },
+                    marginRight: 3,
+                    fontFamily: "Nunito",
+                    fontWeight: "700",
+                  }}
+                  size="large"
+                  variant="contained"
+                >
+                  Join
+                </Button>
 
-              <Button
-                disableElevation
-                onClick={() => {
-                  setOpenLogin(true);
-                }}
-                color="secondary"
-                sx={{
-                  borderRadius: 5,
-                  marginRight: 2,
-                  fontFamily: "Nunito",
-                  fontWeight: "700",
-                }}
-                size="large"
-                variant="outlined"
-              >
-                Login
-              </Button>
+                <Button
+                  disableElevation
+                  onClick={() => {
+                    setOpenLogin(true);
+                  }}
+                  color="secondary"
+                  sx={{
+                    borderRadius: 5,
+                    marginRight: 2,
+                    fontFamily: "Nunito",
+                    fontWeight: "700",
+                  }}
+                  size="large"
+                  variant="outlined"
+                >
+                  Login
+                </Button>
+              </Stack>
             </div>
           )}
           <Tabs textColor="secondary">
-            <Tab href="/about-us" 
+            <Tab
+              href="/about-us"
               sx={{
                 fontFamily: "Nunito",
                 fontWeight: "700",
+                marginRight: 100,
               }}
               label="About us"
             />

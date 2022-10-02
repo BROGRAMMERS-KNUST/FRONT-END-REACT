@@ -4,19 +4,18 @@ import { useSelector } from "react-redux";
 import React, { useEffect } from "react";
 import { CircularProgress, Grid, Typography, Box } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { getPosts } from "../action/posts";
+import { getProfiles } from "../action/posts";
 
 function StulancersAvailable(field) {
   const { stulancers } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
-  console.log(field);
 
   useEffect(() => {
-    dispatch(getPosts(field));
+    dispatch(getProfiles(field));
   }, [dispatch]);
 
   return !stulancers ? (
-    <Box sx={{ marginTop: 4 }}>
+    <Box sx={{ marginTop: 4, marginLeft: 2 }}>
       <Typography variant="h5" sx={{ fontFamily: "Nunito" }}>
         Loading Stulancers...
       </Typography>

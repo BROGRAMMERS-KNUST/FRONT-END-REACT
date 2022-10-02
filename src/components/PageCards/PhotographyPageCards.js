@@ -3,8 +3,8 @@ import { Typography, Box, Stack, Card } from "@mui/material";
 
 function PageCards() {
   return (
-    <Box>
-      <Stack direction="row" spacing={4} sx={{ flexWrap: "wrap" }}>
+    <Box marginLeft={3} marginRight={4}>
+      <Stack direction="row" spacing={5} sx={{ flexWrap: "nowrap" }}>
         <Stack>
           <Card
             sx={{
