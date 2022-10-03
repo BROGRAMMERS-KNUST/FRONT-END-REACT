@@ -15,7 +15,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import GraphicDesignPage from './Pages/GraphicDesignPage';
 import FoodServicesPage from './Pages/FoodServicesPage';
 import WritingAndTranslationPage from './Pages/WritingAndTranslationPage';
+import FreelancerPage from './components/FreelancerPage';
+import FreelancerInfo from './components/FreelancerInfo';
 import Dashboard from './Pages/Dashboard';
+import PortfolioPage from './components/PortfolioPage';
 
 const user = JSON.parse(localStorage.getItem('profile'));
 
@@ -41,6 +44,15 @@ function App() {
             </Route>
             <Route path='/writing&translation'>
               <WritingAndTranslationPage />
+            </Route>
+            <Route path='/freelancerpage'>
+              <FreelancerPage />
+            </Route>
+            <Route path='/freelancerinfo'>
+              <FreelancerInfo />
+            </Route>
+            <Route path='/portfoliopage'>
+              <PortfolioPage />
             </Route>
           </Switch>
           {/*<Footer />*/}

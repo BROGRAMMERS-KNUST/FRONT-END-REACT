@@ -1,7 +1,23 @@
-import axios from "axios";
+import axios from 'axios';
 
-const url = "http://localhost:5000/";
+const API = axios.create({ baseURL: 'http://localhost:5000' });
+API.interceptors.request.use((req) => {
+  if (localStorage.getItem('profile')) {
+    req.headers.Authorization = `Bearer ${
+      JSON.parse(localStorage.getItem('profile')).token
+    }`;
+  }
 
-export const fetchPosts = (Data) => axios.get(`${url}posts`);
-export const signup = (userData) => axios.post(`${url}user/signup`, userData);
-export const login = (loginData) => axios.post(`${url}user/login`, loginData);
+  return req;
+});
+
+export const fetchPosts = (Data) => API.get('/posts');
+export const signup = (userData) => API.post('/user/signup', userData);
+export const signupserviceprovider = (userData) =>
+  API.post('/user/signupservice', userData);
+export const loginhirer = (loginData) =>
+  API.post('/user/loginhirer', loginData);
+export const loginservicer = (loginData) =>
+  API.post('/user/loginservicer', loginData);
+export const freelancerinfo = (freelancerData, freelancerId) =>
+  API.patch(`/user/signupservice/${freelancerId}`, freelancerData);

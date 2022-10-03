@@ -15,7 +15,8 @@ import {
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import Login from '../Auth/Login';
+import Login from '../Auth/LoginHirer';
+import LoginInBoth from '../LogInBoth';
 import SignInOut from './SignInOut';
 
 function Header() {
@@ -49,6 +50,9 @@ function Header() {
             fontFamily='Nunito'
             fontWeight='700'
             letterSpacing={2}
+            onClick={() => {
+              history.push('/');
+            }}
           >
             STULANCER
           </Typography>
@@ -161,7 +165,7 @@ function Header() {
           setOpenLogin(false);
         }}
       >
-        <Login />
+        <LoginInBoth />
       </Modal>
     </Box>
   );

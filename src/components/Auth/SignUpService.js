@@ -2,7 +2,7 @@ import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
 
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { signup } from '../../action/auth';
+import { signupserviceprovider } from '../../action/auth';
 import { useHistory } from 'react-router-dom';
 import FileBase from 'react-file-base64';
 const SignUpService = () => {
@@ -21,11 +21,16 @@ const SignUpService = () => {
     email: '',
     password: '',
     serviceType: 'servicer',
+    bio: '',
+    portfolioLink: '',
+    telephoneNumber: 0,
+    whatsappLink: '',
+    service: '',
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(signup(userData, history));
+    dispatch(signupserviceprovider(userData, history));
     console.log(userData);
   };
 
