@@ -23,6 +23,7 @@ const SignUpService = () => {
     serviceType: 'servicer',
     bio: '',
     portfolioLink: '',
+    profilePic: '',
     telephoneNumber: 0,
     whatsappLink: '',
     service: '',
@@ -86,7 +87,13 @@ const SignUpService = () => {
           <Typography sx={{}} color='#646765' fontFamily='Nunito'>
             Upload profile picture
           </Typography>
-          <FileBase type='file' multiple='false' />
+          <FileBase
+            type='file'
+            multiple={false}
+            onDone={({ base64 }) => {
+              userData.profilePic = base64;
+            }}
+          />
           <Button
             type='submit'
             sx={{

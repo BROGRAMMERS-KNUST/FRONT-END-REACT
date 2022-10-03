@@ -19,6 +19,7 @@ const SignUp = () => {
     fullName: '',
     email: '',
     password: '',
+    profilePic: '',
     serviceType: 'hirer',
   };
   const dispatch = useDispatch();
@@ -81,7 +82,13 @@ const SignUp = () => {
           <Typography sx={{}} color='#646765' fontFamily='Nunito'>
             Upload profile picture
           </Typography>
-          <FileBase type='file' multiple='false' />
+          <FileBase
+            type='file'
+            multiple='false'
+            onDone={({ base64 }) => {
+              userData.profilePic = base64;
+            }}
+          />
 
           <Button
             sx={{
