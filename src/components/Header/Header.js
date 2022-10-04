@@ -62,11 +62,12 @@ function Header() {
           {user ? (
             <div>
               <Stack direction='row' spacing={2}>
-                <Avatar sx={{ marginTop: 0.5, bgcolor: 'orange' }}>
-                  {user.result.fullName.charAt(0)}
+                <Avatar
+                  alt={user.result.fullName.charAt(0)}
+                  src={user.result.profilePic}
+                  sx={{ marginTop: 0.5, bgcolor: 'orange' }}
+                />
 
-                  {/* alt={user.result.username.charAt(0)} src={user.result.imageUrl} */}
-                </Avatar>
                 <Tabs textColor='secondary'>
                   <Tooltip title='Click to visit your account page'>
                     <Tab
