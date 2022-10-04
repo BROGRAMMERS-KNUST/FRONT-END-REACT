@@ -1,5 +1,4 @@
 import * as api from '../api/index';
-
 export const signup = (userData, history) => async (dispatch) => {
   try {
     const { data } = await api.signup(userData);
