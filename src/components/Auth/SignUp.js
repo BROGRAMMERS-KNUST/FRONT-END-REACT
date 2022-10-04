@@ -27,6 +27,7 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(signup(userData, history));
+    window.location.reload();
   };
 
   return (
@@ -84,7 +85,7 @@ const SignUp = () => {
           </Typography>
           <FileBase
             type='file'
-            multiple='false'
+            multiple={false}
             onDone={({ base64 }) => {
               userData.profilePic = base64;
             }}

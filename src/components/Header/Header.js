@@ -31,6 +31,7 @@ function Header() {
     dispatch({ type: 'LOGOUT' });
     history.push('/');
     setUser(null);
+    window.location.reload();
   };
 
   return (

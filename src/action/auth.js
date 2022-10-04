@@ -4,7 +4,7 @@ export const signup = (userData, history) => async (dispatch) => {
   try {
     const { data } = await api.signup(userData);
     dispatch({ type: 'AUTH', data });
-    history.go('/');
+    history.push('/');
   } catch (error) {
     console.log(error);
   }
@@ -15,6 +15,7 @@ export const signupserviceprovider =
       const { data } = await api.signupserviceprovider(userData);
       dispatch({ type: 'AUTHSERVICE', data });
       history.push('/freelancerinfo');
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }
@@ -25,6 +26,7 @@ export const loginhirer = (loginData, history) => async (dispatch) => {
     const { data } = await api.loginhirer(loginData);
     dispatch({ type: 'AUTH', data });
     history.push('/');
+    window.location.reload();
   } catch (error) {
     console.log(error);
   }
@@ -35,6 +37,7 @@ export const loginservicer = (loginData, history) => async (dispatch) => {
     const { data } = await api.loginservicer(loginData);
     dispatch({ type: 'AUTH', data });
     history.push('/portfoliopage');
+    window.location.reload();
   } catch (error) {
     console.log(error);
   }
