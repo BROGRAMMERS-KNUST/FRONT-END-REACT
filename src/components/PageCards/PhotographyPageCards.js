@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box, Stack, Card } from "@mui/material";
+import { Typography, Box, Stack, Card, Button } from "@mui/material";
 
 function PageCards() {
   return (
@@ -9,7 +9,7 @@ function PageCards() {
           <Card
             sx={{
               background:
-                "url('https://www.ghanayello.com/img/gh/j/1623446783-57-pixxxy-photography.jpg') ",
+                "url('https://www.thoughtco.com/thmb/GAtp0KJWAXudEuz9ufGu2jKAdYQ=/3909x2199/smart/filters:no_upscale()/film-photography-592347645-59e4d0609abed500119e7b14.jpg') ",
               backgroundSize: "cover",
               width: "300px",
               height: 200,
@@ -22,10 +22,13 @@ function PageCards() {
               fontFamily: "Nunito",
             }}
           >
-            Photoshoots
+            Photography
           </Typography>
           <Typography variant="body" width="300px">
-            Get memories that will last a lifetime.
+            <Button variant="text">Photoshoots</Button> <br />{" "}
+            <Button variant="text"> Birthdays & Parties</Button> <br />{" "}
+            <Button variant="text">Graduation & Matriculation </Button>
+            <br /> <Button variant="text">Local photography</Button>
           </Typography>
         </Stack>
 
@@ -33,7 +36,7 @@ function PageCards() {
           <Card
             sx={{
               background:
-                "url('https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=964&q=80') ",
+                "url('https://cdn.mos.cms.futurecdn.net/9bjnhkgWn4CVMZzbNHw7de-320-80.jpg') ",
               backgroundSize: "cover",
               width: 300,
               height: 200,
@@ -46,10 +49,13 @@ function PageCards() {
               fontFamily: "Nunito",
             }}
           >
-            Birthdays & Parties
+            Video Editing 
           </Typography>
           <Typography variant="body" width="300px">
-            Get the best of photographers for your birthday events.
+          <Button variant="text">Video Editing</Button> <br />{" "}
+            <Button variant="text">Social Media Videos</Button> <br />{" "}
+            <Button variant="text">Real Estate Promos</Button>
+            <br /> <Button variant="text">Animation</Button>
           </Typography>
         </Stack>
 
@@ -57,7 +63,7 @@ function PageCards() {
           <Card
             sx={{
               background:
-                "url('https://imgs.search.brave.com/pGWN2s3OA4uEJTASyBvEpcigcsFSM1H_cR-IhuJN3UI/rs:fit:678:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC4y/MjF3ZUxtenBWVlNw/QU5iaTI3UUx3SGFG/TCZwaWQ9QXBp') ",
+                "url('https://berkas.lektur.id/kbbi-tesaurus/miscellaneous.jpg') ",
               backgroundSize: "cover",
               width: "300px",
               height: 200,
@@ -70,10 +76,13 @@ function PageCards() {
               fontFamily: "Nunito",
             }}
           >
-            Graduation & Matriculation
+            Miscellaneous
           </Typography>
           <Typography variant="body" width="300px">
-            Get the best pictures of your academic milestones.
+          <Button variant="text">Logo Animation</Button> <br />{" "}
+            <Button variant="text">NFT Animation</Button> <br />{" "}
+            <Button variant="text">Animation for Kids</Button>
+            <br /> <Button variant="text">Videographers</Button>
           </Typography>
         </Stack>
       </Stack>

@@ -92,7 +92,7 @@ const GridCategory = () => {
               sx={{ fontFamily: 'Nunito', fontWeight: '700', marginLeft: 1.5 }}
               color='white'
             >
-              Photography
+              Photography&Video
             </Typography>
 
             <Button
