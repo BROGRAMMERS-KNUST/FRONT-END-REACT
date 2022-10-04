@@ -21,28 +21,37 @@ export default function Footer() {
               <Box borderBottom={1}>Categories</Box>
               <Box>
                 <Link underline="none" href="/" color="inherit">
+                  Home
+                </Link>
+              </Box>
+              <Box>
+                <Link underline="none" href="/webdevelopment" color="inherit">
                   Web development
                 </Link>
               </Box>
               <Box>
-                <Link underline="none" href="/" color="inherit">
+                <Link underline="none" href="/photography" color="inherit">
                   {" "}
                   Photogragphy
                 </Link>
               </Box>
               <Box>
-                <Link underline="none" href="/" color="inherit">
-                  Catering Services
+                <Link underline="none" href="/food-serices" color="inherit">
+                  Food Services
                 </Link>
               </Box>
               <Box>
-                <Link underline="none" href="/" color="inherit">
+                <Link
+                  underline="none"
+                  href="/writing&translation"
+                  color="inherit"
+                >
                   {" "}
                   Writing
                 </Link>
               </Box>
               <Box>
-                <Link underline="none" href="/" color="inherit">
+                <Link underline="none" href="/graphic-design" color="inherit">
                   Graphic Design
                 </Link>
               </Box>
@@ -79,10 +88,10 @@ export default function Footer() {
           <hr />
           <div className="row">
             <p className="col-sm">
+              <SocialFollow />
               &copy;{new Date().getFullYear()} Brogrammers | All right reserved
               | Terms of Service | Privacy
             </p>
-            <SocialFollow />
           </div>
         </Container>
       </Box>

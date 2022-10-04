@@ -7,13 +7,9 @@ const BoxOne = () => {
       {/* FIRST BOX */}
       <Box
         sx={{
-          bgcolor: "#000042",
-          color: "white",
+          color: "primary",
           height: "80vh",
           padding: "15px",
-          "&:hover": {
-            bgcolor: "#000057",
-          },
         }}
       >
         <Grid width={600} margin="auto">
@@ -22,10 +18,11 @@ const BoxOne = () => {
             align="center"
             color="secondary"
             sx={{
-              marginTop: 10,
+              marginTop: 20,
               marginLeft: 4,
               marginRight: 4,
               fontFamily: "Nunito",
+              fontWeight: "bold",
             }}
           >
             About Us
@@ -38,13 +35,18 @@ const BoxOne = () => {
               marginLeft: 4,
               marginRight: 4,
             }}
-            fontWeight="700"
-            color="#b3b3cc"
+            fontWeight="bold"
+            color="primary"
           >
             We are on a mision to help students hone their skills by providing a
             freelancing platform
           </Typography>
-          <Typography variant="body1" align="center" marginBottom={6}>
+          <Typography
+            variant="body1"
+            align="center"
+            marginBottom={6}
+            fontWeight="bold"
+          >
             Our mission is reduce the hassle of finding reliable services on
             campus
           </Typography>
