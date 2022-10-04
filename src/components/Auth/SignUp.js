@@ -27,7 +27,6 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(signup(userData, history));
-    window.location.reload();
   };
 
   return (
