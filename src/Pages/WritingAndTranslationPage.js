@@ -14,12 +14,6 @@ function WritingAndTranslationPage() {
         </Link>
         <Link underline='hover'>WRITING & TRANSLATION</Link>
       </Breadcrumbs>
-      <Typography
-        variant='h4'
-        sx={{ marginTop: 1, marginBottom: 2, fontFamily: 'Nunito' }}
-      >
-        Explore Writing & Translation
-      </Typography>
       <WritingAndTranslationPageCards />
       <StulancersAvailable service='Author' />
     </Box>

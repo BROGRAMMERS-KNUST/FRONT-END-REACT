@@ -1,12 +1,11 @@
 import React from "react";
 import { Typography, Box, Stack, Card, Button } from "@mui/material";
 import BrushIcon from "@mui/icons-material/Brush";
-import VideoCallIcon from '@mui/icons-material/VideoCall';
-import CameraAltIcon from '@mui/icons-material/CameraAlt';
-import AnimationIcon from '@mui/icons-material/Animation';
-import SchoolIcon from '@mui/icons-material/School';
-import FilterIcon from '@mui/icons-material/Filter';
-
+import VideoCallIcon from "@mui/icons-material/VideoCall";
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import AnimationIcon from "@mui/icons-material/Animation";
+import SchoolIcon from "@mui/icons-material/School";
+import FilterIcon from "@mui/icons-material/Filter";
 
 function PageCards() {
   return (
@@ -136,11 +135,18 @@ function PageCards() {
           >
             Photography
           </Typography>
+          <Typography
+            variant="h5"
+            width="300px"
+            sx={{
+              fontFamily: "Nunito",
+            }}
+          ></Typography>
           <Typography variant="body" width="300px">
-            <Button variant="text">Photoshoots</Button> <br />{" "}
-            <Button variant="text"> Birthdays & Parties</Button> <br />{" "}
-            <Button variant="text">Graduation & Matriculation </Button>
-            <br /> <Button variant="text">Local photography</Button>
+            <Button sx={{ color: "black" }}>Photoshoots</Button> <br />{" "}
+            <Button sx={{ color: "black" }}> Birthdays & Parties</Button> <br />{" "}
+            <Button sx={{ color: "black" }}>Graduation & Matriculation </Button>
+            <br /> <Button sx={{ color: "black" }}>Local photography</Button>
           </Typography>
         </Stack>
 
@@ -164,10 +170,10 @@ function PageCards() {
             Video Editing
           </Typography>
           <Typography variant="body" width="300px">
-            <Button variant="text">Video Editing</Button> <br />{" "}
-            <Button variant="text">Social Media Videos</Button> <br />{" "}
-            <Button variant="text">Real Estate Promos</Button>
-            <br /> <Button variant="text">Animation</Button>
+            <Button sx={{ color: "black" }}>Video Editing</Button> <br />{" "}
+            <Button sx={{ color: "black" }}>Social Media Videos</Button> <br />{" "}
+            <Button sx={{ color: "black" }}>Real Estate Promos</Button>
+            <br /> <Button sx={{ color: "black" }}>Animation</Button>
           </Typography>
         </Stack>
 
@@ -191,10 +197,10 @@ function PageCards() {
             Miscellaneous
           </Typography>
           <Typography variant="body" width="300px">
-            <Button variant="text">Logo Animation</Button> <br />{" "}
-            <Button variant="text">NFT Animation</Button> <br />{" "}
-            <Button variant="text">Animation for Kids</Button>
-            <br /> <Button variant="text">Videographers</Button>
+            <Button sx={{ color: "black" }}>Logo Animation</Button> <br />{" "}
+            <Button sx={{ color: "black" }}>NFT Animation</Button> <br />{" "}
+            <Button sx={{ color: "black" }}>Animation for Kids</Button>
+            <br /> <Button sx={{ color: "black" }}>Videographers</Button>
           </Typography>
         </Stack>
       </Stack>

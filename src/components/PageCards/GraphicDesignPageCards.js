@@ -113,6 +113,9 @@ function GraphicDesignPageCards() {
           </Box>
         </Stack>
         <br />
+        <Typography variant="h5" fontWeight="medium">
+        Explore Graphics & Design
+      </Typography>
         <Stack direction="row" spacing={4} sx={{ flexWrap: "nowrap" }}>
           <Stack>
             <Card
@@ -135,13 +138,13 @@ function GraphicDesignPageCards() {
               Logo and Brand Identity
             </Typography>
             <Typography variant="body" width="300px">
-            <Button variant="text">Logo Maker</Button>
+            <Button sx={{ color: "black" }}>Logo Maker</Button>
               <br />
-              <Button variant="text">Brand Style Guides</Button>
+              <Button sx={{ color: "black" }}>Brand Style Guides</Button>
               <br />
-              <Button variant="text">Logo Design</Button>
+              <Button sx={{ color: "black" }}>Logo Design</Button>
               <br />
-              <Button variant="text">Business Cards & Stationaries</Button>
+              <Button sx={{ color: "black" }}>Business Cards & Stationaries</Button>
               <br />
             </Typography>
           </Stack>
@@ -167,10 +170,10 @@ function GraphicDesignPageCards() {
               Visual Design
             </Typography>
             <Typography variant="body" width="300px">
-              <Button variant="text">Image Editing</Button> <br />{" "}
-              <Button variant="text">Presentation Design</Button> <br />{" "}
-              <Button variant="text">Infographic Design </Button>
-              <br /> <Button variant="text">Resume Design</Button>
+              <Button sx={{ color: "black" }}>Image Editing</Button> <br />{" "}
+              <Button sx={{ color: "black" }}>Presentation Design</Button> <br />{" "}
+              <Button sx={{ color: "black" }}>Infographic Design </Button>
+              <br /> <Button sx={{ color: "black" }}>Resume Design</Button>
             </Typography>
           </Stack>
 
@@ -195,13 +198,13 @@ function GraphicDesignPageCards() {
               Print Design
             </Typography>
             <Typography variant="body" width="300px">
-              <Button variant="text">T-Shirts & Merchandise</Button> <br />
-              <Button variant="text">Flyer Design</Button> <br />{" "}
-              <Button variant="text">Brochure Design </Button>
-              <br /> <Button variant="text">Poster Design</Button> <br />           
-              <Button variant="text">Menu Design</Button>
+              <Button sx={{ color: "black" }}>T-Shirts & Merchandise</Button> <br />
+              <Button sx={{ color: "black" }}>Flyer Design</Button> <br />{" "}
+              <Button sx={{ color: "black" }}>Brochure Design </Button>
+              <br /> <Button sx={{ color: "black" }}>Poster Design</Button> <br />           
+              <Button sx={{ color: "black" }}>Menu Design</Button>
               <br />
-              <Button variant="text">Invitation Design</Button>
+              <Button sx={{ color: "black" }}>Invitation Design</Button>
             </Typography>
           </Stack>
 
@@ -226,12 +229,12 @@ function GraphicDesignPageCards() {
               Packaging & Covers
             </Typography>
             <Typography variant="body" width="300px">
-              <Button variant="text">Packaging & Label Design </Button> <br />
-              <Button variant="text">Book Design</Button> <br />{" "}
-              <Button variant="text">Laptop Stickers</Button> <br />{" "}
-              <Button variant="text">Album Cover </Button>
-              <br /> <Button variant="text">Menu Design</Button> <br />{" "}
-              <Button variant="text">Cover Art</Button>
+              <Button sx={{ color: "black" }}>Packaging & Label Design </Button> <br />
+              <Button sx={{ color: "black" }}>Book Design</Button> <br />{" "}
+              <Button sx={{ color: "black" }}>Laptop Stickers</Button> <br />{" "}
+              <Button sx={{ color: "black" }}>Album Cover </Button>
+              <br /> <Button sx={{ color: "black" }}>Menu Design</Button> <br />{" "}
+              <Button sx={{ color: "black" }}>Cover Art</Button>
             </Typography>
           </Stack>
         </Stack>
@@ -257,9 +260,9 @@ function GraphicDesignPageCards() {
               Miscellaneous
             </Typography>
             <Typography variant="body" width="300px">
-              <Button variant="text">Game Art </Button> <br />{" "}
-              <Button variant="text">Infographic Design </Button>
-              <br /> <Button variant="text">Social Media Design</Button>
+              <Button sx={{ color: "black" }}>Game Art </Button> <br />{" "}
+              <Button sx={{ color: "black" }}>Infographic Design </Button>
+              <br /> <Button sx={{ color: "black" }}>Social Media Design</Button>
             </Typography>
           </Stack>
         </Stack>
