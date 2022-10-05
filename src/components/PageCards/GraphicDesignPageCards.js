@@ -135,8 +135,7 @@ function GraphicDesignPageCards() {
               Logo and Brand Identity
             </Typography>
             <Typography variant="body" width="300px">
-              Stand out from the crowd with a logo that fits your business and
-              ideas.
+            <Button variant="text">Logo Maker</Button>
               <br />
               <Button variant="text">Brand Style Guides</Button>
               <br />
@@ -179,7 +178,7 @@ function GraphicDesignPageCards() {
             <Card
               sx={{
                 background:
-                  "url('https://imgs.search.brave.com/ZciqV_ZdFAB0hySTBTwf9Ki2WU8Czor17NrosD2FsYI/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5x/VjZUMXotVzRwS0FH/QWpBNWlMc3RnSGFI/YSZwaWQ9QXBp') ",
+                  "url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/75513a77da804a4b04cf63c5231e5fe2-1627366825531/print_design_2x.png') ",
                 backgroundSize: "cover",
                 width: 300,
                 height: 200,
@@ -199,9 +198,7 @@ function GraphicDesignPageCards() {
               <Button variant="text">T-Shirts & Merchandise</Button> <br />
               <Button variant="text">Flyer Design</Button> <br />{" "}
               <Button variant="text">Brochure Design </Button>
-              <br /> <Button variant="text">Poster Design</Button> <br />
-              <Button variant="text">Catalog Design </Button>
-              <br />
+              <br /> <Button variant="text">Poster Design</Button> <br />           
               <Button variant="text">Menu Design</Button>
               <br />
               <Button variant="text">Invitation Design</Button>
@@ -212,7 +209,7 @@ function GraphicDesignPageCards() {
             <Card
               sx={{
                 background:
-                  "url('https://imgs.search.brave.com/JJ9EyQU-Cl35bIX79vpEhk4hFAYWG5Q3nnkLQibaq60/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5U/ZnlVa2oxR0xfNU1H/RndaZ2pHbmpRSGFI/YSZwaWQ9QXBp') ",
+                  "url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/fa22b92aed2d9e4e17b63c7af717aa24-1626178498470/Packaging_Labels_2x.png') ",
                 backgroundSize: "cover",
                 width: 300,
                 height: 200,
@@ -260,7 +257,6 @@ function GraphicDesignPageCards() {
               Miscellaneous
             </Typography>
             <Typography variant="body" width="300px">
-              <Button variant="text">Logo Maker</Button> <br />{" "}
               <Button variant="text">Game Art </Button> <br />{" "}
               <Button variant="text">Infographic Design </Button>
               <br /> <Button variant="text">Social Media Design</Button>
