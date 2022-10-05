@@ -11,7 +11,7 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-export const fetchPosts = (Data) => API.get('/posts');
+export const fetchPosts = ({ service }) => API.get(`/posts/${service}`);
 export const signup = (userData) => API.post('/user/signup', userData);
 export const signupserviceprovider = (userData) =>
   API.post('/user/signupservice', userData);

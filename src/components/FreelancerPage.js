@@ -1,16 +1,31 @@
-import { Avatar, Button, CssBaseline, Paper, Typography } from '@mui/material';
+import {
+  Avatar,
+  Button,
+  CssBaseline,
+  IconButton,
+  Paper,
+  Typography,
+} from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import avatar from '../images/pavel-anoshin-d0peGya6R5Y-unsplash.jpg';
 import Rating from '@mui/material/Rating';
 import CallIcon from '@mui/icons-material/Call';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-
+import CloseIcon from '@mui/icons-material/Close';
 import WorkIcon from '@mui/icons-material/Work';
 function getLabelText(value) {
   return value;
 }
-const FreelancerPage = () => {
+const FreelancerPage = ({
+  fullName,
+  bio,
+  profilePic,
+  telephoneNumber,
+  portfolioLink,
+  whatsappLink,
+  service,
+}) => {
   const [value, setValue] = useState(4.5);
   getLabelText(value);
   return (
@@ -19,11 +34,14 @@ const FreelancerPage = () => {
         elevation={6}
         sx={{
           width: 500,
-          marginTop: 10.5,
+          marginTop: 6.5,
           marginLeft: 62,
           paddingTop: 3,
         }}
       >
+        <IconButton sx={{ marginLeft: 55.5, marginTop: -1.5 }}>
+          <CloseIcon />
+        </IconButton>
         <Avatar
           sx={{
             bgcolor: 'orange',
@@ -34,16 +52,16 @@ const FreelancerPage = () => {
             width: 150,
             height: 150,
           }}
-          src={avatar}
+          src={profilePic}
         />
 
         <Typography
-          sx={{ marginLeft: 14 }}
+          sx={{ textAlign: 'center' }}
           fontSize={40}
           fontWeight='700'
           fontFamily='Nunito'
         >
-          Kwame Darkwa
+          {fullName}
         </Typography>
         <Typography
           fontSize={25}
@@ -51,7 +69,7 @@ const FreelancerPage = () => {
           color='primary'
           fontFamily='Nunito'
         >
-          Photographer
+          {service}
         </Typography>
         <CssBaseline />
         <Box sx={{ display: 'flex' }}>
@@ -59,14 +77,14 @@ const FreelancerPage = () => {
             name='half-rating-read'
             value={value}
             precision={0.5}
-            sx={{ paddingLeft: 22, marginBottom: 2 }}
+            sx={{ paddingLeft: 20, marginBottom: 2 }}
             size='large'
             readOnly
             getLabelText={getLabelText}
           />
 
           <Typography
-            sx={{ paddingLeft: 2 }}
+            sx={{ paddingLeft: 1.5 }}
             color='#646765'
             fontFamily='Nunito'
             fontWeight='700'
@@ -88,8 +106,7 @@ const FreelancerPage = () => {
           color='#646765'
           variant='body2'
         >
-          Hey, I am Kwame Darkwa! I am a Photographer focused on Outdoor
-          Scenery. I have worked with several international companies.
+          {bio}
         </Typography>
 
         <Typography

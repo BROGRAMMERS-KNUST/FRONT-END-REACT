@@ -1,8 +1,8 @@
-import { Typography, Box, Breadcrumbs, Link } from "@mui/material";
-import React from "react";
-import Navbar from "../components/Header/Navbar";
-import PhotographyPageCards from "../components/PageCards/PhotographyPageCards";
-import StulancersAvailable from "./StulancersAvailable";
+import { Typography, Box, Breadcrumbs, Link } from '@mui/material';
+import React from 'react';
+import Navbar from '../components/Header/Navbar';
+import PhotographyPageCards from '../components/PageCards/PhotographyPageCards';
+import StulancersAvailable from './StulancersAvailable';
 
 export default function PhotograhyPage() {
   return (
@@ -24,7 +24,7 @@ export default function PhotograhyPage() {
         Photography
       </Typography>
       <PhotographyPageCards />
-      <StulancersAvailable field="photography" />
+      <StulancersAvailable service="Photographer" />
     </Box>
   );
 }

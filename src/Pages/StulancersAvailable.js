@@ -1,22 +1,23 @@
-import StulancerComp from "../components/StulancerComp";
-import { useSelector } from "react-redux";
+import StulancerComp from '../components/StulancerComp';
+import { useSelector } from 'react-redux';
 
-import React, { useEffect } from "react";
-import { CircularProgress, Grid, Typography, Box } from "@mui/material";
-import { useDispatch } from "react-redux";
-import { getProfiles } from "../action/posts";
+import React, { useEffect } from 'react';
+import { CircularProgress, Grid, Typography, Box } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import { getProfiles } from '../action/posts';
 
-function StulancersAvailable(field) {
+function StulancersAvailable(service) {
   const { stulancers } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getProfiles(field));
+    dispatch(getProfiles(service));
+    console.log(service);
   }, [dispatch]);
 
   return !stulancers ? (
     <Box sx={{ marginTop: 4, marginLeft: 2 }}>
-      <Typography variant="h5" sx={{ fontFamily: "Nunito" }}>
+      <Typography variant='h5' sx={{ fontFamily: 'Nunito' }}>
         Loading Stulancers...
       </Typography>
       <CircularProgress />
@@ -24,16 +25,16 @@ function StulancersAvailable(field) {
   ) : (
     <Box sx={{ marginTop: 4, marginBottom: 4 }}>
       <Typography
-        color="primary"
-        variant="h5"
-        sx={{ marginTop: 1, marginBottom: 2, fontFamily: "Nunito" }}
+        color='primary'
+        variant='h5'
+        sx={{ marginTop: 1, marginBottom: 2, fontFamily: 'Nunito' }}
       >
         Stulancers Available
       </Typography>
-      <Grid container alignItems="stretch" spacing={2} flexWrap>
+      <Grid container alignItems='stretch' spacing={2} flexWrap>
         {stulancers.map((stulancer) => (
           <Grid item key={stulancer._id} xs={12} sm={2}>
-            <StulancerComp stulancer={stulancer} field={field} />
+            <StulancerComp stulancer={stulancer} field={service} />
           </Grid>
         ))}
       </Grid>

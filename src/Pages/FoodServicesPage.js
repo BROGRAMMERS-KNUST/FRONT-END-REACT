@@ -1,8 +1,8 @@
-import React from "react";
-import { Box, Link, Breadcrumbs, Typography } from "@mui/material";
-import StulancersAvailable from "../Pages/StulancersAvailable";
-import Navbar from "../components/Header/Navbar";
-import FoodServicesPageCards from "../components/PageCards/FoodServicesPageCards";
+import React from 'react';
+import { Box, Link, Breadcrumbs, Typography } from '@mui/material';
+import StulancersAvailable from '../Pages/StulancersAvailable';
+import Navbar from '../components/Header/Navbar';
+import FoodServicesPageCards from '../components/PageCards/FoodServicesPageCards';
 
 function FoodServicesPage() {
   return (
@@ -10,19 +10,19 @@ function FoodServicesPage() {
       <Box sx={{ marginTop: 10, marginLeft: 4, marginRight: 4 }}>
         <Navbar />
         <Breadcrumbs>
-          <Link href="/" underline="hover">
+          <Link href='/' underline='hover'>
             STULANCER
           </Link>
-          <Link underline="hover">Explore Food Services</Link>
+          <Link underline='hover'>Explore Food Services</Link>
         </Breadcrumbs>
         <Typography
-          variant="h4"
-          sx={{ marginTop: 1, marginBottom: 2, fontFamily: "Nunito" }}
+          variant='h4'
+          sx={{ marginTop: 1, marginBottom: 2, fontFamily: 'Nunito' }}
         >
           Food Services
         </Typography>
         <FoodServicesPageCards />
-        <StulancersAvailable />
+        <StulancersAvailable service='Caterer' />
       </Box>
     </div>
   );

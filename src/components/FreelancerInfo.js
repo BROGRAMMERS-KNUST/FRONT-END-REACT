@@ -130,6 +130,7 @@ const FreelancerInfo = () => {
               <MenuItem value='Web Developer'>Web Developer</MenuItem>
               <MenuItem value='Caterer'>Caterer</MenuItem>
               <MenuItem value='Graphic Designer'>Graphic Designer</MenuItem>
+              <MenuItem value='Author'>CV Writer</MenuItem>
               <MenuItem value='Other'>Other</MenuItem>
             </Select>
           </FormControl>
