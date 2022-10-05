@@ -17,12 +17,6 @@ function GraphicDesignPage() {
             GRAPHIC DESIGN
           </Link>
         </Breadcrumbs>
-        <Typography
-          variant='h4'
-          sx={{ marginTop: 1, marginBottom: 2, fontFamily: 'Nunito' }}
-        >
-          Graphic Design
-        </Typography>
         <GraphicDesignPageCards />
         <StulancersAvailable service='Graphic Designer' />
       </Box>

@@ -1,6 +1,12 @@
 import React from "react";
 import { Box, Stack, Typography, Button } from "@mui/material";
 import Card from "@mui/material/Card";
+import ImageIcon from "@mui/icons-material/Image";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LaptopIcon from '@mui/icons-material/Laptop';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
+import BrushIcon from '@mui/icons-material/Brush';
 
 function GraphicDesignPageCards() {
   return (
@@ -37,6 +43,75 @@ function GraphicDesignPageCards() {
             </Button>
           </Typography>
         </Box>
+         <Typography fontWeight= 'medium'> Most popular in Graphics & Design</Typography> <br/>
+        <Stack  direction="row" spacing={4} sx={{ flexWrap: "nowrap" }}>
+          <Box
+            sx={{
+              bgcolor: "background.paper",
+              boxShadow: 1,
+              borderRadius: 2,
+              p: 2,
+              width: "12vw",
+            }}
+          >
+            <ImageIcon color="primary" /> Image Editing
+          </Box>
+          <Box
+            sx={{
+              bgcolor: "background.paper",
+              boxShadow: 1,
+              borderRadius: 2,
+              p: 2,
+              width: "14vw",
+            }}
+          >
+            <InstagramIcon color="primary" /> Social Media Design
+          </Box>
+          <Box
+            sx={{
+              bgcolor: "background.paper",
+              boxShadow: 1,
+              borderRadius: 2,
+              p: 2,
+              width: "10vw",
+            }}
+          >
+            <BrushIcon color="primary"/> Logo Design
+          </Box>
+          <Box
+            sx={{
+              bgcolor: "background.paper",
+              boxShadow: 1,
+              borderRadius: 2,
+              p: 2,
+              width: "12vw",
+            }}
+          >
+            <LaptopIcon color="primary"/> Laptop Stickers
+          </Box>
+          <Box
+            sx={{
+              bgcolor: "background.paper",
+              boxShadow: 1,
+              borderRadius: 2,
+              p: 2,
+              width: "15vw",
+            }}
+          >
+            <HowToRegIcon color="primary"/> T-shirt & Merchandise
+          </Box>
+          <Box
+            sx={{
+              bgcolor: "background.paper",
+              boxShadow: 1,
+              borderRadius: 2,
+              p: 2,
+              width: "9vw",
+            }}
+          >
+            <ColorLensIcon color="primary" /> Cover Art
+          </Box>
+        </Stack>
         <br />
         <Stack direction="row" spacing={4} sx={{ flexWrap: "nowrap" }}>
           <Stack>
