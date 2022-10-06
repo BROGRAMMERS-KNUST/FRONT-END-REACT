@@ -20,7 +20,7 @@ const StulancerComp = ({ stulancer }) => {
   return (
     <Box>
       <Card
-        sx={{ width: 200 }}
+        sx={{ width: 200, ':hover': { cursor: 'pointer' } }}
         onClick={() => {
           setOpen(true);
         }}
