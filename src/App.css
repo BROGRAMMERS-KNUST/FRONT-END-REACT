@@ -5,8 +5,19 @@
   top: 10%;
 }
 
+.PortfolioPic {
+  position: absolute;
+  max-height: 40rem;
+  left: 57%;
+  top: 10%;
+}
+
 .highlight {
   color: #e5b411;
+  font-weight: 700;
+}
+.highlight1 {
+  color: #ff6b84;
   font-weight: 700;
 }
 
