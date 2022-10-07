@@ -37,7 +37,7 @@ const StulancerComp = ({ stulancer }) => {
           setOpen(true);
         }}
       >
-        <CardMedia title={stulancer.username} image={stulancer.profilepic} />
+        <CardMedia title={stulancer.username} image={stulancer.profilePic} />
         <div>
           <Typography variant='h6'>{stulancer.fullName}</Typography>
           <Typography variant='body2'>{stulancer.brandName}</Typography>
@@ -52,8 +52,7 @@ const StulancerComp = ({ stulancer }) => {
             <Typography gutterBottom>{stulancer.profileDescription}</Typography>
           </CardContent>
         </div>
-        <Rating name='read-only' value={stulancer.rating} readOnly />
-        {stulancer.rating}
+        <Rating name='read-only' value={value} precision={0.5} readOnly />
       </Card>
 
       <Modal
@@ -62,11 +61,12 @@ const StulancerComp = ({ stulancer }) => {
           setOpen(false);
         }}
       >
+        {/*Freelancer modal,cannot be in a separate component because of close button */}
         <Paper
           elevation={6}
           sx={{
             width: 500,
-            marginTop: 6.5,
+            marginTop: 5,
             marginLeft: 62,
             paddingTop: 3,
           }}

@@ -31,7 +31,7 @@ function Header() {
     dispatch({ type: 'LOGOUT' });
     history.push('/');
     setUser(null);
-    window.location.reload();
+    //window.location.reload();
   };
 
   return (
@@ -69,8 +69,9 @@ function Header() {
                 />
 
                 <Tabs textColor='secondary'>
-                  <Tooltip title='Click to visit your account page'>
+                  <Tooltip title='Click to update profile'>
                     <Tab
+                      href='/updateprofile'
                       sx={{
                         fontFamily: 'Nunito',
                         fontWeight: '700',

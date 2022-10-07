@@ -20,6 +20,7 @@ import FreelancerInfo from './components/FreelancerInfo';
 import PortfolioPage from './components/PortfolioPage';
 import FooterMain from './components/Footer/FooterMain';
 import AboutUS from './Pages/AboutUS';
+import UpdateProfile from './components/UpdateProfile';
 
 const user = JSON.parse(localStorage.getItem('profile'));
 
@@ -57,6 +58,10 @@ function App() {
             </Route>
             <Route path='/about-us'>
               <AboutUS />
+            </Route>
+
+            <Route path='/updateprofile'>
+              <UpdateProfile />
             </Route>
           </Switch>
           <FooterMain />
