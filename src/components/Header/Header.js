@@ -79,23 +79,47 @@ function Header() {
                     />
                   </Tooltip>
                 </Tabs>
-                <Button
-                  disableElevation
-                  onClick={() => {
-                    handleLogout();
-                  }}
-                  color='secondary'
-                  sx={{
-                    borderRadius: 5,
-                    marginRight: 2,
-                    fontFamily: 'Nunito',
-                    fontWeight: '700',
-                  }}
-                  size='large'
-                  variant='outlined'
-                >
-                  Log out
-                </Button>
+                {user.result.serviceType === 'servicer' ? (
+                  <div>
+                    <Button
+                      disableElevation
+                      onClick={() => {
+                        handleLogout();
+                      }}
+                      color='primary'
+                      sx={{
+                        borderRadius: 5,
+                        marginRight: 2,
+                        fontFamily: 'Nunito',
+                        fontWeight: '700',
+                      }}
+                      size='large'
+                      variant='outlined'
+                    >
+                      Log out
+                    </Button>
+                  </div>
+                ) : (
+                  <div>
+                    <Button
+                      disableElevation
+                      onClick={() => {
+                        handleLogout();
+                      }}
+                      color='secondary'
+                      sx={{
+                        borderRadius: 5,
+                        marginRight: 2,
+                        fontFamily: 'Nunito',
+                        fontWeight: '700',
+                      }}
+                      size='large'
+                      variant='outlined'
+                    >
+                      Log out
+                    </Button>
+                  </div>
+                )}
               </Stack>
             </div>
           ) : (

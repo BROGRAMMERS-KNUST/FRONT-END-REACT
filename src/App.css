@@ -1,6 +1,6 @@
 .LandingPic {
   position: absolute;
-  max-height: 42rem;
+  max-height: 41.5rem;
   left: 55.5%;
   top: 10%;
 }
@@ -9,7 +9,7 @@
   position: absolute;
   max-height: 40rem;
   left: 57%;
-  top: 10%;
+  top: 15%;
 }
 
 .highlight {

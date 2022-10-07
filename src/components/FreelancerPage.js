@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
-import avatar from '../images/pavel-anoshin-d0peGya6R5Y-unsplash.jpg';
+
 import Rating from '@mui/material/Rating';
 import CallIcon from '@mui/icons-material/Call';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
@@ -173,22 +173,6 @@ const FreelancerPage = ({
           >
             WhatsApp
           </Button>
-
-          {/* <Button
-            sx={{
-              borderRadius: 5,
-              marginLeft: 2,
-              marginBottom: 5,
-              fontFamily: 'Nunito',
-              fontWeight: '700',
-            }}
-            size='small'
-            startIcon={<TelegramIcon />}
-            variant='contained'
-          >
-            Telegram
-          </Button>
-          */}
         </Box>
       </Paper>
     </Box>

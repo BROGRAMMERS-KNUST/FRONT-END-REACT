@@ -40,11 +40,6 @@ const FreelancerInfo = () => {
   const handleChange = (e) => {
     setService(freelancerData.service);
   };
-  function refresh() {
-    setTimeout(function () {
-      window.location.reload();
-    }, 100);
-  }
 
   const [service, setService] = useState('');
   //window.location.reload();
