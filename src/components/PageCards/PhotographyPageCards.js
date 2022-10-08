@@ -118,6 +118,7 @@ function PageCards() {
       <Stack direction="row" spacing={5} sx={{ flexWrap: "nowrap" }}>
         <Stack>
           <Card
+           
             sx={{
               background:
                 "url('https://www.thoughtco.com/thmb/GAtp0KJWAXudEuz9ufGu2jKAdYQ=/3909x2199/smart/filters:no_upscale()/film-photography-592347645-59e4d0609abed500119e7b14.jpg') ",

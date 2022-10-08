@@ -20,6 +20,7 @@ import FreelancerInfo from "./components/FreelancerInfo";
 import PortfolioPage from "./components/PortfolioPage";
 import FooterMain from "./components/Footer/FooterMain";
 import AboutUS from "./Pages/AboutUS";
+import Webby from "./Pages/Webby";
 
 const user = JSON.parse(localStorage.getItem("profile"));
 
@@ -39,6 +40,9 @@ function App() {
             </Route>
             <Route path="/graphic-design">
               <GraphicDesignPage />
+            </Route>
+            <Route path='/webby'>  
+            <Webby/>
             </Route>
             <Route path="/food-services">
               <FoodServicesPage />
