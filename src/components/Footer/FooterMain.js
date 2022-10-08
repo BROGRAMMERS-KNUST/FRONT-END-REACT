@@ -14,6 +14,7 @@ export default function Footer() {
         bgcolor="text.secondary"
         color="white"
         marginTop={8}
+
       >
         <Container maxWidth="lg">
           <Grid container spacing={5}>

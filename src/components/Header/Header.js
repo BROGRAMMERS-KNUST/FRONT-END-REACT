@@ -55,7 +55,7 @@ function Header() {
               history.push('/');
             }}
           >
-            STULANCER
+           <Button href="/" sx={{fontSize:"30px"}}>STULANCER</Button> 
           </Typography>
 
           {/*CHECKS IF USER IS LOGGED IN AND DECIDES TYPE OF HEADER*/}
