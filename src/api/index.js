@@ -21,3 +21,5 @@ export const loginservicer = (loginData) =>
   API.post('/user/loginservicer', loginData);
 export const freelancerinfo = (freelancerData, freelancerId) =>
   API.patch(`/user/signupservice/${freelancerId}`, freelancerData);
+export const updatefreelancerinfo = (freelancerData, freelancerId) =>
+  API.patch(`/user/updateservice/${freelancerId}`, freelancerData);

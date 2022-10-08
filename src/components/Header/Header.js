@@ -31,7 +31,7 @@ function Header() {
     dispatch({ type: 'LOGOUT' });
     history.push('/');
     setUser(null);
-    window.location.reload();
+    //window.location.reload();
   };
 
   return (
@@ -47,7 +47,7 @@ function Header() {
             color='primary'
             variant='h2'
             fontSize={30}
-            sx={{ flexGrow: 1 }}
+            sx={{ flexGrow: 1, ':hover': { cursor: 'pointer' } }}
             fontFamily='Nunito'
             fontWeight='700'
             letterSpacing={2}
@@ -69,8 +69,9 @@ function Header() {
                 />
 
                 <Tabs textColor='secondary'>
-                  <Tooltip title='Click to visit your account page'>
+                  <Tooltip title='Click to update profile'>
                     <Tab
+                      href='/updateprofile'
                       sx={{
                         fontFamily: 'Nunito',
                         fontWeight: '700',
@@ -79,23 +80,47 @@ function Header() {
                     />
                   </Tooltip>
                 </Tabs>
-                <Button
-                  disableElevation
-                  onClick={() => {
-                    handleLogout();
-                  }}
-                  color='secondary'
-                  sx={{
-                    borderRadius: 5,
-                    marginRight: 2,
-                    fontFamily: 'Nunito',
-                    fontWeight: '700',
-                  }}
-                  size='large'
-                  variant='outlined'
-                >
-                  Log out
-                </Button>
+                {user.result.serviceType === 'servicer' ? (
+                  <div>
+                    <Button
+                      disableElevation
+                      onClick={() => {
+                        handleLogout();
+                      }}
+                      color='primary'
+                      sx={{
+                        borderRadius: 5,
+                        marginRight: 2,
+                        fontFamily: 'Nunito',
+                        fontWeight: '700',
+                      }}
+                      size='large'
+                      variant='outlined'
+                    >
+                      Log out
+                    </Button>
+                  </div>
+                ) : (
+                  <div>
+                    <Button
+                      disableElevation
+                      onClick={() => {
+                        handleLogout();
+                      }}
+                      color='secondary'
+                      sx={{
+                        borderRadius: 5,
+                        marginRight: 2,
+                        fontFamily: 'Nunito',
+                        fontWeight: '700',
+                      }}
+                      size='large'
+                      variant='outlined'
+                    >
+                      Log out
+                    </Button>
+                  </div>
+                )}
               </Stack>
             </div>
           ) : (
