@@ -1,5 +1,4 @@
 import React from 'react';
-import CardContent from '@mui/material/CardContent';
 import Carousel from 'react-material-ui-carousel'
 import { Paper, Button, sliderClasses,Card,Stack, Typography, Container,Grid} from '@mui/material'
 import Background from '../Main/Background';
