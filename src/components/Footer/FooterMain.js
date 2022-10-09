@@ -26,7 +26,7 @@ export default function Footer() {
                 </Link>
               </Box>
               <Box>
-                <Link underline="none" href="/webdevelopment" color="inherit">
+                <Link underline="none" href="/webby" color="inherit">
                   Web development
                 </Link>
               </Box>
@@ -74,12 +74,12 @@ export default function Footer() {
             <Grid item xs={12} sm={4}>
               <Box borderBottom={1}>Support</Box>
               <Box>
-                <Link underline="none" href="/" color="inherit">
+                <Link underline="none" href="/Help" color="inherit">
                   Help
                 </Link>
               </Box>
               <Box>
-                <Link underline="none" href="/" color="inherit">
+                <Link underline="none" href="/Sales" color="inherit">
                   {" "}
                   How to Sell on Stulancer
                 </Link>
