@@ -26,6 +26,7 @@ function getLabelText(value) {
 }
 const StulancerComp = ({ stulancer }) => {
   const [value, setValue] = useState(4.5);
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   getLabelText(value);
   const [open, setOpen] = useState(false);
 
@@ -177,40 +178,56 @@ const StulancerComp = ({ stulancer }) => {
           >
             Contact Me
           </Typography>
+          {user ? (
+            <Box sx={{}}>
+              <Button
+                sx={{
+                  borderRadius: 5,
+                  marginLeft: 2,
+                  marginBottom: 5,
+                  fontFamily: 'Nunito',
+                  fontWeight: '700',
+                }}
+                startIcon={<CallIcon />}
+                variant='contained'
+                size='small'
+              >
+                Call
+              </Button>
 
-          <Box sx={{}}>
-            <Button
-              sx={{
-                borderRadius: 5,
-                marginLeft: 2,
-                marginBottom: 5,
-                fontFamily: 'Nunito',
-                fontWeight: '700',
-              }}
-              startIcon={<CallIcon />}
-              variant='contained'
-              size='small'
-            >
-              Call
-            </Button>
-
-            <Button
-              sx={{
-                borderRadius: 5,
-                marginBottom: 5,
-                marginLeft: 2,
-                backgroundColor: '#1DA427',
-                ':hover': { backgroundColor: '#17761E' },
-                fontFamily: 'Nunito',
-                fontWeight: '700',
-              }}
-              startIcon={<WhatsAppIcon />}
-              variant='contained'
-              size='small'
-            >
-              WhatsApp
-            </Button>
-          </Box>
+              <Button
+                sx={{
+                  borderRadius: 5,
+                  marginBottom: 5,
+                  marginLeft: 2,
+                  backgroundColor: '#1DA427',
+                  ':hover': { backgroundColor: '#17761E' },
+                  fontFamily: 'Nunito',
+                  fontWeight: '700',
+                }}
+                startIcon={<WhatsAppIcon />}
+                variant='contained'
+                size='small'
+              >
+                WhatsApp
+              </Button>
+            </Box>
+          ) : (
+            <Box>
+              <Typography
+                sx={{
+                  paddingLeft: 2,
+                  paddingBottom: 1,
+                  ':hover': { cursor: 'pointer', textDecoration: 'underline' },
+                }}
+                fontFamily='Nunito'
+                color='primary'
+                fontWeight='700'
+              >
+                Login to see contact info
+              </Typography>
+            </Box>
+          )}
         </Paper>
       </Modal>
     </Box>
