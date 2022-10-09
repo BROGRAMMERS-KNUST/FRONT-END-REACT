@@ -51,11 +51,13 @@ function Header() {
             fontFamily='Nunito'
             fontWeight='700'
             letterSpacing={2}
-            onClick={() => {
-              history.push('/');
-            }}
           >
-           <Button href="/" sx={{fontSize:"30px"}}>STULANCER</Button> 
+            <Button
+              href='/'
+              sx={{ fontSize: '30px', fontFamily: 'Nunito', fontWeight: 700 }}
+            >
+              STULANCER
+            </Button>
           </Typography>
 
           {/*CHECKS IF USER IS LOGGED IN AND DECIDES TYPE OF HEADER*/}

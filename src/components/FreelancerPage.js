@@ -27,6 +27,7 @@ const FreelancerPage = ({
   service,
 }) => {
   const [value, setValue] = useState(4.5);
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   getLabelText(value);
   return (
     <Box>
@@ -141,39 +142,52 @@ const FreelancerPage = ({
           Contact Me
         </Typography>
 
-        <Box sx={{}}>
-          <Button
-            sx={{
-              borderRadius: 5,
-              marginLeft: 2,
-              marginBottom: 5,
-              fontFamily: 'Nunito',
-              fontWeight: '700',
-            }}
-            startIcon={<CallIcon />}
-            variant='contained'
-            size='small'
-          >
-            Call
-          </Button>
+        {user ? (
+          <Box sx={{}}>
+            <Button
+              sx={{
+                borderRadius: 5,
+                marginLeft: 2,
+                marginBottom: 5,
+                fontFamily: 'Nunito',
+                fontWeight: '700',
+              }}
+              startIcon={<CallIcon />}
+              variant='contained'
+              size='small'
+            >
+              Call
+            </Button>
 
-          <Button
-            sx={{
-              borderRadius: 5,
-              marginBottom: 5,
-              marginLeft: 2,
-              backgroundColor: '#1DA427',
-              ':hover': { backgroundColor: '#17761E' },
-              fontFamily: 'Nunito',
-              fontWeight: '700',
-            }}
-            startIcon={<WhatsAppIcon />}
-            variant='contained'
-            size='small'
-          >
-            WhatsApp
-          </Button>
-        </Box>
+            <Button
+              sx={{
+                borderRadius: 5,
+                marginBottom: 5,
+                marginLeft: 2,
+                backgroundColor: '#1DA427',
+                ':hover': { backgroundColor: '#17761E' },
+                fontFamily: 'Nunito',
+                fontWeight: '700',
+              }}
+              startIcon={<WhatsAppIcon />}
+              variant='contained'
+              size='small'
+            >
+              WhatsApp
+            </Button>
+          </Box>
+        ) : (
+          <Box>
+            <Typography
+              sx={{ paddingLeft: 2, paddingBottom: 1 }}
+              fontFamily='Nunito'
+              color='#646765'
+              fontWeight='700'
+            >
+              Login to see contact info
+            </Typography>
+          </Box>
+        )}
       </Paper>
     </Box>
   );
