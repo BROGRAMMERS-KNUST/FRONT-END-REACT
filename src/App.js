@@ -22,6 +22,7 @@ import FooterMain from "./components/Footer/FooterMain";
 import AboutUS from "./Pages/AboutUS";
 import Webby from "./Pages/Webby";
 
+
 const user = JSON.parse(localStorage.getItem('profile'));
 
 function App() {
@@ -62,10 +63,12 @@ function App() {
             <Route path='/about-us'>
               <AboutUS />
             </Route>
-
+{ /*
             <Route path='/updateprofile'>
               <UpdateProfile />
             </Route>
+            */
+}    
           </Switch>
           <FooterMain />
         </div>
