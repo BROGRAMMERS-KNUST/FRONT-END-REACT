@@ -16,10 +16,7 @@ export default function SocialFollow() {
       <div class="social-container">
         <div class="social-container">
           <Stack direction="row" spacing={2}>
-            <a
-              href="http://www.whatsapp.com/Brogrammers</Box>"
-              className="whatsApp icon"
-            >
+            <a href="https://wa.me/242764001" className="whatsApp icon">
               <FontAwesomeIcon icon={faWhatsapp} size="2x" />
             </a>
 

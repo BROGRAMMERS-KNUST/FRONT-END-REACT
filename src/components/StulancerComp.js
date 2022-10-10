@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Card,
   CardContent,
@@ -10,6 +10,7 @@ import {
   IconButton,
   BoxIconButton,
   Button,
+<<<<<<< HEAD
   Avatar,
   Paper,
 } from '@mui/material';
@@ -24,6 +25,12 @@ import WorkIcon from '@mui/icons-material/Work';
 function getLabelText(value) {
   return value;
 }
+=======
+} from "@mui/material";
+import { useState } from "react";
+import FreelancerPage from "../Pages/FreelancerPage";
+import CloseIcon from "@mui/icons-material/Close";
+>>>>>>> d058322 (latest update)
 const StulancerComp = ({ stulancer }) => {
   const [value, setValue] = useState(4.5);
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
@@ -40,11 +47,11 @@ const StulancerComp = ({ stulancer }) => {
       >
         <CardMedia title={stulancer.username} image={stulancer.profilePic} />
         <div>
-          <Typography variant='h6'>{stulancer.fullName}</Typography>
-          <Typography variant='body2'>{stulancer.brandName}</Typography>
+          <Typography variant="h6">{stulancer.fullName}</Typography>
+          <Typography variant="body2">{stulancer.brandName}</Typography>
         </div>
         <div>
-          <Typography variant='body2' color='textSecondary'>
+          <Typography variant="body2" color="textSecondary">
             {stulancer.serviceTags.map((tag) => `${tag} `)}
           </Typography>
         </div>
@@ -53,7 +60,12 @@ const StulancerComp = ({ stulancer }) => {
             <Typography gutterBottom>{stulancer.profileDescription}</Typography>
           </CardContent>
         </div>
+<<<<<<< HEAD
         <Rating name='read-only' value={value} precision={0.5} readOnly />
+=======
+        <Rating name="read-only" value={stulancer.rating} readOnly />
+        {stulancer.rating}
+>>>>>>> d058322 (latest update)
       </Card>
 
       <Modal

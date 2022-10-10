@@ -5,6 +5,7 @@ import { CheckCircleOutline } from "@mui/icons-material";
 const BoxTwo = () => {
   return (
     <Box
+      bgcolor="#F5F5F5"
       sx={{
         color: "primary",
         height: "100vh",

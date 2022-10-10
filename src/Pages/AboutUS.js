@@ -2,6 +2,8 @@ import React from "react";
 import BoxOne from "../components/AboutUs/BoxOne";
 import BoxTwo from "../components/AboutUs/BoxTwo";
 import BoxThree from "../components/AboutUs/BoxThree";
+import Developers from "../components/AboutUs/Developers";
+import BoxFour from "../components/AboutUs/BoxFour";
 
 const AboutUS = () => {
   return (
@@ -9,6 +11,7 @@ const AboutUS = () => {
       <BoxOne />
       <BoxTwo />
       <BoxThree />
+      <BoxFour />
     </div>
   );
 };

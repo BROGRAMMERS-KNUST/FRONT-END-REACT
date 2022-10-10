@@ -12,6 +12,7 @@ import Header from './components/Header/Header';
 import PhotograhyPage from './Pages/PhotograhyPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+<<<<<<< HEAD
 import GraphicDesignPage from './Pages/GraphicDesignPage';
 import FoodServicesPage from './Pages/FoodServicesPage';
 import WritingAndTranslationPage from './Pages/WritingAndTranslationPage';
@@ -22,6 +23,16 @@ import FooterMain from './components/Footer/FooterMain';
 import AboutUS from './Pages/AboutUS';
 import Webby from './Pages/Webby';
 import UpdateProfile from './components/UpdateProfile';
+=======
+import GraphicDesignPage from "./Pages/GraphicDesignPage";
+import FoodServicesPage from "./Pages/FoodServicesPage";
+import WritingAndTranslationPage from "./Pages/WritingAndTranslationPage";
+import FreelancerPage from "./Pages/FreelancerPage";
+import FreelancerInfo from "./components/FreelancerInfo";
+import PortfolioPage from "./Pages/PortfolioPage";
+import FooterMain from "./components/Footer/FooterMain";
+import AboutUS from "./Pages/AboutUS";
+>>>>>>> d058322 (latest update)
 
 
 const user = JSON.parse(localStorage.getItem('profile'));

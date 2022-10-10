@@ -6,15 +6,16 @@ const BoxOne = () => {
     <Box>
       {/* FIRST BOX */}
       <Box
+        bgcolor="#F8F8FF"
         sx={{
           color: "primary",
-          height: "80vh",
+          height: "75vh",
           padding: "15px",
         }}
       >
         <Grid width={600} margin="auto">
           <Typography
-            variant="subtitle1"
+            variant="h6"
             align="center"
             color="secondary"
             sx={{
@@ -51,29 +52,6 @@ const BoxOne = () => {
             campus
           </Typography>
         </Grid>
-        <Stack direction="row" spacing={0}>
-          <Card
-            sx={{
-              background:
-                "url('https://th.bing.com/th/id/R.d6b7eeb68cc5706c6834c7a8e728e907?rik=x1zgW0k9qfD4yw&pid=ImgRaw&r=0') ",
-
-              backgroundSize: "cover",
-              width: 50,
-              height: 50,
-              marginTop: "100px",
-              marginLeft: "100px",
-            }}
-          ></Card>
-          <Card
-            sx={{
-              background:
-                "url('https://th.bing.com/th/id/R.d6b7eeb68cc5706c6834c7a8e728e907?rik=x1zgW0k9qfD4yw&pid=ImgRaw&r=0') ",
-              backgroundSize: "cover",
-              width: 50,
-              height: 50,
-            }}
-          ></Card>
-        </Stack>
       </Box>
     </Box>
   );

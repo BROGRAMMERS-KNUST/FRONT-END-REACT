@@ -13,8 +13,11 @@ export default function Footer() {
         py={{ xs: 1, sm: 3 }}
         bgcolor="text.secondary"
         color="white"
+<<<<<<< HEAD
         marginTop={8}
 
+=======
+>>>>>>> d058322 (latest update)
       >
         <Container maxWidth="lg">
           <Grid container spacing={5}>
@@ -99,49 +102,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-/*
-import React from "react";
-import SocialFollow from "./SocialFollow";
-import {
-  Box,
-  Container,
-  Heading,
-} from './FooterStyles';
-
-
-
-
-
-
-
-
-const FooterMain = () => {
-  return (
-    <Box>
-      <h4 
-                  style={{ color: "green", 
-                   textAlign: "center", 
-                   marginTop: "-50px" }}>
-         STULANCER
-      </h4>
-      <Container>
-            <Heading>About Us</Heading>
-            <Heading>Services</Heading>
-            <Heading>Contact Us</Heading>
-            <SocialFollow/>
-
-            <div  style={{ color: "green", 
-                   textAlign: "center", 
-                   fontSize:'15px',
-                   fontWeight:'bold'
-                    }}>
-             
-            </div>
-         
-      </Container>
-    </Box>
-  );
-};
-export default FooterMain;
-*/
