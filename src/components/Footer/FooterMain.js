@@ -13,11 +13,7 @@ export default function Footer() {
         py={{ xs: 1, sm: 3 }}
         bgcolor="text.secondary"
         color="white"
-<<<<<<< HEAD
         marginTop={8}
-
-=======
->>>>>>> d058322 (latest update)
       >
         <Container maxWidth="lg">
           <Grid container spacing={5}>
@@ -40,7 +36,7 @@ export default function Footer() {
                 </Link>
               </Box>
               <Box>
-                <Link underline="none" href="/food-serices" color="inherit">
+                <Link underline="none" href="/food-services" color="inherit">
                   Food Services
                 </Link>
               </Box>

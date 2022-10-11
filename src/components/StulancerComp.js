@@ -10,62 +10,65 @@ import {
   IconButton,
   BoxIconButton,
   Button,
-<<<<<<< HEAD
   Avatar,
   Paper,
-} from '@mui/material';
-import { useState } from 'react';
-import FreelancerPage from './FreelancerPage';
-import CloseIcon from '@mui/icons-material/Close';
-
-import CallIcon from '@mui/icons-material/Call';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-
-import WorkIcon from '@mui/icons-material/Work';
-function getLabelText(value) {
-  return value;
-}
-=======
+  Stack,
 } from "@mui/material";
 import { useState } from "react";
 import FreelancerPage from "../Pages/FreelancerPage";
 import CloseIcon from "@mui/icons-material/Close";
->>>>>>> d058322 (latest update)
+
+import CallIcon from "@mui/icons-material/Call";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+
+import WorkIcon from "@mui/icons-material/Work";
+function getLabelText(value) {
+  return value;
+}
 const StulancerComp = ({ stulancer }) => {
   const [value, setValue] = useState(4.5);
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
   getLabelText(value);
   const [open, setOpen] = useState(false);
 
   return (
     <Box>
+      <Box
+        sx={{
+          background: `url(${stulancer.profilePic})`,
+          backgroundSize: "cover",
+          height: 180,
+          width: 300,
+          borderRadius: 1,
+        }}
+      ></Box>
       <Card
-        sx={{ width: 200, ':hover': { cursor: 'pointer' } }}
+        sx={{ width: 300, ":hover": { cursor: "pointer" } }}
         onClick={() => {
           setOpen(true);
         }}
       >
-        <CardMedia title={stulancer.username} image={stulancer.profilePic} />
-        <div>
-          <Typography variant="h6">{stulancer.fullName}</Typography>
-          <Typography variant="body2">{stulancer.brandName}</Typography>
-        </div>
-        <div>
-          <Typography variant="body2" color="textSecondary">
-            {stulancer.serviceTags.map((tag) => `${tag} `)}
-          </Typography>
-        </div>
-        <div>
-          <CardContent>
-            <Typography gutterBottom>{stulancer.profileDescription}</Typography>
-          </CardContent>
-        </div>
-<<<<<<< HEAD
-        <Rating name='read-only' value={value} precision={0.5} readOnly />
-=======
-        <Rating name="read-only" value={stulancer.rating} readOnly />
-        {stulancer.rating}
->>>>>>> d058322 (latest update)
+        <CardContent>
+          <Stack direction="row" spacing={1}>
+            <Avatar
+              alt={stulancer.fullName}
+              sx={{ bgcolor: "primary.light" }}
+              src={stulancer.profilePic}
+            ></Avatar>
+            <Typography variant="h6">{stulancer.fullName}</Typography>
+          </Stack>
+          <div>
+            <Typography marginTop={2} marginBottom={1} variant="body1">
+              {stulancer.bio}
+            </Typography>
+          </div>
+          <Rating
+            name="read-only"
+            value={stulancer.rating}
+            precision={0.5}
+            readOnly
+          />
+        </CardContent>
       </Card>
 
       <Modal
@@ -94,8 +97,8 @@ const StulancerComp = ({ stulancer }) => {
           </IconButton>
           <Avatar
             sx={{
-              bgcolor: 'orange',
-              top: '50%',
+              bgcolor: "orange",
+              top: "50%",
               marginLeft: 22,
               marginTop: 1,
               marginBottom: 3,
@@ -106,64 +109,64 @@ const StulancerComp = ({ stulancer }) => {
           />
 
           <Typography
-            sx={{ textAlign: 'center' }}
+            sx={{ textAlign: "center" }}
             fontSize={40}
-            fontWeight='700'
-            fontFamily='Nunito'
+            fontWeight="700"
+            fontFamily="Nunito"
           >
             {stulancer.fullName}
           </Typography>
           <Typography
             fontSize={25}
-            sx={{ textAlign: 'center' }}
-            color='primary'
-            fontFamily='Nunito'
+            sx={{ textAlign: "center" }}
+            color="primary"
+            fontFamily="Nunito"
           >
             {stulancer.service}
           </Typography>
 
-          <Box sx={{ display: 'flex' }}>
+          <Box sx={{ display: "flex" }}>
             <Rating
-              name='half-rating-read'
+              name="half-rating-read"
               value={value}
               precision={0.5}
               sx={{ paddingLeft: 20, marginBottom: 2 }}
-              size='large'
+              size="large"
               readOnly
               getLabelText={getLabelText}
             />
 
             <Typography
               sx={{ paddingLeft: 1.5 }}
-              color='#646765'
-              fontFamily='Nunito'
-              fontWeight='700'
+              color="#646765"
+              fontFamily="Nunito"
+              fontWeight="700"
             >
               ({value})
             </Typography>
           </Box>
           <Typography
             sx={{ paddingLeft: 2, paddingTop: 2 }}
-            color='#646765'
-            fontFamily='Nunito'
-            fontWeight='700'
+            color="#646765"
+            fontFamily="Nunito"
+            fontWeight="700"
           >
             Bio
           </Typography>
           <Typography
             sx={{ paddingLeft: 2, paddingBottom: 2 }}
-            fontFamily='Nunito'
-            color='#646765'
-            variant='body2'
+            fontFamily="Nunito"
+            color="#646765"
+            variant="body2"
           >
             {stulancer.bio}
           </Typography>
 
           <Typography
             sx={{ paddingLeft: 2, paddingBottom: 1 }}
-            fontFamily='Nunito'
-            color='#646765'
-            fontWeight='700'
+            fontFamily="Nunito"
+            color="#646765"
+            fontWeight="700"
           >
             Portfolio
           </Typography>
@@ -172,21 +175,21 @@ const StulancerComp = ({ stulancer }) => {
               borderRadius: 5,
               marginLeft: 2,
               marginBottom: 2,
-              fontFamily: 'Nunito',
-              fontWeight: '700',
+              fontFamily: "Nunito",
+              fontWeight: "700",
             }}
             startIcon={<WorkIcon />}
-            variant='contained'
-            size='small'
+            variant="contained"
+            size="small"
           >
             Portfolio
           </Button>
 
           <Typography
             sx={{ paddingLeft: 2, paddingBottom: 1.2 }}
-            fontFamily='Nunito'
-            color='#646765'
-            fontWeight='700'
+            fontFamily="Nunito"
+            color="#646765"
+            fontWeight="700"
           >
             Contact Me
           </Typography>
@@ -197,29 +200,30 @@ const StulancerComp = ({ stulancer }) => {
                   borderRadius: 5,
                   marginLeft: 2,
                   marginBottom: 5,
-                  fontFamily: 'Nunito',
-                  fontWeight: '700',
+                  fontFamily: "Nunito",
+                  fontWeight: "700",
                 }}
                 startIcon={<CallIcon />}
-                variant='contained'
-                size='small'
+                variant="contained"
+                size="small"
               >
                 Call
               </Button>
 
               <Button
+                href={stulancer.whatsappLink}
                 sx={{
                   borderRadius: 5,
                   marginBottom: 5,
                   marginLeft: 2,
-                  backgroundColor: '#1DA427',
-                  ':hover': { backgroundColor: '#17761E' },
-                  fontFamily: 'Nunito',
-                  fontWeight: '700',
+                  backgroundColor: "#1DA427",
+                  ":hover": { backgroundColor: "#17761E" },
+                  fontFamily: "Nunito",
+                  fontWeight: "700",
                 }}
                 startIcon={<WhatsAppIcon />}
-                variant='contained'
-                size='small'
+                variant="contained"
+                size="small"
               >
                 WhatsApp
               </Button>
@@ -230,11 +234,11 @@ const StulancerComp = ({ stulancer }) => {
                 sx={{
                   paddingLeft: 2,
                   paddingBottom: 1,
-                  ':hover': { cursor: 'pointer', textDecoration: 'underline' },
+                  ":hover": { cursor: "pointer", textDecoration: "underline" },
                 }}
-                fontFamily='Nunito'
-                color='primary'
-                fontWeight='700'
+                fontFamily="Nunito"
+                color="primary"
+                fontWeight="700"
               >
                 Login to see contact info
               </Typography>
