@@ -1,3 +1,4 @@
+//COMPONENTS
 import React from "react";
 import { Typography, Box, Stack, Card, Button } from "@mui/material";
 import BrushIcon from "@mui/icons-material/Brush";
@@ -6,6 +7,11 @@ import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import AnimationIcon from "@mui/icons-material/Animation";
 import SchoolIcon from "@mui/icons-material/School";
 import FilterIcon from "@mui/icons-material/Filter";
+
+//IMAGES
+import writingOne from "../../images/PagecardImages/writingOne.webp";
+import writingTwo from "../../images/PagecardImages/writingTwo.webp";
+import writingThree from "../../images/PagecardImages/writingThree.webp";
 
 function PageCards() {
   return (
@@ -111,8 +117,7 @@ function PageCards() {
         <Stack>
           <Card
             sx={{
-              background:
-                "url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/42593ecc6f1e40fd735892b99f001ea4-1631622804525/Content%20Writing%20_%20Editing.png') ",
+              background: `url(${writingOne})`,
               backgroundSize: "cover",
               width: "300px",
               height: 200,
@@ -123,23 +128,24 @@ function PageCards() {
             width="300px"
             sx={{
               fontFamily: "Nunito",
+              marginTop: 1,
             }}
           >
             Content Writing and Editing
           </Typography>
           <Typography variant="body" width="300px">
-          <Button sx={{ color: "black" }}>Articles & Blog Posts</Button> <br />
-              <Button sx={{ color: "black" }}>Proofreading & Editing</Button><br />{" "}
-              <Button sx={{ color: "black" }}>Website Content </Button>           
-              <Button sx={{ color: "black" }}>Book Writing & Editing</Button>
+            <Button sx={{ color: "black" }}>Articles & Blog Posts</Button>{" "}
+            <br />
+            <Button sx={{ color: "black" }}>Proofreading & Editing</Button>
+            <br /> <Button sx={{ color: "black" }}>Website Content </Button>
+            <Button sx={{ color: "black" }}>Book Writing & Editing</Button>
           </Typography>
         </Stack>
 
         <Stack>
           <Card
             sx={{
-              background:
-                "url('https://imgs.search.brave.com/g0egLPZpxX6KL3P4-CdgN9zVZw6znn4p8kk4RAD9iBU/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5t/WWhmQU5ScGxhSWlP/TWQxWHUxaGhRSGFF/OCZwaWQ9QXBp') ",
+              background: `url(${writingTwo})`,
               backgroundSize: "cover",
               width: 300,
               height: 200,
@@ -150,23 +156,23 @@ function PageCards() {
             width="300px"
             sx={{
               fontFamily: "Nunito",
+              marginTop: 1,
             }}
           >
             Career Writing
           </Typography>
           <Typography variant="body" width="300px">
-          <Button sx={{ color: "black" }}>Resume Writing </Button><br />{" "}
-              <Button sx={{ color: "black" }}>Cover Letters </Button>   <br />       
-              <Button sx={{ color: "black" }}>LinkedIn Profiles</Button>
-                    
+            <Button sx={{ color: "black" }}>Resume Writing </Button>
+            <br /> <Button sx={{ color: "black" }}>Cover Letters </Button>{" "}
+            <br />
+            <Button sx={{ color: "black" }}>LinkedIn Profiles</Button>
           </Typography>
         </Stack>
 
         <Stack>
           <Card
             sx={{
-              background:
-                "url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/42593ecc6f1e40fd735892b99f001ea4-1631622804516/Translation%20_%20Transcription.png') ",
+              background: `url(${writingThree})`,
               backgroundSize: "cover",
               width: "300px",
               height: 200,
@@ -177,13 +183,14 @@ function PageCards() {
             width="300px"
             sx={{
               fontFamily: "Nunito",
+              marginTop: 1,
             }}
           >
             Translation & Transcription
           </Typography>
           <Typography variant="body" width="300px">
-          <Button sx={{ color: "black" }}>Translation </Button>  <br />         
-              <Button sx={{ color: "black" }}>Transcription</Button>
+            <Button sx={{ color: "black" }}>Translation </Button> <br />
+            <Button sx={{ color: "black" }}>Transcription</Button>
           </Typography>
         </Stack>
       </Stack>

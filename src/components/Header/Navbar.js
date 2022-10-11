@@ -62,6 +62,7 @@ function Navbar() {
         </Link>
 
         <Link
+          href="writing&translation"
           underline="hover"
           sx={{ fontFamily: "Nunito" }}
           style={{

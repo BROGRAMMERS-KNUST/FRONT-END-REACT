@@ -1,15 +1,50 @@
 import React from "react";
-import { Typography, Box, Stack, Card } from "@mui/material";
+import { Typography, Box, Stack, Card, Button } from "@mui/material";
+
+//IMAGES
+import foodOne from "../../images/PagecardImages/foodOne.webp";
+import foodTwo from "../../images/PagecardImages/foodTwo.jpeg";
+import foodThree from "../../images/PagecardImages/foodThree.jpg";
 
 function FoodServicesPageCards() {
   return (
     <Box>
+      <Box
+        sx={{
+          background: "#0D4114",
+          color: "white",
+          height: "200px",
+          width: "95vw",
+          borderRadius: "10px",
+          marginTop: 3,
+          margin: "auto",
+          marginBottom: 5,
+          marginLeft: 0,
+        }}
+      >
+        <Typography
+          align="center"
+          variant="h4"
+          paddingTop={3}
+          fontFamily={"Nunito"}
+        >
+          Food Services
+        </Typography>
+        <Typography align="center" fontFamily={"Nunito"}>
+          Get the best delivery services on campus
+          <br />
+          <br />
+          <Button style={{ margin: "auto" }} variant="contained">
+            {" "}
+            How Stulancer Works
+          </Button>
+        </Typography>
+      </Box>
       <Stack direction="row" spacing={8} sx={{ flexWrap: "wrap" }}>
         <Stack>
           <Card
             sx={{
-              background:
-                "url('https://www.ghanayello.com/img/gh/j/1623446783-57-pixxxy-photography.jpg') ",
+              background: `url(${foodOne})`,
               backgroundSize: "cover",
               width: "300px",
               height: 200,
@@ -20,20 +55,21 @@ function FoodServicesPageCards() {
             width="300px"
             sx={{
               fontFamily: "Nunito",
+              marginTop: 1,
             }}
           >
-            Photoshoots
+            Food Delivery
           </Typography>
           <Typography variant="body" width="300px">
-            Get memories that will last a lifetime.
+            Feeling hungry? Order your food from the best stulancers available
+            with the fastest delivery.
           </Typography>
         </Stack>
 
         <Stack>
           <Card
             sx={{
-              background:
-                "url('https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=964&q=80') ",
+              background: `url(${foodTwo})`,
               backgroundSize: "cover",
               width: 300,
               height: 200,
@@ -44,36 +80,42 @@ function FoodServicesPageCards() {
             width="300px"
             sx={{
               fontFamily: "Nunito",
+              marginTop: 1,
             }}
           >
-            Birthdays and Parties
+            Catering Services
           </Typography>
           <Typography variant="body" width="300px">
-            Get the best of photographers for your birthday events.
+            Do you need item13 for your events? Don't fret, there are Stulancers
+            to sort you out.
           </Typography>
         </Stack>
 
         <Stack>
           <Card
             sx={{
-              background:
-                "url('https://imgs.search.brave.com/pGWN2s3OA4uEJTASyBvEpcigcsFSM1H_cR-IhuJN3UI/rs:fit:678:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC4y/MjF3ZUxtenBWVlNw/QU5iaTI3UUx3SGFG/TCZwaWQ9QXBp') ",
+              background: `url(${foodThree})`,
               backgroundSize: "cover",
               width: "300px",
               height: 200,
             }}
-          ></Card>
+          />
           <Typography
             variant="h5"
             width="300px"
             sx={{
               fontFamily: "Nunito",
+              marginTop: 1,
             }}
           >
-            Graduation and Matriculation
+            Miscellaneous
           </Typography>
           <Typography variant="body" width="300px">
-            Get the best pictures of your academic milestones.
+            <Button sx={{ color: "black" }}>Fast Foods</Button>
+            <br />
+            <Button sx={{ color: "black" }}>Local Dishes</Button>
+            <br />
+            <Button sx={{ color: "black" }}>Continental Dishes</Button>
           </Typography>
         </Stack>
       </Stack>

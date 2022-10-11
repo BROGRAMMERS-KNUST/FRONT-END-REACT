@@ -1,24 +1,70 @@
-import React from 'react';
-import Carousel from 'react-material-ui-carousel'
-import { Paper, Button, sliderClasses,Card,Stack, Typography, Container,Grid} from '@mui/material'
-import Background from '../Main/Background';
-import { Box} from '@mui/system';
-import styled from '@emotion/styled';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faInstagram, faTwitter, faWhatsapp,faYoutube,faGoogle} from '@fortawesome/free-brands-svg-icons'
-import Avatar from '@mui/material/Avatar';
-import { faReact } from '@fortawesome/free-brands-svg-icons';
-import AvatarGroup from '@mui/material/AvatarGroup';
-import Rating from '@mui/material/Rating';
-import FavoriteIcon from '@material-ui/icons/Favorite'
-import Badge from '@mui/material/Badge';
-const WebbyCards=(props)=>{
-    return (
-      <div>
-       
-       <Stack direction="row" spacing={12} sx={{ flexWrap: "nowrap" }}>
-          <Stack>
-            <Carousel>
+import React from "react";
+import Carousel from "react-material-ui-carousel";
+import {
+  Paper,
+  Button,
+  sliderClasses,
+  Card,
+  Stack,
+  Typography,
+  Container,
+  Grid,
+} from "@mui/material";
+import Background from "../Main/Background";
+import { Box } from "@mui/system";
+import styled from "@emotion/styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faTwitter,
+  faWhatsapp,
+  faYoutube,
+  faGoogle,
+} from "@fortawesome/free-brands-svg-icons";
+import Avatar from "@mui/material/Avatar";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
+import AvatarGroup from "@mui/material/AvatarGroup";
+import Rating from "@mui/material/Rating";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import Badge from "@mui/material/Badge";
+const WebbyCards = (props) => {
+  return (
+    <div>
+      <Box
+        sx={{
+          background: "#0D4114",
+          color: "white",
+          height: "200px",
+          width: "95vw",
+          borderRadius: "10px",
+          marginTop: 3,
+          margin: "auto",
+          marginBottom: 5,
+          marginLeft: 0,
+        }}
+      >
+        <Typography
+          align="center"
+          variant="h4"
+          paddingTop={3}
+          fontFamily={"Nunito"}
+        >
+          Web Development
+        </Typography>
+        <Typography align="center" fontFamily={"Nunito"}>
+          Need your own website? We've got you covered
+          <br />
+          <br />
+          <Button style={{ margin: "auto" }} variant="contained">
+            {" "}
+            How Stulancer Works
+          </Button>
+        </Typography>
+      </Box>
+
+      <Stack direction="row" spacing={12} sx={{ flexWrap: "nowrap" }}>
+        <Stack>
+          <Carousel>
             <Card
               sx={{
                 background:
@@ -27,8 +73,7 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
+            ></Card>
             <Card
               sx={{
                 background:
@@ -37,10 +82,9 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
-            
-             <Card
+            ></Card>
+
+            <Card
               sx={{
                 background:
                   "url('https://images.pexels.com/photos/3194518/pexels-photo-3194518.jpeg?auto=compress&cs=tinysrgb&w=600') ",
@@ -48,73 +92,77 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
+            ></Card>
+          </Carousel>
+          <Paper
+            sx={{
+              width: 350,
+              height: 150,
+            }}
+          >
+            <Badge
+              overlap="circular"
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
             >
-            </Card>
-            </Carousel>
-              <Paper sx={{
-                width: 350,
-                height: 150,
-                }}>
-                  <Badge
-                     overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}>
-                  <Avatar  alt='Maxwell' sx={{bgcolor:'primary.light'}} >MX</Avatar> 
-                     <Typography sx={{marginTop:1,marginLeft:0.4}}>Max</Typography>
-                  </Badge>
-                <Box sx={{
-                  '&:hover': { color: 'purple' },
-                }}>          
+              <Avatar alt="Maxwell" sx={{ bgcolor: "primary.light" }}>
+                MX
+              </Avatar>
+              <Typography sx={{ marginTop: 1, marginLeft: 0.4 }}>
+                Max
+              </Typography>
+            </Badge>
+            <Box
+              sx={{
+                "&:hover": { color: "purple" },
+              }}
+            >
               I'll develop a modern web app or e-commerce website
               <div>
                 <Rating precision={0.5} value={3} readOnly />
               </div>
-              
-              </Box>
-              </Paper >
-              
-              <Paper>
-              <Stack direction="row" spacing={2}>
+            </Box>
+          </Paper>
+
+          <Paper>
+            <Stack direction="row" spacing={2}>
               <a
-              href="http://www.whatsapp.com/Brogrammers</Box>"
-              className="whatsApp icon"
-            >
-              <FontAwesomeIcon icon={faWhatsapp} size="1x" />
-            </a>
+                href="http://www.whatsapp.com/Brogrammers</Box>"
+                className="whatsApp icon"
+              >
+                <FontAwesomeIcon icon={faWhatsapp} size="1x" />
+              </a>
 
-            <a href="https://www.youtube.com/" className="youtube social">
-              <FontAwesomeIcon icon={faYoutube} size="1x" />
-            </a>
+              <a href="https://www.youtube.com/" className="youtube social">
+                <FontAwesomeIcon icon={faYoutube} size="1x" />
+              </a>
 
-            <a href="https://www.twitter.com/" className="twitter social">
-              <FontAwesomeIcon icon={faTwitter} size="1x" />
-            </a>
+              <a href="https://www.twitter.com/" className="twitter social">
+                <FontAwesomeIcon icon={faTwitter} size="1x" />
+              </a>
 
-            <a href="https://www.gmail.com/" className="google social">
-              <FontAwesomeIcon icon={faGoogle} size="1x" />
-            </a>
-             
-              <span>Starting at <b>$100</b></span>
-            <Rating icon={<FavoriteIcon/>} max={1}></Rating>
+              <a href="https://www.gmail.com/" className="google social">
+                <FontAwesomeIcon icon={faGoogle} size="1x" />
+              </a>
 
-             
-              </Stack>
-              </Paper>
-            <Typography
-              variant="h5"
-              width="300px"
-              sx={{
-                fontFamily: "Nunito",
-                marginTop: 1,
-              }}
-            >
-             
-            </Typography>
-            <br></br>
-            
-          </Stack>
-          
- <Stack>
-            <Carousel>
+              <span>
+                Starting at <b>$100</b>
+              </span>
+              <Rating icon={<FavoriteIcon />} max={1}></Rating>
+            </Stack>
+          </Paper>
+          <Typography
+            variant="h5"
+            width="300px"
+            sx={{
+              fontFamily: "Nunito",
+              marginTop: 1,
+            }}
+          ></Typography>
+          <br></br>
+        </Stack>
+
+        <Stack>
+          <Carousel>
             <Card
               sx={{
                 background:
@@ -123,8 +171,7 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
+            ></Card>
             <Card
               sx={{
                 background:
@@ -133,8 +180,7 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
+            ></Card>
             <Card
               sx={{
                 background:
@@ -143,9 +189,8 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
-             <Card
+            ></Card>
+            <Card
               sx={{
                 background:
                   "url('https://img.freepik.com/free-psd/various-web-printable-templates-with-screen_23-2148450117.jpg?size=626&ext=jpg&ga=GA1.2.356087201.1665257753')",
@@ -153,71 +198,77 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
+            ></Card>
+          </Carousel>
+          <Paper
+            sx={{
+              width: 350,
+              height: 150,
+            }}
+          >
+            <Badge
+              overlap="circular"
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
             >
-            </Card>
-            </Carousel>
-              <Paper sx={{
-                width: 350,
-                height: 150,
-                }}>
-                  <Badge
-                     overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}>
-                  <Avatar  alt='Maxwell' sx={{bgcolor:'success.light'}} >RM</Avatar> 
-                     <Typography sx={{marginTop:1,marginLeft:0.4}}>Rosemond</Typography>
-                  </Badge>
-                <Box sx={{
-                  '&:hover': { color: 'orange' },
-                }}>          
-              I'll develop a professional wordpress website design 
+              <Avatar alt="Maxwell" sx={{ bgcolor: "success.light" }}>
+                RM
+              </Avatar>
+              <Typography sx={{ marginTop: 1, marginLeft: 0.4 }}>
+                Rosemond
+              </Typography>
+            </Badge>
+            <Box
+              sx={{
+                "&:hover": { color: "orange" },
+              }}
+            >
+              I'll develop a professional wordpress website design
               <div>
                 <Rating precision={0.5} value={3} readOnly />
               </div>
-              
-              </Box>
-              </Paper >
-              
-              <Paper>
-              <Stack direction="row" spacing={2}>
+            </Box>
+          </Paper>
+
+          <Paper>
+            <Stack direction="row" spacing={2}>
               <a
-              href="http://www.whatsapp.com/Brogrammers</Box>"
-              className="whatsApp icon"
-            >
-              <FontAwesomeIcon icon={faWhatsapp} size="1x" />
-            </a>
+                href="http://www.whatsapp.com/Brogrammers</Box>"
+                className="whatsApp icon"
+              >
+                <FontAwesomeIcon icon={faWhatsapp} size="1x" />
+              </a>
 
-            <a href="https://www.youtube.com/" className="youtube social">
-              <FontAwesomeIcon icon={faYoutube} size="1x" />
-            </a>
+              <a href="https://www.youtube.com/" className="youtube social">
+                <FontAwesomeIcon icon={faYoutube} size="1x" />
+              </a>
 
-            <a href="https://www.twitter.com/" className="twitter social">
-              <FontAwesomeIcon icon={faTwitter} size="1x" />
-            </a>
+              <a href="https://www.twitter.com/" className="twitter social">
+                <FontAwesomeIcon icon={faTwitter} size="1x" />
+              </a>
 
-            <a href="https://www.gmail.com/" className="google social">
-              <FontAwesomeIcon icon={faGoogle} size="1x" />
-            </a>
-             
-              <span>Starting at <b>$70</b></span>
-            <Rating icon={<FavoriteIcon/>} max={1}></Rating>
+              <a href="https://www.gmail.com/" className="google social">
+                <FontAwesomeIcon icon={faGoogle} size="1x" />
+              </a>
 
-             
-              </Stack>
-              </Paper>
-            <Typography
-              variant="h5"
-              width="300px"
-              sx={{
-                fontFamily: "Nunito",
-                marginTop: 1,
-              }}
-            >
-            </Typography>
-            <br></br>
-          </Stack>
+              <span>
+                Starting at <b>$70</b>
+              </span>
+              <Rating icon={<FavoriteIcon />} max={1}></Rating>
+            </Stack>
+          </Paper>
+          <Typography
+            variant="h5"
+            width="300px"
+            sx={{
+              fontFamily: "Nunito",
+              marginTop: 1,
+            }}
+          ></Typography>
+          <br></br>
+        </Stack>
 
-          <Stack>
-            <Carousel>
+        <Stack>
+          <Carousel>
             <Card
               sx={{
                 background:
@@ -226,8 +277,7 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
+            ></Card>
             <Card
               sx={{
                 background:
@@ -236,10 +286,9 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
-            
-             <Card
+            ></Card>
+
+            <Card
               sx={{
                 background:
                   "url('https://img.freepik.com/free-photo/closeup-shot-two-pretty-afro-american-girls-using-their-phones-while-holding-shopping-bags_181624-46178.jpg?size=626&ext=jpg&ga=GA1.2.356087201.1665257753')",
@@ -247,77 +296,81 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
+            ></Card>
+          </Carousel>
+          <Paper
+            sx={{
+              width: 350,
+              height: 150,
+            }}
+          >
+            <Badge
+              overlap="circular"
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
             >
-            </Card>
-            </Carousel>
-              <Paper sx={{
-                width: 350,
-                height: 150,
-                }}>
-                  <Badge
-                     overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}>
-                  <Avatar  alt='Maxwell' sx={{bgcolor:'primary.light'}} >Mk</Avatar> 
-                     <Typography sx={{marginTop:1,marginLeft:0.4}}>Musk</Typography>
-                  </Badge>
-                <Box sx={{
-                  '&:hover': { color: 'purple' },
-                }}>          
+              <Avatar alt="Maxwell" sx={{ bgcolor: "primary.light" }}>
+                Mk
+              </Avatar>
+              <Typography sx={{ marginTop: 1, marginLeft: 0.4 }}>
+                Musk
+              </Typography>
+            </Badge>
+            <Box
+              sx={{
+                "&:hover": { color: "purple" },
+              }}
+            >
               I will build a profitable shopify dropping store
               <div>
                 <Rating precision={0.5} value={3} readOnly />
               </div>
-              
-              </Box>
-              </Paper >
-              
-              <Paper>
-              <Stack direction="row" spacing={2}>
+            </Box>
+          </Paper>
+
+          <Paper>
+            <Stack direction="row" spacing={2}>
               <a
-              href="http://www.whatsapp.com/Brogrammers</Box>"
-              className="whatsApp icon"
-            >
-              <FontAwesomeIcon icon={faWhatsapp} size="1x" />
-            </a>
+                href="http://www.whatsapp.com/Brogrammers</Box>"
+                className="whatsApp icon"
+              >
+                <FontAwesomeIcon icon={faWhatsapp} size="1x" />
+              </a>
 
-            <a href="https://www.youtube.com/" className="youtube social">
-              <FontAwesomeIcon icon={faYoutube} size="1x" />
-            </a>
+              <a href="https://www.youtube.com/" className="youtube social">
+                <FontAwesomeIcon icon={faYoutube} size="1x" />
+              </a>
 
-            <a href="https://www.twitter.com/" className="twitter social">
-              <FontAwesomeIcon icon={faTwitter} size="1x" />
-            </a>
+              <a href="https://www.twitter.com/" className="twitter social">
+                <FontAwesomeIcon icon={faTwitter} size="1x" />
+              </a>
 
-            <a href="https://www.gmail.com/" className="google social">
-              <FontAwesomeIcon icon={faGoogle} size="1x" />
-            </a>
-             
-              <span>Starting at <b>$70</b></span>
-            <Rating icon={<FavoriteIcon/>} max={1}></Rating>
+              <a href="https://www.gmail.com/" className="google social">
+                <FontAwesomeIcon icon={faGoogle} size="1x" />
+              </a>
 
-             
-              </Stack>
-              </Paper>
-            <Typography
-              variant="h5"
-              width="300px"
-              sx={{
-                fontFamily: "Nunito",
-                marginTop: 1,
-              }}
-            >
-             
-            </Typography>
-            <br></br>
-            
-          </Stack> 
+              <span>
+                Starting at <b>$70</b>
+              </span>
+              <Rating icon={<FavoriteIcon />} max={1}></Rating>
+            </Stack>
+          </Paper>
+          <Typography
+            variant="h5"
+            width="300px"
+            sx={{
+              fontFamily: "Nunito",
+              marginTop: 1,
+            }}
+          ></Typography>
+          <br></br>
         </Stack>
-         {
-            //new set of stacks
-          }  
-           <Stack direction="row" spacing={12} sx={{ flexWrap: "nowrap" }}>
-          <Stack>
-            <Carousel>
+      </Stack>
+      {
+        //new set of stacks
+      }
+      <Stack direction="row" spacing={12} sx={{ flexWrap: "nowrap" }}>
+        <Stack>
+          <Carousel>
             <Card
               sx={{
                 background:
@@ -326,8 +379,7 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
+            ></Card>
             <Card
               sx={{
                 background:
@@ -336,10 +388,9 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
-            
-             <Card
+            ></Card>
+
+            <Card
               sx={{
                 background:
                   "url('https://img.freepik.com/premium-vector/fitness-mobile-app-ui_1302-17270.jpg?size=626&ext=jpg&ga=GA1.2.356087201.1665257753') ",
@@ -347,73 +398,78 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
+            ></Card>
+          </Carousel>
+          <Paper
+            sx={{
+              width: 350,
+              height: 150,
+            }}
+          >
+            <Badge
+              overlap="circular"
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
             >
-            </Card>
-            </Carousel>
-              <Paper sx={{
-                width: 350,
-                height: 150,
-                }}>
-                  <Badge
-                     overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}>
-                  <Avatar  alt='Valaria' sx={{bgcolor:'primary.light'}} >VL</Avatar> 
-                     <Typography sx={{marginTop:1,marginLeft:0.4}}>Valaria</Typography>
-                  </Badge>
-                <Box sx={{
-                  '&:hover': { color: 'purple' },
-                }}>          
-              I will create eye catching website UI and UX design for your business within 12 hours
+              <Avatar alt="Valaria" sx={{ bgcolor: "primary.light" }}>
+                VL
+              </Avatar>
+              <Typography sx={{ marginTop: 1, marginLeft: 0.4 }}>
+                Valaria
+              </Typography>
+            </Badge>
+            <Box
+              sx={{
+                "&:hover": { color: "purple" },
+              }}
+            >
+              I will create eye catching website UI and UX design for your
+              business within 12 hours
               <div>
                 <Rating precision={0.5} value={3} readOnly />
               </div>
-              
-              </Box>
-              </Paper >
-              
-              <Paper>
-              <Stack direction="row" spacing={2}>
+            </Box>
+          </Paper>
+
+          <Paper>
+            <Stack direction="row" spacing={2}>
               <a
-              href="http://www.whatsapp.com/Brogrammers</Box>"
-              className="whatsApp icon"
-            >
-              <FontAwesomeIcon icon={faWhatsapp} size="1x" />
-            </a>
+                href="http://www.whatsapp.com/Brogrammers</Box>"
+                className="whatsApp icon"
+              >
+                <FontAwesomeIcon icon={faWhatsapp} size="1x" />
+              </a>
 
-            <a href="https://www.youtube.com/" className="youtube social">
-              <FontAwesomeIcon icon={faYoutube} size="1x" />
-            </a>
+              <a href="https://www.youtube.com/" className="youtube social">
+                <FontAwesomeIcon icon={faYoutube} size="1x" />
+              </a>
 
-            <a href="https://www.twitter.com/" className="twitter social">
-              <FontAwesomeIcon icon={faTwitter} size="1x" />
-            </a>
+              <a href="https://www.twitter.com/" className="twitter social">
+                <FontAwesomeIcon icon={faTwitter} size="1x" />
+              </a>
 
-            <a href="https://www.gmail.com/" className="google social">
-              <FontAwesomeIcon icon={faGoogle} size="1x" />
-            </a>
-             
-              <span>Starting at <b>$200</b></span>
-            <Rating icon={<FavoriteIcon/>} max={1}></Rating>
+              <a href="https://www.gmail.com/" className="google social">
+                <FontAwesomeIcon icon={faGoogle} size="1x" />
+              </a>
 
-             
-              </Stack>
-              </Paper>
-            <Typography
-              variant="h5"
-              width="300px"
-              sx={{
-                fontFamily: "Nunito",
-                marginTop: 1,
-              }}
-            >
-             
-            </Typography>
-            <br></br>
-            
-          </Stack>
-          
- <Stack>
-            <Carousel>
+              <span>
+                Starting at <b>$200</b>
+              </span>
+              <Rating icon={<FavoriteIcon />} max={1}></Rating>
+            </Stack>
+          </Paper>
+          <Typography
+            variant="h5"
+            width="300px"
+            sx={{
+              fontFamily: "Nunito",
+              marginTop: 1,
+            }}
+          ></Typography>
+          <br></br>
+        </Stack>
+
+        <Stack>
+          <Carousel>
             <Card
               sx={{
                 background:
@@ -422,8 +478,7 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
+            ></Card>
             <Card
               sx={{
                 background:
@@ -432,8 +487,7 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
+            ></Card>
             <Card
               sx={{
                 background:
@@ -442,9 +496,8 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
-             <Card
+            ></Card>
+            <Card
               sx={{
                 background:
                   "url('https://img.freepik.com/free-psd/frontal-minimal-3d-phones-mockup-levitating_135149-104.jpg?size=626&ext=jpg&ga=GA1.2.356087201.1665257753')",
@@ -452,71 +505,77 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
+            ></Card>
+          </Carousel>
+          <Paper
+            sx={{
+              width: 350,
+              height: 150,
+            }}
+          >
+            <Badge
+              overlap="circular"
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
             >
-            </Card>
-            </Carousel>
-              <Paper sx={{
-                width: 350,
-                height: 150,
-                }}>
-                  <Badge
-                     overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}>
-                  <Avatar  alt='Maxwell' sx={{bgcolor:'success.light'}} >ES</Avatar> 
-                     <Typography sx={{marginTop:1,marginLeft:0.4}}>Edwardson</Typography>
-                  </Badge>
-                <Box sx={{
-                  '&:hover': { color: 'gold' },
-                }}>          
-                 I will do psd web template or psd website mockup design
+              <Avatar alt="Maxwell" sx={{ bgcolor: "success.light" }}>
+                ES
+              </Avatar>
+              <Typography sx={{ marginTop: 1, marginLeft: 0.4 }}>
+                Edwardson
+              </Typography>
+            </Badge>
+            <Box
+              sx={{
+                "&:hover": { color: "gold" },
+              }}
+            >
+              I will do psd web template or psd website mockup design
               <div>
                 <Rating precision={0.5} value={3} readOnly />
               </div>
-              
-              </Box>
-              </Paper >
-              
-              <Paper>
-              <Stack direction="row" spacing={2}>
+            </Box>
+          </Paper>
+
+          <Paper>
+            <Stack direction="row" spacing={2}>
               <a
-              href="http://www.whatsapp.com/Brogrammers</Box>"
-              className="whatsApp icon"
-            >
-              <FontAwesomeIcon icon={faWhatsapp} size="1x" />
-            </a>
+                href="http://www.whatsapp.com/Brogrammers</Box>"
+                className="whatsApp icon"
+              >
+                <FontAwesomeIcon icon={faWhatsapp} size="1x" />
+              </a>
 
-            <a href="https://www.youtube.com/" className="youtube social">
-              <FontAwesomeIcon icon={faYoutube} size="1x" />
-            </a>
+              <a href="https://www.youtube.com/" className="youtube social">
+                <FontAwesomeIcon icon={faYoutube} size="1x" />
+              </a>
 
-            <a href="https://www.twitter.com/" className="twitter social">
-              <FontAwesomeIcon icon={faTwitter} size="1x" />
-            </a>
+              <a href="https://www.twitter.com/" className="twitter social">
+                <FontAwesomeIcon icon={faTwitter} size="1x" />
+              </a>
 
-            <a href="https://www.gmail.com/" className="google social">
-              <FontAwesomeIcon icon={faGoogle} size="1x" />
-            </a>
-             
-              <span>Starting at <b>$70</b></span>
-            <Rating icon={<FavoriteIcon/>} max={1}></Rating>
+              <a href="https://www.gmail.com/" className="google social">
+                <FontAwesomeIcon icon={faGoogle} size="1x" />
+              </a>
 
-             
-              </Stack>
-              </Paper>
-            <Typography
-              variant="h5"
-              width="300px"
-              sx={{
-                fontFamily: "Nunito",
-                marginTop: 1,
-              }}
-            >
-            </Typography>
-            <br></br>
-          </Stack>
+              <span>
+                Starting at <b>$70</b>
+              </span>
+              <Rating icon={<FavoriteIcon />} max={1}></Rating>
+            </Stack>
+          </Paper>
+          <Typography
+            variant="h5"
+            width="300px"
+            sx={{
+              fontFamily: "Nunito",
+              marginTop: 1,
+            }}
+          ></Typography>
+          <br></br>
+        </Stack>
 
-          <Stack>
-            <Carousel>
+        <Stack>
+          <Carousel>
             <Card
               sx={{
                 background:
@@ -525,8 +584,7 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
+            ></Card>
             <Card
               sx={{
                 background:
@@ -535,10 +593,9 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
-            >
-            </Card>
-            
-             <Card
+            ></Card>
+
+            <Card
               sx={{
                 background:
                   "url('https://img.freepik.com/free-vector/mobile-social-application-ui-design-concept-flat_1284-45235.jpg?size=338&ext=jpg&ga=GA1.2.356087201.1665257753')",
@@ -546,77 +603,76 @@ const WebbyCards=(props)=>{
                 width: 350,
                 height: 200,
               }}
+            ></Card>
+          </Carousel>
+          <Paper
+            sx={{
+              width: 350,
+              height: 150,
+            }}
+          >
+            <Badge
+              overlap="circular"
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
             >
-            </Card>
-            </Carousel>
-              <Paper sx={{
-                width: 350,
-                height: 150,
-                }}>
-                  <Badge
-                     overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}>
-                  <Avatar  alt='Maxwell' sx={{bgcolor:'primary.light'}} >JO</Avatar> 
-                     <Typography sx={{marginTop:1,marginLeft:0.4}}>Jane Ova</Typography>
-                  </Badge>
-                <Box sx={{
-                  '&:hover': { color: 'red' },
-                }}>          
-                  I will design your creative website layout editable in xd and PSD
+              <Avatar alt="Maxwell" sx={{ bgcolor: "primary.light" }}>
+                JO
+              </Avatar>
+              <Typography sx={{ marginTop: 1, marginLeft: 0.4 }}>
+                Jane Ova
+              </Typography>
+            </Badge>
+            <Box
+              sx={{
+                "&:hover": { color: "red" },
+              }}
+            >
+              I will design your creative website layout editable in xd and PSD
               <div>
                 <Rating precision={0.5} value={3} readOnly />
               </div>
-              
-              </Box>
-              </Paper >
-              
-              <Paper>
-              <Stack direction="row" spacing={2}>
+            </Box>
+          </Paper>
+
+          <Paper>
+            <Stack direction="row" spacing={2}>
               <a
-              href="http://www.whatsapp.com/Brogrammers</Box>"
-              className="whatsApp icon"
-            >
-              <FontAwesomeIcon icon={faWhatsapp} size="1x" />
-            </a>
+                href="http://www.whatsapp.com/Brogrammers</Box>"
+                className="whatsApp icon"
+              >
+                <FontAwesomeIcon icon={faWhatsapp} size="1x" />
+              </a>
 
-            <a href="https://www.youtube.com/" className="youtube social">
-              <FontAwesomeIcon icon={faYoutube} size="1x" />
-            </a>
+              <a href="https://www.youtube.com/" className="youtube social">
+                <FontAwesomeIcon icon={faYoutube} size="1x" />
+              </a>
 
-            <a href="https://www.twitter.com/" className="twitter social">
-              <FontAwesomeIcon icon={faTwitter} size="1x" />
-            </a>
+              <a href="https://www.twitter.com/" className="twitter social">
+                <FontAwesomeIcon icon={faTwitter} size="1x" />
+              </a>
 
-            <a href="https://www.gmail.com/" className="google social">
-              <FontAwesomeIcon icon={faGoogle} size="1x" />
-            </a>
-             
-              <span>Starting at <b>$270</b></span>
-            <Rating icon={<FavoriteIcon/>} max={1}></Rating>
+              <a href="https://www.gmail.com/" className="google social">
+                <FontAwesomeIcon icon={faGoogle} size="1x" />
+              </a>
 
-             
-              </Stack>
-              </Paper>
-            <Typography
-              variant="h5"
-              width="300px"
-              sx={{
-                fontFamily: "Nunito",
-                marginTop: 1,
-              }}
-            >
-             
-            </Typography>
-            <br></br>
-            
-          </Stack> 
+              <span>
+                Starting at <b>$270</b>
+              </span>
+              <Rating icon={<FavoriteIcon />} max={1}></Rating>
+            </Stack>
+          </Paper>
+          <Typography
+            variant="h5"
+            width="300px"
+            sx={{
+              fontFamily: "Nunito",
+              marginTop: 1,
+            }}
+          ></Typography>
+          <br></br>
         </Stack>
-
-
-        </div>   
-    )    
-}
- export default WebbyCards
-
-
-
+      </Stack>
+    </div>
+  );
+};
+export default WebbyCards;

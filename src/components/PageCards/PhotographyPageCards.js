@@ -1,3 +1,4 @@
+//COMPONENTS
 import React from "react";
 import { Typography, Box, Stack, Card, Button } from "@mui/material";
 import BrushIcon from "@mui/icons-material/Brush";
@@ -6,6 +7,11 @@ import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import AnimationIcon from "@mui/icons-material/Animation";
 import SchoolIcon from "@mui/icons-material/School";
 import FilterIcon from "@mui/icons-material/Filter";
+
+//IMAGES
+import photographyOne from "../../images/PagecardImages/photographyOne.jpg";
+import photographyTwo from "../../images/PagecardImages/photographyTwo.webp";
+import photographyThree from "../../images/PagecardImages/photographyThree.jpg";
 
 function PageCards() {
   return (
@@ -118,10 +124,8 @@ function PageCards() {
       <Stack direction="row" spacing={5} sx={{ flexWrap: "nowrap" }}>
         <Stack>
           <Card
-           
             sx={{
-              background:
-                "url('https://www.thoughtco.com/thmb/GAtp0KJWAXudEuz9ufGu2jKAdYQ=/3909x2199/smart/filters:no_upscale()/film-photography-592347645-59e4d0609abed500119e7b14.jpg') ",
+              background: `url(${photographyOne})`,
               backgroundSize: "cover",
               width: "300px",
               height: 200,
@@ -132,17 +136,11 @@ function PageCards() {
             width="300px"
             sx={{
               fontFamily: "Nunito",
+              marginTop: 1,
             }}
           >
             Photography
           </Typography>
-          <Typography
-            variant="h5"
-            width="300px"
-            sx={{
-              fontFamily: "Nunito",
-            }}
-          ></Typography>
           <Typography variant="body" width="300px">
             <Button sx={{ color: "black" }}>Photoshoots</Button> <br />{" "}
             <Button sx={{ color: "black" }}> Birthdays & Parties</Button> <br />{" "}
@@ -154,8 +152,7 @@ function PageCards() {
         <Stack>
           <Card
             sx={{
-              background:
-                "url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/db9a26d5b822890f6b4e7f91b878ab19-1631622451064/Video%20Editing%20_%20Post-Production.png') ",
+              background: `url(${photographyTwo})`,
               backgroundSize: "cover",
               width: 300,
               height: 200,
@@ -166,6 +163,7 @@ function PageCards() {
             width="300px"
             sx={{
               fontFamily: "Nunito",
+              marginTop: 1,
             }}
           >
             Video Editing
@@ -181,8 +179,7 @@ function PageCards() {
         <Stack>
           <Card
             sx={{
-              background:
-                "url('https://berkas.lektur.id/kbbi-tesaurus/miscellaneous.jpg') ",
+              background: `url(${photographyThree})`,
               backgroundSize: "cover",
               width: "300px",
               height: 200,
@@ -193,6 +190,7 @@ function PageCards() {
             width="300px"
             sx={{
               fontFamily: "Nunito",
+              marginTop: 1,
             }}
           >
             Miscellaneous

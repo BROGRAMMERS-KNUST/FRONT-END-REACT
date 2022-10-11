@@ -1,12 +1,20 @@
+//COMPONENTS
 import React from "react";
 import { Box, Stack, Typography, Button } from "@mui/material";
 import Card from "@mui/material/Card";
 import ImageIcon from "@mui/icons-material/Image";
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LaptopIcon from '@mui/icons-material/Laptop';
-import ColorLensIcon from '@mui/icons-material/ColorLens';
-import HowToRegIcon from '@mui/icons-material/HowToReg';
-import BrushIcon from '@mui/icons-material/Brush';
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LaptopIcon from "@mui/icons-material/Laptop";
+import ColorLensIcon from "@mui/icons-material/ColorLens";
+import HowToRegIcon from "@mui/icons-material/HowToReg";
+import BrushIcon from "@mui/icons-material/Brush";
+
+//IMAGES
+import graphicOne from "../../images/PagecardImages/graphicOne.jpeg";
+import graphicTwo from "../../images/PagecardImages/graphicTwo.webp";
+import graphicThree from "../../images/PagecardImages/graphicThree.webp";
+import graphicFour from "../../images/PagecardImages/graphicFour.webp";
+import graphicFive from "../../images/PagecardImages/graphicFive.webp";
 
 function GraphicDesignPageCards() {
   return (
@@ -43,8 +51,12 @@ function GraphicDesignPageCards() {
             </Button>
           </Typography>
         </Box>
-         <Typography fontWeight= 'medium'> Most popular in Graphics & Design</Typography> <br/>
-        <Stack  direction="row" spacing={4} sx={{ flexWrap: "nowrap" }}>
+        <Typography fontWeight="medium">
+          {" "}
+          Most popular in Graphics & Design
+        </Typography>{" "}
+        <br />
+        <Stack direction="row" spacing={4} sx={{ flexWrap: "nowrap" }}>
           <Box
             sx={{
               bgcolor: "background.paper",
@@ -76,7 +88,7 @@ function GraphicDesignPageCards() {
               width: "10vw",
             }}
           >
-            <BrushIcon color="primary"/> Logo Design
+            <BrushIcon color="primary" /> Logo Design
           </Box>
           <Box
             sx={{
@@ -87,7 +99,7 @@ function GraphicDesignPageCards() {
               width: "12vw",
             }}
           >
-            <LaptopIcon color="primary"/> Laptop Stickers
+            <LaptopIcon color="primary" /> Laptop Stickers
           </Box>
           <Box
             sx={{
@@ -98,7 +110,7 @@ function GraphicDesignPageCards() {
               width: "15vw",
             }}
           >
-            <HowToRegIcon color="primary"/> T-shirt & Merchandise
+            <HowToRegIcon color="primary" /> T-shirt & Merchandise
           </Box>
           <Box
             sx={{
@@ -114,14 +126,13 @@ function GraphicDesignPageCards() {
         </Stack>
         <br />
         <Typography variant="h5" fontWeight="medium">
-        Explore Graphics & Design
-      </Typography>
+          Explore Graphics & Design
+        </Typography>
         <Stack direction="row" spacing={4} sx={{ flexWrap: "nowrap" }}>
           <Stack>
             <Card
               sx={{
-                background:
-                  "url('https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600') ",
+                background: `url(${graphicOne})`,
                 backgroundSize: "cover",
                 width: 300,
                 height: 200,
@@ -138,13 +149,15 @@ function GraphicDesignPageCards() {
               Logo and Brand Identity
             </Typography>
             <Typography variant="body" width="300px">
-            <Button sx={{ color: "black" }}>Logo Maker</Button>
+              <Button sx={{ color: "black" }}>Logo Maker</Button>
               <br />
               <Button sx={{ color: "black" }}>Brand Style Guides</Button>
               <br />
               <Button sx={{ color: "black" }}>Logo Design</Button>
               <br />
-              <Button sx={{ color: "black" }}>Business Cards & Stationaries</Button>
+              <Button sx={{ color: "black" }}>
+                Business Cards & Stationaries
+              </Button>
               <br />
             </Typography>
           </Stack>
@@ -152,8 +165,7 @@ function GraphicDesignPageCards() {
           <Stack>
             <Card
               sx={{
-                background:
-                  "url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/431c7d880582a199f5b240dde2694206-1626594004546/Visual%20Design_2x.png') ",
+                background: `url(${graphicTwo})`,
                 backgroundSize: "cover",
                 width: 300,
                 height: 200,
@@ -171,7 +183,8 @@ function GraphicDesignPageCards() {
             </Typography>
             <Typography variant="body" width="300px">
               <Button sx={{ color: "black" }}>Image Editing</Button> <br />{" "}
-              <Button sx={{ color: "black" }}>Presentation Design</Button> <br />{" "}
+              <Button sx={{ color: "black" }}>Presentation Design</Button>{" "}
+              <br />{" "}
               <Button sx={{ color: "black" }}>Infographic Design </Button>
               <br /> <Button sx={{ color: "black" }}>Resume Design</Button>
             </Typography>
@@ -180,8 +193,7 @@ function GraphicDesignPageCards() {
           <Stack>
             <Card
               sx={{
-                background:
-                  "url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/75513a77da804a4b04cf63c5231e5fe2-1627366825531/print_design_2x.png') ",
+                background: `url(${graphicThree})`,
                 backgroundSize: "cover",
                 width: 300,
                 height: 200,
@@ -198,10 +210,12 @@ function GraphicDesignPageCards() {
               Print Design
             </Typography>
             <Typography variant="body" width="300px">
-              <Button sx={{ color: "black" }}>T-Shirts & Merchandise</Button> <br />
+              <Button sx={{ color: "black" }}>T-Shirts & Merchandise</Button>{" "}
+              <br />
               <Button sx={{ color: "black" }}>Flyer Design</Button> <br />{" "}
               <Button sx={{ color: "black" }}>Brochure Design </Button>
-              <br /> <Button sx={{ color: "black" }}>Poster Design</Button> <br />           
+              <br /> <Button sx={{ color: "black" }}>Poster Design</Button>{" "}
+              <br />
               <Button sx={{ color: "black" }}>Menu Design</Button>
               <br />
               <Button sx={{ color: "black" }}>Invitation Design</Button>
@@ -211,8 +225,7 @@ function GraphicDesignPageCards() {
           <Stack>
             <Card
               sx={{
-                background:
-                  "url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/fa22b92aed2d9e4e17b63c7af717aa24-1626178498470/Packaging_Labels_2x.png') ",
+                background: `url(${graphicFour})`,
                 backgroundSize: "cover",
                 width: 300,
                 height: 200,
@@ -229,11 +242,14 @@ function GraphicDesignPageCards() {
               Packaging & Covers
             </Typography>
             <Typography variant="body" width="300px">
-              <Button sx={{ color: "black" }}>Packaging & Label Design </Button> <br />
+              <Button sx={{ color: "black" }}>Packaging & Label Design </Button>{" "}
+              <br />
               <Button sx={{ color: "black" }}>Book Design</Button> <br />{" "}
               <Button sx={{ color: "black" }}>Laptop Stickers</Button> <br />{" "}
               <Button sx={{ color: "black" }}>Album Cover </Button>
-              <br /> <Button sx={{ color: "black" }}>Menu Design</Button> <br />{" "}
+              <br /> <Button sx={{ color: "black" }}>
+                Menu Design
+              </Button> <br />{" "}
               <Button sx={{ color: "black" }}>Cover Art</Button>
             </Typography>
           </Stack>
@@ -242,8 +258,7 @@ function GraphicDesignPageCards() {
           <Stack>
             <Card
               sx={{
-                background:
-                  "url('https://cdn.dribbble.com/users/77598/screenshots/7958090/media/9dfda44bd1e8b288602cd465655e7a36.png?compress=1&resize=400x300') ",
+                background: `url(${graphicFive})`,
                 backgroundSize: "cover",
                 width: 300,
                 height: 200,
@@ -262,7 +277,8 @@ function GraphicDesignPageCards() {
             <Typography variant="body" width="300px">
               <Button sx={{ color: "black" }}>Game Art </Button> <br />{" "}
               <Button sx={{ color: "black" }}>Infographic Design </Button>
-              <br /> <Button sx={{ color: "black" }}>Social Media Design</Button>
+              <br />{" "}
+              <Button sx={{ color: "black" }}>Social Media Design</Button>
             </Typography>
           </Stack>
         </Stack>
