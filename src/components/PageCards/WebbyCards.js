@@ -27,12 +27,13 @@ import AvatarGroup from "@mui/material/AvatarGroup";
 import Rating from "@mui/material/Rating";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import Badge from "@mui/material/Badge";
+import webdevOne from "../../images/PagecardImages/webdevOne.webp";
 const WebbyCards = (props) => {
   return (
     <div>
       <Box
         sx={{
-          background: "#0D4114",
+          background: `url(${webdevOne})`,
           color: "white",
           height: "200px",
           width: "95vw",
@@ -48,10 +49,11 @@ const WebbyCards = (props) => {
           variant="h4"
           paddingTop={3}
           fontFamily={"Nunito"}
+          fontWeight="bold"
         >
           Web Development
         </Typography>
-        <Typography align="center" fontFamily={"Nunito"}>
+        <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
           Need your own website? We've got you covered
           <br />
           <br />

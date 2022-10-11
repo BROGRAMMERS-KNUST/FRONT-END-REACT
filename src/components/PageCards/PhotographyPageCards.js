@@ -12,13 +12,14 @@ import FilterIcon from "@mui/icons-material/Filter";
 import photographyOne from "../../images/PagecardImages/photographyOne.jpg";
 import photographyTwo from "../../images/PagecardImages/photographyTwo.webp";
 import photographyThree from "../../images/PagecardImages/photographyThree.jpg";
+import photographyFour from "../../images/PagecardImages/photographyFour.webp";
 
 function PageCards() {
   return (
     <Box marginLeft={1}>
       <Box
         sx={{
-          background: "#530326",
+          background: `url(${photographyFour})`,
           color: "white",
           height: "200px",
           width: "95vw",
@@ -34,10 +35,11 @@ function PageCards() {
           variant="h4"
           paddingTop={3}
           fontFamily={"Nunito"}
+          fontWeight="bold"
         >
           Photography & Video
         </Typography>
-        <Typography align="center" fontFamily={"Nunito"}>
+        <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
           Bring your story to life with creative videos
           <br />
           <br />

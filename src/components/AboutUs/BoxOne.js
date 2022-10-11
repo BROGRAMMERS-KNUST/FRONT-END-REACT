@@ -6,7 +6,7 @@ const BoxOne = () => {
     <Box>
       {/* FIRST BOX */}
       <Box
-        bgcolor="#F8F8FF"
+        bgcolor="#F5F5F5"
         sx={{
           color: "primary",
           height: "75vh",

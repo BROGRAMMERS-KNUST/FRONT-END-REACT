@@ -5,13 +5,14 @@ import { Typography, Box, Stack, Card, Button } from "@mui/material";
 import foodOne from "../../images/PagecardImages/foodOne.webp";
 import foodTwo from "../../images/PagecardImages/foodTwo.jpeg";
 import foodThree from "../../images/PagecardImages/foodThree.jpg";
+import foodFour from "../../images/PagecardImages/foodFour.jpg";
 
 function FoodServicesPageCards() {
   return (
     <Box>
       <Box
         sx={{
-          background: "#0D4114",
+          background: `url(${foodFour})`,
           color: "white",
           height: "200px",
           width: "95vw",

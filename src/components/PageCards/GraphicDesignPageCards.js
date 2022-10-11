@@ -15,6 +15,7 @@ import graphicTwo from "../../images/PagecardImages/graphicTwo.webp";
 import graphicThree from "../../images/PagecardImages/graphicThree.webp";
 import graphicFour from "../../images/PagecardImages/graphicFour.webp";
 import graphicFive from "../../images/PagecardImages/graphicFive.webp";
+import graphicSix from "../../images/PagecardImages/graphicSix.png";
 
 function GraphicDesignPageCards() {
   return (
@@ -22,8 +23,9 @@ function GraphicDesignPageCards() {
       <Box marginLeft={1}>
         <Box
           sx={{
-            background: "#0D4114",
-            color: "white",
+            background: `url(${graphicSix})`,
+            backgroundSize: "cover",
+            color: "primary",
             height: "200px",
             width: "95vw",
             borderRadius: "10px",
@@ -38,10 +40,11 @@ function GraphicDesignPageCards() {
             variant="h4"
             paddingTop={3}
             fontFamily={"Nunito"}
+            fontWeight="bold"
           >
             Graphics & Design
           </Typography>
-          <Typography align="center" fontFamily={"Nunito"}>
+          <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
             Design to make you standout
             <br />
             <br />
@@ -195,6 +198,7 @@ function GraphicDesignPageCards() {
               sx={{
                 background: `url(${graphicThree})`,
                 backgroundSize: "cover",
+
                 width: 300,
                 height: 200,
               }}
