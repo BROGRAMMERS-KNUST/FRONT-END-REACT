@@ -82,6 +82,12 @@ export default function Footer() {
                   How to Sell on Stulancer
                 </Link>
               </Box>
+              <Box>
+                <Link underline="none" href="/about-us" color="inherit">
+                  {" "}
+                  About Us
+                </Link>
+              </Box>
             </Grid>
           </Grid>
           <hr />

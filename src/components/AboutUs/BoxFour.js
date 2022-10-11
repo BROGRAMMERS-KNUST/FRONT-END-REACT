@@ -51,7 +51,7 @@ const BoxFour = () => {
           <Typography variant="body1">
             You can show your gratitude by donating money to the students who
             worked tirelessly to make this project a succes. Mobile Money
-            Number:0242764001 Reference:Stulancer
+            Number: <em>0242764001</em> Reference:<em>Stulancer</em>
           </Typography>
         </Card>
       </Stack>

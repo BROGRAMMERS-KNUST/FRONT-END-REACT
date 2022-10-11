@@ -27,42 +27,11 @@ import AvatarGroup from "@mui/material/AvatarGroup";
 import Rating from "@mui/material/Rating";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import Badge from "@mui/material/Badge";
-import webdevOne from "../../images/PagecardImages/webdevOne.webp";
+import WebCarousel from "../Carousels/WebCarousel";
 const WebbyCards = (props) => {
   return (
     <div>
-      <Box
-        sx={{
-          background: `url(${webdevOne})`,
-          color: "white",
-          height: "200px",
-          width: "95vw",
-          borderRadius: "10px",
-          marginTop: 3,
-          margin: "auto",
-          marginBottom: 5,
-          marginLeft: 0,
-        }}
-      >
-        <Typography
-          align="center"
-          variant="h4"
-          paddingTop={3}
-          fontFamily={"Nunito"}
-          fontWeight="bold"
-        >
-          Web Development
-        </Typography>
-        <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
-          Need your own website? We've got you covered
-          <br />
-          <br />
-          <Button style={{ margin: "auto" }} variant="contained">
-            {" "}
-            How Stulancer Works
-          </Button>
-        </Typography>
-      </Box>
+      <WebCarousel />
 
       <Stack direction="row" spacing={12} sx={{ flexWrap: "nowrap" }}>
         <Stack>

@@ -12,44 +12,12 @@ import FilterIcon from "@mui/icons-material/Filter";
 import writingOne from "../../images/PagecardImages/writingOne.webp";
 import writingTwo from "../../images/PagecardImages/writingTwo.webp";
 import writingThree from "../../images/PagecardImages/writingThree.webp";
-import writingFour from "../../images/PagecardImages/writingFour.png";
+import WritingCarousel from "../Carousels/WritingCarousel";
 
 function PageCards() {
   return (
     <Box marginLeft={1}>
-      <Box
-        sx={{
-          background: `url(${writingFour})`,
-          backgroundSize: "cover",
-          color: "primary",
-          height: "200px",
-          width: "95vw",
-          borderRadius: "10px",
-          marginTop: 3,
-          margin: "auto",
-          marginBottom: 5,
-          marginLeft: 0,
-        }}
-      >
-        <Typography
-          align="center"
-          variant="h4"
-          paddingTop={3}
-          fontFamily={"Nunito"}
-          fontWeight="bold"
-        >
-          Writing & Translation
-        </Typography>
-        <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
-          Get your words across-in any language
-          <br />
-          <br />
-          <Button style={{ margin: "auto" }} variant="contained">
-            {" "}
-            How Stulancer Works
-          </Button>
-        </Typography>
-      </Box>
+      <WritingCarousel />
       <Typography fontWeight="medium">
         {" "}
         Most popular in Writing & Translation

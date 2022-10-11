@@ -8,6 +8,7 @@ import LaptopIcon from "@mui/icons-material/Laptop";
 import ColorLensIcon from "@mui/icons-material/ColorLens";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import BrushIcon from "@mui/icons-material/Brush";
+import GraphicCarousel from "../Carousels/GraphicCarousel";
 
 //IMAGES
 import graphicOne from "../../images/PagecardImages/graphicOne.jpeg";
@@ -15,45 +16,12 @@ import graphicTwo from "../../images/PagecardImages/graphicTwo.webp";
 import graphicThree from "../../images/PagecardImages/graphicThree.webp";
 import graphicFour from "../../images/PagecardImages/graphicFour.webp";
 import graphicFive from "../../images/PagecardImages/graphicFive.webp";
-import graphicSix from "../../images/PagecardImages/graphicSix.png";
 
 function GraphicDesignPageCards() {
   return (
     <div>
       <Box marginLeft={1}>
-        <Box
-          sx={{
-            background: `url(${graphicSix})`,
-            backgroundSize: "cover",
-            color: "primary",
-            height: "200px",
-            width: "95vw",
-            borderRadius: "10px",
-            marginTop: 3,
-            margin: "auto",
-            marginBottom: 5,
-            marginLeft: 0,
-          }}
-        >
-          <Typography
-            align="center"
-            variant="h4"
-            paddingTop={3}
-            fontFamily={"Nunito"}
-            fontWeight="bold"
-          >
-            Graphics & Design
-          </Typography>
-          <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
-            Design to make you standout
-            <br />
-            <br />
-            <Button style={{ margin: "auto" }} variant="contained">
-              {" "}
-              How Stulancer Works
-            </Button>
-          </Typography>
-        </Box>
+        <GraphicCarousel />
         <Typography fontWeight="medium">
           {" "}
           Most popular in Graphics & Design

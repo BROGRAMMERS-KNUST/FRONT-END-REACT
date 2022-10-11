@@ -5,43 +5,17 @@ import { Typography, Box, Stack, Card, Button } from "@mui/material";
 import foodOne from "../../images/PagecardImages/foodOne.webp";
 import foodTwo from "../../images/PagecardImages/foodTwo.jpeg";
 import foodThree from "../../images/PagecardImages/foodThree.jpg";
-import foodFour from "../../images/PagecardImages/foodFour.jpg";
-
+import FoodCarousel from "../Carousels/FoodCarousel";
 function FoodServicesPageCards() {
   return (
     <Box>
-      <Box
-        sx={{
-          background: `url(${foodFour})`,
-          color: "white",
-          height: "200px",
-          width: "95vw",
-          borderRadius: "10px",
-          marginTop: 3,
-          margin: "auto",
-          marginBottom: 5,
-          marginLeft: 0,
-        }}
+      <FoodCarousel />
+      <Stack
+        direction="row"
+        spacing={8}
+        sx={{ flexWrap: "wrap" }}
+        marginTop={5}
       >
-        <Typography
-          align="center"
-          variant="h4"
-          paddingTop={3}
-          fontFamily={"Nunito"}
-        >
-          Food Services
-        </Typography>
-        <Typography align="center" fontFamily={"Nunito"}>
-          Get the best delivery services on campus
-          <br />
-          <br />
-          <Button style={{ margin: "auto" }} variant="contained">
-            {" "}
-            How Stulancer Works
-          </Button>
-        </Typography>
-      </Box>
-      <Stack direction="row" spacing={8} sx={{ flexWrap: "wrap" }}>
         <Stack>
           <Card
             sx={{

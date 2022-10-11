@@ -12,43 +12,12 @@ import FilterIcon from "@mui/icons-material/Filter";
 import photographyOne from "../../images/PagecardImages/photographyOne.jpg";
 import photographyTwo from "../../images/PagecardImages/photographyTwo.webp";
 import photographyThree from "../../images/PagecardImages/photographyThree.jpg";
-import photographyFour from "../../images/PagecardImages/photographyFour.webp";
+import PhotographyCarousel from "../Carousels/PhotographyCarousel";
 
 function PageCards() {
   return (
     <Box marginLeft={1}>
-      <Box
-        sx={{
-          background: `url(${photographyFour})`,
-          color: "white",
-          height: "200px",
-          width: "95vw",
-          borderRadius: "10px",
-          marginTop: 3,
-          margin: "auto",
-          marginBottom: 5,
-          marginLeft: 0,
-        }}
-      >
-        <Typography
-          align="center"
-          variant="h4"
-          paddingTop={3}
-          fontFamily={"Nunito"}
-          fontWeight="bold"
-        >
-          Photography & Video
-        </Typography>
-        <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
-          Bring your story to life with creative videos
-          <br />
-          <br />
-          <Button style={{ margin: "auto" }} variant="contained">
-            {" "}
-            How Stulancer Works
-          </Button>
-        </Typography>
-      </Box>
+      <PhotographyCarousel />
       <Typography fontWeight="medium">
         {" "}
         Most popular in Photograpgy & Video
