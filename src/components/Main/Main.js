@@ -27,6 +27,7 @@ const Main = () => {
 
       <GridCategory />
       <StulancerPicks />
+      <br />
       <TopRatedStulancers />
     </Box>
   );

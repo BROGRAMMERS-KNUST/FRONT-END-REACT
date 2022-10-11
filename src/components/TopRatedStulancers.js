@@ -4,9 +4,15 @@ import React from "react";
 const TopRatedStulancers = () => {
   return (
     <Box>
-      <Typography variant="h4" fontWeight="bold">
+      <Typography
+        variant="h4"
+        fontFamily="Nunito"
+        fontWeight="bold"
+        margintop={1}
+      >
         Top Rated Stulancers
       </Typography>
+      <Typography variant="body1">Coming soon ...</Typography>
     </Box>
   );
 };
