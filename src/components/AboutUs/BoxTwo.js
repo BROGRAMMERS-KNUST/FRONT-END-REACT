@@ -1,6 +1,12 @@
 import React from "react";
 import { Box, Typography, Stack, Container, Grid } from "@mui/material";
-import { CheckCircleOutline } from "@mui/icons-material";
+import {
+  CheckCircleOutline,
+  GitHub,
+  Groups,
+  People,
+  Twitter,
+} from "@mui/icons-material";
 
 const BoxTwo = () => {
   return (
@@ -90,16 +96,18 @@ const BoxTwo = () => {
               <Typography variant="h4" fontWeight="bold" color="secondary">
                 10
               </Typography>
+              <People />
               <Typography variant="boby3" fontWeight="bold" color="primary">
-                Number of Stulancers
+                {"  "}Number of Stulancers
               </Typography>
             </Grid>
             <Grid item marginTop={5}>
               <Typography variant="h4" fontWeight="bold" color="secondary">
                 10
               </Typography>
+              <Twitter />
               <Typography variant="boby3" fontWeight="bold" color="primary">
-                Followers on Twitter
+                {"  "}Followers on Twitter
               </Typography>
             </Grid>
 
@@ -107,16 +115,18 @@ const BoxTwo = () => {
               <Typography variant="h4" fontWeight="bold" color="secondary">
                 10
               </Typography>
+              <GitHub />
               <Typography variant="boby3" fontWeight="bold" color="primary">
-                Stars on GitHub
+                {"  "}Stars on GitHub
               </Typography>
             </Grid>
             <Grid item marginTop={5}>
               <Typography variant="h4" fontWeight="bold" color="secondary">
                 10
               </Typography>
+              <Groups />
               <Typography variant="boby3" fontWeight="bold" color="primary">
-                Contributers
+                {"  "}Contributers
               </Typography>
             </Grid>
           </Grid>
