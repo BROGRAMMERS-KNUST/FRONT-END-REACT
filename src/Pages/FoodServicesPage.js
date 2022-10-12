@@ -7,7 +7,7 @@ import FoodServicesPageCards from '../components/PageCards/FoodServicesPageCards
 function FoodServicesPage() {
   return (
     <div>
-      <Box sx={{ marginTop: 10, marginLeft: 4, marginRight: 4 }}>
+      <Box sx={{ marginTop: 10, marginLeft: 5, marginRight: 5 }}>
         <Navbar />
         <Breadcrumbs>
           <Link href='/' underline='hover'>
@@ -15,12 +15,7 @@ function FoodServicesPage() {
           </Link>
           <Link underline='hover'>Explore Food Services</Link>
         </Breadcrumbs>
-        <Typography
-          variant='h4'
-          sx={{ marginTop: 1, marginBottom: 2, fontFamily: 'Nunito' }}
-        >
-          Food Services
-        </Typography>
+
         <FoodServicesPageCards />
         <StulancersAvailable service='Caterer' />
       </Box>

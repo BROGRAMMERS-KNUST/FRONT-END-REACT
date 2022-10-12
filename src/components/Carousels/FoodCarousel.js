@@ -1,9 +1,9 @@
-import React from "react";
-import { Typography, Box, Button } from "@mui/material";
-import Carousel from "react-material-ui-carousel";
-import foodFour from "../../images/PagecardImages/foodFour.jpg";
-import foodFive from "../../images/PagecardImages/foodFive.jpeg";
-import foodSix from "../../images/PagecardImages/foodSix.png";
+import React from 'react';
+import { Typography, Box, Button } from '@mui/material';
+import Carousel from 'react-material-ui-carousel';
+import foodFour from '../../images/PagecardImages/foodFour.jpg';
+import foodFive from '../../images/PagecardImages/foodFive.jpeg';
+import foodSix from '../../images/berries-2277.jpg';
 
 const FoodCarousel = () => {
   return (
@@ -12,98 +12,102 @@ const FoodCarousel = () => {
         <Box
           sx={{
             background: `url(${foodFour})`,
-            color: "white",
-            height: "200px",
-            width: "95vw",
-            borderRadius: "10px",
+            backgroundSize: 'cover',
+            color: 'white',
+            height: '205px',
+            width: '93vw',
+            borderRadius: '10px',
             marginTop: 3,
-            margin: "auto",
+            margin: 'auto',
             marginBottom: 5,
-            marginLeft: 0,
+            marginLeft: 0.5,
           }}
         >
           <Typography
-            align="center"
-            variant="h4"
-            paddingTop={3}
-            fontFamily={"Nunito"}
-            fontWeight="bold"
+            align='center'
+            variant='h2'
+            paddingTop={7.1}
+            fontFamily={'Nunito'}
+            fontWeight='bold'
+            letterSpacing={2.5}
           >
             Food Services
           </Typography>
-          <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
+          <Typography
+            letterSpacing={1}
+            variant='h5'
+            align='center'
+            fontFamily={'Nunito'}
+          >
             Get the best delivery services on campus
-            <br />
-            <br />
-            <Button style={{ margin: "auto" }} variant="contained">
-              {" "}
-              How Stulancer Works
-            </Button>
           </Typography>
         </Box>
         <Box
           sx={{
             background: `url(${foodFive})`,
-            color: "white",
-            height: "200px",
-            width: "95vw",
-            borderRadius: "10px",
+            backgroundSize: 'cover',
+            color: 'white',
+            height: '205px',
+            width: '93vw',
+            borderRadius: '10px',
             marginTop: 3,
-            margin: "auto",
+            margin: 'auto',
             marginBottom: 5,
-            marginLeft: 0,
+            marginLeft: 0.5,
           }}
-          fontWeight="bold"
+          fontWeight='bold'
         >
           <Typography
-            align="center"
-            variant="h4"
-            paddingTop={3}
-            fontFamily={"Nunito"}
+            align='center'
+            variant='h2'
+            paddingTop={7.1}
+            fontFamily={'Nunito'}
+            fontWeight='bold'
+            letterSpacing={2.5}
           >
             Food Services
           </Typography>
-          <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
+          <Typography
+            letterSpacing={1}
+            variant='h5'
+            align='center'
+            fontFamily={'Nunito'}
+          >
             Get the best delivery services on campus
-            <br />
-            <br />
-            <Button style={{ margin: "auto" }} variant="contained">
-              {" "}
-              How Stulancer Works
-            </Button>
           </Typography>
         </Box>
         <Box
           sx={{
             background: `url(${foodSix})`,
-
-            color: "black",
-            height: "200px",
-            width: "95vw",
-            borderRadius: "10px",
+            backgroundSize: 'cover',
+            color: 'white',
+            height: '205px',
+            width: '93vw',
+            borderRadius: '10px',
             marginTop: 3,
-            margin: "auto",
+            margin: 'auto',
             marginBottom: 5,
-            marginLeft: 0,
+            marginLeft: 0.5,
           }}
-          fontWeight="bold"
+          fontWeight='bold'
         >
           <Typography
-            align="center"
-            variant="h4"
-            paddingTop={3}
-            fontFamily={"Nunito"}
+            align='center'
+            variant='h2'
+            paddingTop={7.1}
+            fontFamily={'Nunito'}
+            fontWeight='bold'
+            letterSpacing={2.5}
           >
             Food Services
           </Typography>
-          <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
+          <Typography
+            letterSpacing={1}
+            variant='h5'
+            align='center'
+            fontFamily={'Nunito'}
+          >
             Get the best delivery services on campus
-            <br />
-            <br />
-            <Button style={{ margin: "auto" }} variant="contained">
-              {" "}
-              How Stulancer Works
-            </Button>
           </Typography>
         </Box>
       </Carousel>
