@@ -1,10 +1,10 @@
-import { Typography, Box, Button } from "@mui/material";
-import Carousel from "react-material-ui-carousel";
-import writingFour from "../../images/PagecardImages/writingFour.png";
-import writingFive from "../../images/PagecardImages/writingFive.jpeg";
-import writingSix from "../../images/PagecardImages/writingSix.jpeg";
+import { Typography, Box, Button } from '@mui/material';
+import Carousel from 'react-material-ui-carousel';
+import writingFour from '../../images/w4.jpg';
+import writingFive from '../../images/w2.jpg';
+import writingSix from '../../images/w3.jpg';
 
-import React from "react";
+import React from 'react';
 
 const WritingCarousel = () => {
   return (
@@ -13,100 +13,95 @@ const WritingCarousel = () => {
         <Box
           sx={{
             background: `url(${writingFour})`,
-            backgroundSize: "cover",
-            color: "primary",
-            height: "200px",
-            width: "95vw",
-            borderRadius: "10px",
+            backgroundSize: 'cover',
+            color: 'white',
+            height: '205px',
+            width: '93vw',
+            borderRadius: '10px',
             marginTop: 3,
-            margin: "auto",
+            margin: 'auto',
             marginBottom: 5,
-            marginLeft: 0,
+            marginLeft: 0.5,
           }}
         >
           <Typography
-            align="center"
-            variant="h4"
-            paddingTop={3}
-            fontFamily={"Nunito"}
-            fontWeight="bold"
+            align='center'
+            variant='h2'
+            paddingTop={7.1}
+            fontFamily={'Nunito'}
+            fontWeight='bold'
+            letterSpacing={2.5}
           >
             Writing & Translation
           </Typography>
-          <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
+          <Typography align='center' fontFamily={'Nunito'} fontWeight='bold'>
             Get your words across-in any language
-            <br />
-            <br />
-            <Button style={{ margin: "auto" }} variant="contained">
-              {" "}
-              How Stulancer Works
-            </Button>
           </Typography>
         </Box>
         <Box
           sx={{
             background: `url(${writingFive})`,
-            backgroundSize: "cover",
-            color: "primary",
-            height: "200px",
-            width: "95vw",
-            borderRadius: "10px",
+            backgroundSize: 'cover',
+            color: 'white',
+            height: '205px',
+            width: '93vw',
+            borderRadius: '10px',
             marginTop: 3,
-            margin: "auto",
+            margin: 'auto',
             marginBottom: 5,
-            marginLeft: 0,
+            marginLeft: 0.5,
           }}
         >
           <Typography
-            align="center"
-            variant="h4"
-            paddingTop={3}
-            fontFamily={"Nunito"}
-            fontWeight="bold"
+            align='center'
+            variant='h2'
+            paddingTop={7.1}
+            fontFamily={'Nunito'}
+            fontWeight='bold'
+            letterSpacing={2.5}
           >
             Writing & Translation
           </Typography>
-          <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
+          <Typography
+            letterSpacing={1}
+            variant='h5'
+            align='center'
+            fontFamily={'Nunito'}
+          >
             Get your words across-in any language
-            <br />
-            <br />
-            <Button style={{ margin: "auto" }} variant="contained">
-              {" "}
-              How Stulancer Works
-            </Button>
           </Typography>
         </Box>
         <Box
           sx={{
             background: `url(${writingSix})`,
-            backgroundSize: "cover",
-            color: "primary",
-            height: "200px",
-            width: "95vw",
-            borderRadius: "10px",
+            backgroundSize: 'cover',
+            color: 'white',
+            height: '205px',
+            width: '93vw',
+            borderRadius: '10px',
             marginTop: 3,
-            margin: "auto",
+            margin: 'auto',
             marginBottom: 5,
-            marginLeft: 0,
+            marginLeft: 0.5,
           }}
         >
           <Typography
-            align="center"
-            variant="h4"
-            paddingTop={3}
-            fontFamily={"Nunito"}
-            fontWeight="bold"
+            align='center'
+            variant='h2'
+            paddingTop={7.1}
+            fontFamily={'Nunito'}
+            fontWeight='bold'
+            letterSpacing={2.5}
           >
             Writing & Translation
           </Typography>
-          <Typography align="center" fontFamily={"Nunito"} fontWeight="bold">
+          <Typography
+            letterSpacing={1}
+            variant='h5'
+            align='center'
+            fontFamily={'Nunito'}
+          >
             Get your words across-in any language
-            <br />
-            <br />
-            <Button style={{ margin: "auto" }} variant="contained">
-              {" "}
-              How Stulancer Works
-            </Button>
           </Typography>
         </Box>
       </Carousel>
