@@ -1,8 +1,7 @@
 import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
 
 import React from "react";
-import { useState } from "react";
-import { freelancerinfo, updatefreelancerinfo } from "../action/auth";
+import { updatefreelancerinfo } from "../action/auth";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import FileBase from "react-file-base64";

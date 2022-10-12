@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Card, Stack, Grid } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 
 const BoxOne = () => {
   return (

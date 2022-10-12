@@ -2,13 +2,11 @@ import React from 'react';
 import {
   Card,
   CardContent,
-  CardMedia,
   Typography,
   Rating,
   Box,
   Modal,
   IconButton,
-  BoxIconButton,
   Button,
   Avatar,
   Paper,

@@ -1,6 +1,13 @@
-import { Button, Tab, Typography } from "@mui/material";
 import React from "react";
-import { Box, Container, Stack, Card, Link } from "@mui/material";
+import {
+  Box,
+  Container,
+  Stack,
+  Card,
+  Link,
+  Button,
+  Typography,
+} from "@mui/material";
 import Albert from "../../images/Team/Albert.jpg";
 import Kusi from "../../images/Team/Kusi.jpg";
 import Timothy from "../../images/Team/Timothy.jpg";
@@ -32,6 +39,7 @@ const BoxThree = () => {
             <br />
             <br />
             <Button
+              href="/about-us_individual-roles"
               variant="contained"
               endIcon={<ChevronRight />}
               color="secondary"

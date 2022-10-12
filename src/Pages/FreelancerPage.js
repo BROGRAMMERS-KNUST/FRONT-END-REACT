@@ -5,15 +5,15 @@ import {
   IconButton,
   Paper,
   Typography,
-} from '@mui/material';
-import { Box } from '@mui/system';
-import React, { useState } from 'react';
+} from "@mui/material";
+import { Box } from "@mui/system";
+import React, { useState } from "react";
 
-import Rating from '@mui/material/Rating';
-import CallIcon from '@mui/icons-material/Call';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import CloseIcon from '@mui/icons-material/Close';
-import WorkIcon from '@mui/icons-material/Work';
+import Rating from "@mui/material/Rating";
+import CallIcon from "@mui/icons-material/Call";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import CloseIcon from "@mui/icons-material/Close";
+import WorkIcon from "@mui/icons-material/Work";
 function getLabelText(value) {
   return value;
 }
@@ -26,8 +26,8 @@ const FreelancerPage = ({
   whatsappLink,
   service,
 }) => {
-  const [value, setValue] = useState(4.5);
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+  const value = useState(4.5);
+  const user = useState(JSON.parse(localStorage.getItem("profile")));
   getLabelText(value);
   return (
     <Box>
@@ -45,8 +45,8 @@ const FreelancerPage = ({
         </IconButton>
         <Avatar
           sx={{
-            bgcolor: 'orange',
-            top: '50%',
+            bgcolor: "orange",
+            top: "50%",
             marginLeft: 22,
             marginTop: 1,
             marginBottom: 3,
@@ -57,64 +57,64 @@ const FreelancerPage = ({
         />
 
         <Typography
-          sx={{ textAlign: 'center' }}
+          sx={{ textAlign: "center" }}
           fontSize={40}
-          fontWeight='700'
-          fontFamily='Nunito'
+          fontWeight="700"
+          fontFamily="Nunito"
         >
           {fullName}
         </Typography>
         <Typography
           fontSize={25}
-          sx={{ textAlign: 'center' }}
-          color='primary'
-          fontFamily='Nunito'
+          sx={{ textAlign: "center" }}
+          color="primary"
+          fontFamily="Nunito"
         >
           {service}
         </Typography>
         <CssBaseline />
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: "flex" }}>
           <Rating
-            name='half-rating-read'
+            name="half-rating-read"
             value={value}
             precision={0.5}
             sx={{ paddingLeft: 20, marginBottom: 2 }}
-            size='large'
+            size="large"
             readOnly
             getLabelText={getLabelText}
           />
 
           <Typography
             sx={{ paddingLeft: 1.5 }}
-            color='#646765'
-            fontFamily='Nunito'
-            fontWeight='700'
+            color="#646765"
+            fontFamily="Nunito"
+            fontWeight="700"
           >
             ({value})
           </Typography>
         </Box>
         <Typography
           sx={{ paddingLeft: 2, paddingTop: 2 }}
-          color='#646765'
-          fontFamily='Nunito'
-          fontWeight='700'
+          color="#646765"
+          fontFamily="Nunito"
+          fontWeight="700"
         >
           Bio
         </Typography>
         <Typography
           sx={{ paddingLeft: 2, paddingBottom: 2 }}
-          fontFamily='Nunito'
-          color='#646765'
-          variant='body2'
+          fontFamily="Nunito"
+          color="#646765"
+          variant="body2"
         >
           {bio}
         </Typography>
 
         <Typography
           sx={{ paddingLeft: 2, paddingBottom: 1 }}
-          fontFamily='Nunito'
-          color='#646765'
-          fontWeight='700'
+          fontFamily="Nunito"
+          color="#646765"
+          fontWeight="700"
         >
           Portfolio
         </Typography>
@@ -123,21 +123,21 @@ const FreelancerPage = ({
             borderRadius: 5,
             marginLeft: 2,
             marginBottom: 2,
-            fontFamily: 'Nunito',
-            fontWeight: '700',
+            fontFamily: "Nunito",
+            fontWeight: "700",
           }}
           startIcon={<WorkIcon />}
-          variant='contained'
-          size='small'
+          variant="contained"
+          size="small"
         >
           Portfolio
         </Button>
 
         <Typography
           sx={{ paddingLeft: 2, paddingBottom: 1.2 }}
-          fontFamily='Nunito'
-          color='#646765'
-          fontWeight='700'
+          fontFamily="Nunito"
+          color="#646765"
+          fontWeight="700"
         >
           Contact Me
         </Typography>
@@ -149,29 +149,30 @@ const FreelancerPage = ({
                 borderRadius: 5,
                 marginLeft: 2,
                 marginBottom: 5,
-                fontFamily: 'Nunito',
-                fontWeight: '700',
+                fontFamily: "Nunito",
+                fontWeight: "700",
               }}
               startIcon={<CallIcon />}
-              variant='contained'
-              size='small'
+              variant="contained"
+              size="small"
             >
               Call
             </Button>
 
             <Button
+              href={whatsappLink}
               sx={{
                 borderRadius: 5,
                 marginBottom: 5,
                 marginLeft: 2,
-                backgroundColor: '#1DA427',
-                ':hover': { backgroundColor: '#17761E' },
-                fontFamily: 'Nunito',
-                fontWeight: '700',
+                backgroundColor: "#1DA427",
+                ":hover": { backgroundColor: "#17761E" },
+                fontFamily: "Nunito",
+                fontWeight: "700",
               }}
               startIcon={<WhatsAppIcon />}
-              variant='contained'
-              size='small'
+              variant="contained"
+              size="small"
             >
               WhatsApp
             </Button>
@@ -180,9 +181,9 @@ const FreelancerPage = ({
           <Box>
             <Typography
               sx={{ paddingLeft: 2, paddingBottom: 1 }}
-              fontFamily='Nunito'
-              color='#646765'
-              fontWeight='700'
+              fontFamily="Nunito"
+              color="#646765"
+              fontWeight="700"
             >
               Login to see contact info
             </Typography>
