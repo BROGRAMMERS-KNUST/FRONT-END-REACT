@@ -13,15 +13,14 @@ import {
   Stack,
   Container,
   CardHeader,
+  CardMedia,
 } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import { useState } from 'react';
-import FreelancerPage from '../Pages/FreelancerPage';
 import CloseIcon from '@mui/icons-material/Close';
 import GradeRoundedIcon from '@mui/icons-material/GradeRounded';
 import CallIcon from '@mui/icons-material/Call';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import BusinessCenterRoundedIcon from '@mui/icons-material/BusinessCenterRounded';
 import WorkIcon from '@mui/icons-material/Work';
 function getLabelText(value) {
   return value;

@@ -18,7 +18,7 @@ export default function PhotograhyPage() {
         </Link>
       </Breadcrumbs>
       <PhotographyCarousel />
-      {/*<PhotographyPageCards />*/}
+
       <StulancersAvailable service='Photographer' />
     </Box>
   );
