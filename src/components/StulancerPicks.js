@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import StulancersAvailable from "../Pages/StulancersAvailable";
 
 const StulancerPicks = () => {
   return (

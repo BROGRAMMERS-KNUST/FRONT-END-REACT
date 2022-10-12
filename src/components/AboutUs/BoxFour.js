@@ -1,10 +1,6 @@
 import { Card, Stack, Typography, Box } from "@mui/material";
 import React from "react";
-import {
-  Feedback,
-  FeedbackOutlined,
-  PeopleAltOutlined,
-} from "@mui/icons-material";
+import { Feedback, MonetizationOn, People } from "@mui/icons-material";
 
 const BoxFour = () => {
   return (
@@ -14,13 +10,12 @@ const BoxFour = () => {
       </Typography>
       <Stack direction="row" spacing="auto" paddingTop={5}>
         <Card sx={{ width: 350, padding: 2 }}>
-          <Typography
-            startIcon={FeedbackOutlined}
-            variant="h6"
-            color="secondary"
-          >
-            Give feedback
-          </Typography>
+          <Stack direction="row" spacing={2}>
+            <Feedback color="secondary/" fontSize="large" />
+            <Typography variant="h6" color="secondary">
+              Give feedback
+            </Typography>
+          </Stack>
           <Typography variant="body1">
             Tell us what and where we can improve or share your happy moments
             with us! You can also up or downvote any page on our documentation.
@@ -30,9 +25,12 @@ const BoxFour = () => {
           </Typography>
         </Card>
         <Card sx={{ width: 350, padding: 2 }}>
-          <Typography variant="h6" color="secondary">
-            Join the community
-          </Typography>
+          <Stack direction="row" spacing={2}>
+            <People fontSize="large" />
+            <Typography variant="h6" color="secondary">
+              Join the community
+            </Typography>
+          </Stack>
           <Typography variant="body1">
             Become a member of the Stulancer Community. You can help other
             students by providing them with your knowledge and expertise. You
@@ -41,13 +39,12 @@ const BoxFour = () => {
           </Typography>
         </Card>
         <Card sx={{ width: 350, padding: 2 }}>
-          <Typography
-            startIcon={PeopleAltOutlined}
-            variant="h6"
-            color="secondary"
-          >
-            Support us financially
-          </Typography>
+          <Stack direction="row" spacing={2}>
+            <MonetizationOn fontSize="large" />
+            <Typography variant="h6" color="secondary">
+              Support us financially
+            </Typography>
+          </Stack>
           <Typography variant="body1">
             You can show your gratitude by donating money to the students who
             worked tirelessly to make this project a succes. Mobile Money

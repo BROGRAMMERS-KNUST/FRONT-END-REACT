@@ -3,7 +3,7 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import React, { useEffect } from "react";
+import React from "react";
 //css files
 import "./App.css";
 import Background from "./components/Main/Background";
@@ -22,8 +22,7 @@ import FooterMain from "./components/Footer/FooterMain";
 import AboutUS from "./Pages/AboutUS";
 import Webby from "./Pages/Webby";
 import UpdateProfile from "./components/UpdateProfile";
-
-const user = JSON.parse(localStorage.getItem("profile"));
+import IndividualRoles from "./components/AboutUs/IndividualRoles";
 
 function App() {
   return (
@@ -62,6 +61,9 @@ function App() {
             </Route>
             <Route path="/about-us">
               <AboutUS />
+            </Route>
+            <Route exact path="/about-us_individual-roles">
+              <IndividualRoles />
             </Route>
 
             <Route path="/updateprofile">

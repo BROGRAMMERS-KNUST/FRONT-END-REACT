@@ -1,4 +1,4 @@
-import { Typography, Box, Breadcrumbs, Link } from "@mui/material";
+import { Box, Breadcrumbs, Link } from "@mui/material";
 import React from "react";
 import Navbar from "../components/Header/Navbar";
 import PhotographyPageCards from "../components/PageCards/PhotographyPageCards";

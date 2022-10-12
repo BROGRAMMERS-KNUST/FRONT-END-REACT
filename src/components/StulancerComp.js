@@ -2,22 +2,18 @@ import React from "react";
 import {
   Card,
   CardContent,
-  CardMedia,
   Typography,
   Rating,
   Box,
   Modal,
   IconButton,
-  BoxIconButton,
   Button,
   Avatar,
   Paper,
   Stack,
-  Container,
 } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import { useState } from "react";
-import FreelancerPage from "../Pages/FreelancerPage";
 import CloseIcon from "@mui/icons-material/Close";
 
 import CallIcon from "@mui/icons-material/Call";
@@ -28,8 +24,8 @@ function getLabelText(value) {
   return value;
 }
 const StulancerComp = ({ stulancer }) => {
-  const [value, setValue] = useState(4.5);
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+  const value = useState(4.5);
+  const user = useState(JSON.parse(localStorage.getItem("profile")));
   getLabelText(value);
   const [open, setOpen] = useState(false);
 

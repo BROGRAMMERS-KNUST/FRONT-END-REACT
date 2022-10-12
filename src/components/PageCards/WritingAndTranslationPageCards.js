@@ -3,10 +3,8 @@ import React from "react";
 import { Typography, Box, Stack, Card, Button } from "@mui/material";
 import BrushIcon from "@mui/icons-material/Brush";
 import VideoCallIcon from "@mui/icons-material/VideoCall";
-import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import AnimationIcon from "@mui/icons-material/Animation";
 import SchoolIcon from "@mui/icons-material/School";
-import FilterIcon from "@mui/icons-material/Filter";
 
 //IMAGES
 import writingOne from "../../images/PagecardImages/writingOne.webp";

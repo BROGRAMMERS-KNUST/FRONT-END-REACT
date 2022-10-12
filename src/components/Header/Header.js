@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Divider,
+  Link,
   Modal,
   Stack,
   Tab,
@@ -15,7 +16,6 @@ import {
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import Login from "../Auth/LoginHirer";
 import LoginInBoth from "../LogInBoth";
 import SignInOut from "./SignInOut";
 import WorkIcon from "@mui/icons-material/Work";
@@ -83,19 +83,9 @@ function Header() {
                     />
                   </Tooltip>
                 </Tabs>
-                <Tabs textColor="secondary">
-                  <Tooltip title="Visit portfolio">
-                    <Tab
-                      startIcon={<WorkIcon />}
-                      href="/portfolio"
-                      sx={{
-                        fontFamily: "Nunito",
-                        fontWeight: "700",
-                      }}
-                      label=""
-                    />
-                  </Tooltip>
-                </Tabs>
+                <Link margin={2} href="/portfoliopage">
+                  {<WorkIcon fontSize="large" color="secondary" />}
+                </Link>
                 {user.result.serviceType === "servicer" ? (
                   <div>
                     <Button

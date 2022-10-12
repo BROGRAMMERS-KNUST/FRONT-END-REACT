@@ -1,29 +1,15 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import {
-  Paper,
-  Button,
-  sliderClasses,
-  Card,
-  Stack,
-  Typography,
-  Container,
-  Grid,
-} from "@mui/material";
-import Background from "../Main/Background";
+import { Paper, Card, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faInstagram,
   faTwitter,
   faWhatsapp,
   faYoutube,
   faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
 import Avatar from "@mui/material/Avatar";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
-import AvatarGroup from "@mui/material/AvatarGroup";
 import Rating from "@mui/material/Rating";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import Badge from "@mui/material/Badge";

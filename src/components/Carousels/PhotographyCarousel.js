@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box, Stack, Card, Button } from "@mui/material";
+import { Typography, Box, Button } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import photographyFour from "../../images/PagecardImages/photographyFour.webp";
 import photographyFive from "../../images/PagecardImages/photographyFive.jpg";
