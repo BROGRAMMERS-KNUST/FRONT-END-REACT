@@ -1,11 +1,11 @@
-import React from "react";
-import { Stack, Box, Link } from "@mui/material";
+import React from 'react';
+import { Stack, Box, Link } from '@mui/material';
 
 function Navbar() {
   return (
     <Box
       sx={{
-        boxShadow: "0px 1px 1px grey",
+        boxShadow: '0px 1px 1px grey',
         marginTop: -2,
         paddingTop: 1,
         paddingLeft: 5,
@@ -15,59 +15,59 @@ function Navbar() {
         marginBottom: 2,
       }}
     >
-      <Stack direction="row" spacing="auto">
+      <Stack direction='row' spacing='auto'>
         <Link
-          href="/graphic-design"
-          underline="hover"
-          sx={{ fontFamily: "Nunito" }}
+          href='/graphic-design'
+          underline='hover'
+          sx={{ fontFamily: 'Nunito' }}
           style={{
-            textDecorationColor: "gold",
-            textDecorationThickness: "3px",
+            textDecorationColor: 'gold',
+            textDecorationThickness: '3px',
           }}
         >
           GRAPHIC DESIGN
         </Link>
         <Link
-          href="/webby"
-          underline="hover"
-          sx={{ fontFamily: "Nunito" }}
+          href='/webby'
+          underline='hover'
+          sx={{ fontFamily: 'Nunito' }}
           style={{
-            textDecorationColor: "gold",
-            textDecorationThickness: "3px",
+            textDecorationColor: 'gold',
+            textDecorationThickness: '3px',
           }}
         >
           WEB DEVELOPMENT
         </Link>
         <Link
-          href="/photography"
-          underline="hover"
-          sx={{ fontFamily: "Nunito" }}
+          href='/photography'
+          underline='hover'
+          sx={{ fontFamily: 'Nunito' }}
           style={{
-            textDecorationColor: "gold",
-            textDecorationThickness: "3px",
+            textDecorationColor: 'gold',
+            textDecorationThickness: '3px',
           }}
         >
           PHOTOGRAPHY
         </Link>
         <Link
-          href="food-services"
-          underline="hover"
-          sx={{ fontFamily: "Nunito" }}
+          href='food-services'
+          underline='hover'
+          sx={{ fontFamily: 'Nunito' }}
           style={{
-            textDecorationColor: "gold",
-            textDecorationThickness: "3px",
+            textDecorationColor: 'gold',
+            textDecorationThickness: '3px',
           }}
         >
           FOOD SERVICES
         </Link>
 
         <Link
-          href="writing&translation"
-          underline="hover"
-          sx={{ fontFamily: "Nunito" }}
+          href='writing&translation'
+          underline='hover'
+          sx={{ fontFamily: 'Nunito' }}
           style={{
-            textDecorationColor: "gold",
-            textDecorationThickness: "3px",
+            textDecorationColor: 'gold',
+            textDecorationThickness: '3px',
           }}
         >
           WRITING & TRANSLATION
