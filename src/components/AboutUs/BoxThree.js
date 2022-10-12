@@ -13,6 +13,7 @@ import Kusi from "../../images/Team/Kusi.jpg";
 import Timothy from "../../images/Team/Timothy.jpg";
 import Barnes from "../../images/Team/Barnes.jpg";
 import NBA from "../../images/Team/NBA.jpg";
+import Wallace from "../../images/Team/Wallace.jpg";
 import { ChevronRight, GitHub, Telegram, WhatsApp } from "@mui/icons-material";
 
 const BoxThree = () => {
@@ -38,20 +39,20 @@ const BoxThree = () => {
             StuLancer is maintained by a group of invaluable core contributors
             <br />
             <br />
-            <Button
+            {/* <Button
               href="/about-us_individual-roles"
               variant="contained"
               endIcon={<ChevronRight />}
               color="secondary"
             >
               See Individual Roles
-            </Button>
+            </Button> */}
           </Typography>
         </Container>
 
         {/* ALBERT'S STACK */}
 
-        <Stack marginLeft={10} direction="row" sx={{ flexWrap: "wrap" }}>
+        <Stack marginLeft={14} direction="row" sx={{ flexWrap: "wrap" }}>
           <Stack sx={{ width: 200, margin: 2 }}>
             <Card
               sx={{
@@ -227,7 +228,7 @@ const BoxThree = () => {
           <Stack direction="column" sx={{ width: 200, margin: 2 }}>
             <Card
               sx={{
-                background: `url(${Albert})`,
+                background: `url(${Wallace})`,
                 backgroundSize: "cover",
                 width: 200,
                 height: 150,

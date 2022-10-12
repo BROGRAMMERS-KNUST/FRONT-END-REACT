@@ -2,10 +2,10 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import PortfolioPic from "../images/images_3.png";
 import { useState } from "react";
-
 import StarRoundedIcon from "@mui/icons-material/StarRounded";
+
 const PortfolioPage = () => {
-  const user = useState(JSON.parse(localStorage.getItem("profile")));
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
 
   return (
     <Box sx={{ minHeight: "78vh", marginLeft: 4, marginRight: 4 }}>

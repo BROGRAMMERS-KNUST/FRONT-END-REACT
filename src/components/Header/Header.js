@@ -71,40 +71,44 @@ function Header() {
                   sx={{ marginTop: 0.5, bgcolor: "orange" }}
                 />
 
-                <Tabs textColor="secondary">
-                  <Tooltip title="Click to update profile">
-                    <Tab
-                      href="/updateprofile"
-                      sx={{
-                        fontFamily: "Nunito",
-                        fontWeight: "700",
-                      }}
-                      label={user.result.fullName}
-                    />
-                  </Tooltip>
-                </Tabs>
-                <Link margin={2} href="/portfoliopage">
-                  {<WorkIcon fontSize="large" color="secondary" />}
-                </Link>
                 {user.result.serviceType === "servicer" ? (
                   <div>
-                    <Button
-                      disableElevation
-                      onClick={() => {
-                        handleLogout();
-                      }}
-                      color="primary"
-                      sx={{
-                        borderRadius: 5,
-                        marginRight: 2,
-                        fontFamily: "Nunito",
-                        fontWeight: "700",
-                      }}
-                      size="large"
-                      variant="outlined"
-                    >
-                      Log out
-                    </Button>
+                    <Stack direction="row" spacing={2}>
+                      <Tabs textColor="secondary">
+                        <Tooltip title="Click to update profile">
+                          <Tab
+                            href="/updateprofile"
+                            sx={{
+                              fontFamily: "Nunito",
+                              fontWeight: "700",
+                            }}
+                            label={user.result.fullName}
+                          />
+                        </Tooltip>
+                      </Tabs>
+                      <Tooltip label="Visit you portfolio">
+                        <Link margin={2} href="/portfoliopage">
+                          {<WorkIcon fontSize="large" color="primary" />}
+                        </Link>
+                      </Tooltip>
+                      <Button
+                        disableElevation
+                        onClick={() => {
+                          handleLogout();
+                        }}
+                        color="primary"
+                        sx={{
+                          borderRadius: 5,
+                          marginRight: 2,
+                          fontFamily: "Nunito",
+                          fontWeight: "700",
+                        }}
+                        size="large"
+                        variant="outlined"
+                      >
+                        Log out
+                      </Button>
+                    </Stack>
                   </div>
                 ) : (
                   <div>
