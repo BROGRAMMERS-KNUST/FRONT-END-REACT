@@ -1,76 +1,78 @@
 import React from 'react';
 import { Typography, Box, Stack, Card, Button } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
-import webdevOne from '../../images/PagecardImages/webdevOne.webp';
-import webdevTwo from '../../images/PagecardImages/webdevTwo.jpeg';
-import webdevThree from '../../images/PagecardImages/webdevThree.webp';
+import webdevOne from '../../images/WEB1.jpg';
+import webdevTwo from '../../images/WEB2.jpg';
+import webdevThree from '../../images/WEB3.jpg';
 
 const WebCarousel = () => {
   return (
     <Box>
-      <Carousel>
+      <Carousel autoPlay={true} duration={550} animation={'fade'}>
         <Box
           sx={{
             background: `url(${webdevOne})`,
+            backgroundSize: 'cover',
             color: 'white',
-            height: '200px',
-            width: '95vw',
+            height: '205px',
+            width: '93vw',
             borderRadius: '10px',
             marginTop: 3,
             margin: 'auto',
             marginBottom: 5,
-            marginLeft: 0,
+            marginLeft: 0.5,
           }}
         >
           <Typography
             align='center'
-            variant='h4'
-            paddingTop={3}
+            variant='h2'
+            paddingTop={7.1}
             fontFamily={'Nunito'}
             fontWeight='bold'
+            letterSpacing={2.5}
           >
             Web Development
           </Typography>
-          <Typography align='center' fontFamily={'Nunito'} fontWeight='bold'>
+          <Typography
+            letterSpacing={1}
+            variant='h5'
+            align='center'
+            fontFamily={'Nunito'}
+          >
             Need your own website? We've got you covered
-            <br />
-            <br />
-            <Button style={{ margin: 'auto' }} variant='contained'>
-              {' '}
-              How Stulancer Works
-            </Button>
           </Typography>
         </Box>
         <Box
           sx={{
             background: `url(${webdevTwo})`,
+            backgroundSize: 'cover',
             color: 'white',
-            height: '200px',
-            width: '95vw',
+            height: '205px',
+            width: '93vw',
             borderRadius: '10px',
             marginTop: 3,
             margin: 'auto',
             marginBottom: 5,
-            marginLeft: 0,
+            marginLeft: 0.5,
           }}
         >
           <Typography
             align='center'
-            variant='h4'
-            paddingTop={3}
+            variant='h2'
+            paddingTop={7.1}
             fontFamily={'Nunito'}
             fontWeight='bold'
+            letterSpacing={2.5}
           >
             Web Development
           </Typography>
-          <Typography align='center' fontFamily={'Nunito'} fontWeight='bold'>
+          <Typography
+            letterSpacing={1}
+            variant='h5'
+            align='center'
+            fontFamily={'Nunito'}
+          >
             Need your own website? We've got you covered
-            <br />
-            <br />
-            <Button style={{ margin: 'auto' }} variant='contained'>
-              {' '}
-              How Stulancer Works
-            </Button>
           </Typography>
         </Box>
         <Box
@@ -78,37 +80,32 @@ const WebCarousel = () => {
             background: `url(${webdevThree})`,
             backgroundSize: 'cover',
             color: 'white',
-            height: '200px',
-            width: '95vw',
+            height: '205px',
+            width: '93vw',
             borderRadius: '10px',
             marginTop: 3,
             margin: 'auto',
             marginBottom: 5,
-            marginLeft: 0,
+            marginLeft: 0.5,
           }}
         >
           <Typography
             align='center'
-            variant='h4'
-            paddingTop={3}
+            variant='h2'
+            paddingTop={7.1}
             fontFamily={'Nunito'}
             fontWeight='bold'
+            letterSpacing={2.5}
           >
             Web Development
           </Typography>
           <Typography
+            letterSpacing={1}
+            variant='h5'
             align='center'
             fontFamily={'Nunito'}
-            fontWeight='bold'
-            color='secondary'
           >
             Need your own website? We've got you covered
-            <br />
-            <br />
-            <Button style={{ margin: 'auto' }} variant='contained'>
-              {' '}
-              How Stulancer Works
-            </Button>
           </Typography>
         </Box>
       </Carousel>

@@ -5,7 +5,6 @@ import photographyThree from '../../images/artur-d-IADY2y5w7FQ-unsplash.jpg';
 import photographyFour from '../../images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg';
 import photographyFive from '../../images/dylan-mcleod-VRdZBLqnoMU-unsplash.jpg';
 import photographySix from '../../images/PagecardImages/photographySix.jpg';
-import { convertLength } from '@mui/material/styles/cssUtils';
 
 const PhotographyCarousel = () => {
   return (
@@ -27,14 +26,20 @@ const PhotographyCarousel = () => {
         >
           <Typography
             align='center'
-            variant='h4'
+            variant='h2'
             paddingTop={7.1}
             fontFamily={'Nunito'}
             fontWeight='bold'
+            letterSpacing={2.5}
           >
             Photography & Video
           </Typography>
-          <Typography align='center' fontFamily={'Nunito'} fontWeight='bold'>
+          <Typography
+            letterSpacing={1}
+            variant='h5'
+            align='center'
+            fontFamily={'Nunito'}
+          >
             Bring your story to life with creative videos
           </Typography>
         </Box>
@@ -55,14 +60,20 @@ const PhotographyCarousel = () => {
         >
           <Typography
             align='center'
-            variant='h4'
+            variant='h2'
             paddingTop={7.1}
             fontFamily={'Nunito'}
             fontWeight='bold'
+            letterSpacing={2.5}
           >
             Photography & Video
           </Typography>
-          <Typography align='center' fontFamily={'Nunito'} fontWeight='bold'>
+          <Typography
+            letterSpacing={1}
+            variant='h5'
+            align='center'
+            fontFamily={'Nunito'}
+          >
             Bring your story to life with creative videos
           </Typography>
         </Box>
@@ -71,7 +82,6 @@ const PhotographyCarousel = () => {
           sx={{
             background: `url(${photographyThree})`,
             backgroundSize: 'cover',
-
             color: 'white',
             height: '205px',
             width: '93vw',
@@ -84,14 +94,20 @@ const PhotographyCarousel = () => {
         >
           <Typography
             align='center'
-            variant='h4'
+            variant='h2'
             paddingTop={7.1}
             fontFamily={'Nunito'}
             fontWeight='bold'
+            letterSpacing={2.5}
           >
             Photography & Video
           </Typography>
-          <Typography align='center' fontFamily={'Nunito'} fontWeight='bold'>
+          <Typography
+            letterSpacing={1}
+            variant='h5'
+            align='center'
+            fontFamily={'Nunito'}
+          >
             Bring your story to life with creative videos
           </Typography>
         </Box>

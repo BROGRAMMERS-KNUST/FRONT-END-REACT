@@ -22,7 +22,7 @@ function Navbar() {
           sx={{ fontFamily: 'Nunito' }}
           style={{
             textDecorationColor: 'gold',
-            textDecorationThickness: '3px',
+            textDecorationThickness: '2px',
           }}
         >
           GRAPHIC DESIGN
@@ -33,7 +33,7 @@ function Navbar() {
           sx={{ fontFamily: 'Nunito' }}
           style={{
             textDecorationColor: 'gold',
-            textDecorationThickness: '3px',
+            textDecorationThickness: '2px',
           }}
         >
           WEB DEVELOPMENT
@@ -44,7 +44,7 @@ function Navbar() {
           sx={{ fontFamily: 'Nunito' }}
           style={{
             textDecorationColor: 'gold',
-            textDecorationThickness: '3px',
+            textDecorationThickness: '2px',
           }}
         >
           PHOTOGRAPHY
@@ -55,7 +55,7 @@ function Navbar() {
           sx={{ fontFamily: 'Nunito' }}
           style={{
             textDecorationColor: 'gold',
-            textDecorationThickness: '3px',
+            textDecorationThickness: '2px',
           }}
         >
           FOOD SERVICES
@@ -67,7 +67,7 @@ function Navbar() {
           sx={{ fontFamily: 'Nunito' }}
           style={{
             textDecorationColor: 'gold',
-            textDecorationThickness: '3px',
+            textDecorationThickness: '2px',
           }}
         >
           WRITING & TRANSLATION

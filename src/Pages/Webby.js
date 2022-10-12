@@ -1,14 +1,23 @@
-import React from "react";
-import { Box } from "@mui/material";
-import StulancersAvailable from "../Pages/StulancersAvailable";
-import Navbar from "../components/Header/Navbar";
-import WebbyCards from "../components/PageCards/WebbyCards";
+import React from 'react';
+import { Box, Breadcrumbs, Link } from '@mui/material';
+import StulancersAvailable from '../Pages/StulancersAvailable';
+import Navbar from '../components/Header/Navbar';
+import WebbyCards from '../components/PageCards/WebbyCards';
+import WebCarousel from '../components/Carousels/WebCarousel';
 function Webby() {
   return (
     <div>
-      <Box sx={{ marginTop: 10, marginLeft: 4, marginRight: 4 }}>
+      <Box sx={{ marginTop: 10, marginLeft: 5, marginRight: 5 }}>
         <Navbar />
-        <WebbyCards />
+        <Breadcrumbs>
+          <Link href='/' underline='hover'>
+            STULANCER
+          </Link>
+          <Link underline='hover' href='/webby'>
+            WEB DEVELOPMENT
+          </Link>
+        </Breadcrumbs>
+        <WebCarousel />
         <StulancersAvailable />
       </Box>
     </div>

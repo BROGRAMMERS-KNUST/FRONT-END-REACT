@@ -1,62 +1,62 @@
-import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import React from "react";
-import { useState } from "react";
-import { freelancerinfo } from "../action/auth";
-import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import React from 'react';
+import { useState } from 'react';
+import { freelancerinfo } from '../action/auth';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 const FreelancerInfo = () => {
-  const user = useState(JSON.parse(localStorage.getItem("profile")));
+  const user = useState(JSON.parse(localStorage.getItem('profile')));
   const dispatch = useDispatch();
   const history = useHistory();
   const freelancerData = {
-    bio: "",
-    portfolioLink: "",
-    telephoneNumber: "",
-    whatsappLink: "",
-    service: "",
+    bio: '',
+    portfolioLink: '',
+    telephoneNumber: '',
+    whatsappLink: '',
+    service: '',
   };
 
   let freelancerId = null;
   const paperStyle = {
     padding: 20,
-    fontFamily: "Nunito",
-    fontWeight: "700",
-    height: "72vh",
+    fontFamily: 'Nunito',
+    fontWeight: '700',
+    height: '72vh',
     width: 400,
-    margin: "100px auto",
+    margin: '100px auto',
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    freelancerId = user.result._id;
+    freelancerId = user._id;
     dispatch(freelancerinfo(freelancerData, history, freelancerId));
     console.log(freelancerData);
   };
 
-  const service = useState("");
+  const service = useState('');
   //window.location.reload();
   return (
     <Grid>
       <Paper style={paperStyle} elevation={6}>
-        <Grid item align="center">
+        <Grid item align='center'>
           <Typography
-            variant="h5"
-            color="primary"
-            sx={{ fontFamily: "Nunito", fontWeight: "700" }}
+            variant='h5'
+            color='primary'
+            sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
           >
             Stulancer
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
-            label="Bio"
-            placeholder="Enter your Bio"
-            variant="standard"
+            label='Bio'
+            placeholder='Enter your Bio'
+            variant='standard'
             required
             fullWidth
             multiline
@@ -67,9 +67,9 @@ const FreelancerInfo = () => {
           />
 
           <TextField
-            label="Portfolio Link"
-            placeholder="Enter Portfolio link"
-            variant="standard"
+            label='Portfolio Link'
+            placeholder='Enter Portfolio link'
+            variant='standard'
             required
             fullWidth
             multiline
@@ -79,10 +79,10 @@ const FreelancerInfo = () => {
             sx={{ marginBottom: 2 }}
           />
           <TextField
-            label="Telephone Number"
-            type="number"
-            placeholder="Enter Telephone number"
-            variant="standard"
+            label='Telephone Number'
+            type='number'
+            placeholder='Enter Telephone number'
+            variant='standard'
             required
             fullWidth
             multiline
@@ -92,9 +92,9 @@ const FreelancerInfo = () => {
             sx={{ marginBottom: 2 }}
           />
           <TextField
-            label="WhatsApp Link"
-            placeholder="Enter WhatsApp Link"
-            variant="standard"
+            label='WhatsApp Link'
+            placeholder='Enter WhatsApp Link'
+            variant='standard'
             fullWidth
             multiline
             onChange={(e) => {
@@ -104,38 +104,38 @@ const FreelancerInfo = () => {
           />
 
           <FormControl sx={{ marginRight: 2, minWidth: 360, marginBottom: 2 }}>
-            <InputLabel sx={{ marginLeft: -1.5 }} id="service">
+            <InputLabel sx={{ marginLeft: -1.5 }} id='service'>
               Service
             </InputLabel>
             <Select
-              labelId="service"
-              variant="standard"
-              id="demo-simple-select-autowidth"
+              labelId='service'
+              variant='standard'
+              id='demo-simple-select-autowidth'
               fullWidth
               value={service}
               onChange={(e) => {
                 freelancerData.service = e.target.value;
               }}
-              label="service"
+              label='service'
             >
-              <MenuItem value="Photographer">Photographer</MenuItem>
-              <MenuItem value="Web Developer">Web Developer</MenuItem>
-              <MenuItem value="Caterer">Caterer</MenuItem>
-              <MenuItem value="Graphic Designer">Graphic Designer</MenuItem>
-              <MenuItem value="Author">CV Writer</MenuItem>
-              <MenuItem value="Other">Other</MenuItem>
+              <MenuItem value='Photographer'>Photographer</MenuItem>
+              <MenuItem value='Web Developer'>Web Developer</MenuItem>
+              <MenuItem value='Caterer'>Caterer</MenuItem>
+              <MenuItem value='Graphic Designer'>Graphic Designer</MenuItem>
+              <MenuItem value='Author'>CV Writer</MenuItem>
+              <MenuItem value='Other'>Other</MenuItem>
             </Select>
           </FormControl>
 
           <Button
-            sx={{ marginBottom: 1, fontFamily: "Nunito", fontWeight: "700" }}
-            variant="contained"
+            sx={{ marginBottom: 1, fontFamily: 'Nunito', fontWeight: '700' }}
+            variant='contained'
             fullWidth
-            type="submit"
+            type='submit'
           >
             Sumbit
           </Button>
-          <Typography sx={{ fontFamily: "Nunito" }} variant="caption">
+          <Typography sx={{ fontFamily: 'Nunito' }} variant='caption'>
             More services will be added soon !
           </Typography>
         </form>

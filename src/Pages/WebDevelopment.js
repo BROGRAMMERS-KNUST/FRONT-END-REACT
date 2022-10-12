@@ -6,7 +6,7 @@ import StulancersAvailable from './StulancersAvailable';
 
 export default function WebDevelopment() {
   return (
-    <Box sx={{ marginTop: 10, marginLeft: 4, marginRight: 4 }}>
+    <Box sx={{ marginTop: 10, marginLeft: 5, marginRight: 5 }}>
       <Navbar />
       <Breadcrumbs>
         <Link href='/' underline='hover'>
