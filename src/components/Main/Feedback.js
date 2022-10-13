@@ -17,7 +17,7 @@ const Feedback = () => {
             borderRadius: 2,
             fontFamily: 'Nunito',
             fontWeight: '700',
-            padding: 2,
+            padding: 1.5,
           }}
           size='small'
           variant='contained'
