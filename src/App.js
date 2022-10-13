@@ -23,6 +23,9 @@ import AboutUS from './Pages/AboutUS';
 import Webby from './Pages/Webby';
 import UpdateProfile from './components/UpdateProfile';
 import IndividualRoles from './components/AboutUs/IndividualRoles';
+import WhyStulancer from './components/Main/WhyStulancer';
+import LandingCarousel from './components/Main/LandingCarousel';
+import Background1 from './components/Main/Background1';
 
 function App() {
   return (
@@ -32,7 +35,8 @@ function App() {
           <Header />
           <Switch>
             <Route exact path='/'>
-              <Background />
+              <LandingCarousel />
+              <Background1 />
               <Main />
             </Route>
             <Route path='/photography'>

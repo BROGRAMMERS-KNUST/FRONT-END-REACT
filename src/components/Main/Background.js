@@ -2,10 +2,16 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import LandingPic from '../../images/images_8.png';
 import GetStarted from './GetStarted';
-
+import StarRoundedIcon from '@mui/icons-material/StarRounded';
 const Background = () => {
   return (
-    <Box sx={{ minHeight: '78vh', marginLeft: 4, marginRight: 4 }}>
+    <Box
+      sx={{
+        minHeight: '78vh',
+        marginLeft: 5,
+        marginRight: 5,
+      }}
+    >
       <Typography variant='h1' fontFamily='Nunito' marginTop={20}>
         Hire the <span> </span>
         <span className='highlight'>best</span>
