@@ -26,6 +26,7 @@ import IndividualRoles from './components/AboutUs/IndividualRoles';
 import WhyStulancer from './components/Main/WhyStulancer';
 import LandingCarousel from './components/Main/LandingCarousel';
 import Background1 from './components/Main/Background1';
+import Background2 from './components/Main/Background2';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
               <LandingCarousel />
               <Background1 />
               <Main />
+              <Background2 />
             </Route>
             <Route path='/photography'>
               <PhotograhyPage />

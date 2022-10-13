@@ -18,7 +18,6 @@ const GetStarted = () => {
           fontWeight: '700',
           padding: 2,
         }}
-        disabled={user}
         size='small'
         variant='contained'
         endIcon={<KeyboardArrowRightIcon />}
