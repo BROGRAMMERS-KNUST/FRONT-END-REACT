@@ -16,6 +16,7 @@ const Background1 = () => {
         variant='h2'
         fontFamily='Nunito'
         marginTop={20}
+        letterSpacing={1.8}
         sx={{ fontSize: 80, marginBottom: -1 }}
       >
         A <span className='highlight'>platform</span>
