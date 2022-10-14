@@ -12,25 +12,25 @@ import {
   Toolbar,
   Tooltip,
   Typography,
-} from "@mui/material";
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
-import LoginInBoth from "../LogInBoth";
-import SignInOut from "./SignInOut";
-import WorkIcon from "@mui/icons-material/Work";
+} from '@mui/material';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import LoginInBoth from '../LogInBoth';
+import SignInOut from './SignInOut';
+import WorkIcon from '@mui/icons-material/Work';
 
 function Header() {
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const history = useHistory();
   const dispatch = useDispatch();
 
   //FUNCTION FOR LOGGING OUT
   const handleLogout = () => {
-    dispatch({ type: "LOGOUT" });
-    history.push("/");
+    dispatch({ type: 'LOGOUT' });
+    history.push('/');
     setUser(null);
     //window.location.reload();
   };
@@ -38,24 +38,24 @@ function Header() {
   return (
     <Box>
       <AppBar
-        color="transparent"
-        sx={{ backdropFilter: "blur(30px)" }}
+        color='transparent'
+        sx={{ backdropFilter: 'blur(30px)' }}
         elevation={1}
       >
         <Toolbar>
           <Typography
             marginLeft={2}
-            color="primary"
-            variant="h2"
+            color='primary'
+            variant='h2'
             fontSize={30}
-            sx={{ flexGrow: 1, ":hover": { cursor: "pointer" } }}
-            fontFamily="Nunito"
-            fontWeight="700"
+            sx={{ flexGrow: 1, ':hover': { cursor: 'pointer' } }}
+            fontFamily='Nunito'
+            fontWeight='700'
             letterSpacing={2}
           >
             <Button
-              href="/"
-              sx={{ fontSize: "30px", fontFamily: "Nunito", fontWeight: 700 }}
+              href='/'
+              sx={{ fontSize: '30px', fontFamily: 'Nunito', fontWeight: 700 }}
             >
               STULANCER
             </Button>
@@ -64,31 +64,31 @@ function Header() {
           {/*CHECKS IF USER IS LOGGED IN AND DECIDES TYPE OF HEADER*/}
           {user ? (
             <div>
-              <Stack direction="row" spacing={2}>
+              <Stack direction='row' spacing={2}>
                 <Avatar
                   alt={user.result.fullName.charAt(0)}
                   src={user.result.profilePic}
-                  sx={{ marginTop: 0.5, bgcolor: "orange" }}
+                  sx={{ marginTop: 0.5, bgcolor: 'orange' }}
                 />
 
-                {user.result.serviceType === "servicer" ? (
+                {user.result.serviceType === 'servicer' ? (
                   <div>
-                    <Stack direction="row" spacing={2}>
-                      <Tabs textColor="secondary">
-                        <Tooltip title="Click to update profile">
+                    <Stack direction='row' spacing={2}>
+                      <Tabs textColor='secondary'>
+                        <Tooltip title='Click to update profile'>
                           <Tab
-                            href="/updateprofile"
+                            href='/updateprofile'
                             sx={{
-                              fontFamily: "Nunito",
-                              fontWeight: "700",
+                              fontFamily: 'Nunito',
+                              fontWeight: '700',
                             }}
                             label={user.result.fullName}
                           />
                         </Tooltip>
                       </Tabs>
-                      <Tooltip label="Visit you portfolio">
-                        <Link margin={2} href="/portfoliopage">
-                          {<WorkIcon fontSize="large" color="primary" />}
+                      <Tooltip label='Visit you portfolio'>
+                        <Link margin={2} href='/portfoliopage'>
+                          {<WorkIcon fontSize='large' color='primary' />}
                         </Link>
                       </Tooltip>
                       <Button
@@ -96,15 +96,15 @@ function Header() {
                         onClick={() => {
                           handleLogout();
                         }}
-                        color="primary"
+                        color='primary'
                         sx={{
                           borderRadius: 5,
                           marginRight: 2,
-                          fontFamily: "Nunito",
-                          fontWeight: "700",
+                          fontFamily: 'Nunito',
+                          fontWeight: '700',
                         }}
-                        size="large"
-                        variant="outlined"
+                        size='large'
+                        variant='outlined'
                       >
                         Log out
                       </Button>
@@ -112,23 +112,38 @@ function Header() {
                   </div>
                 ) : (
                   <div>
-                    <Button
-                      disableElevation
-                      onClick={() => {
-                        handleLogout();
-                      }}
-                      color="secondary"
-                      sx={{
-                        borderRadius: 5,
-                        marginRight: 2,
-                        fontFamily: "Nunito",
-                        fontWeight: "700",
-                      }}
-                      size="large"
-                      variant="outlined"
-                    >
-                      Log out
-                    </Button>
+                    <Stack direction='row' spacing={2}>
+                      <Tabs textColor='secondary'>
+                        <Tooltip title='Click to update profile'>
+                          <Tab
+                            href='/updateprofilehirer'
+                            sx={{
+                              fontFamily: 'Nunito',
+                              fontWeight: '700',
+                            }}
+                            label={user.result.fullName}
+                          />
+                        </Tooltip>
+                      </Tabs>
+
+                      <Button
+                        disableElevation
+                        onClick={() => {
+                          handleLogout();
+                        }}
+                        color='primary'
+                        sx={{
+                          borderRadius: 5,
+                          marginRight: 2,
+                          fontFamily: 'Nunito',
+                          fontWeight: '700',
+                        }}
+                        size='large'
+                        variant='outlined'
+                      >
+                        Log out
+                      </Button>
+                    </Stack>
                   </div>
                 )}
               </Stack>
@@ -143,14 +158,14 @@ function Header() {
                 disableElevation
                 sx={{
                   borderRadius: 5,
-                  backgroundColor: "#ffc400",
-                  ":hover": { backgroundColor: "#DFAE0C" },
+                  backgroundColor: '#ffc400',
+                  ':hover': { backgroundColor: '#DFAE0C' },
                   marginRight: 2,
-                  fontFamily: "Nunito",
-                  fontWeight: "700",
+                  fontFamily: 'Nunito',
+                  fontWeight: '700',
                 }}
-                size="large"
-                variant="contained"
+                size='large'
+                variant='contained'
               >
                 Join
               </Button>
@@ -160,28 +175,28 @@ function Header() {
                 onClick={() => {
                   setOpenLogin(true);
                 }}
-                color="secondary"
+                color='secondary'
                 sx={{
                   borderRadius: 5,
                   marginRight: 2,
-                  fontFamily: "Nunito",
-                  fontWeight: "700",
+                  fontFamily: 'Nunito',
+                  fontWeight: '700',
                 }}
-                size="large"
-                variant="outlined"
+                size='large'
+                variant='outlined'
               >
                 Login
               </Button>
             </div>
           )}
-          <Tabs textColor="secondary">
+          <Tabs textColor='secondary'>
             <Tab
-              href="/about-us"
+              href='/about-us'
               sx={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
+                fontFamily: 'Nunito',
+                fontWeight: '700',
               }}
-              label="About us"
+              label='About us'
             />
           </Tabs>
         </Toolbar>

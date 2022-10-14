@@ -1,43 +1,50 @@
 import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
 
 import React from 'react';
+import { updatehirerinfo } from '../action/auth';
 import { useDispatch } from 'react-redux';
-import { signup } from '../../action/auth';
 import { useHistory } from 'react-router-dom';
 import FileBase from 'react-file-base64';
-const SignUp = () => {
+
+import { useState } from 'react';
+const UpdateProfileHirer = () => {
+  const user = JSON.parse(localStorage.getItem('profile'));
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const [disabled, setDisabled] = useState(false);
+
+  const hirerData = {
+    fullName: user.result.fullname,
+    email: user.result.email,
+    profilePic: user.result.profilePic,
+  };
+
+  let hirerId = null;
   const paperStyle = {
     padding: 20,
     fontFamily: 'Nunito',
     fontWeight: '700',
-    height: '70vh',
+    height: '50vh',
     width: 400,
-    margin: '0px auto',
+    margin: '100px auto',
   };
 
-  const userData = {
-    fullName: '',
-    email: '',
-    password: '',
-    profilePic: '',
-    serviceType: 'hirer',
-  };
-  const dispatch = useDispatch();
-  const history = useHistory();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(signup(userData, history));
-    console.log(userData);
+    hirerId = user.result._id;
+    setDisabled(true);
+    dispatch(updatehirerinfo(hirerData, history, hirerId));
+    console.log(hirerData);
   };
 
   return (
     <Grid>
-      <Paper style={paperStyle}>
+      <Paper style={paperStyle} elevation={6}>
         <Grid item align='center'>
           <Typography
             variant='h5'
             color='primary'
-            sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
+            sx={{ fontFamily: 'Nunito', fontWeight: '700', marginBottom: 3 }}
           >
             Stulancer
           </Typography>
@@ -45,72 +52,56 @@ const SignUp = () => {
         <form onSubmit={handleSubmit}>
           <TextField
             label='Full Name'
-            placeholder='Enter full name'
+            placeholder='Enter your fullname'
             variant='standard'
             required
             fullWidth
-            helperText='Enter first name first'
-            sx={{ marginBottom: 2, fontFamily: 'Nunito' }}
-            onChange={(e) => {
-              userData.fullName = e.target.value;
-            }}
-          />
-
-          <TextField
-            label='Email'
-            placeholder='Enter email'
-            variant='standard'
-            required
-            fullWidth
+            multiline
+            defaultValue={user.result.fullName}
             sx={{ marginBottom: 2 }}
             onChange={(e) => {
-              userData.email = e.target.value;
+              hirerData.fullName = e.target.value;
+            }}
+          />
+          <TextField
+            label='Email'
+            placeholder='Enter your email'
+            variant='standard'
+            required
+            fullWidth
+            multiline
+            defaultValue={user.result.email}
+            sx={{ marginBottom: 2 }}
+            onChange={(e) => {
+              hirerData.email = e.target.value;
             }}
           />
 
-          <TextField
-            type='password'
-            label='Password'
-            placeholder='Enter password'
-            variant='standard'
-            fullWidth
-            required
-            sx={{ marginBottom: 3 }}
-            onChange={(e) => {
-              userData.password = e.target.value;
-            }}
-          />
-          <Typography sx={{}} color='#646765' fontFamily='Nunito'>
-            Upload profile picture
-          </Typography>
           <FileBase
             type='file'
             multiple={false}
             onDone={({ base64 }) => {
-              userData.profilePic = base64;
+              hirerData.profilePic = base64;
             }}
           />
-
           <Button
             sx={{
-              marginTop: 2.5,
+              marginTop: 1.7,
               marginBottom: 1,
               fontFamily: 'Nunito',
               fontWeight: '700',
             }}
             variant='contained'
+            disabled={disabled}
             fullWidth
             type='submit'
           >
-            Sign up
+            Update profile
           </Button>
-          <Typography sx={{ fontFamily: 'Nunito' }} variant='caption'>
-            By joining I agree to receive emails from StuLancer.
-          </Typography>
         </form>
       </Paper>
     </Grid>
   );
 };
 
-export default SignUp;
+export default UpdateProfileHirer;

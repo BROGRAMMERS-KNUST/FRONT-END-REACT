@@ -13,6 +13,7 @@ export const signupserviceprovider =
   (userData, history) => async (dispatch) => {
     try {
       const { data } = await api.signupserviceprovider(userData);
+
       dispatch({ type: 'AUTHSERVICE', data });
       history.push('/freelancerinfo');
       window.location.reload();
@@ -61,6 +62,19 @@ export const updatefreelancerinfo =
       localStorage.clear();
       localStorage.setItem('profile', JSON.stringify(data));
       history.push('/portfoliopage');
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+export const updatehirerinfo =
+  (hirerData, history, hirerId) => async (dispatch) => {
+    try {
+      const { data } = await api.updatehirerinfo(hirerData, hirerId);
+      localStorage.clear();
+      localStorage.setItem('profile', JSON.stringify(data));
+      history.push('/');
       window.location.reload();
     } catch (error) {
       console.log(error);

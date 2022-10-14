@@ -23,6 +23,9 @@ export const freelancerinfo = (freelancerData, freelancerId) =>
   API.patch(`/user/signupservice/${freelancerId}`, freelancerData);
 export const updatefreelancerinfo = (freelancerData, freelancerId) =>
   API.patch(`/user/updateservice/${freelancerId}`, freelancerData);
+
+export const updatehirerinfo = (hirerData, hirerId) =>
+  API.patch(`/user/updatehirer/${hirerId}`, hirerData);
 export const forgotpassword = (forgotpasswordData) => {
   API.post('/passwordrecovery/forgot-password', forgotpasswordData);
   console.log(`hmm  ${forgotpasswordData}`);
