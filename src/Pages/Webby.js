@@ -18,7 +18,7 @@ function Webby() {
           </Link>
         </Breadcrumbs>
         <WebCarousel />
-        <StulancersAvailable />
+        <StulancersAvailable service='Web Developer' />
       </Box>
     </div>
   );
