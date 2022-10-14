@@ -14,7 +14,8 @@ import Timothy from "../../images/Team/Timothy.jpg";
 import Barnes from "../../images/Team/Barnes.jpg";
 import NBA from "../../images/Team/NBA.jpg";
 import Wallace from "../../images/Team/Wallace.jpg";
-import { ChevronRight, GitHub, Telegram, WhatsApp } from "@mui/icons-material";
+import { GitHub, Telegram, WhatsApp } from "@mui/icons-material";
+import King from "../../images/Team/King.jpg";
 
 const BoxThree = () => {
   return (
@@ -268,7 +269,7 @@ const BoxThree = () => {
           <Stack direction="column" sx={{ width: 200, margin: 2 }}>
             <Card
               sx={{
-                background: `url(${Albert})`,
+                background: `url(${King})`,
                 backgroundSize: "cover",
                 width: 200,
                 height: 150,
@@ -278,8 +279,8 @@ const BoxThree = () => {
               Kinglsey
             </Typography>
             <Typography variant="body1">
-              A third year Computer Enginering student and an aspiring software
-              engineer
+              I ♥ writing code. I love computers and building things. I enjoy
+              playing the guitar
             </Typography>
           </Stack>
 
