@@ -12,7 +12,6 @@ import Header from "./components/Header/Header";
 import PhotograhyPage from "./Pages/PhotograhyPage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-<<<<<<< HEAD
 import GraphicDesignPage from "./Pages/GraphicDesignPage";
 import FoodServicesPage from "./Pages/FoodServicesPage";
 import WritingAndTranslationPage from "./Pages/WritingAndTranslationPage";
@@ -27,24 +26,8 @@ import IndividualRoles from "./components/AboutUs/IndividualRoles";
 import WhyStulancer from "./components/Main/WhyStulancer";
 import LandingCarousel from "./components/Main/LandingCarousel";
 import Background1 from "./components/Main/Background1";
+import Background2 from "./components/Main/Background2";
 import ForgotPassword from "./components/Auth/ForgotPassword";
-=======
-import GraphicDesignPage from './Pages/GraphicDesignPage';
-import FoodServicesPage from './Pages/FoodServicesPage';
-import WritingAndTranslationPage from './Pages/WritingAndTranslationPage';
-import FreelancerPage from './Pages/FreelancerPage';
-import FreelancerInfo from './components/FreelancerInfo';
-import PortfolioPage from './Pages/PortfolioPage';
-import FooterMain from './components/Footer/FooterMain';
-import AboutUS from './Pages/AboutUS';
-import Webby from './Pages/Webby';
-import UpdateProfile from './components/UpdateProfile';
-import IndividualRoles from './components/AboutUs/IndividualRoles';
-import WhyStulancer from './components/Main/WhyStulancer';
-import LandingCarousel from './components/Main/LandingCarousel';
-import Background1 from './components/Main/Background1';
-import Background2 from './components/Main/Background2';
->>>>>>> refs/remotes/origin/master
 
 function App() {
   return (
