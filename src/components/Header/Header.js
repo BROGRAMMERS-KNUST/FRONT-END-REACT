@@ -86,11 +86,7 @@ function Header() {
                           />
                         </Tooltip>
                       </Tabs>
-                      <Tooltip label='Visit you portfolio'>
-                        <Link margin={2} href='/portfoliopage'>
-                          {<WorkIcon fontSize='large' color='primary' />}
-                        </Link>
-                      </Tooltip>
+
                       <Button
                         disableElevation
                         onClick={() => {
