@@ -13,6 +13,7 @@ const Background2 = () => {
         marginRight: 5,
         marginTop: -35,
         marginBottom: 30,
+        backgroundColor: '#f8f2ef',
       }}
     >
       <Typography

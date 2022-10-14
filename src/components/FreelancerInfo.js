@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 const FreelancerInfo = () => {
-  const user = useState(JSON.parse(localStorage.getItem('profile')));
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const dispatch = useDispatch();
   const history = useHistory();
   const freelancerData = {
@@ -33,8 +33,9 @@ const FreelancerInfo = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    freelancerId = user._id;
+    freelancerId = user.result._id;
     dispatch(freelancerinfo(freelancerData, history, freelancerId));
+    console.log(freelancerId);
     console.log(freelancerData);
   };
 
@@ -112,7 +113,6 @@ const FreelancerInfo = () => {
               variant='standard'
               id='demo-simple-select-autowidth'
               fullWidth
-              value={service}
               onChange={(e) => {
                 freelancerData.service = e.target.value;
               }}
@@ -123,7 +123,6 @@ const FreelancerInfo = () => {
               <MenuItem value='Caterer'>Caterer</MenuItem>
               <MenuItem value='Graphic Designer'>Graphic Designer</MenuItem>
               <MenuItem value='Author'>CV Writer</MenuItem>
-              <MenuItem value='Other'>Other</MenuItem>
             </Select>
           </FormControl>
 
