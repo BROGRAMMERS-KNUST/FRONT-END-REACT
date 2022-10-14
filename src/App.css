@@ -46,3 +46,7 @@ img {
   position: absolute;
   max-height: 42rem;
 }
+
+.bold {
+  font-weight: 700;
+}

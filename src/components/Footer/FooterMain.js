@@ -22,30 +22,69 @@ export default function Footer() {
         <Container maxWidth='lg'>
           <Grid container spacing={5}>
             <Grid item xs={12} sm={4}>
-              <Box borderBottom={1}>Categories</Box>
+              <Box
+                sx={{
+                  fontFamily: 'Nunito',
+                  fontWeight: '700',
+                }}
+                borderBottom={1}
+              >
+                Categories
+              </Box>
               <Box>
-                <Link underline='none' href='/' color='inherit'>
+                <Link
+                  sx={{
+                    fontFamily: 'Nunito',
+                  }}
+                  underline='none'
+                  href='/'
+                  color='inherit'
+                >
                   Home
                 </Link>
               </Box>
               <Box>
-                <Link underline='none' href='/webby' color='inherit'>
+                <Link
+                  sx={{
+                    fontFamily: 'Nunito',
+                  }}
+                  underline='none'
+                  href='/webby'
+                  color='inherit'
+                >
                   Web development
                 </Link>
               </Box>
               <Box>
-                <Link underline='none' href='/photography' color='inherit'>
+                <Link
+                  sx={{
+                    fontFamily: 'Nunito',
+                  }}
+                  underline='none'
+                  href='/photography'
+                  color='inherit'
+                >
                   {' '}
                   Photogragphy
                 </Link>
               </Box>
               <Box>
-                <Link underline='none' href='/food-services' color='inherit'>
+                <Link
+                  sx={{
+                    fontFamily: 'Nunito',
+                  }}
+                  underline='none'
+                  href='/food-services'
+                  color='inherit'
+                >
                   Food Services
                 </Link>
               </Box>
               <Box>
                 <Link
+                  sx={{
+                    fontFamily: 'Nunito',
+                  }}
                   underline='none'
                   href='/writing&translation'
                   color='inherit'
@@ -55,13 +94,28 @@ export default function Footer() {
                 </Link>
               </Box>
               <Box>
-                <Link underline='none' href='/graphic-design' color='inherit'>
+                <Link
+                  sx={{
+                    fontFamily: 'Nunito',
+                  }}
+                  underline='none'
+                  href='/graphic-design'
+                  color='inherit'
+                >
                   Graphic Design
                 </Link>
               </Box>
             </Grid>
             <Grid item xs={12} sm={4}>
-              <Box borderBottom={1}>Account</Box>
+              <Box
+                sx={{
+                  fontFamily: 'Nunito',
+                  fontWeight: '700',
+                }}
+                borderBottom={1}
+              >
+                Account
+              </Box>
               <Box>
                 <Link
                   onClick={() => {
@@ -69,7 +123,7 @@ export default function Footer() {
                   }}
                   underline='none'
                   color='inherit'
-                  sx={{ ':hover': { cursor: 'pointer' } }}
+                  sx={{ ':hover': { cursor: 'pointer' }, fontFamily: 'Nunito' }}
                 >
                   Login
                 </Link>
@@ -79,7 +133,7 @@ export default function Footer() {
                   onClick={() => {
                     setOpen(true);
                   }}
-                  sx={{ ':hover': { cursor: 'pointer' } }}
+                  sx={{ ':hover': { cursor: 'pointer' }, fontFamily: 'Nunito' }}
                   underline='none'
                   color='inherit'
                 >
@@ -89,20 +143,49 @@ export default function Footer() {
               </Box>
             </Grid>
             <Grid item xs={12} sm={4}>
-              <Box borderBottom={1}>Support</Box>
+              <Box
+                sx={{
+                  fontFamily: 'Nunito',
+                  fontWeight: '700',
+                }}
+                borderBottom={1}
+              >
+                Support
+              </Box>
               <Box>
-                <Link underline='none' href='/Help' color='inherit'>
+                <Link
+                  sx={{
+                    fontFamily: 'Nunito',
+                  }}
+                  underline='none'
+                  href='/Help'
+                  color='inherit'
+                >
                   Help
                 </Link>
               </Box>
               <Box>
-                <Link underline='none' href='/Sales' color='inherit'>
+                <Link
+                  sx={{
+                    fontFamily: 'Nunito',
+                  }}
+                  underline='none'
+                  href='/Sales'
+                  color='inherit'
+                >
                   {' '}
                   How to Sell on Stulancer
                 </Link>
               </Box>
               <Box>
-                <Link underline='none' href='/about-us' color='inherit'>
+                <Link
+                  sx={{
+                    fontFamily: 'Nunito',
+                  }}
+                  underline='none'
+                  href='/about-us'
+                  color='inherit'
+                >
                   {' '}
                   About Us
                 </Link>
@@ -110,13 +193,18 @@ export default function Footer() {
             </Grid>
           </Grid>
           <hr />
-          <div className='row'>
+          <Box
+            className='row'
+            sx={{
+              fontFamily: 'Nunito',
+            }}
+          >
             <p className='col-sm'>
               <SocialFollow />
               &copy;{new Date().getFullYear()} Brogrammers | All right reserved
               | Terms of Service | Privacy
             </p>
-          </div>
+          </Box>
         </Container>
 
         <Modal
