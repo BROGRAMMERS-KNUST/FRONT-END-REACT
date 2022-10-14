@@ -131,7 +131,6 @@ const UpdateProfile = () => {
               variant='standard'
               id='demo-simple-select-autowidth'
               fullWidth
-              defaultValue={user.result.profilePic}
               onChange={(e) => {
                 freelancerData.service = e.target.value;
               }}

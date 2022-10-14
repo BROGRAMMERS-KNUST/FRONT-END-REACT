@@ -9,16 +9,26 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import { Box } from '@mui/system';
-import CustomizedInputBase from './CustomizedInputBase';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import SignInOut from '../Header/SignInOut';
-import FeedbackForm from '../FeedbackForm';
 import CloseIcon from '@mui/icons-material/Close';
+import { feedback } from '../../action/auth';
 const Feedback = () => {
-  const user = useState(JSON.parse(localStorage.getItem('profile')));
+  const dispatch = useDispatch();
+  const history = useHistory();
   const [open, setOpen] = useState(false);
+
+  const feedbackData = {
+    fullName: '',
+    email: '',
+    feedback: '',
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(feedback(feedbackData));
+    setOpen(false);
+    console.log(feedbackData);
   };
   const paperStyle = {
     padding: 20,
@@ -86,6 +96,9 @@ const Feedback = () => {
                 fullWidth
                 multiline
                 sx={{ marginBottom: 2 }}
+                onChange={(e) => {
+                  feedbackData.fullName = e.target.value;
+                }}
               />
               <TextField
                 label='Email'
@@ -94,6 +107,9 @@ const Feedback = () => {
                 required
                 fullWidth
                 sx={{ marginBottom: 2 }}
+                onChange={(e) => {
+                  feedbackData.email = e.target.value;
+                }}
               />
 
               <TextField
@@ -104,6 +120,9 @@ const Feedback = () => {
                 fullWidth
                 multiline
                 sx={{ marginBottom: 2 }}
+                onChange={(e) => {
+                  feedbackData.feedback = e.target.value;
+                }}
               />
 
               <Button
