@@ -87,6 +87,18 @@ function Header() {
                         </Tooltip>
                       </Tabs>
 
+                      <Tabs textColor='secondary'>
+                        <Tooltip title='Visit your dashboard'>
+                          <Tab
+                            href='/portfoliopage'
+                            sx={{}}
+                            label={
+                              <WorkIcon fontSize='medium' color='primary' />
+                            }
+                          />
+                        </Tooltip>
+                      </Tabs>
+
                       <Button
                         disableElevation
                         onClick={() => {
