@@ -29,6 +29,7 @@ import Background1 from './components/Main/Background1';
 import Background2 from './components/Main/Background2';
 import ForgotPassword from './components/Auth/ForgotPassword';
 import UpdateProfileHirer from './components/UpdateProfileHirer';
+import OtherInfo from './components/OtherInfo';
 
 function App() {
   return (
@@ -82,6 +83,10 @@ function App() {
             </Route>
             <Route path='/updateprofilehirer'>
               <UpdateProfileHirer />
+            </Route>
+
+            <Route path='/otherinfo'>
+              <OtherInfo />
             </Route>
           </Switch>
           <FooterMain />

@@ -84,6 +84,7 @@ const AboutUsCarousel = () => {
             marginTop: 1,
             marginBottom: 5,
             marginLeft: 0.5,
+            backgroundPositionY: -50,
           }}
         >
           <Typography

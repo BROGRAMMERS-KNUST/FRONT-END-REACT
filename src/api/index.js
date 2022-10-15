@@ -33,6 +33,10 @@ export const loginservicer = (loginData) =>
 export const freelancerinfo = (freelancerData, freelancerId) =>
   API.patch(`/user/signupservice/${freelancerId}`, freelancerData);
 
+//TAKE STARTING PRICE AND 3 BRANDING PICS
+export const otherfreelancerinfo = (freelancerData, freelancerId) =>
+  API.patch(`/user/signupservice/${freelancerId}`, freelancerData);
+
 //UPDATE STULANCER INFO
 export const updatefreelancerinfo = (freelancerData, freelancerId) =>
   API.patch(`/user/updateservice/${freelancerId}`, freelancerData);

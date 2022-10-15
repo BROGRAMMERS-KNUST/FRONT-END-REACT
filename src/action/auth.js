@@ -49,6 +49,20 @@ export const freelancerinfo =
     try {
       const { data } = await api.freelancerinfo(freelancerData, freelancerId);
       localStorage.setItem('profile', JSON.stringify(data));
+      history.push('/otherinfo');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+export const otherfreelancerinfo =
+  (freelancerData, history, freelancerId) => async (dispatch) => {
+    try {
+      const { data } = await api.otherfreelancerinfo(
+        freelancerData,
+        freelancerId
+      );
+      localStorage.setItem('profile', JSON.stringify(data));
       history.push('/portfoliopage');
     } catch (error) {
       console.log(error);

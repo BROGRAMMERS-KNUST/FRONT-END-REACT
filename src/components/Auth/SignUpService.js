@@ -27,6 +27,10 @@ const SignUpService = () => {
     telephoneNumber: 0,
     whatsappLink: '',
     service: '',
+    startingPrice: '',
+    brandPic1: '',
+    brandPic2: '',
+    brandPic3: '',
   };
 
   const handleSubmit = (e) => {

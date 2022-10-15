@@ -10,8 +10,6 @@ import {
   Button,
   Avatar,
   Paper,
-  Stack,
-  Container,
   CardHeader,
   CardMedia,
 } from '@mui/material';
@@ -30,13 +28,17 @@ const StulancerComp = ({ stulancer }) => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   getLabelText(value);
   const [open, setOpen] = useState(false);
-  const brandDescription = stulancer.bio;
-  const sliced = brandDescription.slice(0, 60) + '...';
+
   return (
     <Box>
       <Box>
         <Card
-          sx={{ width: 300, ':hover': { cursor: 'pointer' }, boxShadow: 4 }}
+          sx={{
+            width: 320,
+
+            ':hover': { cursor: 'pointer' },
+            boxShadow: 4,
+          }}
           onClick={() => {
             setOpen(true);
           }}
@@ -62,44 +64,42 @@ const StulancerComp = ({ stulancer }) => {
           />
           <CardMedia>
             <Carousel
-              sx={{ width: 300, height: 180 }}
+              sx={{ width: 320, height: 150 }}
               indicators={false}
               autoPlay={false}
             >
               <Box
                 sx={{
-                  background:
-                    "url('https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600') ",
-
-                  width: 300,
-                  height: 180,
+                  background: `url(${stulancer.brandPic1}) `,
+                  width: 320,
+                  height: 150,
+                  backgroundPositionY: -70,
                   backgroundSize: 'cover',
                   borderRadius: 1,
                 }}
               />
-              <Box
-                sx={{
-                  background:
-                    "url('https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&w=600') ",
-
-                  width: 300,
-                  height: 180,
-                  backgroundSize: 'cover',
-                  borderRadius: 1,
-                }}
-              ></Box>
 
               <Box
                 sx={{
-                  background:
-                    "url('https://images.pexels.com/photos/3194518/pexels-photo-3194518.jpeg?auto=compress&cs=tinysrgb&w=600') ",
-
-                  width: 300,
-                  height: 180,
+                  background: `url(${stulancer.brandPic2}) `,
+                  width: 320,
+                  height: 150,
+                  backgroundPositionY: -70,
                   backgroundSize: 'cover',
                   borderRadius: 1,
                 }}
-              ></Box>
+              />
+
+              <Box
+                sx={{
+                  background: `url(${stulancer.brandPic3}) `,
+                  width: 320,
+                  height: 150,
+                  backgroundPositionY: -70,
+                  backgroundSize: 'cover',
+                  borderRadius: 1,
+                }}
+              />
             </Carousel>
           </CardMedia>
           <CardContent>
@@ -115,12 +115,12 @@ const StulancerComp = ({ stulancer }) => {
               </Typography>
 
               <Typography
-                sx={{ fontSize: 13.0, marginLeft: 10 }}
+                sx={{ fontSize: 13.0, marginLeft: 11 }}
                 fontFamily='Nunito'
                 fontWeight='700'
                 color='#646765'
               >
-                STARTING AT GHC100
+                STARTING AT {stulancer.startingPrice}
               </Typography>
             </Box>
           </CardContent>
