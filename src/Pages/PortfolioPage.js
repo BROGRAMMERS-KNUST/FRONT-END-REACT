@@ -2,7 +2,6 @@ import {
   Button,
   Grid,
   Paper,
-  TextField,
   Typography,
   Box,
   Card,
@@ -13,14 +12,18 @@ import {
 import React from 'react';
 import PortfolioPic from '../images/images_3.png';
 import { useState } from 'react';
-import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import Carousel from 'react-material-ui-carousel';
 import Resizer from 'react-image-file-resizer';
 import CloseIcon from '@mui/icons-material/Close';
 import PaidRoundedIcon from '@mui/icons-material/PaidRounded';
+import { updatebrandpics } from '../action/auth';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 const PortfolioPage = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
+  const history = useHistory();
   const paperStyle = {
     padding: 20,
     fontFamily: 'Nunito',
@@ -30,15 +33,18 @@ const PortfolioPage = () => {
     margin: '100px auto',
   };
   const freelancerData = {
-    startingPrice: '',
-    brandPic1: '',
-    brandPic2: '',
-    brandPic3: '',
+    brandPic1: user.result.brandPic1,
+    brandPic2: user.result.brandPic2,
+    brandPic3: user.result.brandPic3,
   };
 
   let freelancerId = null;
   const handleSubmit = (e) => {
     e.preventDefault();
+    freelancerId = user.result._id;
+
+    dispatch(updatebrandpics(freelancerData, history, freelancerId));
+    console.log(freelancerData);
   };
   return (
     <Box sx={{ minHeight: '78vh', marginLeft: 4, marginRight: 4 }}>

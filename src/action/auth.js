@@ -98,9 +98,20 @@ export const updatehirerinfo =
 export const feedback = (feedbackData) => async (dispatch) => {
   try {
     const { data } = await api.feedback(feedbackData);
-
     console.log(data);
   } catch (error) {
     console.log(error);
   }
 };
+
+export const updatebrandpics =
+  (freelancerData, history, freelancerId) => async (dispatch) => {
+    try {
+      const { data } = await api.updatebrandpics(freelancerData, freelancerId);
+      localStorage.clear();
+      localStorage.setItem('profile', JSON.stringify(data));
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+    }
+  };

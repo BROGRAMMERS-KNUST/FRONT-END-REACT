@@ -49,5 +49,10 @@ export const forgotpassword = (forgotpasswordData) => {
   console.log(`hmm  ${forgotpasswordData}`);
 };
 
+//FEEDBACK
 export const feedback = (feedbackData) =>
   API.post('/user/feedback', feedbackData);
+
+//UPDATE BRAND PICS ONLY
+export const updatebrandpics = (freelancerData, freelancerId) =>
+  API.patch(`/user/updatebrandpics/${freelancerId}`, freelancerData);

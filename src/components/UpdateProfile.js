@@ -4,7 +4,6 @@ import React from 'react';
 import { updatefreelancerinfo } from '../action/auth';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import FileBase from 'react-file-base64';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
