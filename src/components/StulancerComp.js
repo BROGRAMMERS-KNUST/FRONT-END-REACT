@@ -115,7 +115,7 @@ const StulancerComp = ({ stulancer }) => {
               </Typography>
 
               <Typography
-                sx={{ fontSize: 13.0, marginLeft: 11 }}
+                sx={{ fontSize: 13.0, marginLeft: 16 }}
                 fontFamily='Nunito'
                 fontWeight='700'
                 color='#646765'

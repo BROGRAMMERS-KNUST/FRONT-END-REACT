@@ -1,11 +1,11 @@
 import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
-
+import Resizer from 'react-image-file-resizer';
 import React from 'react';
 import { useState } from 'react';
 import { otherfreelancerinfo } from '../action/auth';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import FileBase from 'react-file-base64';
+
 import { Box } from '@mui/system';
 const OtherInfo = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
@@ -70,29 +70,77 @@ const OtherInfo = () => {
             Upload 3 Branding Pics
           </Typography>
           <Box sx={{ marginBottom: 2 }}>
-            <FileBase
+            <input
               type='file'
-              multiple={false}
-              onDone={({ base64 }) => {
-                freelancerData.brandPic1 = base64;
+              onChange={(e) => {
+                try {
+                  Resizer.imageFileResizer(
+                    e.target.files[0],
+                    320,
+                    150,
+                    'JPEG',
+                    52,
+                    0,
+                    (uri) => {
+                      freelancerData.brandPic1 = uri;
+                    },
+                    'base64',
+                    200,
+                    100
+                  );
+                } catch (error) {
+                  console.log(error);
+                }
               }}
             />
           </Box>
           <Box sx={{ marginBottom: 2 }}>
-            <FileBase
+            <input
               type='file'
-              multiple={false}
-              onDone={({ base64 }) => {
-                freelancerData.brandPic2 = base64;
+              onChange={(e) => {
+                try {
+                  Resizer.imageFileResizer(
+                    e.target.files[0],
+                    320,
+                    250,
+                    'JPEG',
+                    50,
+                    0,
+                    (uri) => {
+                      freelancerData.brandPic2 = uri;
+                    },
+                    'base64',
+                    200,
+                    100
+                  );
+                } catch (error) {
+                  console.log(error);
+                }
               }}
             />
           </Box>
           <Box sx={{ marginBottom: 2 }}>
-            <FileBase
+            <input
               type='file'
-              multiple={false}
-              onDone={({ base64 }) => {
-                freelancerData.brandPic3 = base64;
+              onChange={(e) => {
+                try {
+                  Resizer.imageFileResizer(
+                    e.target.files[0],
+                    320,
+                    250,
+                    'JPEG',
+                    50,
+                    0,
+                    (uri) => {
+                      freelancerData.brandPic3 = uri;
+                    },
+                    'base64',
+                    200,
+                    100
+                  );
+                } catch (error) {
+                  console.log(error);
+                }
               }}
             />
           </Box>

@@ -1,5 +1,5 @@
 import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
-
+import Resizer from 'react-image-file-resizer';
 import React from 'react';
 import { updatefreelancerinfo } from '../action/auth';
 import { useDispatch } from 'react-redux';
@@ -22,6 +22,7 @@ const UpdateProfile = () => {
     portfolioLink: user.result.portfolioLink,
     telephoneNumber: user.result.telephoneNumber,
     whatsappLink: user.result.whatsappLink,
+    profilePic: user.result.profilePic,
   };
 
   let freelancerId = null;
@@ -144,11 +145,27 @@ const UpdateProfile = () => {
               <MenuItem value='Other'>Other</MenuItem>
             </Select>
           </FormControl>
-          <FileBase
+          <input
             type='file'
-            multiple={false}
-            onDone={({ base64 }) => {
-              freelancerData.profilePic = base64;
+            onChange={(e) => {
+              try {
+                Resizer.imageFileResizer(
+                  e.target.files[0],
+                  320,
+                  250,
+                  'JPEG',
+                  50,
+                  0,
+                  (uri) => {
+                    freelancerData.profilePic = uri;
+                  },
+                  'base64',
+                  200,
+                  100
+                );
+              } catch (error) {
+                console.log(error);
+              }
             }}
           />
           <Button

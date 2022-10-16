@@ -1,10 +1,9 @@
 import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
-
+import Resizer from 'react-image-file-resizer';
 import React from 'react';
 import { updatehirerinfo } from '../action/auth';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import FileBase from 'react-file-base64';
 
 import { useState } from 'react';
 const UpdateProfileHirer = () => {
@@ -77,11 +76,27 @@ const UpdateProfileHirer = () => {
             }}
           />
 
-          <FileBase
+          <input
             type='file'
-            multiple={false}
-            onDone={({ base64 }) => {
-              hirerData.profilePic = base64;
+            onChange={(e) => {
+              try {
+                Resizer.imageFileResizer(
+                  e.target.files[0],
+                  320,
+                  250,
+                  'JPEG',
+                  50,
+                  0,
+                  (uri) => {
+                    hirerData.profilePic = uri;
+                  },
+                  'base64',
+                  200,
+                  100
+                );
+              } catch (error) {
+                console.log(error);
+              }
             }}
           />
           <Button

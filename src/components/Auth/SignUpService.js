@@ -1,10 +1,12 @@
 import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
-
+import Resizer from 'react-image-file-resizer';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { signupserviceprovider } from '../../action/auth';
 import { useHistory } from 'react-router-dom';
 import FileBase from 'react-file-base64';
+import { useState } from 'react';
+
 const SignUpService = () => {
   const paperStyle = {
     padding: 20,
@@ -16,6 +18,8 @@ const SignUpService = () => {
   };
   const dispatch = useDispatch();
   const history = useHistory();
+  const [compressedImage, setCompressedImage] = useState('');
+
   const userData = {
     fullName: '',
     email: '',
@@ -35,7 +39,9 @@ const SignUpService = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     dispatch(signupserviceprovider(userData, history));
+    console.log(compressedImage);
     console.log(userData);
   };
 
@@ -91,11 +97,27 @@ const SignUpService = () => {
           <Typography sx={{}} color='#646765' fontFamily='Nunito'>
             Upload profile picture
           </Typography>
-          <FileBase
+          <input
             type='file'
-            multiple={false}
-            onDone={({ base64 }) => {
-              userData.profilePic = base64;
+            onChange={(e) => {
+              try {
+                Resizer.imageFileResizer(
+                  e.target.files[0],
+                  200,
+                  200,
+                  'JPEG',
+                  65,
+                  0,
+                  (uri) => {
+                    userData.profilePic = uri;
+                  },
+                  'base64',
+                  100,
+                  100
+                );
+              } catch (error) {
+                console.log(error);
+              }
             }}
           />
           <Button
