@@ -115,12 +115,12 @@ const StulancerComp = ({ stulancer }) => {
               </Typography>
 
               <Typography
-                sx={{ fontSize: 13.0, marginLeft: 16 }}
+                sx={{ fontSize: 13.0, marginLeft: 9 }}
                 fontFamily='Nunito'
                 fontWeight='700'
                 color='#646765'
               >
-                STARTING AT {stulancer.startingPrice}
+                STARTING AT GHC {stulancer.startingPrice}
               </Typography>
             </Box>
           </CardContent>

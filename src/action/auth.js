@@ -115,3 +115,18 @@ export const updatebrandpics =
       console.log(error);
     }
   };
+
+export const updatestartingprice =
+  (startingPrice, history, freelancerId) => async (dispatch) => {
+    try {
+      const { data } = await api.updatestartingprice(
+        startingPrice,
+        freelancerId
+      );
+      localStorage.clear();
+      localStorage.setItem('profile', JSON.stringify(data));
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+    }
+  };

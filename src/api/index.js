@@ -56,3 +56,7 @@ export const feedback = (feedbackData) =>
 //UPDATE BRAND PICS ONLY
 export const updatebrandpics = (freelancerData, freelancerId) =>
   API.patch(`/user/updatebrandpics/${freelancerId}`, freelancerData);
+
+//UPDATE STARTING PRICE ONLY
+export const updatestartingprice = (startingPrice, freelancerId) =>
+  API.patch(`/user/updatestartingprice/${freelancerId}`, startingPrice);

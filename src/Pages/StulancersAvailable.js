@@ -30,9 +30,9 @@ function StulancersAvailable(service) {
       >
         Stulancers Available
       </Typography>
-      <Grid container spacing={42} flexWrap>
+      <Grid container spacing={4} flexWrap columnSpacing={-4}>
         {stulancers.map((stulancer) => (
-          <Grid item key={stulancer._id} xs={12} sm={2}>
+          <Grid item key={stulancer._id} xs={12} sm={2} xl={3}>
             <StulancerComp stulancer={stulancer} field={service} />
           </Grid>
         ))}
