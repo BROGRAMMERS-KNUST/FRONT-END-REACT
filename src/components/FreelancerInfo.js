@@ -19,6 +19,7 @@ const FreelancerInfo = () => {
     telephoneNumber: '',
     whatsappLink: '',
     service: '',
+    specificService: '',
   };
 
   let freelancerId = null;
@@ -125,6 +126,18 @@ const FreelancerInfo = () => {
               <MenuItem value='Author'>CV Writer</MenuItem>
             </Select>
           </FormControl>
+          <TextField
+            label='Specific service'
+            placeholder='Enter specific service'
+            variant='standard'
+            required
+            fullWidth
+            multiline
+            onChange={(e) => {
+              freelancerData.specificService = e.target.value;
+            }}
+            sx={{ marginBottom: 2 }}
+          />
 
           <Button
             sx={{ marginBottom: 1, fontFamily: 'Nunito', fontWeight: '700' }}

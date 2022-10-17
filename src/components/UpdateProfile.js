@@ -22,6 +22,7 @@ const UpdateProfile = () => {
     telephoneNumber: user.result.telephoneNumber,
     whatsappLink: user.result.whatsappLink,
     profilePic: user.result.profilePic,
+    specificService: user.result.specificService,
   };
 
   let freelancerId = null;
@@ -29,7 +30,7 @@ const UpdateProfile = () => {
     padding: 20,
     fontFamily: 'Nunito',
     fontWeight: '700',
-    height: '78vh',
+    height: '88vh',
     width: 400,
     margin: '100px auto',
   };
@@ -144,6 +145,20 @@ const UpdateProfile = () => {
               <MenuItem value='Other'>Other</MenuItem>
             </Select>
           </FormControl>
+
+          <TextField
+            label='Specific service'
+            placeholder='Enter specific service'
+            variant='standard'
+            required
+            defaultValue={user.result.specificService}
+            fullWidth
+            multiline
+            onChange={(e) => {
+              freelancerData.specificService = e.target.value;
+            }}
+            sx={{ marginBottom: 2 }}
+          />
           <input
             type='file'
             onChange={(e) => {

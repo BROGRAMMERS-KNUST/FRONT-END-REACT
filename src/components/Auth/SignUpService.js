@@ -31,6 +31,7 @@ const SignUpService = () => {
     telephoneNumber: 0,
     whatsappLink: '',
     service: '',
+    specificService: '',
     startingPrice: '',
     brandPic1: '',
     brandPic2: '',

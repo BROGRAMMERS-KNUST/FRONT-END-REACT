@@ -63,7 +63,7 @@ const StulancerComp = ({ stulancer }) => {
             }
             subheader={
               <Typography color='primary' fontFamily='Nunito'>
-                {stulancer.service}
+                {stulancer.specificService}
               </Typography>
             }
           />
