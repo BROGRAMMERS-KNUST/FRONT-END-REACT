@@ -12,7 +12,7 @@ import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 const GridCategory = () => {
   return (
     <Box sx={{ margin: 'solid', color: 'red' }}>
-      <Grid container spacing={4} flexWrap>
+      <Grid container spacing={1} flexWrap>
         <Grid
           item
           //First Grid box
