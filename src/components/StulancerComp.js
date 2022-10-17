@@ -15,7 +15,7 @@ import {
   Link,
   Tooltip,
 } from '@mui/material';
-import ContentCopyRoundedIcon from '@mui/icons-material/ContentCopyRounded';
+
 import Carousel from 'react-material-ui-carousel';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
@@ -23,7 +23,7 @@ import GradeRoundedIcon from '@mui/icons-material/GradeRounded';
 import CallIcon from '@mui/icons-material/Call';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import WorkIcon from '@mui/icons-material/Work';
-import CopyToClipboard from 'react-copy-to-clipboard';
+
 function getLabelText(value) {
   return value;
 }
