@@ -1,7 +1,6 @@
 import { Button, Modal } from '@mui/material';
 import React, { useState } from 'react';
 import { Box } from '@mui/system';
-import CustomizedInputBase from './CustomizedInputBase';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import SignInOut from '../Header/SignInOut';
 

@@ -12,7 +12,7 @@ import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 const GridCategory = () => {
   return (
     <Box sx={{ margin: 'solid', color: 'red' }}>
-      <Grid container spacing={6} flexWrap>
+      <Grid container spacing={4} flexWrap>
         <Grid
           item
           //First Grid box
@@ -46,7 +46,8 @@ const GridCategory = () => {
               Web development
             </Typography>
 
-            <Button href='webby'
+            <Button
+              href='webby'
               sx={{
                 backgroundColor: 'white',
                 ':hover': { backgroundColor: 'white' },
