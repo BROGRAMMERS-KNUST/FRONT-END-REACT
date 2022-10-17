@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
-import { forgotpassword } from "../../api";
+import { forgotpassword } from "../../action/passwordrecovery";
 
 const ForgotPassword = () => {
   const dispatch = useDispatch();
@@ -55,6 +55,7 @@ const ForgotPassword = () => {
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
+            type="email"
             label="Email"
             placeholder="Enter email"
             variant="standard"
