@@ -44,6 +44,7 @@ const LoginServicer = () => {
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
+            type="email"
             label="Email"
             placeholder="Enter email"
             variant="standard"
