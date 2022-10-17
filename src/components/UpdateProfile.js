@@ -30,7 +30,6 @@ const UpdateProfile = () => {
     padding: 20,
     fontFamily: 'Nunito',
     fontWeight: '700',
-    height: '88vh',
     width: 400,
     margin: '100px auto',
   };

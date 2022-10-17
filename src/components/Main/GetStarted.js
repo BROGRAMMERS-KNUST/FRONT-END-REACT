@@ -20,6 +20,7 @@ const GetStarted = () => {
         }}
         size='small'
         variant='contained'
+        disabled={user}
         endIcon={<KeyboardArrowRightIcon />}
         onClick={() => {
           setOpen(true);

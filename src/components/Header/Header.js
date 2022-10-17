@@ -31,6 +31,7 @@ function Header() {
   const handleLogout = () => {
     dispatch({ type: 'LOGOUT' });
     history.push('/');
+    window.location.reload();
     setUser(null);
     //window.location.reload();
   };

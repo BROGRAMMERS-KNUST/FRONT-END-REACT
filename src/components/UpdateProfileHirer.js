@@ -23,7 +23,6 @@ const UpdateProfileHirer = () => {
     padding: 20,
     fontFamily: 'Nunito',
     fontWeight: '700',
-    height: '50vh',
     width: 400,
     margin: '100px auto',
   };
