@@ -28,6 +28,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-column-view": "^0.0.1-alpha.3",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-elastic-carousel": "^0.11.5",
     "react-file-base64": "^1.0.3",

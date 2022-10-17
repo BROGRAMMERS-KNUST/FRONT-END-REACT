@@ -12,7 +12,10 @@ import {
   Paper,
   CardHeader,
   CardMedia,
+  Link,
+  Tooltip,
 } from '@mui/material';
+import ContentCopyRoundedIcon from '@mui/icons-material/ContentCopyRounded';
 import Carousel from 'react-material-ui-carousel';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
@@ -20,6 +23,7 @@ import GradeRoundedIcon from '@mui/icons-material/GradeRounded';
 import CallIcon from '@mui/icons-material/Call';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import WorkIcon from '@mui/icons-material/Work';
+import CopyToClipboard from 'react-copy-to-clipboard';
 function getLabelText(value) {
   return value;
 }
@@ -28,6 +32,7 @@ const StulancerComp = ({ stulancer }) => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   getLabelText(value);
   const [open, setOpen] = useState(false);
+  const [open1, setOpen1] = useState(false);
 
   return (
     <Box>
@@ -225,12 +230,15 @@ const StulancerComp = ({ stulancer }) => {
             Portfolio
           </Typography>
           <Button
+            href={stulancer.portfolioLink}
+            target='_blank'
             sx={{
               borderRadius: 5,
               marginLeft: 2,
               marginBottom: 2,
               fontFamily: 'Nunito',
               fontWeight: '700',
+              ':hover': { color: 'white' },
             }}
             startIcon={<WorkIcon />}
             variant='contained'
@@ -259,18 +267,22 @@ const StulancerComp = ({ stulancer }) => {
                 startIcon={<CallIcon />}
                 variant='contained'
                 size='small'
+                onClick={(e) => {
+                  setOpen1(true);
+                }}
               >
                 Call
               </Button>
 
               <Button
                 href={stulancer.whatsappLink}
+                target='_blank'
                 sx={{
                   borderRadius: 5,
                   marginBottom: 5,
                   marginLeft: 2,
                   backgroundColor: '#1DA427',
-                  ':hover': { backgroundColor: '#17761E' },
+                  ':hover': { backgroundColor: '#17761E', color: 'white' },
                   fontFamily: 'Nunito',
                   fontWeight: '700',
                 }}
@@ -297,6 +309,55 @@ const StulancerComp = ({ stulancer }) => {
               </Typography>
             </Box>
           )}
+        </Paper>
+      </Modal>
+
+      <Modal
+        open={open1}
+        onClose={() => {
+          setOpen1(false);
+        }}
+      >
+        {/*Call modal */}
+        <Paper
+          elevation={6}
+          sx={{
+            width: 350,
+
+            marginTop: 35,
+            marginLeft: 72,
+            paddingTop: 3,
+          }}
+        >
+          <IconButton
+            onClick={() => {
+              setOpen1(false);
+            }}
+            sx={{ marginLeft: 37, marginTop: -1.5 }}
+          >
+            <CloseIcon />
+          </IconButton>
+
+          <Typography
+            variant='subtitle1'
+            color='#666666'
+            sx={{ fontFamily: 'Nunito', fontWeight: '700', marginLeft: 3 }}
+          >
+            Telephone Number
+          </Typography>
+
+          <Typography
+            variant='h4'
+            color='primary'
+            sx={{
+              fontFamily: 'Nunito',
+              fontWeight: '700',
+              marginLeft: 3,
+              paddingBottom: 3,
+            }}
+          >
+            {stulancer.telephoneNumber}
+          </Typography>
         </Paper>
       </Modal>
     </Box>
