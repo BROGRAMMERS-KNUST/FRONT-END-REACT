@@ -5,7 +5,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import SignInOut from '../Header/SignInOut';
 
 const GetStarted = () => {
-  const user = useState(JSON.parse(localStorage.getItem('profile')));
+  const user = JSON.parse(localStorage.getItem('profile'));
   const [open, setOpen] = useState(false);
   return (
     <Box sx={{ display: 'flex', marginTop: 2 }}>
