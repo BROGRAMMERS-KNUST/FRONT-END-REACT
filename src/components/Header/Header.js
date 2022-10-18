@@ -39,8 +39,7 @@ function Header() {
   return (
     <Box>
       <AppBar
-        color='transparent'
-        sx={{ backdropFilter: 'blur(30px)' }}
+        sx={{ backdropFilter: 'blur(30px)', backgroundColor: 'white' }}
         elevation={1}
       >
         <Toolbar>
