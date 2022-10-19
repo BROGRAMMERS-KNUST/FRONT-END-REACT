@@ -1,4 +1,5 @@
 import {
+  Alert,
   AppBar,
   Avatar,
   Box,
@@ -6,6 +7,7 @@ import {
   Divider,
   Link,
   Modal,
+  Snackbar,
   Stack,
   Tab,
   Tabs,
@@ -26,14 +28,24 @@ function Header() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const history = useHistory();
   const dispatch = useDispatch();
+  const [opensnack, setOpenSnack] = useState(false);
+  const [message, setMessage] = useState('');
 
   //FUNCTION FOR LOGGING OUT
   const handleLogout = () => {
+    setMessage('Logged Out ');
+    setOpenSnack(true);
     dispatch({ type: 'LOGOUT' });
-    history.push('/');
-    window.location.reload();
-    setUser(null);
-    //window.location.reload();
+    try {
+      setTimeout(() => {
+        history.push('/');
+        window.location.reload();
+        setUser(null);
+        setOpenSnack(false);
+      }, 1530);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -227,6 +239,11 @@ function Header() {
       >
         <LoginInBoth />
       </Modal>
+      <Snackbar open={opensnack} autoHideDuration={1000}>
+        <Alert severity='info' sx={{ width: '100%' }}>
+          {message}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 }
