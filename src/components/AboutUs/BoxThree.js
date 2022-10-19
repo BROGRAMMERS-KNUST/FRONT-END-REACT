@@ -16,6 +16,7 @@ import NBA from '../../images/Team/NBA.jpg';
 import Wallace from '../../images/Team/Wallace.jpg';
 import Wassem from '../../images/Team/Wassem-Darkwa.jpg';
 import King from '../../images/Team/King.jpg';
+import EMMA from '../../images/Team/EMMA.jpg';
 import { ChevronRight, GitHub, Telegram, WhatsApp } from '@mui/icons-material';
 
 const BoxThree = () => {
@@ -469,7 +470,7 @@ const BoxThree = () => {
           <Stack direction='column' sx={{ width: 200, margin: 2 }}>
             <Card
               sx={{
-                background: `url(${Albert})`,
+                background: `url(${EMMA})`,
                 backgroundSize: 'cover',
                 width: 200,
                 height: 150,
@@ -491,9 +492,30 @@ const BoxThree = () => {
               }}
               variant='body1'
             >
-              A third year Computer Enginering student and an aspiring software
-              engineer
+             Hey there! I dabble in games-related software engineeering. I am the guy to call
+             if there is an arcade tournament
             </Typography>
+            <Stack direction='row' spacing={1}>
+              <Link
+                variant='inherit'
+                color='secondary'
+                target='_blank'
+                rel='noopener'
+                href='https://github.com/Carmpeli'
+              >
+                {<GitHub />}
+              </Link>
+
+              <Link
+                variant='inherit'
+                color='secondary'
+                target='_blank'
+                rel='noopener'
+                href='https://t.me/C_rmine'
+              >
+                {<Telegram />}
+              </Link>
+            </Stack>
           </Stack>
         </Stack>
       </Box>

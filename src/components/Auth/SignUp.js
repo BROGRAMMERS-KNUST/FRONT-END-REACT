@@ -1,9 +1,19 @@
-import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
+import {
+  Alert,
+  Button,
+  Grid,
+  Paper,
+  Snackbar,
+  TextField,
+  Typography,
+} from '@mui/material';
 import Resizer from 'react-image-file-resizer';
 import React from 'react';
+import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { signup } from '../../action/auth';
 import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
 
 const SignUp = () => {
   const paperStyle = {
@@ -23,10 +33,28 @@ const SignUp = () => {
   };
   const dispatch = useDispatch();
   const history = useHistory();
-  const handleSubmit = (e) => {
+  const [message, setMessage] = useState('');
+  const [open, setOpen] = useState(false);
+  const [openerror, setOpenError] = useState(false);
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(signup(userData, history));
-    console.log(userData);
+
+    try {
+      const url = 'http://localhost:5000/user/signup';
+      const { data } = await axios.post(url, userData);
+      console.log(data);
+      setMessage(data.message);
+      setOpenError(false);
+      setOpen(true);
+      setTimeout(() => {
+        dispatch({ type: 'AUTH', data });
+        window.location.reload();
+      }, 1480);
+    } catch (error) {
+      console.log(error);
+      setMessage(error.response.data.message);
+      setOpenError(true);
+    }
   };
 
   return (
@@ -124,6 +152,17 @@ const SignUp = () => {
             By joining I agree to receive emails from StuLancer.
           </Typography>
         </form>
+        <Snackbar open={open} autoHideDuration={10000}>
+          <Alert severity='success' sx={{ width: '100%' }}>
+            {message}
+          </Alert>
+        </Snackbar>
+
+        <Snackbar open={openerror} autoHideDuration={10000}>
+          <Alert severity='error' sx={{ width: '100%' }}>
+            {message}
+          </Alert>
+        </Snackbar>
       </Paper>
     </Grid>
   );

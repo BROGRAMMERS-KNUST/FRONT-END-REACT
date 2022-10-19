@@ -1,4 +1,12 @@
-import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
+import {
+  Button,
+  Grid,
+  Paper,
+  TextField,
+  Typography,
+  Snackbar,
+  Alert,
+} from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -8,11 +16,14 @@ import { useState } from 'react';
 import { freelancerinfo } from '../action/auth';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
+import axios from 'axios';
 const FreelancerInfo = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const dispatch = useDispatch();
   const history = useHistory();
+  const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState('');
+  const [disabled, setDisabled] = useState(false);
   const freelancerData = {
     bio: '',
     portfolioLink: '',
@@ -31,16 +42,27 @@ const FreelancerInfo = () => {
     margin: '100px auto',
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setDisabled(true);
     freelancerId = user.result._id;
-    dispatch(freelancerinfo(freelancerData, history, freelancerId));
-    console.log(freelancerId);
-    console.log(freelancerData);
+    try {
+      const url = `http://localhost:5000/user/signupservice/${freelancerId}`;
+      const { data } = await axios.patch(url, freelancerData);
+      setMessage(data.message);
+      setOpen(true);
+      setTimeout(() => {
+        history.push('/otherinfo');
+      }, 1600);
+
+      localStorage.setItem('profile', JSON.stringify(data));
+      console.log(freelancerId);
+      console.log(freelancerData);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  const service = useState('');
-  //window.location.reload();
   return (
     <Grid>
       <Paper style={paperStyle} elevation={6}>
@@ -141,6 +163,7 @@ const FreelancerInfo = () => {
           <Button
             sx={{ marginBottom: 1, fontFamily: 'Nunito', fontWeight: '700' }}
             variant='contained'
+            disabled={disabled}
             fullWidth
             type='submit'
           >
@@ -150,6 +173,11 @@ const FreelancerInfo = () => {
             More services will be added soon !
           </Typography>
         </form>
+        <Snackbar open={open} autoHideDuration={1000}>
+          <Alert severity='success' sx={{ width: '100%' }}>
+            {message}
+          </Alert>
+        </Snackbar>
       </Paper>
     </Grid>
   );

@@ -9,6 +9,8 @@ import {
   Tooltip,
   IconButton,
   TextField,
+  Snackbar,
+  Alert,
 } from '@mui/material';
 import React from 'react';
 import PortfolioPic from '../images/images_3.png';
@@ -20,10 +22,16 @@ import PaidRoundedIcon from '@mui/icons-material/PaidRounded';
 import { updatebrandpics, updatestartingprice } from '../action/auth';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 const PortfolioPage = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
+  const [opensnack, setOpenSnack] = useState(false);
+  const [openerror, setOpenError] = useState(false);
+  const [openerror1, setOpenError1] = useState(false);
+  const [message, setMessage] = useState('');
+
   const dispatch = useDispatch();
   const history = useHistory();
   const paperStyle = {
@@ -54,21 +62,49 @@ const PortfolioPage = () => {
   let freelancerId = null;
 
   //handle submit for starting price only
-  const handleSubmit1 = (e) => {
+  const handleSubmit1 = async (e) => {
     e.preventDefault();
     freelancerId = user.result._id;
-
-    dispatch(updatestartingprice(startingPrice, history, freelancerId));
-    console.log(freelancerData);
+    try {
+      const url = `http://localhost:5000/user/updatestartingprice/${freelancerId}`;
+      const { data } = await axios.patch(url, startingPrice);
+      setMessage(data.message);
+      setOpenError1(false);
+      setOpenSnack(true);
+      setTimeout(() => {
+        window.location.reload();
+      }, 1530);
+      localStorage.setItem('profile', JSON.stringify(data));
+      console.log(freelancerId);
+      console.log(startingPrice);
+    } catch (error) {
+      console.log(error);
+      setMessage(error.response.data.message);
+      setOpenError1(true);
+    }
   };
 
   //handle sumbit for brand pics only
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     freelancerId = user.result._id;
-
-    dispatch(updatebrandpics(freelancerData, history, freelancerId));
-    console.log(freelancerData);
+    try {
+      const url = `http://localhost:5000/user/updatebrandpics/${freelancerId}`;
+      const { data } = await axios.patch(url, freelancerData);
+      setMessage(data.message);
+      setOpenError(false);
+      setOpenSnack(true);
+      setTimeout(() => {
+        window.location.reload();
+      }, 1530);
+      localStorage.setItem('profile', JSON.stringify(data));
+      console.log(freelancerId);
+      console.log(freelancerData);
+    } catch (error) {
+      console.log(error);
+      setMessage(error.response.data.message);
+      setOpenError(true);
+    }
   };
   return (
     <Box sx={{ minHeight: '78vh', marginLeft: 4, marginRight: 4 }}>
@@ -301,6 +337,17 @@ const PortfolioPage = () => {
               Sumbit
             </Button>
           </form>
+          <Snackbar open={opensnack} autoHideDuration={1000}>
+            <Alert severity='success' sx={{ width: '100%' }}>
+              {message}
+            </Alert>
+          </Snackbar>
+
+          <Snackbar open={openerror} autoHideDuration={1000}>
+            <Alert severity='error' sx={{ width: '100%' }}>
+              {message}
+            </Alert>
+          </Snackbar>
         </Paper>
       </Modal>
 
@@ -356,6 +403,16 @@ const PortfolioPage = () => {
               Sumbit
             </Button>
           </form>
+          <Snackbar open={opensnack} autoHideDuration={1000}>
+            <Alert severity='success' sx={{ width: '100%' }}>
+              {message}
+            </Alert>
+          </Snackbar>
+          <Snackbar open={openerror1} autoHideDuration={1000}>
+            <Alert severity='error' sx={{ width: '100%' }}>
+              {message}
+            </Alert>
+          </Snackbar>
         </Paper>
       </Modal>
     </Box>

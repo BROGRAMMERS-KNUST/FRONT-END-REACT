@@ -1,4 +1,12 @@
-import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
+import {
+  Alert,
+  Button,
+  Grid,
+  Paper,
+  Snackbar,
+  TextField,
+  Typography,
+} from '@mui/material';
 import Resizer from 'react-image-file-resizer';
 import React from 'react';
 import { updatefreelancerinfo } from '../action/auth';
@@ -9,12 +17,16 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useState } from 'react';
+
+import axios from 'axios';
 const UpdateProfile = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
   const dispatch = useDispatch();
   const history = useHistory();
   const [disabled, setDisabled] = useState(false);
-
+  const [open, setOpen] = useState(false);
+  const [openerror, setOpenError] = useState(false);
+  const [message, setMessage] = useState('');
   const freelancerData = {
     fullName: user.result.fullname,
     bio: user.result.bio,
@@ -34,12 +46,27 @@ const UpdateProfile = () => {
     margin: '100px auto',
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     freelancerId = user.result._id;
     setDisabled(true);
-    dispatch(updatefreelancerinfo(freelancerData, history, freelancerId));
-    console.log(freelancerData);
+    try {
+      const url = `http://localhost:5000/user/updateservice/${freelancerId}`;
+      const { data } = await axios.patch(url, freelancerData);
+      setMessage(data.message);
+      setOpenError(false);
+      setOpen(true);
+      setTimeout(() => {
+        history.push('/portfoliopage');
+      }, 1550);
+      localStorage.setItem('profile', JSON.stringify(data));
+      console.log(freelancerId);
+      console.log(freelancerData);
+    } catch (error) {
+      console.log(error);
+      setMessage(error.response.data.message);
+      setOpenError(true);
+    }
   };
 
   return (
@@ -195,6 +222,17 @@ const UpdateProfile = () => {
           >
             Update profile
           </Button>
+          <Snackbar open={open} autoHideDuration={1000}>
+            <Alert severity='success' sx={{ width: '100%' }}>
+              {message}
+            </Alert>
+          </Snackbar>
+
+          <Snackbar open={openerror} autoHideDuration={1000}>
+            <Alert severity='error' sx={{ width: '100%' }}>
+              {message}
+            </Alert>
+          </Snackbar>
         </form>
       </Paper>
     </Grid>

@@ -1,10 +1,18 @@
-import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
+import {
+  Alert,
+  Button,
+  Grid,
+  Paper,
+  Snackbar,
+  TextField,
+  Typography,
+} from '@mui/material';
 import Resizer from 'react-image-file-resizer';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { signupserviceprovider } from '../../action/auth';
 import { useHistory } from 'react-router-dom';
-
+import axios from 'axios';
 const SignUpService = () => {
   const paperStyle = {
     padding: 20,
@@ -15,8 +23,9 @@ const SignUpService = () => {
   };
   const dispatch = useDispatch();
   const history = useHistory();
-  const [compressedImage, setCompressedImage] = useState('');
-
+  const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState('');
+  const [openerror, setOpenError] = useState(false);
   const userData = {
     fullName: '',
     email: '',
@@ -30,12 +39,25 @@ const SignUpService = () => {
     service: '',
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    dispatch(signupserviceprovider(userData, history));
-    console.log(compressedImage);
-    console.log(userData);
+    try {
+      const url = 'http://localhost:5000/user/signupservice';
+      const { data } = await axios.post(url, userData);
+      console.log(data);
+      setMessage(data.message);
+      setOpenError(false);
+      setOpen(true);
+      setTimeout(() => {
+        dispatch({ type: 'AUTHSERVICE', data });
+        history.push('/freelancerinfo');
+        window.location.reload();
+      }, 1480);
+    } catch (error) {
+      console.log(error);
+      setMessage(error.response.data.message);
+      setOpenError(true);
+    }
   };
 
   return (
@@ -132,6 +154,18 @@ const SignUpService = () => {
         <Typography sx={{ fontFamily: 'Nunito' }} variant='caption'>
           By joining I agree to receive emails from StuLancer.
         </Typography>
+
+        <Snackbar open={open} autoHideDuration={10000}>
+          <Alert severity='success' sx={{ width: '100%' }}>
+            {message}
+          </Alert>
+        </Snackbar>
+
+        <Snackbar open={openerror} autoHideDuration={10000}>
+          <Alert severity='error' sx={{ width: '100%' }}>
+            {message}
+          </Alert>
+        </Snackbar>
       </Paper>
     </Grid>
   );

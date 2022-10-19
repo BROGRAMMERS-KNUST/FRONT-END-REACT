@@ -30,6 +30,8 @@ import Background2 from './components/Main/Background2';
 import ForgotPassword from './components/Auth/ForgotPassword';
 import UpdateProfileHirer from './components/UpdateProfileHirer';
 import OtherInfo from './components/OtherInfo';
+import Background3 from './components/Main/Background3';
+import Page404 from './components/Page404';
 
 function App() {
   return (
@@ -42,6 +44,7 @@ function App() {
               <LandingCarousel />
               <Background1 />
               <Main />
+              <Background3 />
               <Background2 />
             </Route>
             <Route path='/photography'>
@@ -87,6 +90,10 @@ function App() {
 
             <Route path='/otherinfo'>
               <OtherInfo />
+            </Route>
+
+            <Route path='*'>
+              <Page404 />
             </Route>
           </Switch>
           <FooterMain />
