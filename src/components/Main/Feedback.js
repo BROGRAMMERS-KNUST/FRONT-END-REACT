@@ -1,9 +1,11 @@
 import {
+  Alert,
   Button,
   Grid,
   IconButton,
   Modal,
   Paper,
+  Snackbar,
   TextField,
   Typography,
 } from '@mui/material';
@@ -14,21 +16,39 @@ import { useHistory } from 'react-router-dom';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import CloseIcon from '@mui/icons-material/Close';
 import { feedback } from '../../action/auth';
+import axios from 'axios';
 const Feedback = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const [open, setOpen] = useState(false);
-
+  const [message, setMessage] = useState('');
+  const [opensnack, setSnackOpen] = useState(false);
+  const [openerror, setOpenError] = useState(false);
   const feedbackData = {
     fullName: '',
     email: '',
     feedback: '',
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(feedback(feedbackData));
-    setOpen(false);
-    console.log(feedbackData);
+    try {
+      const url = 'http://localhost:5000/user/feedback';
+      const { data } = await axios.post(url, feedbackData);
+
+      setMessage(data.message);
+      setOpenError(false);
+      setSnackOpen(true);
+      setTimeout(() => {
+        setOpen(false);
+        setSnackOpen(false);
+      }, 1500);
+      console.log(feedbackData);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+      setMessage(error.response.data.message);
+      setOpenError(true);
+    }
   };
   const paperStyle = {
     padding: 20,
@@ -101,6 +121,7 @@ const Feedback = () => {
               />
               <TextField
                 label='Email'
+                type='email'
                 placeholder='Enter your Email'
                 variant='standard'
                 required
@@ -138,6 +159,17 @@ const Feedback = () => {
                 Submit
               </Button>
             </form>
+            <Snackbar open={opensnack} autoHideDuration={10000}>
+              <Alert severity='success' sx={{ width: '100%' }}>
+                {message}
+              </Alert>
+            </Snackbar>
+
+            <Snackbar open={openerror} autoHideDuration={10000}>
+              <Alert severity='error' sx={{ width: '100%' }}>
+                {message}
+              </Alert>
+            </Snackbar>
           </Paper>
         </Modal>
       </Box>
