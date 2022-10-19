@@ -7,9 +7,16 @@
 
 .LandingPic1 {
   position: absolute;
+  max-height: 36rem;
+  left: 59.5%;
+  top: 260%;
+}
+
+.LandingPic2 {
+  position: absolute;
   max-height: 40rem;
   left: 57.5%;
-  top: 265%;
+  top: 353%;
 }
 
 .PortfolioPic {
@@ -39,6 +46,11 @@
 }
 .highlight4 {
   color: #f6a151;
+  font-weight: 700;
+}
+
+.highlight5 {
+  color: #ff6b84;
   font-weight: 700;
 }
 

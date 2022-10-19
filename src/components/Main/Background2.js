@@ -28,7 +28,7 @@ const Background2 = () => {
         <br /> We'll <span className='highlight4'>love </span>to
         <br /> <span className='highlight4'>hear</span> from you
       </Typography>
-      <img className='LandingPic1' src={LandingPic1} alt='3D model' />
+      <img className='LandingPic2' src={LandingPic1} alt='3D model' />
 
       <Feedback />
     </Box>

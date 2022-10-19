@@ -30,6 +30,7 @@ import Background2 from './components/Main/Background2';
 import ForgotPassword from './components/Auth/ForgotPassword';
 import UpdateProfileHirer from './components/UpdateProfileHirer';
 import OtherInfo from './components/OtherInfo';
+import Background3 from './components/Main/Background3';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
               <LandingCarousel />
               <Background1 />
               <Main />
+              <Background3 />
               <Background2 />
             </Route>
             <Route path='/photography'>

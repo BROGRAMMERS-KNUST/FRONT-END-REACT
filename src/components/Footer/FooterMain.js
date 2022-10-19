@@ -164,19 +164,7 @@ export default function Footer() {
                   Contact Support
                 </Link>
               </Box>
-              <Box>
-                <Link
-                  sx={{
-                    fontFamily: 'Nunito',
-                  }}
-                  underline='none'
-                  href='/Sales'
-                  color='inherit'
-                >
-                  {' '}
-                  How to Sell on Stulancer
-                </Link>
-              </Box>
+
               <Box>
                 <Link
                   sx={{
