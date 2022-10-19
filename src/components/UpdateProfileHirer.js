@@ -1,17 +1,27 @@
-import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
+import {
+  Alert,
+  Button,
+  Grid,
+  Paper,
+  Snackbar,
+  TextField,
+  Typography,
+} from '@mui/material';
 import Resizer from 'react-image-file-resizer';
 import React from 'react';
 import { updatehirerinfo } from '../action/auth';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
+import axios from 'axios';
 import { useState } from 'react';
 const UpdateProfileHirer = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
   const dispatch = useDispatch();
   const history = useHistory();
   const [disabled, setDisabled] = useState(false);
-
+  const [openerror, setOpenError] = useState(false);
+  const [message, setMessage] = useState('');
+  const [open, setOpen] = useState(false);
   const hirerData = {
     fullName: user.result.fullname,
     email: user.result.email,
@@ -27,12 +37,29 @@ const UpdateProfileHirer = () => {
     margin: '100px auto',
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     hirerId = user.result._id;
     setDisabled(true);
-    dispatch(updatehirerinfo(hirerData, history, hirerId));
-    console.log(hirerData);
+    try {
+      const url = `http://localhost:5000/user/updatehirer/${hirerId}`;
+      const { data } = await axios.patch(url, hirerData);
+      setMessage(data.message);
+      setOpen(true);
+      setTimeout(() => {
+        localStorage.clear();
+        localStorage.setItem('profile', JSON.stringify(data));
+        history.push('/');
+        window.location.reload();
+      }, 1550);
+      localStorage.setItem('profile', JSON.stringify(data));
+      console.log(hirerId);
+      console.log(hirerData);
+    } catch (error) {
+      console.log(error);
+      setMessage(error.message);
+      setOpenError(true);
+    }
   };
 
   return (
@@ -113,6 +140,18 @@ const UpdateProfileHirer = () => {
             Update profile
           </Button>
         </form>
+
+        <Snackbar open={open} autoHideDuration={1000}>
+          <Alert severity='success' sx={{ width: '100%' }}>
+            {message}
+          </Alert>
+        </Snackbar>
+
+        <Snackbar open={openerror} autoHideDuration={1000}>
+          <Alert severity='error' sx={{ width: '100%' }}>
+            {message}
+          </Alert>
+        </Snackbar>
       </Paper>
     </Grid>
   );
