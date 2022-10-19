@@ -161,7 +161,7 @@ export default function Footer() {
                   href='/Help'
                   color='inherit'
                 >
-                  Help
+                  Contact Support
                 </Link>
               </Box>
               <Box>
