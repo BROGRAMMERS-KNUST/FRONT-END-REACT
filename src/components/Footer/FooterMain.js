@@ -158,7 +158,7 @@ export default function Footer() {
                     fontFamily: 'Nunito',
                   }}
                   underline='none'
-                  href='/Help'
+                  href='/about-us'
                   color='inherit'
                 >
                   Contact Support
