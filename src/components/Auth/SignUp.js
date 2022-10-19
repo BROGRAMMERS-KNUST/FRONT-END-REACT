@@ -44,14 +44,15 @@ const SignUp = () => {
       const { data } = await axios.post(url, userData);
       console.log(data);
       setMessage(data.message);
+      setOpenError(false);
       setOpen(true);
       setTimeout(() => {
         dispatch({ type: 'AUTH', data });
         window.location.reload();
-      }, 1500);
+      }, 1480);
     } catch (error) {
       console.log(error);
-      setMessage(error.message);
+      setMessage(error.response.data.message);
       setOpenError(true);
     }
   };

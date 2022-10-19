@@ -69,6 +69,7 @@ const PortfolioPage = () => {
       const url = `http://localhost:5000/user/updatestartingprice/${freelancerId}`;
       const { data } = await axios.patch(url, startingPrice);
       setMessage(data.message);
+      setOpenError1(false);
       setOpenSnack(true);
       setTimeout(() => {
         window.location.reload();
@@ -78,7 +79,7 @@ const PortfolioPage = () => {
       console.log(startingPrice);
     } catch (error) {
       console.log(error);
-      setMessage(error.message);
+      setMessage(error.response.data.message);
       setOpenError1(true);
     }
   };
@@ -91,6 +92,7 @@ const PortfolioPage = () => {
       const url = `http://localhost:5000/user/updatebrandpics/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
+      setOpenError(false);
       setOpenSnack(true);
       setTimeout(() => {
         window.location.reload();
@@ -100,7 +102,7 @@ const PortfolioPage = () => {
       console.log(freelancerData);
     } catch (error) {
       console.log(error);
-      setMessage(error.message);
+      setMessage(error.response.data.message);
       setOpenError(true);
     }
   };

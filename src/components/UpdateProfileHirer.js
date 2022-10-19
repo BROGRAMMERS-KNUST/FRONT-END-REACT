@@ -45,6 +45,7 @@ const UpdateProfileHirer = () => {
       const url = `http://localhost:5000/user/updatehirer/${hirerId}`;
       const { data } = await axios.patch(url, hirerData);
       setMessage(data.message);
+      setOpenError(false);
       setOpen(true);
       setTimeout(() => {
         localStorage.clear();
@@ -57,7 +58,7 @@ const UpdateProfileHirer = () => {
       console.log(hirerData);
     } catch (error) {
       console.log(error);
-      setMessage(error.message);
+      setMessage(error.response.data.message);
       setOpenError(true);
     }
   };

@@ -54,6 +54,7 @@ const UpdateProfile = () => {
       const url = `http://localhost:5000/user/updateservice/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
+      setOpenError(false);
       setOpen(true);
       setTimeout(() => {
         history.push('/portfoliopage');
@@ -63,7 +64,7 @@ const UpdateProfile = () => {
       console.log(freelancerData);
     } catch (error) {
       console.log(error);
-      setMessage(error.message);
+      setMessage(error.response.data.message);
       setOpenError(true);
     }
   };
