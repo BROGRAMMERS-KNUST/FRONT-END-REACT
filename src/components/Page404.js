@@ -6,11 +6,11 @@ const Page404 = () => {
   return (
     <Box
       sx={{
-        minHeight: '20vh',
+        minHeight: '10vh',
         marginLeft: 5,
         marginRight: 5,
         marginTop: 0,
-        marginBottom: 50,
+        marginBottom: 35,
       }}
     >
       <Typography
@@ -21,14 +21,14 @@ const Page404 = () => {
         letterSpacing={1.8}
         sx={{ marginBottom: -1 }}
       >
-        Return<span className='highlight5'></span>
+        <span className='highlight5'>404 Error</span>
         <br />
-        back to<span className='highlight5'></span>
+        Page not<span className='highlight5'></span>
         <br />
-        <span className='highlight5'> HomePage </span>
+        <span className='highlight5'> found </span>
       </Typography>
       <img className='LandingPic3' src={LandingPic4} alt='3D model' />
-      <Link>
+      <Link href='/'>
         <Typography
           variant='h5'
           fontFamily='Nunito'
@@ -36,7 +36,7 @@ const Page404 = () => {
           letterSpacing={1.8}
           sx={{ marginBottom: -1 }}
         >
-          Home page
+          Return back to Home page
         </Typography>
       </Link>
     </Box>

@@ -92,7 +92,7 @@ function App() {
               <OtherInfo />
             </Route>
 
-            <Route path='/404'>
+            <Route path='*'>
               <Page404 />
             </Route>
           </Switch>
