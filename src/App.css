@@ -19,6 +19,13 @@
   top: 353%;
 }
 
+.LandingPic3 {
+  position: absolute;
+  max-height: 40rem;
+  left: 57.5%;
+  top: 0%;
+}
+
 .PortfolioPic {
   position: absolute;
   max-height: 40rem;
