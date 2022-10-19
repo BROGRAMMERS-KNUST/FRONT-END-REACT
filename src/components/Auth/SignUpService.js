@@ -51,7 +51,7 @@ const SignUpService = () => {
         dispatch({ type: 'AUTHSERVICE', data });
         history.push('/freelancerinfo');
         window.location.reload();
-      }, 1530);
+      }, 1500);
     } catch (error) {
       console.log(error);
       setMessage(error.message);
