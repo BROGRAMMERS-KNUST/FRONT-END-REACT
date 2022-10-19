@@ -23,6 +23,7 @@ const FreelancerInfo = () => {
   const history = useHistory();
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState('');
+  const [disabled, setDisabled] = useState(false);
   const freelancerData = {
     bio: '',
     portfolioLink: '',
@@ -43,6 +44,7 @@ const FreelancerInfo = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setDisabled(true);
     freelancerId = user.result._id;
     try {
       const url = `http://localhost:5000/user/signupservice/${freelancerId}`;
@@ -161,6 +163,7 @@ const FreelancerInfo = () => {
           <Button
             sx={{ marginBottom: 1, fontFamily: 'Nunito', fontWeight: '700' }}
             variant='contained'
+            disabled={disabled}
             fullWidth
             type='submit'
           >
