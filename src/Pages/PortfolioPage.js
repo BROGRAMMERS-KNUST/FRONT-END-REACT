@@ -19,11 +19,11 @@ import Carousel from 'react-material-ui-carousel';
 import Resizer from 'react-image-file-resizer';
 import CloseIcon from '@mui/icons-material/Close';
 import PaidRoundedIcon from '@mui/icons-material/PaidRounded';
-import { updatebrandpics, updatestartingprice } from '../action/auth';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 const PortfolioPage = () => {
+  document.title = 'StuLancer-Dashboard 👩‍💻';
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
