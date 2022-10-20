@@ -2,6 +2,7 @@ import {
   Alert,
   Button,
   Grid,
+  Input,
   Link,
   Paper,
   Snackbar,
@@ -29,7 +30,18 @@ const LoginHirer = () => {
   const [messageerror, setMessageError] = useState('');
   const [open, setOpen] = useState(false);
   const [openerror, setOpenError] = useState(false);
-  const loginData = { email: '', password: '' };
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const loginData = { email: email, password: password };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(loginData);
@@ -73,7 +85,7 @@ const LoginHirer = () => {
             required
             fullWidth
             sx={{ marginTop: 4, marginBottom: 2, fontFamily: 'Nunito' }}
-            onChange={(e) => (loginData.email = e.target.value)}
+            onChange={handleEmailChange}
           />
 
           <TextField
@@ -84,7 +96,7 @@ const LoginHirer = () => {
             required
             type='password'
             sx={{ marginBottom: 3 }}
-            onChange={(e) => (loginData.password = e.target.value)}
+            onChange={handlePasswordChange}
           />
 
           <Button
@@ -97,13 +109,13 @@ const LoginHirer = () => {
           </Button>
         </form>
         <Snackbar open={open} autoHideDuration={6000}>
-          <Alert severity='success' sx={{ width: '100%' }}>
+          <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
             {message}
           </Alert>
         </Snackbar>
 
         <Snackbar open={openerror} autoHideDuration={6000}>
-          <Alert severity='error' sx={{ width: '100%' }}>
+          <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
             {messageerror}
           </Alert>
         </Snackbar>

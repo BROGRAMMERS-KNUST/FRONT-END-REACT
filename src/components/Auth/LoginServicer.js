@@ -44,6 +44,7 @@ const LoginServicer = () => {
         window.location.reload();
       }, 1500);
     } catch (error) {
+      console.log(error);
       setMessage(error.response.data.message);
       setOpenError(true);
     }

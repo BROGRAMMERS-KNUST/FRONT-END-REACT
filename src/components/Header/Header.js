@@ -240,7 +240,7 @@ function Header() {
         <LoginInBoth />
       </Modal>
       <Snackbar open={opensnack} autoHideDuration={1000}>
-        <Alert severity='info' sx={{ width: '100%' }}>
+        <Alert variant='filled' severity='info' sx={{ width: '100%' }}>
           {message}
         </Alert>
       </Snackbar>

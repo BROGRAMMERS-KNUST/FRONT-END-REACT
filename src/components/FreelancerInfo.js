@@ -22,6 +22,7 @@ const FreelancerInfo = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const [open, setOpen] = useState(false);
+  const [openerror, setOpenError] = useState(false);
   const [message, setMessage] = useState('');
   const [disabled, setDisabled] = useState(false);
   const freelancerData = {
@@ -60,6 +61,8 @@ const FreelancerInfo = () => {
       console.log(freelancerData);
     } catch (error) {
       console.log(error);
+      setMessage(error.response.data.message);
+      setOpenError(true);
     }
   };
 
@@ -174,7 +177,13 @@ const FreelancerInfo = () => {
           </Typography>
         </form>
         <Snackbar open={open} autoHideDuration={1000}>
-          <Alert severity='success' sx={{ width: '100%' }}>
+          <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+            {message}
+          </Alert>
+        </Snackbar>
+
+        <Snackbar open={openerror} autoHideDuration={10000}>
+          <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
             {message}
           </Alert>
         </Snackbar>
