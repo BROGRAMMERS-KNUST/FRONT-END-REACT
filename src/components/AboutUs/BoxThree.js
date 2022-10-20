@@ -207,9 +207,37 @@ const BoxThree = () => {
               }}
               variant='body1'
             >
-              A third year Computer Enginering student and an aspiring software
-              engineer
+              Front-end Web Developer
             </Typography>
+            <Stack direction='row' spacing={1}>
+              <Link
+                variant='inherit'
+                color='secondary'
+                target='_blank'
+                rel='noopener'
+                href='https://github.com/Tmawuli'
+              >
+                {<GitHub />}
+              </Link>
+              <Link
+                variant='inherit'
+                color='secondary'
+                target='_blank'
+                rel='noopener'
+                href='https://wa.me/0548632081'
+              >
+                {<WhatsApp />}
+              </Link>
+              <Link
+                variant='inherit'
+                color='secondary'
+                target='_blank'
+                rel='noopener'
+                href='https://t.me/Juju666'
+              >
+                {<Telegram />}
+              </Link>
+            </Stack>
           </Stack>
 
           {/* MAXWELL'S STACK */}
