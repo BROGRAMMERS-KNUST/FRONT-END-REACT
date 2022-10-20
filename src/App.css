@@ -1,3 +1,9 @@
+.logo {
+  position: absolute;
+  max-height: 3rem;
+  top: 10%;
+}
+
 .LandingPic {
   position: absolute;
   max-height: 41.5rem;

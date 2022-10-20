@@ -21,7 +21,7 @@ import { useHistory } from 'react-router-dom';
 import LoginInBoth from '../LogInBoth';
 import SignInOut from './SignInOut';
 import WorkIcon from '@mui/icons-material/Work';
-
+import stulancerlogo from '../../images/apple-touch-icon.png';
 function Header() {
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
@@ -39,7 +39,7 @@ function Header() {
     try {
       setTimeout(() => {
         history.push('/');
-        //window.location.reload();
+        window.location.reload();
         setUser(null);
         setOpenSnack(false);
       }, 1530);
@@ -69,7 +69,7 @@ function Header() {
               href='/'
               sx={{ fontSize: '30px', fontFamily: 'Nunito', fontWeight: 700 }}
             >
-              STULANCER
+              <Box sx={{ display: 'flex' }}>STULANCER</Box>
             </Button>
           </Typography>
 
