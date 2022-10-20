@@ -4,13 +4,61 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import SocialFollow from './SocialFollow';
-import { Modal } from '@mui/material';
+import {
+  Alert,
+  Button,
+  IconButton,
+  Modal,
+  Paper,
+  Snackbar,
+  Typography,
+  TextField,
+} from '@mui/material';
 import LoginInBoth from '../LogInBoth';
 import { useState } from 'react';
 import SignInOut from '../Header/SignInOut';
+import CloseIcon from '@mui/icons-material/Close';
+import axios from 'axios';
 export default function Footer() {
   const [open, setOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
+  const [message, setMessage] = useState('');
+  const [opensnack, setSnackOpen] = useState(false);
+  const [openerror, setOpenError] = useState(false);
+  const feedbackData = {
+    fullName: '',
+    email: '',
+    feedback: '',
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const url = 'http://localhost:5000/user/feedback';
+      const { data } = await axios.post(url, feedbackData);
+
+      setMessage(data.message);
+      setOpenError(false);
+      setSnackOpen(true);
+      setTimeout(() => {
+        setOpenModal(false);
+        setSnackOpen(false);
+      }, 1500);
+      console.log(feedbackData);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+      setMessage(error.response.data.message);
+      setOpenError(true);
+    }
+  };
+  const paperStyle = {
+    padding: 20,
+    fontFamily: 'Nunito',
+    fontWeight: '700',
+    width: 400,
+    margin: '100px auto',
+  };
   return (
     <footer>
       <Box
@@ -49,7 +97,7 @@ export default function Footer() {
                     fontFamily: 'Nunito',
                   }}
                   underline='none'
-                  href='/webby'
+                  href='/webdevelopment'
                   color='inherit'
                 >
                   Web development
@@ -156,9 +204,12 @@ export default function Footer() {
                 <Link
                   sx={{
                     fontFamily: 'Nunito',
+                    ':hover': { cursor: 'pointer' },
                   }}
                   underline='none'
-                  href='/about-us'
+                  onClick={() => {
+                    setOpenModal(true);
+                  }}
                   color='inherit'
                 >
                   Contact Support
@@ -211,6 +262,100 @@ export default function Footer() {
           }}
         >
           <SignInOut />
+        </Modal>
+        <Modal
+          open={openModal}
+          onClose={() => {
+            setOpenModal(false);
+          }}
+        >
+          <Paper style={paperStyle} elevation={6}>
+            <IconButton
+              onClick={() => {
+                setOpenModal(false);
+              }}
+              sx={{ marginLeft: 41, marginTop: -1.5 }}
+            >
+              <CloseIcon />
+            </IconButton>
+            <Grid item align='center'>
+              <Typography
+                variant='h5'
+                color='primary'
+                sx={{
+                  fontFamily: 'Nunito',
+                  fontWeight: '700',
+                  marginBottom: 3,
+                }}
+              >
+                Stulancer
+              </Typography>
+            </Grid>
+            <form onSubmit={handleSubmit}>
+              <TextField
+                label='Full Name'
+                placeholder='Enter your fullname'
+                variant='standard'
+                required
+                fullWidth
+                multiline
+                sx={{ marginBottom: 2 }}
+                onChange={(e) => {
+                  feedbackData.fullName = e.target.value;
+                }}
+              />
+              <TextField
+                label='Email'
+                type='email'
+                placeholder='Enter your Email'
+                variant='standard'
+                required
+                fullWidth
+                sx={{ marginBottom: 2 }}
+                onChange={(e) => {
+                  feedbackData.email = e.target.value;
+                }}
+              />
+
+              <TextField
+                label='Feedback'
+                placeholder='Enter your Feedback'
+                variant='standard'
+                required
+                fullWidth
+                multiline
+                sx={{ marginBottom: 2 }}
+                onChange={(e) => {
+                  feedbackData.feedback = e.target.value;
+                }}
+              />
+
+              <Button
+                sx={{
+                  marginTop: 1.7,
+                  marginBottom: 1,
+                  fontFamily: 'Nunito',
+                  fontWeight: '700',
+                }}
+                variant='contained'
+                fullWidth
+                type='submit'
+              >
+                Submit
+              </Button>
+            </form>
+            <Snackbar open={opensnack} autoHideDuration={10000}>
+              <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+                {message}
+              </Alert>
+            </Snackbar>
+
+            <Snackbar open={openerror} autoHideDuration={10000}>
+              <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
+                {message}
+              </Alert>
+            </Snackbar>
+          </Paper>
         </Modal>
       </Box>
     </footer>

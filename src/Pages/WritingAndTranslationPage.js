@@ -5,6 +5,7 @@ import StulancersAvailable from '../Pages/StulancersAvailable';
 import Navbar from '../components/Header/Navbar';
 
 function WritingAndTranslationPage() {
+  document.title = 'StuLancer-Writing&Translation📝';
   return (
     <Box sx={{ marginTop: 10, marginLeft: 5, marginRight: 5 }}>
       <Navbar />

@@ -28,7 +28,7 @@ function Navbar() {
           GRAPHIC DESIGN
         </Link>
         <Link
-          href='/webby'
+          href='/webdevelopment'
           underline='hover'
           sx={{ fontFamily: 'Nunito' }}
           style={{

@@ -53,7 +53,7 @@ function App() {
             <Route path='/graphic-design'>
               <GraphicDesignPage />
             </Route>
-            <Route path='/webby'>
+            <Route path='/webdevelopment'>
               <Webby />
             </Route>
             <Route path='/food-services'>

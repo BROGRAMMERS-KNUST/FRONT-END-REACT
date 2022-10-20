@@ -43,7 +43,10 @@ const LoginServicer = () => {
         history.push('/portfoliopage');
         window.location.reload();
       }, 1500);
-    } catch (error) {}
+    } catch (error) {
+      setMessage(error.response.data.message);
+      setOpenError(true);
+    }
   };
 
   return (
@@ -91,13 +94,13 @@ const LoginServicer = () => {
           </Button>
         </form>
         <Snackbar open={open} autoHideDuration={10000}>
-          <Alert severity='success' sx={{ width: '100%' }}>
+          <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
             {message}
           </Alert>
         </Snackbar>
 
         <Snackbar open={openerror} autoHideDuration={10000}>
-          <Alert severity='error' sx={{ width: '100%' }}>
+          <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
             {message}
           </Alert>
         </Snackbar>

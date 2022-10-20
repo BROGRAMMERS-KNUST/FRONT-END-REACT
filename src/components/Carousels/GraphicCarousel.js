@@ -72,7 +72,7 @@ const GraphicCarousel = () => {
             fontFamily={'Nunito'}
             letterSpacing={1}
           >
-            Design to make you standout
+            Designs to make you standout
           </Typography>
         </Box>
         <Box
@@ -105,7 +105,7 @@ const GraphicCarousel = () => {
             align='center'
             fontFamily={'Nunito'}
           >
-            Design to make you standout
+            Designs to make you standout
           </Typography>
         </Box>
       </Carousel>

@@ -5,6 +5,7 @@ import Navbar from '../components/Header/Navbar';
 import FoodServicesPageCards from '../components/PageCards/FoodServicesPageCards';
 
 function FoodServicesPage() {
+  document.title = 'StuLancer-Food Services 🍕';
   return (
     <div>
       <Box sx={{ marginTop: 10, marginLeft: 5, marginRight: 5 }}>

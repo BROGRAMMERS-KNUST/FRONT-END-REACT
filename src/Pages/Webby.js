@@ -5,6 +5,7 @@ import Navbar from '../components/Header/Navbar';
 import WebbyCards from '../components/PageCards/WebbyCards';
 import WebCarousel from '../components/Carousels/WebCarousel';
 function Webby() {
+  document.title = 'StuLancer-Web Development 👩‍💻';
   return (
     <div>
       <Box sx={{ marginTop: 10, marginLeft: 5, marginRight: 5 }}>
@@ -13,7 +14,7 @@ function Webby() {
           <Link href='/' underline='hover'>
             STULANCER
           </Link>
-          <Link underline='hover' href='/webby'>
+          <Link underline='hover' href='/webdevelopment'>
             WEB DEVELOPMENT
           </Link>
         </Breadcrumbs>

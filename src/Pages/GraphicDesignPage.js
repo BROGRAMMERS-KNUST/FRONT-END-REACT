@@ -6,6 +6,7 @@ import Navbar from '../components/Header/Navbar';
 import GraphicCarousel from '../components/Carousels/GraphicCarousel';
 
 function GraphicDesignPage() {
+  document.title = 'StuLancer-Graphics & Design 🎨';
   return (
     <div>
       <Box sx={{ marginTop: 10, marginLeft: 5, marginRight: 5 }}>
@@ -18,7 +19,9 @@ function GraphicDesignPage() {
             GRAPHIC DESIGN
           </Link>
         </Breadcrumbs>
+
         <GraphicCarousel />
+        <GraphicDesignPageCards />
         <StulancersAvailable service='Graphic Designer' />
       </Box>
     </div>

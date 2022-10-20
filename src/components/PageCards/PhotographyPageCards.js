@@ -7,6 +7,7 @@ import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import AnimationIcon from '@mui/icons-material/Animation';
 import SchoolIcon from '@mui/icons-material/School';
 import FilterIcon from '@mui/icons-material/Filter';
+import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 
 //IMAGES
 import photographyOne from '../../images/PagecardImages/photographyOne.jpg';
@@ -20,7 +21,7 @@ function PageCards() {
       <PhotographyCarousel />
       <Typography fontWeight='medium'>
         {' '}
-        Most popular in Photograpgy & Video
+        Most popular in Photography & Video
       </Typography>{' '}
       <br />
       <Stack direction='row' spacing={4} sx={{ flexWrap: 'nowrap' }}>
@@ -55,7 +56,7 @@ function PageCards() {
             width: '14vw',
           }}
         >
-          <BrushIcon color='primary' /> Social Media Videos
+          <VideoLibraryIcon color='primary' /> Social Media Videos
         </Box>
         <Box
           sx={{
