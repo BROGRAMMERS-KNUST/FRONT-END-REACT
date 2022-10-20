@@ -28,7 +28,19 @@ const LoginServicer = () => {
   const [message, setMessage] = useState('');
   const [open, setOpen] = useState(false);
   const [openerror, setOpenError] = useState(false);
-  const loginData = { email: '', password: '' };
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const loginData = { email: email, password: password };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -71,7 +83,7 @@ const LoginServicer = () => {
             required
             fullWidth
             sx={{ marginTop: 4, marginBottom: 2, fontFamily: 'Nunito' }}
-            onChange={(e) => (loginData.email = e.target.value)}
+            onChange={handleEmailChange}
           />
 
           <TextField
@@ -82,7 +94,7 @@ const LoginServicer = () => {
             required
             type='password'
             sx={{ marginBottom: 3 }}
-            onChange={(e) => (loginData.password = e.target.value)}
+            onChange={handlePasswordChange}
           />
 
           <Button

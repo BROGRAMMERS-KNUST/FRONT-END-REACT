@@ -39,7 +39,7 @@ function Header() {
     try {
       setTimeout(() => {
         history.push('/');
-        window.location.reload();
+        //window.location.reload();
         setUser(null);
         setOpenSnack(false);
       }, 1530);
