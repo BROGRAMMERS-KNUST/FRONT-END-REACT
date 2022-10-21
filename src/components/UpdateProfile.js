@@ -58,6 +58,7 @@ const UpdateProfile = () => {
       setOpen(true);
       setTimeout(() => {
         history.push('/portfoliopage');
+        window.location.reload();
       }, 1550);
       localStorage.setItem('profile', JSON.stringify(data));
       console.log(freelancerId);

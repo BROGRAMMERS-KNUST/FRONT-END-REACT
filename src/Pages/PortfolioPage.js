@@ -116,8 +116,12 @@ const PortfolioPage = () => {
         {/*<br /> <span className='highlight1'>Freelancer</span>*/}
         <br />
         <span className='highlight1'>
-          {user.result.fullName.substring(0, user.result.fullName.indexOf(' '))}{' '}
-          <span className='emoji'>👋</span>
+          {user.result.fullName.split(' ')[0]}
+          {user.result.fullName.split(' ')[0] ? (
+            <span className='emoji'> 👋</span>
+          ) : (
+            <div></div>
+          )}
         </span>
       </Typography>
       <img className='PortfolioPic' src={PortfolioPic} alt='3D model' />

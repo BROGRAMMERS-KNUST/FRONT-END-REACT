@@ -94,10 +94,7 @@ function Header() {
                               fontFamily: 'Nunito',
                               fontWeight: '700',
                             }}
-                            label={user.result.fullName.substring(
-                              0,
-                              user.result.fullName.indexOf(' ')
-                            )}
+                            label={user.result.fullName.split(' ')[0]}
                           />
                         </Tooltip>
                       </Tabs>
@@ -144,10 +141,7 @@ function Header() {
                               fontFamily: 'Nunito',
                               fontWeight: '700',
                             }}
-                            label={user.result.fullName.substring(
-                              0,
-                              user.result.fullName.indexOf(' ')
-                            )}
+                            label={user.result.fullName.split(' ')[0]}
                           />
                         </Tooltip>
                       </Tabs>
