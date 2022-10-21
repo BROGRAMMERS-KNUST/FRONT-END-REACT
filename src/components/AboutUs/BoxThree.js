@@ -333,8 +333,7 @@ const BoxThree = () => {
               }}
               variant='body1'
             >
-              A third year Computer Enginering student and an aspiring software
-              engineer
+              Front End Web Developer
             </Typography>
           </Stack>
 

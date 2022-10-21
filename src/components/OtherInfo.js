@@ -46,6 +46,7 @@ const OtherInfo = () => {
       const url = `http://localhost:5000/user/signupservice/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
+      setOpenError(false);
       setOpen(true);
       setTimeout(() => {
         history.push('/portfoliopage');
@@ -102,7 +103,7 @@ const OtherInfo = () => {
                     320,
                     150,
                     'JPEG',
-                    52,
+                    60,
                     0,
                     (uri) => {
                       freelancerData.brandPic1 = uri;
@@ -127,7 +128,7 @@ const OtherInfo = () => {
                     320,
                     250,
                     'JPEG',
-                    50,
+                    60,
                     0,
                     (uri) => {
                       freelancerData.brandPic2 = uri;
@@ -152,7 +153,7 @@ const OtherInfo = () => {
                     320,
                     250,
                     'JPEG',
-                    50,
+                    60,
                     0,
                     (uri) => {
                       freelancerData.brandPic3 = uri;

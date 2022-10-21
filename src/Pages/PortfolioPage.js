@@ -64,10 +64,12 @@ const PortfolioPage = () => {
   //handle submit for starting price only
   const handleSubmit1 = async (e) => {
     e.preventDefault();
+
     freelancerId = user.result._id;
     try {
       const url = `http://localhost:5000/user/updatestartingprice/${freelancerId}`;
       const { data } = await axios.patch(url, startingPrice);
+      console.log(data.message);
       setMessage(data.message);
       setOpenError1(false);
       setOpenError(false);
@@ -88,6 +90,7 @@ const PortfolioPage = () => {
   //handle sumbit for brand pics only
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     freelancerId = user.result._id;
     try {
       const url = `http://localhost:5000/user/updatebrandpics/${freelancerId}`;
