@@ -17,6 +17,7 @@ import Wallace from '../../images/Team/Wallace.jpg';
 import Wassem from '../../images/Team/Wassem-Darkwa.jpg';
 import King from '../../images/Team/King.jpg';
 import EMMA from '../../images/Team/EMMA.jpg';
+import Moses from '../../images/Team/Moses.jpg';
 import { ChevronRight, GitHub, Telegram, WhatsApp } from '@mui/icons-material';
 
 const BoxThree = () => {
@@ -342,7 +343,7 @@ const BoxThree = () => {
           <Stack direction='column' sx={{ width: 200, margin: 2 }}>
             <Card
               sx={{
-                background: `url(${Albert})`,
+                background: `url(${Moses})`,
                 backgroundSize: 'cover',
                 width: 200,
                 height: 150,
@@ -364,8 +365,7 @@ const BoxThree = () => {
               }}
               variant='body1'
             >
-              A third year Computer Enginering student and an aspiring software
-              engineer
+              Computer Enginering student at KNUST
             </Typography>
           </Stack>
 
@@ -492,8 +492,8 @@ const BoxThree = () => {
               }}
               variant='body1'
             >
-             Hey there! I dabble in games-related software engineeering. I am the guy to call
-             if there is an arcade tournament
+              Hey there! I dabble in games-related software engineeering. I am
+              the guy to call if there is an arcade tournament
             </Typography>
             <Stack direction='row' spacing={1}>
               <Link
