@@ -212,6 +212,7 @@ const StulancerComp = ({ stulancer }) => {
           >
             Bio
           </Typography>
+
           <Typography
             sx={{ paddingLeft: 2, paddingBottom: 2 }}
             fontFamily='Nunito'
@@ -220,6 +221,7 @@ const StulancerComp = ({ stulancer }) => {
           >
             {stulancer.bio}
           </Typography>
+
           <Typography
             sx={{ paddingLeft: 2, paddingBottom: 1 }}
             fontFamily='Nunito'
@@ -228,6 +230,7 @@ const StulancerComp = ({ stulancer }) => {
           >
             Portfolio
           </Typography>
+
           <Button
             href={stulancer.portfolioLink}
             target='_blank'

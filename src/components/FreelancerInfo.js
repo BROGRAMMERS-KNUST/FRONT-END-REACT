@@ -81,11 +81,12 @@ const FreelancerInfo = () => {
         <form onSubmit={handleSubmit}>
           <TextField
             label='Bio'
-            placeholder='Enter your Bio'
+            placeholder='Enter your Bio, 100 characters maximum'
             variant='standard'
             required
             fullWidth
             multiline
+            inputProps={{ maxLength: 100 }}
             sx={{ marginBottom: 2 }}
             onChange={(e) => {
               freelancerData.bio = e.target.value;

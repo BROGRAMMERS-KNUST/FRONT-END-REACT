@@ -70,6 +70,7 @@ const PortfolioPage = () => {
       const { data } = await axios.patch(url, startingPrice);
       setMessage(data.message);
       setOpenError1(false);
+      setOpenError(false);
       setOpenSnack(true);
       setTimeout(() => {
         window.location.reload();
@@ -93,6 +94,7 @@ const PortfolioPage = () => {
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
       setOpenError(false);
+      setOpenError1(false);
       setOpenSnack(true);
       setTimeout(() => {
         window.location.reload();
@@ -113,7 +115,10 @@ const PortfolioPage = () => {
         <span>StuLancer</span>
         {/*<br /> <span className='highlight1'>Freelancer</span>*/}
         <br />
-        <span className='highlight1'>{user.result.fullName}</span>
+        <span className='highlight1'>
+          {user.result.fullName.substring(0, user.result.fullName.indexOf(' '))}{' '}
+          <span className='emoji'>👋</span>
+        </span>
       </Typography>
       <img className='PortfolioPic' src={PortfolioPic} alt='3D model' />
       <Typography variant='h4' fontFamily='Nunito'>
@@ -338,13 +343,13 @@ const PortfolioPage = () => {
             </Button>
           </form>
           <Snackbar open={opensnack} autoHideDuration={1000}>
-            <Alert severity='success' sx={{ width: '100%' }}>
+            <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
               {message}
             </Alert>
           </Snackbar>
 
           <Snackbar open={openerror} autoHideDuration={1000}>
-            <Alert severity='error' sx={{ width: '100%' }}>
+            <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
               {message}
             </Alert>
           </Snackbar>
@@ -404,12 +409,12 @@ const PortfolioPage = () => {
             </Button>
           </form>
           <Snackbar open={opensnack} autoHideDuration={1000}>
-            <Alert severity='success' sx={{ width: '100%' }}>
+            <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
               {message}
             </Alert>
           </Snackbar>
           <Snackbar open={openerror1} autoHideDuration={1000}>
-            <Alert severity='error' sx={{ width: '100%' }}>
+            <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
               {message}
             </Alert>
           </Snackbar>

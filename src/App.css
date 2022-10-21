@@ -4,6 +4,13 @@
   top: 10%;
 }
 
+.emoji {
+  position: absolute;
+  font-size: 2.8rem;
+  left: 12.7%;
+  top: 40%;
+}
+
 .LandingPic {
   position: absolute;
   max-height: 41.5rem;

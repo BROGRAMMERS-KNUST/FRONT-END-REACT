@@ -93,6 +93,7 @@ const OtherInfo = () => {
           </Typography>
           <Box sx={{ marginBottom: 2 }}>
             <input
+              required
               type='file'
               onChange={(e) => {
                 try {
@@ -176,12 +177,12 @@ const OtherInfo = () => {
           </Button>
         </form>
         <Snackbar open={open} autoHideDuration={1000}>
-          <Alert severity='success' sx={{ width: '100%' }}>
+          <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
             {message}
           </Alert>
         </Snackbar>
         <Snackbar open={openerror} autoHideDuration={1000}>
-          <Alert severity='error' sx={{ width: '100%' }}>
+          <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
             {message}
           </Alert>
         </Snackbar>

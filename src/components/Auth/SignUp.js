@@ -81,6 +81,7 @@ const SignUp = () => {
             onChange={(e) => {
               userData.fullName = e.target.value;
             }}
+            inputProps={{ maxLength: 30 }}
           />
 
           <TextField

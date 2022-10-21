@@ -94,6 +94,7 @@ const UpdateProfile = () => {
             onChange={(e) => {
               freelancerData.fullName = e.target.value;
             }}
+            inputProps={{ maxLength: 30 }}
           />
           <TextField
             label='Bio'
@@ -223,13 +224,13 @@ const UpdateProfile = () => {
             Update profile
           </Button>
           <Snackbar open={open} autoHideDuration={1000}>
-            <Alert severity='success' sx={{ width: '100%' }}>
+            <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
               {message}
             </Alert>
           </Snackbar>
 
           <Snackbar open={openerror} autoHideDuration={1000}>
-            <Alert severity='error' sx={{ width: '100%' }}>
+            <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
               {message}
             </Alert>
           </Snackbar>
