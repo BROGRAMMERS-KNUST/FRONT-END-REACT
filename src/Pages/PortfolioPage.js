@@ -193,7 +193,7 @@ const PortfolioPage = () => {
                     background: `url(${user.result.brandPic1}) `,
                     width: 320,
                     height: 150,
-                    backgroundPositionY: -70,
+                    backgroundPositionY: -40,
                     backgroundSize: 'cover',
                     borderRadius: 1,
                   }}

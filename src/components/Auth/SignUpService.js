@@ -26,10 +26,13 @@ const SignUpService = () => {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [openerror, setOpenError] = useState(false);
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const userData = {
-    fullName: '',
-    email: '',
-    password: '',
+    fullName: fullName,
+    email: email,
+    password: password,
     serviceType: 'servicer',
     bio: '',
     portfolioLink: '',
@@ -39,8 +42,19 @@ const SignUpService = () => {
     service: '',
   };
 
+  const handleFullNameChange = (e) => {
+    setFullName(e.target.value);
+  };
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(userData);
     try {
       const url = 'http://localhost:5000/user/signupservice';
       const { data } = await axios.post(url, userData);
@@ -81,9 +95,7 @@ const SignUpService = () => {
             fullWidth
             helperText='Enter first name first'
             sx={{ marginBottom: 2 }}
-            onChange={(e) => {
-              userData.fullName = e.target.value;
-            }}
+            onChange={handleFullNameChange}
             inputProps={{ maxLength: 30 }}
           />
 
@@ -95,9 +107,7 @@ const SignUpService = () => {
             required
             fullWidth
             sx={{ marginBottom: 2 }}
-            onChange={(e) => {
-              userData.email = e.target.value;
-            }}
+            onChange={handleEmailChange}
           />
           <TextField
             label='Password'
@@ -107,9 +117,7 @@ const SignUpService = () => {
             required
             type='password'
             sx={{ marginBottom: 3 }}
-            onChange={(e) => {
-              userData.password = e.target.value;
-            }}
+            onChange={handlePasswordChange}
           />
           <Typography sx={{}} color='#646765' fontFamily='Nunito'>
             Upload profile picture
