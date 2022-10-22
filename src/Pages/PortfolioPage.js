@@ -78,7 +78,7 @@ const PortfolioPage = () => {
       setOpenError(false);
       setOpenSnack(true);
       setTimeout(() => {
-        //window.location.reload();
+        window.location.reload();
       }, 1530);
       localStorage.setItem('profile', JSON.stringify(data));
       console.log(freelancerId);

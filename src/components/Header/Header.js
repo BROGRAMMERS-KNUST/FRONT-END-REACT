@@ -15,19 +15,21 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import LoginInBoth from '../LogInBoth';
 import SignInOut from './SignInOut';
 import WorkIcon from '@mui/icons-material/Work';
-import stulancerlogo from '../../images/apple-touch-icon.png';
+import decode from 'jwt-decode';
+
 function Header() {
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const history = useHistory();
   const dispatch = useDispatch();
+  const location = useLocation();
   const [opensnack, setOpenSnack] = useState(false);
   const [message, setMessage] = useState('');
 
@@ -40,6 +42,7 @@ function Header() {
       setTimeout(() => {
         history.push('/');
         window.location.reload();
+
         setUser(null);
         setOpenSnack(false);
       }, 1530);
@@ -48,6 +51,21 @@ function Header() {
     }
   };
 
+  useEffect(() => {
+    if (user) {
+      const token = user.result.token;
+
+      if (token) {
+        const decodedToken = decode(token);
+        console.log(decodedToken.exp);
+        if (decodedToken.exp < Date.now() / 1000) {
+          handleLogout();
+        }
+      }
+    }
+
+    setUser(JSON.parse(localStorage.getItem('profile')));
+  }, [location]);
   return (
     <Box>
       <AppBar
