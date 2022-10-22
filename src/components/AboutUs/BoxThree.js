@@ -300,8 +300,7 @@ const BoxThree = () => {
               }}
               variant='body1'
             >
-              A third year Computer Enginering student and an aspiring software
-              engineer
+              Let me be your Spring Programmer and your Hardware Engineer
             </Typography>
           </Stack>
 
