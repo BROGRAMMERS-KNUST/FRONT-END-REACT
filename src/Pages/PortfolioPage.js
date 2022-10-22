@@ -31,7 +31,7 @@ const PortfolioPage = () => {
   const [openerror, setOpenError] = useState(false);
   const [openerror1, setOpenError1] = useState(false);
   const [message, setMessage] = useState('');
-
+  const [sPrice, setsPrice] = useState('');
   const dispatch = useDispatch();
   const history = useHistory();
   const paperStyle = {
@@ -55,8 +55,11 @@ const PortfolioPage = () => {
     brandPic3: user.result.brandPic3,
   };
 
+  const handleStartingPriceChange = (e) => {
+    setsPrice(e.target.value);
+  };
   const startingPrice = {
-    startingPrice: user.result.startingPrice,
+    startingPrice: sPrice,
   };
 
   let freelancerId = null;
@@ -64,7 +67,7 @@ const PortfolioPage = () => {
   //handle submit for starting price only
   const handleSubmit1 = async (e) => {
     e.preventDefault();
-
+    console.log(startingPrice);
     freelancerId = user.result._id;
     try {
       const url = `http://localhost:5000/user/updatestartingprice/${freelancerId}`;
@@ -75,7 +78,7 @@ const PortfolioPage = () => {
       setOpenError(false);
       setOpenSnack(true);
       setTimeout(() => {
-        window.location.reload();
+        //window.location.reload();
       }, 1530);
       localStorage.setItem('profile', JSON.stringify(data));
       console.log(freelancerId);
@@ -397,9 +400,7 @@ const PortfolioPage = () => {
               fullWidth
               defaultValue={user.result.startingPrice}
               sx={{ marginBottom: 2 }}
-              onChange={(e) => {
-                startingPrice.startingPrice = e.target.value;
-              }}
+              onChange={handleStartingPriceChange}
             />
             <Button
               sx={{
