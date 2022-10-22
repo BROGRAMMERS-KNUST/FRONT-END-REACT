@@ -51,21 +51,21 @@ function Header() {
     }
   };
 
-  useEffect(() => {
-    if (user) {
-      const token = user.result.token;
+  // useEffect(() => {
+  //   if (user) {
+  //     const token = user.result.token;
 
-      if (token) {
-        const decodedToken = decode(token);
-        console.log(decodedToken.exp);
-        if (decodedToken.exp < Date.now() / 1000) {
-          handleLogout();
-        }
-      }
-    }
+  //     if (token) {
+  //       const decodedToken = decode(token);
+  //       console.log(decodedToken.exp);
+  //       if (decodedToken.exp < Date.now() / 1000) {
+  //         handleLogout();
+  //       }
+  //     }
+  //   }
 
-    setUser(JSON.parse(localStorage.getItem('profile')));
-  }, [location]);
+  //   setUser(JSON.parse(localStorage.getItem('profile')));
+  // }, [location]);
   return (
     <Box>
       <AppBar
