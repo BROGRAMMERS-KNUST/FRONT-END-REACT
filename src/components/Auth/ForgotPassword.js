@@ -89,7 +89,6 @@ const ForgotPassword = () => {
           </FormControl>
 
           <Button
-            onClick="disable"
             sx={{
               marginBottom: 1,
               fontFamily: "Nunito",
