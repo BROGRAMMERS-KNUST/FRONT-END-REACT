@@ -105,7 +105,7 @@ const OtherInfo = () => {
                     320,
                     150,
                     'JPEG',
-                    60,
+                    70,
                     0,
                     (uri) => {
                       freelancerData.brandPic1 = uri;
@@ -122,6 +122,7 @@ const OtherInfo = () => {
           </Box>
           <Box sx={{ marginBottom: 2 }}>
             <input
+              required
               type='file'
               onChange={(e) => {
                 try {
@@ -130,7 +131,7 @@ const OtherInfo = () => {
                     320,
                     250,
                     'JPEG',
-                    60,
+                    70,
                     0,
                     (uri) => {
                       freelancerData.brandPic2 = uri;
@@ -147,6 +148,7 @@ const OtherInfo = () => {
           </Box>
           <Box sx={{ marginBottom: 2 }}>
             <input
+              required
               type='file'
               onChange={(e) => {
                 try {
@@ -155,7 +157,7 @@ const OtherInfo = () => {
                     320,
                     250,
                     'JPEG',
-                    60,
+                    70,
                     0,
                     (uri) => {
                       freelancerData.brandPic3 = uri;

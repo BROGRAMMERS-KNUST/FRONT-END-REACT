@@ -273,7 +273,7 @@ const PortfolioPage = () => {
                       320,
                       150,
                       'JPEG',
-                      52,
+                      70,
                       0,
                       (uri) => {
                         freelancerData.brandPic1 = uri;
@@ -298,7 +298,7 @@ const PortfolioPage = () => {
                       320,
                       250,
                       'JPEG',
-                      50,
+                      70,
                       0,
                       (uri) => {
                         freelancerData.brandPic2 = uri;
@@ -323,7 +323,7 @@ const PortfolioPage = () => {
                       320,
                       250,
                       'JPEG',
-                      50,
+                      70,
                       0,
                       (uri) => {
                         freelancerData.brandPic3 = uri;
