@@ -5,20 +5,27 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import CakeIcon from '@mui/icons-material/Cake';
 import LocalBarIcon from '@mui/icons-material/LocalBar';
 import CelebrationIcon from '@mui/icons-material/Celebration';
+import LocalPizzaIcon from '@mui/icons-material/LocalPizza';
+import LunchDiningIcon from '@mui/icons-material/LunchDining';
 //IMAGES
 import foodOne from '../../images/PagecardImages/foodOne.webp';
-import foodTwo from '../../images/PagecardImages/foodTwo.jpeg';
+import foodTwo from '../../images/PagecardImages/anh-nguyen-kcA-c3f_3FE-unsplash.jpg';
 import foodThree from '../../images/PagecardImages/foodThree.jpg';
 import FoodCarousel from '../Carousels/FoodCarousel';
 function FoodServicesPageCards() {
   return (
     <Box>
       <FoodCarousel />
-      <Stack direction='row' spacing={4} sx={{ flexWrap: 'nowrap' }}>
+      <Typography fontWeight='bold' sx={{ fontFamily: 'Nunito', marginTop: 1 }}>
+        {' '}
+        Most popular in Food Services
+      </Typography>{' '}
+      <br />
+      <Stack direction='row' spacing={8} sx={{ flexWrap: 'nowrap' }}>
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '11vw',
@@ -29,7 +36,7 @@ function FoodServicesPageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '10vw',
@@ -40,10 +47,10 @@ function FoodServicesPageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
-            width: '14vw',
+            width: '10vw',
           }}
         >
           <CakeIcon color='primary' /> Pastries
@@ -51,7 +58,7 @@ function FoodServicesPageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '10vw',
@@ -62,13 +69,37 @@ function FoodServicesPageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
-            width: '17vw',
+            width: '12vw',
           }}
         >
           <CelebrationIcon color='primary' /> Parties & Events
+        </Box>
+
+        <Box
+          sx={{
+            bgcolor: 'background.paper',
+            boxShadow: 2,
+            borderRadius: 2,
+            p: 2,
+            width: '8vw',
+          }}
+        >
+          <LocalPizzaIcon color='primary' /> Pizza
+        </Box>
+
+        <Box
+          sx={{
+            bgcolor: 'background.paper',
+            boxShadow: 2,
+            borderRadius: 2,
+            p: 2,
+            width: '8vw',
+          }}
+        >
+          <LunchDiningIcon color='primary' /> Burgers
         </Box>
       </Stack>
       <Stack
@@ -109,6 +140,7 @@ function FoodServicesPageCards() {
               backgroundSize: 'cover',
               width: 300,
               height: 200,
+              backgroundPositionY: -50,
             }}
           ></Card>
           <Typography

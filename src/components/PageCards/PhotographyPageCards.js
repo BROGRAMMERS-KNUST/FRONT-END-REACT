@@ -1,7 +1,6 @@
 //COMPONENTS
 import React from 'react';
 import { Typography, Box, Stack, Card, Button } from '@mui/material';
-import BrushIcon from '@mui/icons-material/Brush';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import AnimationIcon from '@mui/icons-material/Animation';
@@ -19,16 +18,16 @@ function PageCards() {
   return (
     <Box marginLeft={1}>
       <PhotographyCarousel />
-      <Typography fontWeight='medium'>
+      <Typography fontWeight='bold' sx={{ fontFamily: 'Nunito', marginTop: 1 }}>
         {' '}
         Most popular in Photography & Video
       </Typography>{' '}
       <br />
-      <Stack direction='row' spacing={4} sx={{ flexWrap: 'nowrap' }}>
+      <Stack direction='row' spacing={8} sx={{ flexWrap: 'nowrap' }}>
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '11vw',
@@ -39,7 +38,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '10vw',
@@ -50,7 +49,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '14vw',
@@ -61,7 +60,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '10vw',
@@ -72,7 +71,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '17vw',
@@ -83,7 +82,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '12vw',
@@ -93,7 +92,7 @@ function PageCards() {
         </Box>
       </Stack>
       <br />
-      <Stack direction='row' spacing={5} sx={{ flexWrap: 'nowrap' }}>
+      <Stack direction='row' spacing={8} sx={{ flexWrap: 'nowrap' }}>
         <Stack>
           <Card
             sx={{

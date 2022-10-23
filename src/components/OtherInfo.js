@@ -20,10 +20,11 @@ const OtherInfo = () => {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [openerror, setOpenError] = useState(false);
+  const [sPrice, setsPrice] = useState('');
   const dispatch = useDispatch();
   const history = useHistory();
   const freelancerData = {
-    startingPrice: '',
+    startingPrice: sPrice,
     brandPic1: '',
     brandPic2: '',
     brandPic3: '',
@@ -36,6 +37,9 @@ const OtherInfo = () => {
     fontWeight: '700',
     width: 400,
     margin: '100px auto',
+  };
+  const handleStartingPriceChange = (e) => {
+    setsPrice(e.target.value);
   };
 
   const handleSubmit = async (e) => {
@@ -56,7 +60,7 @@ const OtherInfo = () => {
       console.log(freelancerData);
     } catch (error) {
       console.log(error);
-      setMessage(error.message);
+      setMessage(error.response.data.message);
       setOpenError(true);
     }
   };
@@ -82,9 +86,7 @@ const OtherInfo = () => {
             fullWidth
             multiline
             sx={{ marginBottom: 2.5 }}
-            onChange={(e) => {
-              freelancerData.startingPrice = e.target.value;
-            }}
+            onChange={handleStartingPriceChange}
           />
 
           <Typography
@@ -103,7 +105,7 @@ const OtherInfo = () => {
                     320,
                     150,
                     'JPEG',
-                    60,
+                    70,
                     0,
                     (uri) => {
                       freelancerData.brandPic1 = uri;
@@ -120,6 +122,7 @@ const OtherInfo = () => {
           </Box>
           <Box sx={{ marginBottom: 2 }}>
             <input
+              required
               type='file'
               onChange={(e) => {
                 try {
@@ -128,7 +131,7 @@ const OtherInfo = () => {
                     320,
                     250,
                     'JPEG',
-                    60,
+                    70,
                     0,
                     (uri) => {
                       freelancerData.brandPic2 = uri;
@@ -145,6 +148,7 @@ const OtherInfo = () => {
           </Box>
           <Box sx={{ marginBottom: 2 }}>
             <input
+              required
               type='file'
               onChange={(e) => {
                 try {
@@ -153,7 +157,7 @@ const OtherInfo = () => {
                     320,
                     250,
                     'JPEG',
-                    60,
+                    70,
                     0,
                     (uri) => {
                       freelancerData.brandPic3 = uri;

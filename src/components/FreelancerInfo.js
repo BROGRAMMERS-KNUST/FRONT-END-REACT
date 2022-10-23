@@ -51,6 +51,7 @@ const FreelancerInfo = () => {
       const url = `http://localhost:5000/user/signupservice/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
+      setOpenError(false);
       setOpen(true);
       setTimeout(() => {
         history.push('/otherinfo');
@@ -123,6 +124,7 @@ const FreelancerInfo = () => {
             placeholder='Enter WhatsApp Link'
             variant='standard'
             fullWidth
+            required
             multiline
             onChange={(e) => {
               freelancerData.whatsappLink = e.target.value;

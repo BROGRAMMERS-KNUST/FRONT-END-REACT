@@ -9,7 +9,12 @@ import ColorLensIcon from '@mui/icons-material/ColorLens';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import BrushIcon from '@mui/icons-material/Brush';
 import GraphicCarousel from '../Carousels/GraphicCarousel';
-
+import MonitorIcon from '@mui/icons-material/Monitor';
+import SourceIcon from '@mui/icons-material/Source';
+import DisplaySettingsIcon from '@mui/icons-material/DisplaySettings';
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
+import EngineeringIcon from '@mui/icons-material/Engineering';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 //IMAGES
 import graphicOne from '../../images/PagecardImages/graphicOne.jpeg';
 import graphicTwo from '../../images/PagecardImages/graphicTwo.webp';
@@ -17,29 +22,26 @@ import graphicThree from '../../images/PagecardImages/graphicThree.webp';
 import graphicFour from '../../images/PagecardImages/graphicFour.webp';
 import graphicFive from '../../images/PagecardImages/graphicFive.webp';
 
-function GraphicDesignPageCards() {
+function WebDesignPageCards() {
   return (
     <div>
       <Box marginLeft={1}>
-        <Typography
-          fontWeight='bold'
-          sx={{ fontFamily: 'Nunito', marginTop: 1 }}
-        >
+        <Typography fontWeight='medium'>
           {' '}
-          Most popular in Graphics & Design
+          Most popular in Web Development
         </Typography>{' '}
         <br />
-        <Stack direction='row' spacing={8} sx={{ flexWrap: 'nowrap' }}>
+        <Stack direction='row' spacing={8.3} sx={{ flexWrap: 'nowrap' }}>
           <Box
             sx={{
               bgcolor: 'background.paper',
-              boxShadow: 1,
+              boxShadow: 2,
               borderRadius: 2,
               p: 2,
-              width: '12vw',
+              width: '11.5vw',
             }}
           >
-            <ImageIcon color='primary' /> Image Editing
+            <MonitorIcon color='primary' /> Front End Dev
           </Box>
           <Box
             sx={{
@@ -47,10 +49,10 @@ function GraphicDesignPageCards() {
               boxShadow: 2,
               borderRadius: 2,
               p: 2,
-              width: '14vw',
+              width: '11.5vw',
             }}
           >
-            <InstagramIcon color='primary' /> Social Media Design
+            <DisplaySettingsIcon color='primary' /> Back End Dev
           </Box>
           <Box
             sx={{
@@ -61,7 +63,7 @@ function GraphicDesignPageCards() {
               width: '10vw',
             }}
           >
-            <BrushIcon color='primary' /> Logo Design
+            <DesignServicesIcon color='primary' /> UI/UX
           </Box>
           <Box
             sx={{
@@ -69,10 +71,10 @@ function GraphicDesignPageCards() {
               boxShadow: 2,
               borderRadius: 2,
               p: 2,
-              width: '12vw',
+              width: '11.5vw',
             }}
           >
-            <LaptopIcon color='primary' /> Laptop Stickers
+            <EngineeringIcon color='primary' /> DevOps
           </Box>
           <Box
             sx={{
@@ -80,10 +82,10 @@ function GraphicDesignPageCards() {
               boxShadow: 2,
               borderRadius: 2,
               p: 2,
-              width: '15vw',
+              width: '13vw',
             }}
           >
-            <HowToRegIcon color='primary' /> T-shirt & Merchandise
+            <ManageAccountsIcon color='primary' /> Project Manager
           </Box>
           <Box
             sx={{
@@ -91,14 +93,13 @@ function GraphicDesignPageCards() {
               boxShadow: 2,
               borderRadius: 2,
               p: 2,
-              width: '9vw',
+              width: '13vw',
             }}
           >
-            <ColorLensIcon color='primary' /> Cover Art
+            <SourceIcon color='primary' /> Content Developer
           </Box>
         </Stack>
-        <br />
-        <Typography
+        {/* <Typography
           sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
           variant='h5'
           marginTop={1}
@@ -232,38 +233,10 @@ function GraphicDesignPageCards() {
               <Button sx={{ color: 'black' }}>Cover Art</Button>
             </Typography>
           </Stack>
-        </Stack>
-        <Stack direction='row' spacing={6} sx={{ flexWrap: 'wrap' }}>
-          <Stack>
-            <Card
-              sx={{
-                background: `url(${graphicFive})`,
-                backgroundSize: 'cover',
-                width: 300,
-                height: 200,
-              }}
-            ></Card>
-            <Typography
-              variant='h5'
-              width='300px'
-              sx={{
-                fontFamily: 'Nunito',
-                marginTop: 1,
-              }}
-            >
-              Miscellaneous
-            </Typography>
-            <Typography variant='body' width='300px'>
-              <Button sx={{ color: 'black' }}>Game Art </Button> <br />{' '}
-              <Button sx={{ color: 'black' }}>Infographic Design </Button>
-              <br />{' '}
-              <Button sx={{ color: 'black' }}>Social Media Design</Button>
-            </Typography>
-          </Stack>
-        </Stack>
+        </Stack> */}
       </Box>
     </div>
   );
 }
 
-export default GraphicDesignPageCards;
+export default WebDesignPageCards;

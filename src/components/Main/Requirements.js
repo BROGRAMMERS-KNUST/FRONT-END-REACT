@@ -143,8 +143,7 @@ const Requirements = () => {
                 fontFamily: 'Nunito',
               }}
             >
-              <CheckCircleOutlineRounded color='secondary' />
-              At least 1 brand picture and at most 3 for upload
+              <CheckCircleOutlineRounded color='secondary' />3 brand pictures
             </Typography>
 
             <Typography
