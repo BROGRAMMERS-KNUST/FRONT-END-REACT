@@ -27,7 +27,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '11vw',
@@ -39,7 +39,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '11vw',
@@ -51,7 +51,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '14vw',
@@ -62,7 +62,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '10vw',
