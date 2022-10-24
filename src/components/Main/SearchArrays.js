@@ -36,7 +36,7 @@ export const graphics = [
   'church flier',
   'church flyer',
   'abstract',
-  'abstract art',
+  'art',
   'photoshop',
   'adobe',
   'adobe photoshop',
