@@ -2,7 +2,6 @@ import {
   Alert,
   Button,
   Grid,
-  Input,
   Link,
   Paper,
   Snackbar,
@@ -12,7 +11,6 @@ import {
 
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { loginhirer } from '../../action/auth';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';

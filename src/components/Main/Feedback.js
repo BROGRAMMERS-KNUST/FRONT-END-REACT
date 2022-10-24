@@ -12,14 +12,11 @@ import {
 import React, { useState } from 'react';
 import { Box } from '@mui/system';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import CloseIcon from '@mui/icons-material/Close';
-import { feedback } from '../../action/auth';
 import axios from 'axios';
 const Feedback = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [opensnack, setSnackOpen] = useState(false);

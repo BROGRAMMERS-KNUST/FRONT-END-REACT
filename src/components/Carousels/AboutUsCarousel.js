@@ -1,10 +1,9 @@
 import React from 'react';
-import { Box, Button, Grid, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import bgpic from '../../images/AboutUs/IMG-20221013-WA0023.jpg';
 import bgpic1 from '../../images/AboutUs/a1.jpg';
 import bgpic2 from '../../images/AboutUs/a2.jpg';
-import bgpic3 from '../../images/macarons-2548827.jpg';
 
 const AboutUsCarousel = () => {
   return (

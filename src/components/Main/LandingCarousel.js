@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Grid, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import bgpic from '../../images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg';
 import bgpic1 from '../../images/mandalas-1084082.jpg';

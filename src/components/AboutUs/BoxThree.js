@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Container,
-  Stack,
-  Card,
-  Link,
-  Button,
-  Typography,
-} from '@mui/material';
+import { Box, Container, Stack, Card, Link, Typography } from '@mui/material';
 import Albert from '../../images/Team/Albert.jpg';
 import Kusi from '../../images/Team/Kusi.jpg';
 import Timothy from '../../images/Team/Timothy.jpg';
@@ -18,7 +10,7 @@ import Wassem from '../../images/Team/Wassem-Darkwa.jpg';
 import King from '../../images/Team/King.jpg';
 import EMMA from '../../images/Team/EMMA.jpg';
 import Moses from '../../images/Team/Moses.jpg';
-import { ChevronRight, GitHub, Telegram, WhatsApp } from '@mui/icons-material';
+import { GitHub, Telegram, WhatsApp } from '@mui/icons-material';
 
 const BoxThree = () => {
   return (

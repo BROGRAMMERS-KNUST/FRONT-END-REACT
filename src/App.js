@@ -6,7 +6,6 @@ import '@fontsource/roboto/700.css';
 import React from 'react';
 //css files
 import './App.css';
-import Background from './components/Main/Background';
 import Main from './components/Main/Main';
 import Header from './components/Header/Header';
 import PhotograhyPage from './Pages/PhotograhyPage';
@@ -23,7 +22,6 @@ import AboutUS from './Pages/AboutUS';
 import Webby from './Pages/Webby';
 import UpdateProfile from './components/UpdateProfile';
 import IndividualRoles from './components/AboutUs/IndividualRoles';
-import WhyStulancer from './components/Main/WhyStulancer';
 import LandingCarousel from './components/Main/LandingCarousel';
 import Background1 from './components/Main/Background1';
 import Background2 from './components/Main/Background2';

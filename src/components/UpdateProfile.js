@@ -9,8 +9,6 @@ import {
 } from '@mui/material';
 import Resizer from 'react-image-file-resizer';
 import React from 'react';
-import { updatefreelancerinfo } from '../action/auth';
-import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -21,7 +19,6 @@ import { useState } from 'react';
 import axios from 'axios';
 const UpdateProfile = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
-  const dispatch = useDispatch();
   const history = useHistory();
   const [disabled, setDisabled] = useState(false);
   const [open, setOpen] = useState(false);

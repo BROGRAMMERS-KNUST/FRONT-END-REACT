@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Box, Stack, Card, Button } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import webdevOne from '../../images/WEB1.jpg';
 import webdevTwo from '../../images/WEB2.jpg';

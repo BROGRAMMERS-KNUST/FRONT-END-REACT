@@ -8,7 +8,6 @@ import LaptopIcon from '@mui/icons-material/Laptop';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import BrushIcon from '@mui/icons-material/Brush';
-import GraphicCarousel from '../Carousels/GraphicCarousel';
 
 //IMAGES
 import graphicOne from '../../images/PagecardImages/graphicOne.jpeg';

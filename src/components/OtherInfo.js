@@ -10,7 +10,6 @@ import {
 import Resizer from 'react-image-file-resizer';
 import React from 'react';
 import { useState } from 'react';
-import { otherfreelancerinfo } from '../action/auth';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
@@ -21,7 +20,6 @@ const OtherInfo = () => {
   const [message, setMessage] = useState('');
   const [openerror, setOpenError] = useState(false);
   const [sPrice, setsPrice] = useState('');
-  const dispatch = useDispatch();
   const history = useHistory();
   const freelancerData = {
     startingPrice: sPrice,

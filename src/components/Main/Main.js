@@ -1,10 +1,7 @@
 import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
-import StulancerPicks from '../StulancerPicks';
 import GridCategory from './GridCategory';
-import TopRatedStulancers from '../TopRatedStulancers';
-import WhyStulancer from './WhyStulancer';
 
 const Main = () => {
   return (

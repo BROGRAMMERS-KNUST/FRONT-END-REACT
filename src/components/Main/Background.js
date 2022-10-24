@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import LandingPic from '../../images/images_8.png';
 import GetStarted from './GetStarted';
-import StarRoundedIcon from '@mui/icons-material/StarRounded';
+
 const Background = () => {
   return (
     <Box

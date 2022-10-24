@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import graphicSix from '../../images/9.png';
 import graphicSeven from '../../images/PagecardImages/graphicSeven.jpg';

@@ -1,5 +1,4 @@
 import React from 'react';
-import BoxOne from '../components/AboutUs/BoxOne';
 import BoxTwo from '../components/AboutUs/BoxTwo';
 import BoxThree from '../components/AboutUs/BoxThree';
 import BoxFour from '../components/AboutUs/BoxFour';

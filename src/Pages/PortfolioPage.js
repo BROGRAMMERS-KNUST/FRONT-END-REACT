@@ -19,8 +19,7 @@ import Carousel from 'react-material-ui-carousel';
 import Resizer from 'react-image-file-resizer';
 import CloseIcon from '@mui/icons-material/Close';
 import PaidRoundedIcon from '@mui/icons-material/PaidRounded';
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+
 import axios from 'axios';
 const PortfolioPage = () => {
   document.title = 'StuLancer-Dashboard 👩‍💻';
@@ -32,8 +31,6 @@ const PortfolioPage = () => {
   const [openerror1, setOpenError1] = useState(false);
   const [message, setMessage] = useState('');
   const [sPrice, setsPrice] = useState('');
-  const dispatch = useDispatch();
-  const history = useHistory();
   const paperStyle = {
     padding: 20,
     fontFamily: 'Nunito',
