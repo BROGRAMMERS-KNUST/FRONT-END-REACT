@@ -5,7 +5,7 @@ import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
-import { photography, graphics, web } from './SearchArrays';
+import { photography, graphics, web, food, writing } from './SearchArrays';
 const Search = () => {
   const history = useHistory();
   const [searchInput, setsearchInput] = useState('');
@@ -51,6 +51,33 @@ const Search = () => {
       }
     });
   };
+
+  //CHECK FOOD FUNCTION
+  const checkFood = (array, data) => {
+    const splittedData = data.split(' ');
+    console.log(splittedData);
+
+    return array.some((arrayData) => {
+      for (let i = 0; i < splittedData.length; i++) {
+        if (splittedData[i] === arrayData) {
+          return splittedData[i] === arrayData;
+        }
+      }
+    });
+  };
+  //CHECK WRITING  FUNCTION
+  const checkWriting = (array, data) => {
+    const splittedData = data.split(' ');
+    console.log(splittedData);
+
+    return array.some((arrayData) => {
+      for (let i = 0; i < splittedData.length; i++) {
+        if (splittedData[i] === arrayData) {
+          return splittedData[i] === arrayData;
+        }
+      }
+    });
+  };
   const handleSearchInput = (e) => {
     setsearchInput(e.target.value);
   };
@@ -64,6 +91,10 @@ const Search = () => {
       history.push('/graphic-design');
     } else if (checkWeb(web, searchInput)) {
       history.push('/webdevelopment');
+    } else if (checkFood(food, searchInput)) {
+      history.push('/food-services');
+    } else if (checkWriting(writing, searchInput)) {
+      history.push('/writing&translation');
     }
   };
   return (

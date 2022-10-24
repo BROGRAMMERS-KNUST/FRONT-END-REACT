@@ -22,6 +22,7 @@ export const photography = [
   'picture',
   '4k camera',
   '4k',
+  'matriculation',
 ];
 
 export const graphics = [
@@ -31,6 +32,7 @@ export const graphics = [
   'flyer',
   'flier',
   'poster',
+  'church',
   'church flier',
   'church flyer',
   'abstract',
@@ -83,4 +85,39 @@ export const web = [
   'AI',
   'neural',
   'machine',
+  'ui',
+  'ux',
+  'ui/ux',
+];
+
+export const food = [
+  'food',
+  'cake',
+  'pizza',
+  'burger',
+  'wine',
+  'drink',
+  'breakfast',
+  'delivery',
+  'pastries',
+  'pie',
+  'sandwich',
+  'shawama',
+  'jollof',
+];
+
+export const writing = [
+  'book',
+  'write',
+  'writing',
+  'translate',
+  'translation',
+  'biography',
+  'autobiography',
+  'author',
+  'magazine',
+  'resume',
+  'cv',
+  'letter',
+  'letters',
 ];
