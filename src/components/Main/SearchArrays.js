@@ -23,3 +23,24 @@ export const photography = [
   '4k camera',
   '4k',
 ];
+
+export const graphics = [
+  'graphics',
+  'designer',
+  'flyer',
+  'flier',
+  'poster',
+  'church flier',
+  'church flyer',
+  'abstract',
+  'abstract art',
+  'photoshop',
+  'adobe',
+  'adobe photoshop',
+  'adobe illustrator',
+  'indesign',
+  'adobe indesign',
+  'vector art',
+  'mockup design',
+  'mockup',
+];

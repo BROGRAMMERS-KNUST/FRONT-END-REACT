@@ -5,11 +5,12 @@ import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
-import { photography } from './SearchArrays';
+import { photography, graphics } from './SearchArrays';
 const Search = () => {
   const history = useHistory();
   const [searchInput, setsearchInput] = useState('');
 
+  //CHECK PHOTOGRAPHY FUNCTION
   const checkPhotgraphy = (array, data) => {
     const splittedData = data.split(' ');
     console.log(splittedData);
@@ -21,20 +22,20 @@ const Search = () => {
         }
       }
     });
+  };
 
-    // return array.some((arrayData) => {
-    //   return splittedData[0] === arrayData;
-    // });
+  //CHECK GRAPHICS FUNCTION
+  const checkGraphics = (array, data) => {
+    const splittedData = data.split(' ');
+    console.log(splittedData);
 
-    // // splittedData.forEach((element) => {
-    // //   console.log(`Element = ${element}`);
-    // //   console.log(element === '2');
-    // });
-    // array.some((arrayData) => {
-    //   arrayData.forEach((element) => {
-    //     data === element;
-    //   });
-    // });
+    return array.some((arrayData) => {
+      for (let i = 0; i < splittedData.length; i++) {
+        if (splittedData[i] === arrayData) {
+          return splittedData[i] === arrayData;
+        }
+      }
+    });
   };
   const handleSearchInput = (e) => {
     setsearchInput(e.target.value);
@@ -45,6 +46,8 @@ const Search = () => {
     console.log(checkPhotgraphy(photography, searchInput));
     if (checkPhotgraphy(photography, searchInput)) {
       history.push('/photography');
+    } else if (checkGraphics(graphics, searchInput)) {
+      history.push('/graphic-design');
     }
   };
   return (
