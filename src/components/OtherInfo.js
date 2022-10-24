@@ -45,7 +45,7 @@ const OtherInfo = () => {
     freelancerId = user.result._id;
 
     try {
-      const url = `http://localhost:5000/user/signupservice/${freelancerId}`;
+      const url = `http://localhost:5000/user/signupservicesp/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
       setOpenError(false);
