@@ -120,4 +120,7 @@ export const writing = [
   'cv',
   'letter',
   'letters',
+  'articles',
+  'article',
+  'transcription',
 ];
