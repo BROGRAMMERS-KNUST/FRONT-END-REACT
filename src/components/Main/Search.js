@@ -5,7 +5,7 @@ import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
-import { photography, graphics } from './SearchArrays';
+import { photography, graphics, web } from './SearchArrays';
 const Search = () => {
   const history = useHistory();
   const [searchInput, setsearchInput] = useState('');
@@ -37,6 +37,20 @@ const Search = () => {
       }
     });
   };
+
+  //CHECK WEB DEV FUNCTION
+  const checkWeb = (array, data) => {
+    const splittedData = data.split(' ');
+    console.log(splittedData);
+
+    return array.some((arrayData) => {
+      for (let i = 0; i < splittedData.length; i++) {
+        if (splittedData[i] === arrayData) {
+          return splittedData[i] === arrayData;
+        }
+      }
+    });
+  };
   const handleSearchInput = (e) => {
     setsearchInput(e.target.value);
   };
@@ -48,6 +62,8 @@ const Search = () => {
       history.push('/photography');
     } else if (checkGraphics(graphics, searchInput)) {
       history.push('/graphic-design');
+    } else if (checkWeb(web, searchInput)) {
+      history.push('/webdevelopment');
     }
   };
   return (
