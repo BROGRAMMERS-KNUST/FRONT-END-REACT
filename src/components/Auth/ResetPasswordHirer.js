@@ -59,11 +59,11 @@ const ResetPasswordHirer = () => {
       <Paper style={paperStyle} elevation={6}>
         <Grid item align='center'>
           <Typography
-            variant='h5'
+            variant='h6'
             color='primary'
             sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
           >
-            Password Reset
+            Hirer Password Reset
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>

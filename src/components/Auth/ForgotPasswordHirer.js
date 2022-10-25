@@ -76,11 +76,11 @@ const ForgotPasswordHirer = () => {
       <Paper style={paperStyle} elevation={6}>
         <Grid item align='center'>
           <Typography
-            variant='h5'
+            variant='h6'
             color='primary'
             sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
           >
-            Password Recovery
+            Hirer Password Recovery
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>
