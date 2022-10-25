@@ -91,7 +91,9 @@ const ResetPassword = () => {
           >
             Sumbit
           </Button>
-          <Typography variant='body2'>Reset your password</Typography>
+          <Typography sx={{ fontFamily: 'Nunito' }} variant='body2'>
+            Reset your password
+          </Typography>
         </form>
         <Snackbar open={open} autoHideDuration={10000}>
           <Alert variant='filled' severity='success' sx={{ width: '100%' }}>

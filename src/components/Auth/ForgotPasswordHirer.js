@@ -108,7 +108,7 @@ const ForgotPasswordHirer = () => {
           >
             Sumbit
           </Button>
-          <Typography variant='body2'>
+          <Typography sx={{ fontFamily: 'Nunito' }} variant='body2'>
             A recovery link will be sent to the email you have provided
           </Typography>
         </form>

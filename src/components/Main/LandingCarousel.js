@@ -5,6 +5,8 @@ import bgpic from '../../images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg';
 import bgpic1 from '../../images/mandalas-1084082.jpg';
 import bgpic2 from '../../images/Fotolia_45501220_Subscription_XL.jpg';
 import bgpic3 from '../../images/macarons-2548827.jpg';
+import bgpic4 from '../../images/D1.jpg';
+import bgpic5 from '../../images/D2.jpg';
 import Search from './Search';
 const LandingCarousel = () => {
   return (
@@ -72,7 +74,6 @@ const LandingCarousel = () => {
         <Box
           sx={{
             background: `url(${bgpic1})`,
-
             backgroundSize: 'cover',
             color: 'white',
             height: '520px',
@@ -211,6 +212,110 @@ const LandingCarousel = () => {
             }}
           >
             <span className='highlight1'>freelancer</span> online
+          </Typography>
+          <Typography
+            variant='h4'
+            letterSpacing={2.0}
+            sx={{
+              fontFamily: 'Nunito',
+              textAlign: 'center',
+              fontWeight: '100',
+            }}
+          >
+            Turn your ideas into a reality
+          </Typography>
+          <Search />
+        </Box>
+
+        <Box
+          sx={{
+            background: `url(${bgpic4})`,
+            backgroundSize: 'cover',
+            color: 'white',
+            height: '520px',
+            width: '93vw',
+            borderRadius: '20px ',
+            marginTop: 1,
+            marginBottom: 5,
+            marginLeft: 0.5,
+          }}
+        >
+          <Typography
+            variant='h1'
+            letterSpacing={2.5}
+            sx={{
+              fontFamily: 'Nunito',
+              textAlign: 'center',
+              paddingTop: 12,
+              marginBottom: -5,
+              fontWeight: '700',
+            }}
+          >
+            Hire the <span className='highlightl1'>best</span>
+          </Typography>
+          <Typography
+            variant='h1'
+            letterSpacing={2.3}
+            sx={{
+              fontFamily: 'Nunito',
+              textAlign: 'center',
+              paddingTop: 3,
+              fontWeight: '700',
+            }}
+          >
+            <span className='highlightl1'>freelancer</span> online
+          </Typography>
+          <Typography
+            variant='h4'
+            letterSpacing={2.0}
+            sx={{
+              fontFamily: 'Nunito',
+              textAlign: 'center',
+              fontWeight: '100',
+            }}
+          >
+            Turn your ideas into a reality
+          </Typography>
+          <Search />
+        </Box>
+
+        <Box
+          sx={{
+            background: `url(${bgpic5})`,
+            backgroundSize: 'cover',
+            color: 'white',
+            height: '520px',
+            width: '93vw',
+            borderRadius: '20px ',
+            marginTop: 1,
+            marginBottom: 5,
+            marginLeft: 0.5,
+          }}
+        >
+          <Typography
+            variant='h1'
+            letterSpacing={2.5}
+            sx={{
+              fontFamily: 'Nunito',
+              textAlign: 'center',
+              paddingTop: 12,
+              marginBottom: -5,
+              fontWeight: '700',
+            }}
+          >
+            Hire the <span className='highlightl2'>best</span>
+          </Typography>
+          <Typography
+            variant='h1'
+            letterSpacing={2.3}
+            sx={{
+              fontFamily: 'Nunito',
+              textAlign: 'center',
+              paddingTop: 3,
+              fontWeight: '700',
+            }}
+          >
+            <span className='highlightl2'>freelancer</span> online
           </Typography>
           <Typography
             variant='h4'
