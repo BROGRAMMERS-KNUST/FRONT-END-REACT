@@ -102,6 +102,9 @@ export const web = [
   'angular',
   'laravel',
   'php',
+  'api',
+  'API',
+  'stack',
 ];
 
 export const food = [
