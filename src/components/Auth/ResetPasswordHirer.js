@@ -1,8 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import {
-  Select,
-  MenuItem,
   Button,
   Typography,
   Grid,
@@ -11,13 +9,14 @@ import {
   Snackbar,
   Alert,
 } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import { useHistory, useParams } from 'react-router-dom';
 
-import { useHistory } from 'react-router-dom';
 import axios from 'axios';
-import emailjs from '@emailjs/browser';
-import dotenv from 'dotenv';
-const ForgotPassword = () => {
+
+const ResetPasswordHirer = () => {
   const history = useHistory();
+  let { id, token } = useParams();
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [openerror, setOpenError] = useState(false);
@@ -29,44 +28,25 @@ const ForgotPassword = () => {
     margin: '100px auto',
   };
 
-  const [email, setEmail] = useState('');
-  const forgotpasswordData = { email: email };
+  const [password, setPassword] = useState('');
+  const resetpasswordData = { password: password };
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(resetpasswordData);
     try {
-      const url = 'http://localhost:5000/passwordrecovery/forgot-password';
-      const { data } = await axios.post(url, forgotpasswordData);
-      console.log(`Message from Front End : ${data.message}`);
-      let templateParams = {
-        name: data.result.fullName,
-        email: data.result.email,
-        message: data.link,
-      };
-      emailjs
-        .send(
-          'service_2uo0b8g',
-          'template_jbek2bm',
-          templateParams,
-          'NsLZvQfSLLBDu2zdp'
-        )
-        .then(
-          function (response) {
-            console.log('SUCCESS!', response.status, response.text);
-            setMessage(data.message);
-            setOpenError(false);
-            setOpen(true);
-            setTimeout(() => {
-              history.push('/');
-            }, 1500);
-          },
-          function (error) {
-            console.log('FAILED...', error);
-          }
-        );
+      const url = `http://localhost:5000/passwordrecovery/reset-password-hirer/${id}/${token}`;
+      const { data } = await axios.post(url, resetpasswordData);
+      console.log(data);
+      setMessage(data.message);
+      setOpenError(false);
+      setOpen(true);
+      setTimeout(() => {
+        history.push('/');
+      }, 1500);
     } catch (error) {
       console.log(error);
       setMessage(error.response.data.message);
@@ -83,19 +63,19 @@ const ForgotPassword = () => {
             color='primary'
             sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
           >
-            Password Recovery
+            Password Reset
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
-            type='email'
-            label='Email'
-            placeholder='Enter email'
+            type='password'
+            label='Password'
+            placeholder='Enter your new password'
             variant='standard'
             required
             fullWidth
             sx={{ marginTop: 4, marginBottom: 2, fontFamily: 'Nunito' }}
-            onChange={handleEmailChange}
+            onChange={handlePasswordChange}
           />
 
           <Button
@@ -111,9 +91,7 @@ const ForgotPassword = () => {
           >
             Sumbit
           </Button>
-          <Typography variant='body2'>
-            A recovery link will be sent to the email you have provided
-          </Typography>
+          <Typography variant='body2'>Reset your password</Typography>
         </form>
         <Snackbar open={open} autoHideDuration={10000}>
           <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
@@ -131,4 +109,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default ResetPasswordHirer;

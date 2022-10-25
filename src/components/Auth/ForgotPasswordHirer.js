@@ -1,8 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import {
-  Select,
-  MenuItem,
   Button,
   Typography,
   Grid,
@@ -11,12 +9,10 @@ import {
   Snackbar,
   Alert,
 } from '@mui/material';
-
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import emailjs from '@emailjs/browser';
-import dotenv from 'dotenv';
-const ForgotPassword = () => {
+const ForgotPasswordHirer = () => {
   const history = useHistory();
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState('');
@@ -38,7 +34,8 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = 'http://localhost:5000/passwordrecovery/forgot-password';
+      const url =
+        'http://localhost:5000/passwordrecovery/forgot-password-hirer';
       const { data } = await axios.post(url, forgotpasswordData);
       console.log(`Message from Front End : ${data.message}`);
       let templateParams = {
@@ -131,4 +128,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default ForgotPasswordHirer;
