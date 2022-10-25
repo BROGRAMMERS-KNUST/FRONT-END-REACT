@@ -46,6 +46,7 @@ export const graphics = [
   'vector art',
   'mockup design',
   'mockup',
+  'billboard',
 ];
 
 export const web = [
@@ -88,6 +89,19 @@ export const web = [
   'ui',
   'ux',
   'ui/ux',
+  'blockchain',
+  'web3',
+  'web3.0',
+  'aws',
+  'AWS',
+  'amazon',
+  'Amazon',
+  'Shopify',
+  'shopify',
+  'js',
+  'angular',
+  'laravel',
+  'php',
 ];
 
 export const food = [
@@ -104,6 +118,11 @@ export const food = [
   'sandwich',
   'shawama',
   'jollof',
+  'icecream',
+  'yoghurt',
+  'khebab',
+  'chicken',
+  'turkey',
 ];
 
 export const writing = [
