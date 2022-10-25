@@ -30,6 +30,7 @@ import UpdateProfileHirer from './components/UpdateProfileHirer';
 import OtherInfo from './components/OtherInfo';
 import Background3 from './components/Main/Background3';
 import Page404 from './components/Page404';
+import ResetPassword from './components/Auth/ResetPassword';
 
 function App() {
   return (
@@ -88,6 +89,10 @@ function App() {
 
             <Route path='/otherinfo'>
               <OtherInfo />
+            </Route>
+
+            <Route path='/reset-password/:id/:token'>
+              <ResetPassword />
             </Route>
 
             <Route path='*'>

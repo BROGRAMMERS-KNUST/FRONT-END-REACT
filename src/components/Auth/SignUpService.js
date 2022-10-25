@@ -40,6 +40,7 @@ const SignUpService = () => {
     telephoneNumber: 0,
     whatsappLink: '',
     service: '',
+    verifytoken: '',
   };
 
   const handleFullNameChange = (e) => {
