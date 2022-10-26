@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Typography, Stack, Container, Grid } from '@mui/material';
 import {
   CheckCircleOutline,
@@ -8,9 +8,25 @@ import {
   Twitter,
 } from '@mui/icons-material';
 import axios from 'axios';
+import { useEffect } from 'react';
 
 const BoxTwo = () => {
-  const [message, setMessage] = '';
+  const [numberofStuLancers, setnumberofStuLancers] = useState(0);
+
+  const getNumberofStuLancers = async () => {
+    try {
+      const url = 'http://localhost:5000/user/getnumber';
+      const { data } = await axios.get(url);
+      setnumberofStuLancers(data.result.toString());
+      console.log(`Number of StuLancers is ${data.result.toString()}`);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getNumberofStuLancers();
+  }, []);
 
   return (
     <Box
@@ -131,7 +147,7 @@ const BoxTwo = () => {
                 fontWeight='bold'
                 color='secondary'
               >
-                10
+                {numberofStuLancers}
               </Typography>
               <People />
               <Typography
