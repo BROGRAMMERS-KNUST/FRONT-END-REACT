@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/BROGRAMMERS-KNUST/FRONT-END-REACT/precache-manifest.164f05aa45620ab02c3e2358e50ae645.js"
+  "/BROGRAMMERS-KNUST/FRONT-END-REACT/precache-manifest.3a62f4a2170fc26f0e7fbf49141cfc9d.js"
 );
 
 workbox.clientsClaim();
