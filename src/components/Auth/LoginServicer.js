@@ -118,7 +118,7 @@ const LoginServicer = () => {
           </Alert>
         </Snackbar>
         <Link
-          href='/passwordrecovery/forgot-password'
+          href='https://brogrammersknust.netlify.app/passwordrecovery/forgot-password-hirer'
           sx={{ marginLeft: 12.5, marginBottom: 2, marginTop: 2 }}
           underline='hover'
         >
