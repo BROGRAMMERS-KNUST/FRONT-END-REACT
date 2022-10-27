@@ -9,8 +9,6 @@ import {
 } from '@mui/material';
 import Resizer from 'react-image-file-resizer';
 import React from 'react';
-import { updatefreelancerinfo } from '../action/auth';
-import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -21,7 +19,6 @@ import { useState } from 'react';
 import axios from 'axios';
 const UpdateProfile = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
-  const dispatch = useDispatch();
   const history = useHistory();
   const [disabled, setDisabled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -51,7 +48,7 @@ const UpdateProfile = () => {
     freelancerId = user.result._id;
     setDisabled(true);
     try {
-      const url = `http://localhost:5000/user/updateservice/${freelancerId}`;
+      const url = `https://brogrammers-knust.herokuapp.com/user/updateservice/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
       setOpenError(false);

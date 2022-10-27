@@ -1,18 +1,13 @@
 import {
-  Alert,
   Button,
   Grid,
   IconButton,
   Modal,
   Paper,
-  Snackbar,
-  TextField,
   Typography,
 } from '@mui/material';
 import React, { useState } from 'react';
 import { Box } from '@mui/system';
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import CloseIcon from '@mui/icons-material/Close';
 import { CheckCircleOutlineRounded } from '@mui/icons-material';
@@ -143,8 +138,7 @@ const Requirements = () => {
                 fontFamily: 'Nunito',
               }}
             >
-              <CheckCircleOutlineRounded color='secondary' />
-              At least 1 brand picture and at most 3 for upload
+              <CheckCircleOutlineRounded color='secondary' />3 brand pictures
             </Typography>
 
             <Typography

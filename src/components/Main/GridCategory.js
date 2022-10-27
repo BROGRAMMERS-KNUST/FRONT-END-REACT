@@ -11,7 +11,7 @@ import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 
 const GridCategory = () => {
   return (
-    <Box sx={{ margin: 'solid', color: 'red' }}>
+    <Box sx={{ marginBottom: 10 }}>
       <Grid container spacing={3} flexWrap>
         <Grid
           item
@@ -243,7 +243,7 @@ const GridCategory = () => {
               sx={{ fontFamily: 'Nunito', fontWeight: '700', marginLeft: 1.5 }}
               color='white'
             >
-              Writing
+              Writing&Translation
             </Typography>
 
             <Button

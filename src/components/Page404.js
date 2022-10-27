@@ -3,6 +3,7 @@ import React from 'react';
 import LandingPic4 from '../images/11.png';
 
 const Page404 = () => {
+  document.title = 'StuLancer-404 ❗ ';
   return (
     <Box
       sx={{

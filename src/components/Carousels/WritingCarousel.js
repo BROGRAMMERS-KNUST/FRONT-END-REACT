@@ -1,4 +1,4 @@
-import { Typography, Box, Button } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import writingFour from '../../images/w4.jpg';
 import writingFive from '../../images/w2.jpg';

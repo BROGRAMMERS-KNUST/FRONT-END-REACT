@@ -4,7 +4,6 @@ import {
   faFacebook,
   faTwitter,
   faInstagram,
-  faGoogle,
   faWhatsapp,
   faTelegram,
 } from '@fortawesome/free-brands-svg-icons';
@@ -26,7 +25,7 @@ export default function SocialFollow() {
             </a>
 
             <a
-              href='https://www.youtube.com/'
+              href='https://www.youtube.com/channel/UC3460fdV4miF8El-lKXwNHw'
               className='youtube social'
               target='blank'
             >
@@ -34,7 +33,7 @@ export default function SocialFollow() {
             </a>
 
             <a
-              href='https://www.facebook.com/'
+              href='https://www.facebook.com/100086395737504/'
               className='facebook social'
               target='blank'
             >
@@ -42,19 +41,11 @@ export default function SocialFollow() {
             </a>
 
             <a
-              href='https://www.twitter.com/'
+              href='https://twitter.com/BrogrammersK'
               className='twitter social'
               target='blank'
             >
               <FontAwesomeIcon color='white' icon={faTwitter} size='2x' />
-            </a>
-
-            <a
-              href='https://www.gmail.com/'
-              className='google social'
-              target='blank'
-            >
-              <FontAwesomeIcon color='white' icon={faGoogle} size='2x' />
             </a>
 
             <a
@@ -65,7 +56,7 @@ export default function SocialFollow() {
               <FontAwesomeIcon color='white' icon={faInstagram} size='2x' />
             </a>
             <a
-              href='https://t.me/0242764001'
+              href='https://t.me/+OfgZbPGwFSE5MjA0'
               className='telegram social'
               target='blank'
             >

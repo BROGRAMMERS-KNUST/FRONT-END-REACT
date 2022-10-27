@@ -2,7 +2,6 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import LandingPic1 from '../../images/5.png';
 import Feedback from './Feedback';
-import GetStarted from './GetStarted';
 
 const Background2 = () => {
   return (

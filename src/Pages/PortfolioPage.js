@@ -19,8 +19,7 @@ import Carousel from 'react-material-ui-carousel';
 import Resizer from 'react-image-file-resizer';
 import CloseIcon from '@mui/icons-material/Close';
 import PaidRoundedIcon from '@mui/icons-material/PaidRounded';
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+
 import axios from 'axios';
 const PortfolioPage = () => {
   document.title = 'StuLancer-Dashboard 👩‍💻';
@@ -31,9 +30,7 @@ const PortfolioPage = () => {
   const [openerror, setOpenError] = useState(false);
   const [openerror1, setOpenError1] = useState(false);
   const [message, setMessage] = useState('');
-
-  const dispatch = useDispatch();
-  const history = useHistory();
+  const [sPrice, setsPrice] = useState('');
   const paperStyle = {
     padding: 20,
     fontFamily: 'Nunito',
@@ -55,8 +52,11 @@ const PortfolioPage = () => {
     brandPic3: user.result.brandPic3,
   };
 
+  const handleStartingPriceChange = (e) => {
+    setsPrice(e.target.value);
+  };
   const startingPrice = {
-    startingPrice: user.result.startingPrice,
+    startingPrice: sPrice,
   };
 
   let freelancerId = null;
@@ -64,10 +64,12 @@ const PortfolioPage = () => {
   //handle submit for starting price only
   const handleSubmit1 = async (e) => {
     e.preventDefault();
+    console.log(startingPrice);
     freelancerId = user.result._id;
     try {
       const url = `http://localhost:5000/user/updatestartingprice/${freelancerId}`;
       const { data } = await axios.patch(url, startingPrice);
+      console.log(data.message);
       setMessage(data.message);
       setOpenError1(false);
       setOpenError(false);
@@ -88,6 +90,7 @@ const PortfolioPage = () => {
   //handle sumbit for brand pics only
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     freelancerId = user.result._id;
     try {
       const url = `http://localhost:5000/user/updatebrandpics/${freelancerId}`;
@@ -193,7 +196,7 @@ const PortfolioPage = () => {
                     background: `url(${user.result.brandPic1}) `,
                     width: 320,
                     height: 150,
-                    backgroundPositionY: -70,
+                    backgroundPositionY: -40,
                     backgroundSize: 'cover',
                     borderRadius: 1,
                   }}
@@ -267,7 +270,7 @@ const PortfolioPage = () => {
                       320,
                       150,
                       'JPEG',
-                      52,
+                      70,
                       0,
                       (uri) => {
                         freelancerData.brandPic1 = uri;
@@ -292,7 +295,7 @@ const PortfolioPage = () => {
                       320,
                       250,
                       'JPEG',
-                      50,
+                      70,
                       0,
                       (uri) => {
                         freelancerData.brandPic2 = uri;
@@ -317,7 +320,7 @@ const PortfolioPage = () => {
                       320,
                       250,
                       'JPEG',
-                      50,
+                      70,
                       0,
                       (uri) => {
                         freelancerData.brandPic3 = uri;
@@ -394,9 +397,7 @@ const PortfolioPage = () => {
               fullWidth
               defaultValue={user.result.startingPrice}
               sx={{ marginBottom: 2 }}
-              onChange={(e) => {
-                startingPrice.startingPrice = e.target.value;
-              }}
+              onChange={handleStartingPriceChange}
             />
             <Button
               sx={{

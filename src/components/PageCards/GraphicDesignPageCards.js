@@ -8,7 +8,6 @@ import LaptopIcon from '@mui/icons-material/Laptop';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import BrushIcon from '@mui/icons-material/Brush';
-import GraphicCarousel from '../Carousels/GraphicCarousel';
 
 //IMAGES
 import graphicOne from '../../images/PagecardImages/graphicOne.jpeg';
@@ -21,12 +20,15 @@ function GraphicDesignPageCards() {
   return (
     <div>
       <Box marginLeft={1}>
-        <Typography fontWeight='medium'>
+        <Typography
+          fontWeight='bold'
+          sx={{ fontFamily: 'Nunito', marginTop: 1 }}
+        >
           {' '}
           Most popular in Graphics & Design
         </Typography>{' '}
         <br />
-        <Stack direction='row' spacing={4} sx={{ flexWrap: 'nowrap' }}>
+        <Stack direction='row' spacing={8} sx={{ flexWrap: 'nowrap' }}>
           <Box
             sx={{
               bgcolor: 'background.paper',
@@ -41,7 +43,7 @@ function GraphicDesignPageCards() {
           <Box
             sx={{
               bgcolor: 'background.paper',
-              boxShadow: 1,
+              boxShadow: 2,
               borderRadius: 2,
               p: 2,
               width: '14vw',
@@ -52,7 +54,7 @@ function GraphicDesignPageCards() {
           <Box
             sx={{
               bgcolor: 'background.paper',
-              boxShadow: 1,
+              boxShadow: 2,
               borderRadius: 2,
               p: 2,
               width: '10vw',
@@ -63,7 +65,7 @@ function GraphicDesignPageCards() {
           <Box
             sx={{
               bgcolor: 'background.paper',
-              boxShadow: 1,
+              boxShadow: 2,
               borderRadius: 2,
               p: 2,
               width: '12vw',
@@ -74,7 +76,7 @@ function GraphicDesignPageCards() {
           <Box
             sx={{
               bgcolor: 'background.paper',
-              boxShadow: 1,
+              boxShadow: 2,
               borderRadius: 2,
               p: 2,
               width: '15vw',
@@ -85,7 +87,7 @@ function GraphicDesignPageCards() {
           <Box
             sx={{
               bgcolor: 'background.paper',
-              boxShadow: 1,
+              boxShadow: 2,
               borderRadius: 2,
               p: 2,
               width: '9vw',
@@ -103,7 +105,7 @@ function GraphicDesignPageCards() {
         >
           Explore Graphics & Design
         </Typography>
-        <Stack direction='row' spacing={4} sx={{ flexWrap: 'nowrap' }}>
+        <Stack direction='row' spacing={8} sx={{ flexWrap: 'nowrap' }}>
           <Stack>
             <Card
               sx={{

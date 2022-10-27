@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Container,
-  Stack,
-  Card,
-  Link,
-  Button,
-  Typography,
-} from '@mui/material';
+import { Box, Container, Stack, Card, Link, Typography } from '@mui/material';
 import Albert from '../../images/Team/Albert.jpg';
 import Kusi from '../../images/Team/Kusi.jpg';
 import Timothy from '../../images/Team/Timothy.jpg';
@@ -18,7 +10,8 @@ import Wassem from '../../images/Team/Wassem-Darkwa.jpg';
 import King from '../../images/Team/King.jpg';
 import EMMA from '../../images/Team/EMMA.jpg';
 import Moses from '../../images/Team/Moses.jpg';
-import { ChevronRight, GitHub, Telegram, WhatsApp } from '@mui/icons-material';
+import Maxwell from '../../images/Team/MAXWELL.jpg';
+import { GitHub, Telegram, WhatsApp } from '@mui/icons-material';
 
 const BoxThree = () => {
   return (
@@ -246,7 +239,8 @@ const BoxThree = () => {
           <Stack direction='column' sx={{ width: 200, margin: 2 }}>
             <Card
               sx={{
-                background: `url(${Albert})`,
+                background: `url(${Maxwell})`,
+                backgroundPositionY: -20,
                 backgroundSize: 'cover',
                 width: 200,
                 height: 150,
@@ -268,8 +262,7 @@ const BoxThree = () => {
               }}
               variant='body1'
             >
-              A third year Computer Enginering student and an aspiring software
-              engineer
+              Computer Enginering student
             </Typography>
           </Stack>
 
@@ -300,8 +293,7 @@ const BoxThree = () => {
               }}
               variant='body1'
             >
-              A third year Computer Enginering student and an aspiring software
-              engineer
+              Let me be your Spring Programmer and your Hardware Engineer
             </Typography>
           </Stack>
 
@@ -333,8 +325,7 @@ const BoxThree = () => {
               }}
               variant='body1'
             >
-              A third year Computer Enginering student and an aspiring software
-              engineer
+              Front End Web Developer
             </Typography>
           </Stack>
 

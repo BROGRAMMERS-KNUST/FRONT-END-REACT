@@ -13,7 +13,6 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import React from 'react';
 import { useState } from 'react';
-import { freelancerinfo } from '../action/auth';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
@@ -48,9 +47,10 @@ const FreelancerInfo = () => {
     setDisabled(true);
     freelancerId = user.result._id;
     try {
-      const url = `http://localhost:5000/user/signupservice/${freelancerId}`;
+      const url = `https://brogrammers-knust.herokuapp.com/user/signupservice/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
+      setOpenError(false);
       setOpen(true);
       setTimeout(() => {
         history.push('/otherinfo');
@@ -123,6 +123,7 @@ const FreelancerInfo = () => {
             placeholder='Enter WhatsApp Link'
             variant='standard'
             fullWidth
+            required
             multiline
             onChange={(e) => {
               freelancerData.whatsappLink = e.target.value;

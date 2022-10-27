@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Link, Breadcrumbs, Typography } from '@mui/material';
+import { Box, Link, Breadcrumbs } from '@mui/material';
 import StulancersAvailable from '../Pages/StulancersAvailable';
 import Navbar from '../components/Header/Navbar';
 import FoodServicesPageCards from '../components/PageCards/FoodServicesPageCards';

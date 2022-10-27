@@ -44,7 +44,7 @@ const LoginServicer = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = 'http://localhost:5000/user/loginservicer';
+      const url = 'https://brogrammers-knust.herokuapp.com/user/loginservicer';
       const { data } = await axios.post(url, loginData);
       console.log(data);
       setMessage(data.message);

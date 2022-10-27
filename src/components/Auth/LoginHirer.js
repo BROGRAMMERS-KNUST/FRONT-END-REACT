@@ -2,7 +2,6 @@ import {
   Alert,
   Button,
   Grid,
-  Input,
   Link,
   Paper,
   Snackbar,
@@ -12,7 +11,6 @@ import {
 
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { loginhirer } from '../../action/auth';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
@@ -46,7 +44,7 @@ const LoginHirer = () => {
     e.preventDefault();
     console.log(loginData);
     try {
-      const url = 'http://localhost:5000/user/loginhirer';
+      const url = 'https://brogrammers-knust.herokuapp.com/user/loginhirer';
       const { data } = await axios.post(url, loginData);
       console.log(data);
       setMessage(data.message);
@@ -120,7 +118,7 @@ const LoginHirer = () => {
           </Alert>
         </Snackbar>
         <Link
-          href='/passwordrecovery/forgot-password'
+          href='/passwordrecovery/forgot-password-hirer'
           sx={{ marginLeft: 12.5, marginBottom: 2, marginTop: 2 }}
           underline='hover'
         >

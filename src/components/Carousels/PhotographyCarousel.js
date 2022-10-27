@@ -1,10 +1,9 @@
 import React from 'react';
-import { Typography, Box, Stack, Card, Button } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import photographyThree from '../../images/artur-d-IADY2y5w7FQ-unsplash.jpg';
 import photographyFour from '../../images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg';
 import photographyFive from '../../images/dylan-mcleod-VRdZBLqnoMU-unsplash.jpg';
-import photographySix from '../../images/PagecardImages/photographySix.jpg';
 
 const PhotographyCarousel = () => {
   return (

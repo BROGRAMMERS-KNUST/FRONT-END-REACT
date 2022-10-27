@@ -5,7 +5,6 @@ import {
   Box,
   Button,
   Divider,
-  Link,
   Modal,
   Snackbar,
   Stack,
@@ -21,7 +20,7 @@ import { useHistory } from 'react-router-dom';
 import LoginInBoth from '../LogInBoth';
 import SignInOut from './SignInOut';
 import WorkIcon from '@mui/icons-material/Work';
-import stulancerlogo from '../../images/apple-touch-icon.png';
+
 function Header() {
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
@@ -40,6 +39,7 @@ function Header() {
       setTimeout(() => {
         history.push('/');
         window.location.reload();
+
         setUser(null);
         setOpenSnack(false);
       }, 1530);

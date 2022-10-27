@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
+    "@emailjs/browser": "^3.7.0",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@fontsource/roboto": "^4.5.8",
@@ -24,7 +25,10 @@
     "cors": "^2.8.5",
     "cross-spawn": "^7.0.3",
     "dotenv": "^16.0.3",
+    "install": "^0.13.0",
+    "jwt-decode": "^3.1.2",
     "nodemon": "^2.0.20",
+    "npm": "^8.19.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-column-view": "^0.0.1-alpha.3",

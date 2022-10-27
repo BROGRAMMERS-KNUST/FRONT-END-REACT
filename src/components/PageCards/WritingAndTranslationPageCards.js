@@ -1,15 +1,13 @@
 //COMPONENTS
 import React from 'react';
 import { Typography, Box, Stack, Card, Button } from '@mui/material';
-import BrushIcon from '@mui/icons-material/Brush';
-import VideoCallIcon from '@mui/icons-material/VideoCall';
-import AnimationIcon from '@mui/icons-material/Animation';
-import SchoolIcon from '@mui/icons-material/School';
 import TranslateIcon from '@mui/icons-material/Translate';
 import EditIcon from '@mui/icons-material/Edit';
 import NoteAltIcon from '@mui/icons-material/NoteAlt';
 import BookIcon from '@mui/icons-material/Book';
 import CallIcon from '@mui/icons-material/Call';
+import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
+import SchoolIcon from '@mui/icons-material/School';
 //IMAGES
 import writingOne from '../../images/PagecardImages/writingOne.webp';
 import writingTwo from '../../images/PagecardImages/writingTwo.webp';
@@ -20,7 +18,7 @@ function PageCards() {
   return (
     <Box marginLeft={1}>
       <WritingCarousel />
-      <Typography fontWeight='medium'>
+      <Typography fontWeight='bold' sx={{ fontFamily: 'Nunito', marginTop: 1 }}>
         {' '}
         Most popular in Writing & Translation
       </Typography>{' '}
@@ -29,7 +27,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '11vw',
@@ -41,7 +39,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '11vw',
@@ -53,7 +51,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '14vw',
@@ -64,7 +62,7 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
             width: '10vw',
@@ -75,13 +73,36 @@ function PageCards() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            boxShadow: 1,
+            boxShadow: 2,
             borderRadius: 2,
             p: 2,
-            width: '17vw',
+            width: '11vw',
           }}
         >
           <CallIcon color='primary' /> Client call
+        </Box>
+        <Box
+          sx={{
+            bgcolor: 'background.paper',
+            boxShadow: 2,
+            borderRadius: 2,
+            p: 2,
+            width: '11vw',
+          }}
+        >
+          <LocalPostOfficeIcon color='primary' /> Cover letters
+        </Box>
+
+        <Box
+          sx={{
+            bgcolor: 'background.paper',
+            boxShadow: 2,
+            borderRadius: 2,
+            p: 2,
+            width: '11vw',
+          }}
+        >
+          <SchoolIcon color='primary' /> Case Studies
         </Box>
       </Stack>
       <br />

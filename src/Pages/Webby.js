@@ -2,8 +2,8 @@ import React from 'react';
 import { Box, Breadcrumbs, Link } from '@mui/material';
 import StulancersAvailable from '../Pages/StulancersAvailable';
 import Navbar from '../components/Header/Navbar';
-import WebbyCards from '../components/PageCards/WebbyCards';
 import WebCarousel from '../components/Carousels/WebCarousel';
+import WebDesignPageCards from '../components/PageCards/WebDesignPageCards';
 function Webby() {
   document.title = 'StuLancer-Web Development 👩‍💻';
   return (
@@ -19,6 +19,7 @@ function Webby() {
           </Link>
         </Breadcrumbs>
         <WebCarousel />
+        <WebDesignPageCards />
         <StulancersAvailable service='Web Developer' />
       </Box>
     </div>

@@ -1,14 +1,105 @@
 import { Box, Paper } from '@mui/material';
 import React from 'react';
-
+import { useHistory } from 'react-router-dom';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
+import { useState } from 'react';
+import { photography, graphics, web, food, writing } from './SearchArrays';
 const Search = () => {
+  const history = useHistory();
+  const [searchInput, setsearchInput] = useState('');
+
+  //CHECK PHOTOGRAPHY FUNCTION
+  const checkPhotgraphy = (array, data) => {
+    const splittedData = data.split(' ');
+    console.log(splittedData);
+
+    return array.some((arrayData) => {
+      for (let i = 0; i < splittedData.length; i++) {
+        if (splittedData[i] === arrayData) {
+          return splittedData[i] === arrayData;
+        }
+      }
+    });
+  };
+
+  //CHECK GRAPHICS FUNCTION
+  const checkGraphics = (array, data) => {
+    const splittedData = data.split(' ');
+    console.log(splittedData);
+
+    return array.some((arrayData) => {
+      for (let i = 0; i < splittedData.length; i++) {
+        if (splittedData[i] === arrayData) {
+          return splittedData[i] === arrayData;
+        }
+      }
+    });
+  };
+
+  //CHECK WEB DEV FUNCTION
+  const checkWeb = (array, data) => {
+    const splittedData = data.split(' ');
+    console.log(splittedData);
+
+    return array.some((arrayData) => {
+      for (let i = 0; i < splittedData.length; i++) {
+        if (splittedData[i] === arrayData) {
+          return splittedData[i] === arrayData;
+        }
+      }
+    });
+  };
+
+  //CHECK FOOD FUNCTION
+  const checkFood = (array, data) => {
+    const splittedData = data.split(' ');
+    console.log(splittedData);
+
+    return array.some((arrayData) => {
+      for (let i = 0; i < splittedData.length; i++) {
+        if (splittedData[i] === arrayData) {
+          return splittedData[i] === arrayData;
+        }
+      }
+    });
+  };
+  //CHECK WRITING  FUNCTION
+  const checkWriting = (array, data) => {
+    const splittedData = data.split(' ');
+    console.log(splittedData);
+
+    return array.some((arrayData) => {
+      for (let i = 0; i < splittedData.length; i++) {
+        if (splittedData[i] === arrayData) {
+          return splittedData[i] === arrayData;
+        }
+      }
+    });
+  };
+  const handleSearchInput = (e) => {
+    setsearchInput(e.target.value);
+  };
+  const handleSearch = () => {
+    console.log(searchInput);
+
+    console.log(checkPhotgraphy(photography, searchInput));
+    if (checkPhotgraphy(photography, searchInput)) {
+      history.push('/photography');
+    } else if (checkGraphics(graphics, searchInput)) {
+      history.push('/graphic-design');
+    } else if (checkWeb(web, searchInput)) {
+      history.push('/webdevelopment');
+    } else if (checkFood(food, searchInput)) {
+      history.push('/food-services');
+    } else if (checkWriting(writing, searchInput)) {
+      history.push('/writing&translation');
+    }
+  };
   return (
     <Box>
       <Paper
-        component='form'
         sx={{
           p: '2px 4px',
           display: 'flex',
@@ -31,9 +122,9 @@ const Search = () => {
             fontSize: 22,
           }}
           placeholder='Type in a project idea.....'
-          inputProps={{ 'aria-label': 'search google maps' }}
+          onChange={handleSearchInput}
         />
-        <IconButton sx={{ p: '10px' }} aria-label='search'>
+        <IconButton sx={{ p: '10px' }} onClick={handleSearch}>
           <SearchIcon sx={{ color: 'grey' }} />
         </IconButton>
       </Paper>

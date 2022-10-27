@@ -1,6 +1,7 @@
 import { Typography, Box, Breadcrumbs, Link } from '@mui/material';
 import React from 'react';
 import Navbar from '../components/Header/Navbar';
+import WebDesignPageCards from '../components/PageCards/WebDesignPageCards';
 import WebDev from '../components/PageCards/WebDev';
 import StulancersAvailable from './StulancersAvailable';
 
@@ -17,7 +18,7 @@ export default function WebDevelopment() {
       <Typography variant='h4' sx={{ marginTop: 1, marginBottom: 2 }}>
         Photography
       </Typography>
-      <WebDev />
+      <WebDesignPageCards />
       <StulancersAvailable service='Web Developer' />
     </Box>
   );

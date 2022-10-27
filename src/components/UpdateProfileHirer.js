@@ -9,14 +9,11 @@ import {
 } from '@mui/material';
 import Resizer from 'react-image-file-resizer';
 import React from 'react';
-import { updatehirerinfo } from '../action/auth';
-import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
 const UpdateProfileHirer = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
-  const dispatch = useDispatch();
   const history = useHistory();
   const [disabled, setDisabled] = useState(false);
   const [openerror, setOpenError] = useState(false);
@@ -42,7 +39,7 @@ const UpdateProfileHirer = () => {
     hirerId = user.result._id;
     setDisabled(true);
     try {
-      const url = `http://localhost:5000/user/updatehirer/${hirerId}`;
+      const url = `https://brogrammers-knust.herokuapp.com/user/updatehirer/${hirerId}`;
       const { data } = await axios.patch(url, hirerData);
       setMessage(data.message);
       setOpenError(false);

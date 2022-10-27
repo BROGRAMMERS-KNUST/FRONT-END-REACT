@@ -12,8 +12,6 @@ import {
   Paper,
   CardHeader,
   CardMedia,
-  Link,
-  Tooltip,
 } from '@mui/material';
 
 import Carousel from 'react-material-ui-carousel';

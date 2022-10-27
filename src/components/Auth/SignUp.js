@@ -11,7 +11,6 @@ import Resizer from 'react-image-file-resizer';
 import React from 'react';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import { signup } from '../../action/auth';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -24,23 +23,37 @@ const SignUp = () => {
     margin: '0px auto',
   };
 
-  const userData = {
-    fullName: '',
-    email: '',
-    password: '',
-    profilePic: '',
-    serviceType: 'hirer',
+  const handleFullNameChange = (e) => {
+    setFullName(e.target.value);
+  };
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
   };
   const dispatch = useDispatch();
   const history = useHistory();
   const [message, setMessage] = useState('');
   const [open, setOpen] = useState(false);
   const [openerror, setOpenError] = useState(false);
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const userData = {
+    fullName: fullName,
+    email: email,
+    password: password,
+    profilePic: '',
+    serviceType: 'hirer',
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log(userData);
     try {
-      const url = 'http://localhost:5000/user/signup';
+      const url = 'https://brogrammers-knust.herokuapp.com/user/signup';
       const { data } = await axios.post(url, userData);
       console.log(data);
       setMessage(data.message);
@@ -78,9 +91,7 @@ const SignUp = () => {
             fullWidth
             helperText='Enter first name first'
             sx={{ marginBottom: 2, fontFamily: 'Nunito' }}
-            onChange={(e) => {
-              userData.fullName = e.target.value;
-            }}
+            onChange={handleFullNameChange}
             inputProps={{ maxLength: 30 }}
           />
 
@@ -92,9 +103,7 @@ const SignUp = () => {
             required
             fullWidth
             sx={{ marginBottom: 2 }}
-            onChange={(e) => {
-              userData.email = e.target.value;
-            }}
+            onChange={handleEmailChange}
           />
 
           <TextField
@@ -105,9 +114,7 @@ const SignUp = () => {
             fullWidth
             required
             sx={{ marginBottom: 3 }}
-            onChange={(e) => {
-              userData.password = e.target.value;
-            }}
+            onChange={handlePasswordChange}
           />
           <Typography sx={{}} color='#646765' fontFamily='Nunito'>
             Upload profile picture
