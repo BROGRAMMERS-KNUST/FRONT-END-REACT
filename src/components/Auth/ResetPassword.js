@@ -37,7 +37,7 @@ const ResetPassword = () => {
     e.preventDefault();
     console.log(resetpasswordData);
     try {
-      const url = `http://localhost:5000/passwordrecovery/reset-password/${id}/${token}`;
+      const url = `https://brogrammers-knust.herokuapp.com/passwordrecovery/reset-password/${id}/${token}`;
       const { data } = await axios.post(url, resetpasswordData);
       console.log(data);
       setMessage(data.message);

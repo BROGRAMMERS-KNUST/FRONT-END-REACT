@@ -39,7 +39,7 @@ const UpdateProfileHirer = () => {
     hirerId = user.result._id;
     setDisabled(true);
     try {
-      const url = `http://localhost:5000/user/updatehirer/${hirerId}`;
+      const url = `https://brogrammers-knust.herokuapp.com/user/updatehirer/${hirerId}`;
       const { data } = await axios.patch(url, hirerData);
       setMessage(data.message);
       setOpenError(false);

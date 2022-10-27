@@ -53,7 +53,7 @@ const SignUp = () => {
     e.preventDefault();
     console.log(userData);
     try {
-      const url = 'http://localhost:5000/user/signup';
+      const url = 'https://brogrammers-knust.herokuapp.com/user/signup';
       const { data } = await axios.post(url, userData);
       console.log(data);
       setMessage(data.message);

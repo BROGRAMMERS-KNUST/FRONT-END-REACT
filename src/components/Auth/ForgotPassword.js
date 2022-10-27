@@ -36,7 +36,8 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = 'http://localhost:5000/passwordrecovery/forgot-password';
+      const url =
+        'https://brogrammers-knust.herokuapp.com/passwordrecovery/forgot-password';
       const { data } = await axios.post(url, forgotpasswordData);
       console.log(`Message from Front End : ${data.message}`);
       let templateParams = {
