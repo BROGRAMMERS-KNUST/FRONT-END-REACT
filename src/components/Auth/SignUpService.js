@@ -10,7 +10,6 @@ import {
 import Resizer from 'react-image-file-resizer';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { signupserviceprovider } from '../../action/auth';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 const SignUpService = () => {

@@ -13,7 +13,6 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import React from 'react';
 import { useState } from 'react';
-import { freelancerinfo } from '../action/auth';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';

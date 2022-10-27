@@ -11,7 +11,6 @@ import Resizer from 'react-image-file-resizer';
 import React from 'react';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import { signup } from '../../action/auth';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 

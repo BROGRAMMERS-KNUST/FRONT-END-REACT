@@ -1,18 +1,13 @@
 import {
-  Alert,
   Button,
   Grid,
   IconButton,
   Modal,
   Paper,
-  Snackbar,
-  TextField,
   Typography,
 } from '@mui/material';
 import React, { useState } from 'react';
 import { Box } from '@mui/system';
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import CloseIcon from '@mui/icons-material/Close';
 import { CheckCircleOutlineRounded } from '@mui/icons-material';

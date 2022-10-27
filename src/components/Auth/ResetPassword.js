@@ -9,7 +9,6 @@ import {
   Snackbar,
   Alert,
 } from '@mui/material';
-import { useDispatch } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 
 import axios from 'axios';

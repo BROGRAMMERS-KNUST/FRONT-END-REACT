@@ -9,7 +9,6 @@ import {
 } from '@mui/material';
 import Resizer from 'react-image-file-resizer';
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';

@@ -16,7 +16,7 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import LoginInBoth from '../LogInBoth';
 import SignInOut from './SignInOut';
 import WorkIcon from '@mui/icons-material/Work';
