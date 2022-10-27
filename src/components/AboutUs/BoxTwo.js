@@ -15,7 +15,7 @@ const BoxTwo = () => {
 
   const getNumberofStuLancers = async () => {
     try {
-      const url = 'http://localhost:5000/user/getnumber';
+      const url = 'https://brogrammers-knust.herokuapp.com/user/getnumber';
       const { data } = await axios.get(url);
       setnumberofStuLancers(data.result.toString());
       console.log(`Number of StuLancers is ${data.result.toString()}`);
