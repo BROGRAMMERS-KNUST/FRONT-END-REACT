@@ -67,7 +67,7 @@ const PortfolioPage = () => {
     console.log(startingPrice);
     freelancerId = user.result._id;
     try {
-      const url = `http://localhost:5000/user/updatestartingprice/${freelancerId}`;
+      const url = `https://brogrammers-knust.herokuapp.com/user/updatestartingprice/${freelancerId}`;
       const { data } = await axios.patch(url, startingPrice);
       console.log(data.message);
       setMessage(data.message);
@@ -93,7 +93,7 @@ const PortfolioPage = () => {
 
     freelancerId = user.result._id;
     try {
-      const url = `http://localhost:5000/user/updatebrandpics/${freelancerId}`;
+      const url = `https://brogrammers-knust.herokuapp.com/user/updatebrandpics/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
       setOpenError(false);
