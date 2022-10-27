@@ -10,6 +10,7 @@ import Wassem from '../../images/Team/Wassem-Darkwa.jpg';
 import King from '../../images/Team/King.jpg';
 import EMMA from '../../images/Team/EMMA.jpg';
 import Moses from '../../images/Team/Moses.jpg';
+import Maxwell from '../../images/Team/MAXWELL.jpg';
 import { GitHub, Telegram, WhatsApp } from '@mui/icons-material';
 
 const BoxThree = () => {
@@ -238,7 +239,8 @@ const BoxThree = () => {
           <Stack direction='column' sx={{ width: 200, margin: 2 }}>
             <Card
               sx={{
-                background: `url(${Albert})`,
+                background: `url(${Maxwell})`,
+                backgroundPositionY: -20,
                 backgroundSize: 'cover',
                 width: 200,
                 height: 150,
@@ -260,8 +262,7 @@ const BoxThree = () => {
               }}
               variant='body1'
             >
-              A third year Computer Enginering student and an aspiring software
-              engineer
+              Computer Enginering student
             </Typography>
           </Stack>
 
