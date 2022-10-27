@@ -29,7 +29,7 @@ const Feedback = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = 'http://localhost:5000/user/feedback';
+      const url = 'https://brogrammers-knust.herokuapp.com/user/feedback';
       const { data } = await axios.post(url, feedbackData);
 
       setMessage(data.message);
