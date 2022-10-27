@@ -85,15 +85,15 @@ const Search = () => {
     console.log(searchInput);
 
     console.log(checkPhotgraphy(photography, searchInput));
-    if (checkPhotgraphy(photography, searchInput)) {
+    if (checkPhotgraphy(photography, searchInput.LowerCase()) {
       history.push('/photography');
-    } else if (checkGraphics(graphics, searchInput)) {
+    } else if (checkGraphics(graphics, searchInput.LowerCase()) {
       history.push('/graphic-design');
-    } else if (checkWeb(web, searchInput)) {
+    } else if (checkWeb(web, searchInput.LowerCase()) {
       history.push('/webdevelopment');
-    } else if (checkFood(food, searchInput)) {
+    } else if (checkFood(food, searchInput.LowerCase()) {
       history.push('/food-services');
-    } else if (checkWriting(writing, searchInput)) {
+    } else if (checkWriting(writing, searchInput.LowerCase()) {
       history.push('/writing&translation');
     }
   };
