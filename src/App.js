@@ -82,11 +82,11 @@ function App() {
             <Route path='/updateprofile'>
               <UpdateProfile />
             </Route>
-            <Route path='/passwordrecovery/forgot-password'>
+            <Route path='/passwordrecovery-servicer'>
               <ForgotPassword />
             </Route>
 
-            <Route path='/passwordrecovery/forgot-password-hirer'>
+            <Route path='/passwordrecovery-hirer'>
               <ForgotPasswordHirer />
             </Route>
             <Route path='/updateprofilehirer'>
