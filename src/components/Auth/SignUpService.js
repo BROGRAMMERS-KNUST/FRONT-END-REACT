@@ -56,7 +56,7 @@ const SignUpService = () => {
     e.preventDefault();
     console.log(userData);
     try {
-      const url = 'http://localhost:5000/user/signupservice';
+      const url = 'https://brogrammers-knust.herokuapp.com/user/signupservice';
       const { data } = await axios.post(url, userData);
       console.log(data);
       setMessage(data.message);

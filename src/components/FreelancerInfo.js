@@ -47,7 +47,7 @@ const FreelancerInfo = () => {
     setDisabled(true);
     freelancerId = user.result._id;
     try {
-      const url = `http://localhost:5000/user/signupservice/${freelancerId}`;
+      const url = `https://brogrammers-knust.herokuapp.com/user/signupservice/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
       setOpenError(false);

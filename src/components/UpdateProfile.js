@@ -48,7 +48,7 @@ const UpdateProfile = () => {
     freelancerId = user.result._id;
     setDisabled(true);
     try {
-      const url = `http://localhost:5000/user/updateservice/${freelancerId}`;
+      const url = `https://brogrammers-knust.herokuapp.com/user/updateservice/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
       setOpenError(false);

@@ -44,7 +44,7 @@ const LoginHirer = () => {
     e.preventDefault();
     console.log(loginData);
     try {
-      const url = 'http://localhost:5000/user/loginhirer';
+      const url = 'https://brogrammers-knust.herokuapp.com/user/loginhirer';
       const { data } = await axios.post(url, loginData);
       console.log(data);
       setMessage(data.message);
