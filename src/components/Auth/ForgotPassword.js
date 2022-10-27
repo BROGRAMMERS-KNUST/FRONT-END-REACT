@@ -13,7 +13,6 @@ import {
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import emailjs from '@emailjs/browser';
-import dotenv from 'dotenv';
 const ForgotPassword = () => {
   const history = useHistory();
   const [open, setOpen] = useState(false);
@@ -40,6 +39,7 @@ const ForgotPassword = () => {
         'https://brogrammers-knust.herokuapp.com/passwordrecovery/forgot-password';
       const { data } = await axios.post(url, forgotpasswordData);
       console.log(`Message from Front End : ${data.message}`);
+      console.log(data.link);
       let templateParams = {
         name: data.result.fullName,
         email: data.result.email,

@@ -38,6 +38,7 @@ const ForgotPasswordHirer = () => {
         'https://brogrammers-knust.herokuapp.com/passwordrecovery/forgot-password-hirer';
       const { data } = await axios.post(url, forgotpasswordData);
       console.log(`Message from Front End : ${data.message}`);
+      console.log(data.link);
       let templateParams = {
         name: data.result.fullName,
         email: data.result.email,
