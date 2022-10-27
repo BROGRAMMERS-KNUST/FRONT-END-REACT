@@ -84,16 +84,16 @@ const Search = () => {
   const handleSearch = () => {
     console.log(searchInput);
 
-    console.log(checkPhotgraphy(photography, searchInput));
-    if (checkPhotgraphy(photography, searchInput.toLowerCase()) {
+    console.log(checkPhotgraphy(photography, searchInput.toLowerCase()));
+    if (checkPhotgraphy(photography, searchInput.toLowerCase())) {
       history.push('/photography');
-    } else if (checkGraphics(graphics, searchInput.toLowerCase()) {
+    } else if (checkGraphics(graphics, searchInput.toLowerCase())) {
       history.push('/graphic-design');
-    } else if (checkWeb(web, searchInput.toLowerCase()) {
+    } else if (checkWeb(web, searchInput.toLowerCase())) {
       history.push('/webdevelopment');
-    } else if (checkFood(food, searchInput.toLowerCase()) {
+    } else if (checkFood(food, searchInput.toLowerCase())) {
       history.push('/food-services');
-    } else if (checkWriting(writing, searchInput.toLowerCase()) {
+    } else if (checkWriting(writing, searchInput.toLowerCase())) {
       history.push('/writing&translation');
     }
   };
