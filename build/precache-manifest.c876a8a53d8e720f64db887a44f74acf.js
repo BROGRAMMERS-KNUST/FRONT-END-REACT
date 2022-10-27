@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "7455f3d9e5858c65df47",
+    "revision": "06f7422a08755d9a108f",
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/css/main.588a200b.chunk.css"
   },
   {
-    "revision": "7455f3d9e5858c65df47",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/js/main.ff08fcda.chunk.js"
+    "revision": "06f7422a08755d9a108f",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/js/main.15823ccf.chunk.js"
   },
   {
     "revision": "a28a824b5746260e9a49",
@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/js/2.118ab899.chunk.js"
   },
   {
-    "revision": "b7a6d16cb7e7d94250e39b70f8aab7d2",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/hanny-naibaho-aWXVxy8BSzc-unsplash.b7a6d16c.jpg"
+    "revision": "700400077412fc5856336c5f984c9f01",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/hanny-naibaho-aWXVxy8BSzc-unsplash.70040007.jpg"
   },
   {
-    "revision": "4107e520f72412a0efec53be8af23bfe",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/photographyOne.4107e520.jpg"
+    "revision": "3e650053455ce00e60ac3e9f7f06a99a",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/photographyOne.3e650053.jpg"
   },
   {
     "revision": "79e34e106f1f1b9c3c39275cd33d1dce",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/photographyThree.725066d1.jpg"
   },
   {
-    "revision": "5327dd13a2f7b7965a58ab2b4a63072f",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/artur-d-IADY2y5w7FQ-unsplash.5327dd13.jpg"
+    "revision": "fe1b6671f65635552c4c6b61cb43b02c",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/artur-d-IADY2y5w7FQ-unsplash.fe1b6671.jpg"
   },
   {
     "revision": "c87be49a70d10b915d9f40011bbf5665",
@@ -72,8 +72,8 @@ self.__precacheManifest = [
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/graphicSeven.3f0f5fff.jpg"
   },
   {
-    "revision": "e23249225a7199eaad91ee815f34fdc6",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/1.e2324922.jpg"
+    "revision": "e5e7c9e357b2fd642055ad84c2f42c24",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/1.e5e7c9e3.jpg"
   },
   {
     "revision": "697c8f9c3fc81888cbc1163d95634a2d",
@@ -96,8 +96,8 @@ self.__precacheManifest = [
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/foodFive.c0ecd3dd.jpg"
   },
   {
-    "revision": "c76ead3374b283ba126638dbda858125",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/berries-2277.c76ead33.jpg"
+    "revision": "8e9052decca32733df0f8ee5bc25d8fc",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/berries-2277.8e9052de.jpg"
   },
   {
     "revision": "0a93d3f48d5f339a83ebfe3ff73e9582",
@@ -140,8 +140,8 @@ self.__precacheManifest = [
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/Timothy.b3961e91.jpg"
   },
   {
-    "revision": "2d6c212f25b0795b8fbce56a58b8358a",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/Barnes.2d6c212f.jpg"
+    "revision": "b0b428975fd7d1d32b1e594b6342e54e",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/Barnes.b0b42897.jpg"
   },
   {
     "revision": "f46245c64d741069c6e1c9e5a77fec8b",
@@ -204,16 +204,16 @@ self.__precacheManifest = [
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/mandalas-1084082.c7c97e93.jpg"
   },
   {
-    "revision": "789b50b247ea0f6efed7e30131cb5704",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/Fotolia_45501220_Subscription_XL.789b50b2.jpg"
+    "revision": "5df7856f8d8bdac26adcad0c846774e5",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/Fotolia_45501220_Subscription_XL.5df7856f.jpg"
   },
   {
     "revision": "bb9dd473efa879ad562ca175b0915f70",
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/macarons-2548827.bb9dd473.jpg"
   },
   {
-    "revision": "0a3bc999c0cf2608e45fe24fddc822c0",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/D1.0a3bc999.jpg"
+    "revision": "0670a15624f19947cf9b2f8b333a3d91",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/D1.0670a156.jpg"
   },
   {
     "revision": "7afa60a66cb9ebbd09a75bebe42c77a5",
@@ -232,120 +232,108 @@ self.__precacheManifest = [
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/16.4caf2585.png"
   },
   {
-    "revision": "8391b28e6ede929dea2dd2f53bce12e3",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/11.8391b28e.png"
-  },
-  {
-    "revision": "9b9ec29522d1bf8924ccc2d917e1807b",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-300-normal.9b9ec295.woff2"
-  },
-  {
-    "revision": "2323284ef85bfeaca074c668b72109c6",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-all-300-normal.2323284e.woff"
-  },
-  {
-    "revision": "d04413353a32aed8a0db452373452870",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-ext-300-normal.d0441335.woff2"
-  },
-  {
-    "revision": "dcdaee374d5bbeab0a5ed5c8cf39a6cd",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-greek-300-normal.dcdaee37.woff2"
-  },
-  {
-    "revision": "c2be5367fbf0e1066261fd78eb103f4a",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-greek-ext-300-normal.c2be5367.woff2"
-  },
-  {
-    "revision": "b9c29351c46f3e8c8631c4002457f48a",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-300-normal.b9c29351.woff2"
+    "revision": "ef32a48126be6f4a5ea1e2f2b7f3230c",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/11.ef32a481.png"
   },
   {
     "revision": "716871ec15f054ec158445180fe280e1",
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-ext-300-normal.716871ec.woff2"
   },
   {
+    "revision": "dcdaee374d5bbeab0a5ed5c8cf39a6cd",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-greek-300-normal.dcdaee37.woff2"
+  },
+  {
+    "revision": "d04413353a32aed8a0db452373452870",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-ext-300-normal.d0441335.woff2"
+  },
+  {
     "revision": "48c684d99330969e3ce90b9e9da2d698",
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-vietnamese-300-normal.48c684d9.woff2"
   },
   {
-    "revision": "35de3738b76d249ed060dd3d0f9286be",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-greek-ext-400-normal.35de3738.woff2"
+    "revision": "b9c29351c46f3e8c8631c4002457f48a",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-300-normal.b9c29351.woff2"
   },
   {
-    "revision": "c00467dc3792a8ab586955a3faefcac9",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-ext-400-normal.c00467dc.woff2"
+    "revision": "c2be5367fbf0e1066261fd78eb103f4a",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-greek-ext-300-normal.c2be5367.woff2"
+  },
+  {
+    "revision": "2323284ef85bfeaca074c668b72109c6",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-all-300-normal.2323284e.woff"
+  },
+  {
+    "revision": "9b9ec29522d1bf8924ccc2d917e1807b",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-300-normal.9b9ec295.woff2"
   },
   {
     "revision": "62b936e168110e58e89e70ec82e22755",
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-all-400-normal.62b936e1.woff"
   },
   {
-    "revision": "ca3b09b62fda648a4511700413313fd0",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-vietnamese-400-normal.ca3b09b6.woff2"
-  },
-  {
-    "revision": "d9ac47c7e500fb7083b8d595eaf6fe12",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-400-normal.d9ac47c7.woff2"
-  },
-  {
-    "revision": "15d9f621c3bd1599f0169dcf0bd5e63e",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-400-normal.15d9f621.woff2"
+    "revision": "c00467dc3792a8ab586955a3faefcac9",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-ext-400-normal.c00467dc.woff2"
   },
   {
     "revision": "28668857bef1b85c5748a482cf9b74af",
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-greek-400-normal.28668857.woff2"
   },
   {
+    "revision": "d9ac47c7e500fb7083b8d595eaf6fe12",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-400-normal.d9ac47c7.woff2"
+  },
+  {
     "revision": "87ace20058325aa069320aa4af875dff",
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-ext-400-normal.87ace200.woff2"
   },
   {
-    "revision": "68d75d959b2a0e9958b11d781338c8f7",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-all-500-normal.68d75d95.woff"
+    "revision": "ca3b09b62fda648a4511700413313fd0",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-vietnamese-400-normal.ca3b09b6.woff2"
   },
   {
-    "revision": "7cda2cfee99d697daf8c14819d9004eb",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-vietnamese-500-normal.7cda2cfe.woff2"
+    "revision": "15d9f621c3bd1599f0169dcf0bd5e63e",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-400-normal.15d9f621.woff2"
+  },
+  {
+    "revision": "35de3738b76d249ed060dd3d0f9286be",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-greek-ext-400-normal.35de3738.woff2"
   },
   {
     "revision": "2742d81afb69e902e4513dc7cdda0a7f",
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-ext-500-normal.2742d81a.woff2"
   },
   {
-    "revision": "3a44e06eb954b96aa043227f3534189d",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-500-normal.3a44e06e.woff2"
-  },
-  {
-    "revision": "e7b7001dff6c14165abdc0fefdecae06",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-greek-ext-500-normal.e7b7001d.woff2"
-  },
-  {
-    "revision": "e36fccd06262bef92e7a9841e2202225",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-ext-500-normal.e36fccd0.woff2"
+    "revision": "7b08b9e11fc6b8a8a1398b357e874144",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-500-normal.7b08b9e1.woff2"
   },
   {
     "revision": "53f395eb854a40e978706b1082570e42",
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-greek-500-normal.53f395eb.woff2"
   },
   {
-    "revision": "7b08b9e11fc6b8a8a1398b357e874144",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-500-normal.7b08b9e1.woff2"
+    "revision": "e7b7001dff6c14165abdc0fefdecae06",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-greek-ext-500-normal.e7b7001d.woff2"
   },
   {
-    "revision": "aa462125b8faf7600001e1fe9b47e216",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-all-700-normal.aa462125.woff"
+    "revision": "7cda2cfee99d697daf8c14819d9004eb",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-vietnamese-500-normal.7cda2cfe.woff2"
   },
   {
-    "revision": "3f8b2aa43c439ca2c8930c198320c231",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-greek-700-normal.3f8b2aa4.woff2"
+    "revision": "68d75d959b2a0e9958b11d781338c8f7",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-all-500-normal.68d75d95.woff"
   },
   {
-    "revision": "6f112ec2b932ee12379442c42853244e",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-700-normal.6f112ec2.woff2"
+    "revision": "3a44e06eb954b96aa043227f3534189d",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-500-normal.3a44e06e.woff2"
   },
   {
-    "revision": "e9f5aaf547f165386cd313b995dddd8e",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-700-normal.e9f5aaf5.woff2"
+    "revision": "e36fccd06262bef92e7a9841e2202225",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-ext-500-normal.e36fccd0.woff2"
+  },
+  {
+    "revision": "e0bc9313fdde7851c88c901baf3c2b5c",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-ext-700-normal.e0bc9313.woff2"
   },
   {
     "revision": "2953af0021626d3c3078b17590118908",
@@ -356,15 +344,27 @@ self.__precacheManifest = [
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-vietnamese-700-normal.cdaab836.woff2"
   },
   {
+    "revision": "6f112ec2b932ee12379442c42853244e",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-700-normal.6f112ec2.woff2"
+  },
+  {
+    "revision": "3f8b2aa43c439ca2c8930c198320c231",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-greek-700-normal.3f8b2aa4.woff2"
+  },
+  {
+    "revision": "aa462125b8faf7600001e1fe9b47e216",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-all-700-normal.aa462125.woff"
+  },
+  {
     "revision": "deb26e9b1a25438118e5d39d741ae6b6",
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-ext-700-normal.deb26e9b.woff2"
   },
   {
-    "revision": "e0bc9313fdde7851c88c901baf3c2b5c",
-    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-cyrillic-ext-700-normal.e0bc9313.woff2"
+    "revision": "e9f5aaf547f165386cd313b995dddd8e",
+    "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/static/media/roboto-latin-700-normal.e9f5aaf5.woff2"
   },
   {
-    "revision": "8a4d8870e68bace4f2f2d19cfd6ac940",
+    "revision": "cf3d523fda7e635c120a24af48c6c389",
     "url": "/BROGRAMMERS-KNUST/FRONT-END-REACT/index.html"
   }
 ];
