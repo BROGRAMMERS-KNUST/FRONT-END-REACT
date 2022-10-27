@@ -17,7 +17,7 @@ export default function SocialFollow() {
         <div class='social-container'>
           <Stack direction='row' spacing={2}>
             <a
-              href='https://wa.me/242764001'
+              href='https://wa.me/557367174'
               className='whatsApp icon'
               target='blank'
             >
@@ -41,9 +41,9 @@ export default function SocialFollow() {
             </a>
 
             <a
-              href='https://twitter.com/BrogrammersK'
+              href='https://www.twitter.com/BrogrammersK'
               className='twitter social'
-              target='blank'
+              target='blank' 
             >
               <FontAwesomeIcon color='white' icon={faTwitter} size='2x' />
             </a>
