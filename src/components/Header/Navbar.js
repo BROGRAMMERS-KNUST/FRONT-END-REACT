@@ -19,9 +19,9 @@ function Navbar() {
         <Link
           href="/graphic-design"
           underline="hover"
-          sx={{ fontFamily: "Georgia" }}
+          sx={{ fontFamily: "Nunito" }}
           style={{
-            textDecorationColor: "black",
+            textDecorationColor: "gold",
             textDecorationThickness: "2px",
           }}
         >
@@ -30,9 +30,9 @@ function Navbar() {
         <Link
           href="/webdevelopment"
           underline="hover"
-          sx={{ fontFamily: "Georgia" }}
+          sx={{ fontFamily: "Nunito" }}
           style={{
-            textDecorationColor: "black",
+            textDecorationColor: "gold",
             textDecorationThickness: "2px",
           }}
         >
@@ -41,9 +41,9 @@ function Navbar() {
         <Link
           href="/photography"
           underline="hover"
-          sx={{ fontFamily: "Georgia" }}
+          sx={{ fontFamily: "Nunito" }}
           style={{
-            textDecorationColor: "black",
+            textDecorationColor: "gold",
             textDecorationThickness: "2px",
           }}
         >
@@ -52,9 +52,9 @@ function Navbar() {
         <Link
           href="food-services"
           underline="hover"
-          sx={{ fontFamily: "Georgia" }}
+          sx={{ fontFamily: "Nunito" }}
           style={{
-            textDecorationColor: "black",
+            textDecorationColor: "gold",
             textDecorationThickness: "2px",
           }}
         >
@@ -64,9 +64,9 @@ function Navbar() {
         <Link
           href="writing&translation"
           underline="hover"
-          sx={{ fontFamily: "Georgia" }}
+          sx={{ fontFamily: "Nunito" }}
           style={{
-            textDecorationColor: "black",
+            textDecorationColor: "gold",
             textDecorationThickness: "2px",
           }}
         >
