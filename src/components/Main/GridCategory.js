@@ -11,8 +11,8 @@ import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 
 const GridCategory = () => {
   return (
-    <Box sx={{ marginBottom: 10 }}>
-      <Grid container spacing={3} flexWrap>
+    <Box sx={{ marginBottom: 10, paddingBottom: 10 }}>
+      <Grid container spacing={4}>
         <Grid
           item
           //First Grid box
@@ -20,7 +20,7 @@ const GridCategory = () => {
           <Box
             sx={{
               backgroundColor: '#1976d2',
-              width: 250,
+              width: 210,
               borderRadius: 2,
               boxShadow: 4,
             }}
@@ -38,7 +38,7 @@ const GridCategory = () => {
               Build your websites
             </Typography>
             <Typography
-              variant='h5'
+              variant='h6'
               component='div'
               sx={{ fontFamily: 'Nunito', fontWeight: '700', marginLeft: 1.5 }}
               color='white'
@@ -70,7 +70,7 @@ const GridCategory = () => {
           <Box
             sx={{
               backgroundColor: '#1976d2',
-              width: 250,
+              width: 211,
               borderRadius: 2,
               boxShadow: 4,
             }}
@@ -88,7 +88,7 @@ const GridCategory = () => {
               Wear a smile
             </Typography>
             <Typography
-              variant='h5'
+              variant='h6'
               component='div'
               sx={{ fontFamily: 'Nunito', fontWeight: '700', marginLeft: 1.5 }}
               color='white'
@@ -120,7 +120,7 @@ const GridCategory = () => {
           <Box
             sx={{
               backgroundColor: '#1976d2',
-              width: 250,
+              width: 210,
               borderRadius: 2,
               boxShadow: 4,
             }}
@@ -138,7 +138,7 @@ const GridCategory = () => {
               Food services
             </Typography>
             <Typography
-              variant='h5'
+              variant='h6'
               component='div'
               sx={{ fontFamily: 'Nunito', fontWeight: '700', marginLeft: 1.5 }}
               color='white'
@@ -170,7 +170,7 @@ const GridCategory = () => {
           <Box
             sx={{
               backgroundColor: '#1976d2',
-              width: 250,
+              width: 210,
               borderRadius: 2,
               boxShadow: 4,
             }}
@@ -188,7 +188,7 @@ const GridCategory = () => {
               Digital art services
             </Typography>
             <Typography
-              variant='h5'
+              variant='h6'
               component='div'
               sx={{ fontFamily: 'Nunito', fontWeight: '700', marginLeft: 1.5 }}
               color='white'
@@ -220,7 +220,7 @@ const GridCategory = () => {
           <Box
             sx={{
               backgroundColor: '#1976d2',
-              width: 250,
+              width: 210,
               borderRadius: 2,
               boxShadow: 4,
             }}
@@ -235,10 +235,10 @@ const GridCategory = () => {
               color='white'
               gutterBottom
             >
-              Need help in writing your C.V.?
+              Writing Services
             </Typography>
             <Typography
-              variant='h5'
+              variant='h6'
               component='div'
               sx={{ fontFamily: 'Nunito', fontWeight: '700', marginLeft: 1.5 }}
               color='white'

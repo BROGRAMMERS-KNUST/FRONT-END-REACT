@@ -12,6 +12,7 @@ const Background3 = () => {
         marginRight: 5,
         marginTop: -40,
         marginBottom: 50,
+        //backgroundColor: 'bisque',
       }}
     >
       <Typography
