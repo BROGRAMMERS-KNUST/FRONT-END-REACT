@@ -98,7 +98,7 @@ const LoginHirer = () => {
           />
 
           <Button
-            sx={{ marginBottom: 1 }}
+            sx={{ marginBottom: 1, fontFamily: 'Nunito', fontWeight: '700' }}
             variant='contained'
             fullWidth
             type='submit'
