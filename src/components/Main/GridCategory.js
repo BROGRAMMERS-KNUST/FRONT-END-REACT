@@ -220,7 +220,7 @@ const GridCategory = () => {
           <Box
             sx={{
               backgroundColor: '#1976d2',
-              width: 210,
+              width: 213,
               borderRadius: 2,
               boxShadow: 4,
             }}
