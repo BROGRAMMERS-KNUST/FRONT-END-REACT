@@ -4,6 +4,11 @@ import LandingPic3 from '../../images/16.png';
 import Requirements from './Requirements';
 
 const Background3 = () => {
+  const imgStyle = {
+    maxHeight: '36rem',
+    left: '59.5%',
+    top: '260%',
+  };
   return (
     <Box
       sx={{
@@ -27,7 +32,9 @@ const Background3 = () => {
         becoming a <span className='highlight5'></span>
         <br /> <span className='highlight5'> StuLancer ? </span>
       </Typography>
-      <img className='LandingPic1' src={LandingPic3} alt='3D model' />
+      <Box>
+        <img style={imgStyle} src={LandingPic3} alt='3D model' />
+      </Box>
 
       <Requirements />
     </Box>

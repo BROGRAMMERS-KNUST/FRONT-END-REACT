@@ -4,6 +4,11 @@ import LandingPic from '../../images/images_8.png';
 import GetStarted from './GetStarted';
 
 const Background = () => {
+  const imgStyle = {
+    maxHeight: '41.5rem',
+    left: '55.5%',
+    top: '100%',
+  };
   return (
     <Box
       sx={{
@@ -17,7 +22,11 @@ const Background = () => {
         <span className='highlight'>best</span>
         <br /> <span className='highlight'>Freelancer</span> online
       </Typography>
-      <img className='LandingPic' src={LandingPic} alt='3D model' />
+
+      <Box>
+        <img style={imgStyle} src={LandingPic} alt='3D model' />
+      </Box>
+
       <Typography variant='h4' fontFamily='Nunito'>
         Turn your ideas into reality
       </Typography>

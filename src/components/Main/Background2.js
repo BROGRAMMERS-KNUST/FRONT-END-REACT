@@ -4,6 +4,11 @@ import LandingPic1 from '../../images/5.png';
 import Feedback from './Feedback';
 
 const Background2 = () => {
+  const imgStyle = {
+    maxHeight: '40rem',
+    left: '57.5%',
+    top: '353%',
+  };
   return (
     <Box
       sx={{
@@ -27,7 +32,9 @@ const Background2 = () => {
         <br /> We'll <span className='highlight4'>love </span>to
         <br /> <span className='highlight4'>hear</span> from you
       </Typography>
-      <img className='LandingPic2' src={LandingPic1} alt='3D model' />
+      <Box>
+        <img style={imgStyle} src={LandingPic1} alt='3D model' />
+      </Box>
 
       <Feedback />
     </Box>
