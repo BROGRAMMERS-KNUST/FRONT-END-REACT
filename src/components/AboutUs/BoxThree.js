@@ -409,8 +409,7 @@ const BoxThree = () => {
               }}
               variant='body1'
             >
-              A third year Computer Enginering student and an aspiring software
-              engineer
+              IT enthusiast looking to better the world through the field of IoT
             </Typography>
           </Stack>
 
@@ -441,8 +440,7 @@ const BoxThree = () => {
               }}
               variant='body1'
             >
-              A third year Computer Enginering student and an aspiring software
-              engineer
+              Computer Geek 👩‍💻
             </Typography>
           </Stack>
 
