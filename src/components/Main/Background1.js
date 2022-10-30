@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import LandingPic from '../../images/images_8.png';
 import GetStarted from './GetStarted';
-
+import pattern from '../../images/TribalPattern11.jpg';
 const Background1 = () => {
   return (
     <Box
@@ -10,6 +10,7 @@ const Background1 = () => {
         minHeight: '78vh',
         marginLeft: '2rem',
         marginRight: '2rem',
+        backgroundImage: `url(${pattern})`,
       }}
     >
       <Typography

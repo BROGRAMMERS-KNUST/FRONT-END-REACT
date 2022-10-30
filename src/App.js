@@ -36,7 +36,7 @@ import ResetPasswordHirer from './components/Auth/ResetPasswordHirer';
 
 function App() {
   return (
-    <div>
+    <div className='patternbackground'>
       <Router>
         <div>
           <Header />

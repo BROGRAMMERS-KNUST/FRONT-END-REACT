@@ -12,17 +12,18 @@ import EMMA from '../../images/Team/EMMA.jpg';
 import Moses from '../../images/Team/Moses.jpg';
 import Maxwell from '../../images/Team/MAXWELL.jpg';
 import { GitHub, Telegram, WhatsApp } from '@mui/icons-material';
-
+import pattern from '../../images/TribalPattern10.jpg';
 const BoxThree = () => {
   return (
     <div>
       <Box
-        bgcolor='#4682B4'
         sx={{
           color: 'white',
           padding: '15px',
           paddingLeft: 4.5,
+          backgroundImage: `url(${pattern})`,
         }}
+        bgcolor='#4682B4'
       >
         <Container sx={{ marginLeft: 13.8 }}>
           <Typography

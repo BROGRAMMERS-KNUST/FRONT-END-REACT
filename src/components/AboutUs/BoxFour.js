@@ -1,10 +1,13 @@
 import { Card, Stack, Typography, Box } from '@mui/material';
 import React from 'react';
 import { Feedback, MonetizationOn, People } from '@mui/icons-material';
-
+import pattern from '../../images/TribalPattern11.jpg';
 const BoxFour = () => {
   return (
-    <Box bgcolor='#F5F5F5' sx={{ padding: 15 }}>
+    <Box
+      bgcolor='#F5F5F5'
+      sx={{ padding: 15, backgroundImage: `url(${pattern})` }}
+    >
       <Typography
         sx={{
           fontFamily: 'Nunito',
