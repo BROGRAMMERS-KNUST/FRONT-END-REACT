@@ -40,12 +40,10 @@ export const graphics = [
   'art',
   'photoshop',
   'adobe',
-  'adobe photoshop',
-  'adobe illustrator',
+  'illustrator',
   'indesign',
-  'adobe indesign',
-  'vector art',
-  'mockup design',
+  'vector',
+  'design',
   'mockup',
   'billboard',
 ];
@@ -56,8 +54,10 @@ export const web = [
   'Front-end',
   'Front-End',
   'Front End',
-  'FrontEnd Developer',
-  'frontend developer',
+  'FrontEnd ',
+  'Developer',
+  'developer',
+  'frontend',
   'engineer',
   'deveops',
   'DevOps',
@@ -127,6 +127,9 @@ export const food = [
   'khebab',
   'chicken',
   'turkey',
+  'bread',
+  'meat',
+  'spaghetti',
 ];
 
 export const writing = [
