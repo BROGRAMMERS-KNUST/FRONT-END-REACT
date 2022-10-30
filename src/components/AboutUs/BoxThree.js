@@ -11,7 +11,7 @@ import King from '../../images/Team/King.jpg';
 import EMMA from '../../images/Team/EMMA.jpg';
 import Moses from '../../images/Team/Moses.jpg';
 import Maxwell from '../../images/Team/MAXWELL.jpg';
-import { GitHub, Telegram, WhatsApp } from '@mui/icons-material';
+import { GitHub, Telegram, WhatsApp, Twitter } from '@mui/icons-material';
 import pattern from '../../images/TribalPattern10.jpg';
 const BoxThree = () => {
   return (
@@ -305,6 +305,16 @@ const BoxThree = () => {
                 href='https://kwame_kusi.t.me/'
               >
                 {<Telegram />}
+              </Link>
+
+              <Link
+                variant='inherit'
+                color='secondary'
+                target='_blank'
+                rel='noopener'
+                href='https://twitter.com/lord_k_k'
+              >
+                {<Twitter />}
               </Link>
             </Stack>
           </Stack>
