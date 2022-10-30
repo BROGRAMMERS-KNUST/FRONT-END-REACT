@@ -43,18 +43,18 @@ export default function SocialFollow() {
             <a
               href='https://www.twitter.com/BrogrammersK'
               className='twitter social'
-              target='blank' 
+              target='blank'
             >
               <FontAwesomeIcon color='white' icon={faTwitter} size='2x' />
             </a>
 
-            <a
+            {/* <a
               href='https://www.instagram.com/'
               className='instagram social'
               target='blank'
             >
               <FontAwesomeIcon color='white' icon={faInstagram} size='2x' />
-            </a>
+            </a> */}
             <a
               href='https://t.me/+OfgZbPGwFSE5MjA0'
               className='telegram social'
