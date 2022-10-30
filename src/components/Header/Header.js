@@ -60,7 +60,7 @@ function Header() {
             color='primary'
             variant='h2'
             fontSize={30}
-            sx={{ flexGrow: 1, ':hover': { cursor: 'pointer' } }}
+            sx={{ flexGrow: 1 }}
             fontFamily='Nunito'
             fontWeight='700'
             letterSpacing={2}

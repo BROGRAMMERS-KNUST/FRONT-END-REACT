@@ -22,9 +22,9 @@ function WebDesignPageCards() {
             sx={{
               bgcolor: 'background.paper',
               boxShadow: 2,
-              borderRadius: 2,
-              p: 2,
-              width: '11.5vw',
+              borderRadius: '0.8rem',
+              p: '1rem',
+              width: '11rem',
             }}
           >
             <MonitorIcon color='primary' /> Front End Dev
@@ -33,9 +33,9 @@ function WebDesignPageCards() {
             sx={{
               bgcolor: 'background.paper',
               boxShadow: 2,
-              borderRadius: 2,
-              p: 2,
-              width: '11.5vw',
+              borderRadius: '0.8rem',
+              p: '1rem',
+              width: '10rem',
             }}
           >
             <DisplaySettingsIcon color='primary' /> Back End Dev
@@ -44,9 +44,9 @@ function WebDesignPageCards() {
             sx={{
               bgcolor: 'background.paper',
               boxShadow: 2,
-              borderRadius: 2,
-              p: 2,
-              width: '10vw',
+              borderRadius: '0.8rem',
+              p: '1rem',
+              width: '11rem',
             }}
           >
             <DesignServicesIcon color='primary' /> UI/UX
@@ -55,9 +55,9 @@ function WebDesignPageCards() {
             sx={{
               bgcolor: 'background.paper',
               boxShadow: 2,
-              borderRadius: 2,
-              p: 2,
-              width: '11.5vw',
+              borderRadius: '0.8rem',
+              p: '1rem',
+              width: '11rem',
             }}
           >
             <EngineeringIcon color='primary' /> DevOps
@@ -66,9 +66,9 @@ function WebDesignPageCards() {
             sx={{
               bgcolor: 'background.paper',
               boxShadow: 2,
-              borderRadius: 2,
-              p: 2,
-              width: '13vw',
+              borderRadius: '0.8rem',
+              p: '1rem',
+              width: '13rem',
             }}
           >
             <ManageAccountsIcon color='primary' /> Project Manager
@@ -77,9 +77,9 @@ function WebDesignPageCards() {
             sx={{
               bgcolor: 'background.paper',
               boxShadow: 2,
-              borderRadius: 2,
-              p: 2,
-              width: '13vw',
+              borderRadius: '0.8rem',
+              p: '1rem',
+              width: '13rem',
             }}
           >
             <SourceIcon color='primary' /> Content Developer

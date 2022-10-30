@@ -37,7 +37,7 @@ const StulancerComp = ({ stulancer }) => {
       <Box>
         <Card
           sx={{
-            width: 320,
+            width: '20rem',
             ':hover': { cursor: 'pointer' },
             boxShadow: 4,
           }}
@@ -66,15 +66,15 @@ const StulancerComp = ({ stulancer }) => {
           />
           <CardMedia>
             <Carousel
-              sx={{ width: 320, height: 150 }}
+              sx={{ width: '20rem', height: '9.375rem' }}
               indicators={false}
               autoPlay={false}
             >
               <Box
                 sx={{
                   background: `url(${stulancer.brandPic1}) `,
-                  width: 320,
-                  height: 150,
+                  width: '20rem',
+                  height: '9.375rem',
                   backgroundPositionY: -70,
                   backgroundSize: 'cover',
                   borderRadius: 1,
@@ -84,8 +84,8 @@ const StulancerComp = ({ stulancer }) => {
               <Box
                 sx={{
                   background: `url(${stulancer.brandPic2}) `,
-                  width: 320,
-                  height: 150,
+                  width: '20rem',
+                  height: '9.375rem',
                   backgroundPositionY: -70,
                   backgroundSize: 'cover',
                   borderRadius: 1,
@@ -95,8 +95,8 @@ const StulancerComp = ({ stulancer }) => {
               <Box
                 sx={{
                   background: `url(${stulancer.brandPic3}) `,
-                  width: 320,
-                  height: 150,
+                  width: '20rem',
+                  height: '9.375rem',
                   backgroundPositionY: -70,
                   backgroundSize: 'cover',
                   borderRadius: 1,
@@ -139,9 +139,9 @@ const StulancerComp = ({ stulancer }) => {
         <Paper
           elevation={6}
           sx={{
-            width: 500,
-            marginTop: 5,
-            marginLeft: 62,
+            width: '31.25rem',
+            marginTop: '1rem',
+            marginLeft: '32.5rem',
             paddingTop: 3,
           }}
         >

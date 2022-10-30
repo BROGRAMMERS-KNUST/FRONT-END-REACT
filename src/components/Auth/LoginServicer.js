@@ -28,21 +28,24 @@ const LoginServicer = () => {
   const [message, setMessage] = useState('');
   const [open, setOpen] = useState(false);
   const [openerror, setOpenError] = useState(false);
-
+  const [disabled, setDisabled] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const loginData = { email: email, password: password };
 
   const handleEmailChange = (e) => {
+    setDisabled(false);
     setEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
+    setDisabled(false);
     setPassword(e.target.value);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setDisabled(true);
     try {
       const url = 'https://brogrammers-knust.herokuapp.com/user/loginservicer';
       const { data } = await axios.post(url, loginData);
@@ -102,6 +105,7 @@ const LoginServicer = () => {
             variant='contained'
             fullWidth
             type='submit'
+            disabled={disabled}
           >
             Sign in
           </Button>

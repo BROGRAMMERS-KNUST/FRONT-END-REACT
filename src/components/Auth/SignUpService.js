@@ -28,6 +28,7 @@ const SignUpService = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [disabled, setDisabled] = useState(false);
   const userData = {
     fullName: fullName,
     email: email,
@@ -55,6 +56,7 @@ const SignUpService = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(userData);
+    setDisabled(true);
     try {
       const url = 'https://brogrammers-knust.herokuapp.com/user/signupservice';
       const { data } = await axios.post(url, userData);
@@ -154,6 +156,7 @@ const SignUpService = () => {
               fontWeight: '700',
             }}
             variant='contained'
+            disabled={disabled}
             fullWidth
           >
             Sign up

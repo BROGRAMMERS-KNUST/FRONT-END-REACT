@@ -23,6 +23,7 @@ export const photography = [
   '4k camera',
   '4k',
   'matriculation',
+  'video',
 ];
 
 export const graphics = [

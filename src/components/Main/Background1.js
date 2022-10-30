@@ -8,8 +8,8 @@ const Background1 = () => {
     <Box
       sx={{
         minHeight: '78vh',
-        marginLeft: 5,
-        marginRight: 5,
+        marginLeft: '2rem',
+        marginRight: '2rem',
       }}
     >
       <Typography

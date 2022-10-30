@@ -22,7 +22,14 @@ function StulancersAvailable(service) {
       <CircularProgress />
     </Box>
   ) : (
-    <Box sx={{ marginTop: 4, marginBottom: 4, marginLeft: 2, marginRight: 2 }}>
+    <Box
+      sx={{
+        marginTop: 4,
+        marginBottom: 4,
+        marginLeft: '0.9rem',
+        marginRight: '0.9rem',
+      }}
+    >
       <Typography
         color='primary'
         variant='h5'
@@ -30,7 +37,7 @@ function StulancersAvailable(service) {
       >
         Stulancers Available
       </Typography>
-      <Grid container spacing={5} flexWrap>
+      <Grid container spacing={5} flexWrap columns={4}>
         {stulancers.map((stulancer) => (
           <Grid item key={stulancer._id}>
             <StulancerComp stulancer={stulancer} field={service} />

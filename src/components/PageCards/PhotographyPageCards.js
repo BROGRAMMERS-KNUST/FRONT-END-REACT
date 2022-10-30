@@ -23,14 +23,14 @@ function PageCards() {
         Most popular in Photography & Video
       </Typography>{' '}
       <br />
-      <Stack direction='row' spacing={8} sx={{ flexWrap: 'nowrap' }}>
+      <Stack direction='row' spacing={6} sx={{ flexWrap: 'nowrap' }}>
         <Box
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '11vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <VideoCallIcon color='primary' /> Video Editing
@@ -39,9 +39,9 @@ function PageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '10vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <CameraAltIcon color='primary' /> Photoshoot
@@ -50,9 +50,9 @@ function PageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '14vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '18rem',
           }}
         >
           <VideoLibraryIcon color='primary' /> Social Media Videos
@@ -61,9 +61,9 @@ function PageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '10vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <AnimationIcon color='primary' /> Animation
@@ -72,9 +72,9 @@ function PageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '17vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '23rem',
           }}
         >
           <SchoolIcon color='primary' /> Graduation & Matriculation
@@ -83,9 +83,9 @@ function PageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '12vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '17rem',
           }}
         >
           <FilterIcon color='primary' /> Logo Animation

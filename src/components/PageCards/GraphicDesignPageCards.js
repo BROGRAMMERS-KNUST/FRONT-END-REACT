@@ -32,10 +32,10 @@ function GraphicDesignPageCards() {
           <Box
             sx={{
               bgcolor: 'background.paper',
-              boxShadow: 1,
-              borderRadius: 2,
-              p: 2,
-              width: '12vw',
+              boxShadow: 2,
+              borderRadius: '0.8rem',
+              p: '1rem',
+              width: '11rem',
             }}
           >
             <ImageIcon color='primary' /> Image Editing
@@ -44,9 +44,9 @@ function GraphicDesignPageCards() {
             sx={{
               bgcolor: 'background.paper',
               boxShadow: 2,
-              borderRadius: 2,
-              p: 2,
-              width: '14vw',
+              borderRadius: '0.8rem',
+              p: '1rem',
+              width: '13rem',
             }}
           >
             <InstagramIcon color='primary' /> Social Media Design
@@ -55,9 +55,9 @@ function GraphicDesignPageCards() {
             sx={{
               bgcolor: 'background.paper',
               boxShadow: 2,
-              borderRadius: 2,
-              p: 2,
-              width: '10vw',
+              borderRadius: '0.8rem',
+              p: '1rem',
+              width: '11rem',
             }}
           >
             <BrushIcon color='primary' /> Logo Design
@@ -66,9 +66,9 @@ function GraphicDesignPageCards() {
             sx={{
               bgcolor: 'background.paper',
               boxShadow: 2,
-              borderRadius: 2,
-              p: 2,
-              width: '12vw',
+              borderRadius: '0.8rem',
+              p: '1rem',
+              width: '11rem',
             }}
           >
             <LaptopIcon color='primary' /> Laptop Stickers
@@ -77,9 +77,9 @@ function GraphicDesignPageCards() {
             sx={{
               bgcolor: 'background.paper',
               boxShadow: 2,
-              borderRadius: 2,
-              p: 2,
-              width: '15vw',
+              borderRadius: '0.8rem',
+              p: '1rem',
+              width: '14rem',
             }}
           >
             <HowToRegIcon color='primary' /> T-shirt & Merchandise
@@ -88,9 +88,9 @@ function GraphicDesignPageCards() {
             sx={{
               bgcolor: 'background.paper',
               boxShadow: 2,
-              borderRadius: 2,
-              p: 2,
-              width: '9vw',
+              borderRadius: '0.8rem',
+              p: '1rem',
+              width: '11rem',
             }}
           >
             <ColorLensIcon color='primary' /> Cover Art

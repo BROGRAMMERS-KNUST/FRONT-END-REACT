@@ -36,11 +36,11 @@ const UpdateProfile = () => {
 
   let freelancerId = null;
   const paperStyle = {
-    padding: 20,
+    padding: '1.25rem',
     fontFamily: 'Nunito',
     fontWeight: '700',
-    width: 400,
-    margin: '100px auto',
+    width: '25rem',
+    margin: '6rem auto',
   };
 
   const handleSubmit = async (e) => {
@@ -90,6 +90,7 @@ const UpdateProfile = () => {
             defaultValue={user.result.fullName}
             sx={{ marginBottom: 2 }}
             onChange={(e) => {
+              setDisabled(false);
               freelancerData.fullName = e.target.value;
             }}
             inputProps={{ maxLength: 30 }}
@@ -104,6 +105,7 @@ const UpdateProfile = () => {
             defaultValue={user.result.bio}
             sx={{ marginBottom: 2 }}
             onChange={(e) => {
+              setDisabled(false);
               freelancerData.bio = e.target.value;
             }}
           />
@@ -117,6 +119,7 @@ const UpdateProfile = () => {
             multiline
             defaultValue={user.result.portfolioLink}
             onChange={(e) => {
+              setDisabled(false);
               freelancerData.portfolioLink = e.target.value;
             }}
             sx={{ marginBottom: 2 }}
@@ -131,6 +134,7 @@ const UpdateProfile = () => {
             defaultValue={user.result.telephoneNumber}
             multiline
             onChange={(e) => {
+              setDisabled(false);
               freelancerData.telephoneNumber = e.target.value;
             }}
             sx={{ marginBottom: 2 }}
@@ -143,6 +147,7 @@ const UpdateProfile = () => {
             multiline
             defaultValue={user.result.whatsappLink}
             onChange={(e) => {
+              setDisabled(false);
               freelancerData.whatsappLink = e.target.value;
             }}
             sx={{ marginBottom: 2 }}
@@ -158,6 +163,7 @@ const UpdateProfile = () => {
               id='demo-simple-select-autowidth'
               fullWidth
               onChange={(e) => {
+                setDisabled(false);
                 freelancerData.service = e.target.value;
               }}
               label='service'
@@ -180,6 +186,7 @@ const UpdateProfile = () => {
             fullWidth
             multiline
             onChange={(e) => {
+              setDisabled(false);
               freelancerData.specificService = e.target.value;
             }}
             sx={{ marginBottom: 2 }}

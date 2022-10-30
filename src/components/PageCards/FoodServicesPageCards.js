@@ -21,14 +21,14 @@ function FoodServicesPageCards() {
         Most popular in Food Services
       </Typography>{' '}
       <br />
-      <Stack direction='row' spacing={8} sx={{ flexWrap: 'nowrap' }}>
+      <Stack direction='row' spacing={6} sx={{ flexWrap: 'nowrap' }}>
         <Box
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '11vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <DeliveryDiningIcon color='primary' /> Food Delivery
@@ -37,9 +37,9 @@ function FoodServicesPageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '10vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <FastfoodIcon color='primary' /> Fast Food
@@ -48,9 +48,9 @@ function FoodServicesPageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '10vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <CakeIcon color='primary' /> Pastries
@@ -59,9 +59,9 @@ function FoodServicesPageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '10vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <LocalBarIcon color='primary' /> Drinks
@@ -70,9 +70,9 @@ function FoodServicesPageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '12vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '16rem',
           }}
         >
           <CelebrationIcon color='primary' /> Parties & Events
@@ -82,9 +82,9 @@ function FoodServicesPageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '8vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '11rem',
           }}
         >
           <LocalPizzaIcon color='primary' /> Pizza
@@ -94,9 +94,9 @@ function FoodServicesPageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '8vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '12rem',
           }}
         >
           <LunchDiningIcon color='primary' /> Burgers

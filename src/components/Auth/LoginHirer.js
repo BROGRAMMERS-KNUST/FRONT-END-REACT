@@ -31,18 +31,21 @@ const LoginHirer = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const loginData = { email: email, password: password };
-
+  const [disabled, setDisabled] = useState(false);
   const handleEmailChange = (e) => {
+    setDisabled(false);
     setEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
+    setDisabled(false);
     setPassword(e.target.value);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(loginData);
+    setDisabled(true);
     try {
       const url = 'https://brogrammers-knust.herokuapp.com/user/loginhirer';
       const { data } = await axios.post(url, loginData);
@@ -102,6 +105,7 @@ const LoginHirer = () => {
             variant='contained'
             fullWidth
             type='submit'
+            disabled={disabled}
           >
             Sign in
           </Button>

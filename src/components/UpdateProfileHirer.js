@@ -83,6 +83,7 @@ const UpdateProfileHirer = () => {
             defaultValue={user.result.fullName}
             sx={{ marginBottom: 2 }}
             onChange={(e) => {
+              setDisabled(false);
               hirerData.fullName = e.target.value;
             }}
             inputProps={{ maxLength: 30 }}
@@ -97,6 +98,7 @@ const UpdateProfileHirer = () => {
             defaultValue={user.result.email}
             sx={{ marginBottom: 2 }}
             onChange={(e) => {
+              setDisabled(false);
               hirerData.email = e.target.value;
             }}
           />

@@ -6,16 +6,16 @@ import Feedback from './Feedback';
 const Background2 = () => {
   const imgStyle = {
     maxHeight: '40rem',
-    left: '57.5%',
-    top: '353%',
+    left: '54rem',
+    top: '170.5rem',
   };
   return (
     <Box
       sx={{
         minHeight: '78vh',
-        marginLeft: 5,
-        marginRight: 5,
-        marginTop: -35,
+        marginLeft: '2rem',
+        marginRight: '2rem',
+
         marginBottom: 30,
         backgroundColor: '#f8f2ef',
       }}

@@ -33,6 +33,7 @@ const SignUp = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+  const [disabled, setDisabled] = useState(false);
   const dispatch = useDispatch();
   const history = useHistory();
   const [message, setMessage] = useState('');
@@ -52,6 +53,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(userData);
+    setDisabled(true);
     try {
       const url = 'https://brogrammers-knust.herokuapp.com/user/signup';
       const { data } = await axios.post(url, userData);
@@ -151,6 +153,7 @@ const SignUp = () => {
               fontWeight: '700',
             }}
             variant='contained'
+            disabled={disabled}
             fullWidth
             type='submit'
           >

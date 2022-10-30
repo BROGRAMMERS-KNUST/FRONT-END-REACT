@@ -11,16 +11,17 @@ import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 
 const GridCategory = () => {
   return (
-    <Box sx={{ marginBottom: 10, paddingBottom: 10 }}>
-      <Grid container spacing={5}>
+    <Box sx={{}}>
+      <Grid container spacing={5} xs={12}>
         <Grid
           item
+
           //First Grid box
         >
           <Box
             sx={{
               backgroundColor: '#1976d2',
-              width: 210,
+              width: '13.125rem',
               borderRadius: 2,
               boxShadow: 4,
             }}
@@ -70,7 +71,7 @@ const GridCategory = () => {
           <Box
             sx={{
               backgroundColor: '#1976d2',
-              width: 211,
+              width: '13.125rem',
               borderRadius: 2,
               boxShadow: 4,
             }}
@@ -120,7 +121,7 @@ const GridCategory = () => {
           <Box
             sx={{
               backgroundColor: '#1976d2',
-              width: 210,
+              width: '13.125rem',
               borderRadius: 2,
               boxShadow: 4,
             }}
@@ -170,7 +171,7 @@ const GridCategory = () => {
           <Box
             sx={{
               backgroundColor: '#1976d2',
-              width: 210,
+              width: '13.125rem',
               borderRadius: 2,
               boxShadow: 4,
             }}
@@ -220,7 +221,7 @@ const GridCategory = () => {
           <Box
             sx={{
               backgroundColor: '#1976d2',
-              width: 213,
+              width: '13.125rem',
               borderRadius: 2,
               boxShadow: 4,
             }}

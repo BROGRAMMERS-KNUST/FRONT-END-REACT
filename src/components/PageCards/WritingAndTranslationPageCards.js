@@ -28,9 +28,9 @@ function PageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '11vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <TranslateIcon color='primary' />
@@ -40,9 +40,9 @@ function PageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '11vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <EditIcon color='primary' />
@@ -52,9 +52,9 @@ function PageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '14vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <NoteAltIcon color='primary' /> Resume Writing
@@ -63,9 +63,9 @@ function PageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '10vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <BookIcon color='primary' /> Book Writing
@@ -74,9 +74,9 @@ function PageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '11vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <CallIcon color='primary' /> Client call
@@ -85,9 +85,9 @@ function PageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '11vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <LocalPostOfficeIcon color='primary' /> Cover letters
@@ -97,9 +97,9 @@ function PageCards() {
           sx={{
             bgcolor: 'background.paper',
             boxShadow: 2,
-            borderRadius: 2,
-            p: 2,
-            width: '11vw',
+            borderRadius: '0.8rem',
+            p: '1rem',
+            width: '14rem',
           }}
         >
           <SchoolIcon color='primary' /> Case Studies

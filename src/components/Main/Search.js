@@ -81,9 +81,8 @@ const Search = () => {
   const handleSearchInput = (e) => {
     setsearchInput(e.target.value);
   };
-  const handleSearch = () => {
+  const handleSearch = (e) => {
     console.log(searchInput);
-
     console.log(checkPhotgraphy(photography, searchInput.toLowerCase()));
     if (checkPhotgraphy(photography, searchInput.toLowerCase())) {
       history.push('/photography');

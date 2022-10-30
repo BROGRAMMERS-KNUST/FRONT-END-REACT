@@ -2,7 +2,6 @@ import { Typography, Box, Breadcrumbs, Link } from '@mui/material';
 import React from 'react';
 import Navbar from '../components/Header/Navbar';
 import WebDesignPageCards from '../components/PageCards/WebDesignPageCards';
-import WebDev from '../components/PageCards/WebDev';
 import StulancersAvailable from './StulancersAvailable';
 
 export default function WebDevelopment() {

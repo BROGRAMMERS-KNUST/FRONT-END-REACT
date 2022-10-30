@@ -29,22 +29,23 @@ const PortfolioPage = () => {
   const [opensnack, setOpenSnack] = useState(false);
   const [openerror, setOpenError] = useState(false);
   const [openerror1, setOpenError1] = useState(false);
+  const [disabled, setDisabled] = useState(false);
   const [message, setMessage] = useState('');
   const [sPrice, setsPrice] = useState('');
   const paperStyle = {
-    padding: 20,
+    padding: '1.25rem',
     fontFamily: 'Nunito',
     fontWeight: '700',
-    width: 400,
-    margin: '100px auto',
+    width: '25rem',
+    margin: '6rem auto',
   };
 
   const paperStyle1 = {
-    padding: 20,
+    padding: '1.25rem',
     fontFamily: 'Nunito',
     fontWeight: '700',
-    width: 400,
-    margin: '100px auto',
+    width: '25rem',
+    margin: '9rem auto',
   };
   const freelancerData = {
     brandPic1: user.result.brandPic1,
@@ -54,6 +55,7 @@ const PortfolioPage = () => {
 
   const handleStartingPriceChange = (e) => {
     setsPrice(e.target.value);
+    setDisabled(false);
   };
   const startingPrice = {
     startingPrice: sPrice,
@@ -64,6 +66,7 @@ const PortfolioPage = () => {
   //handle submit for starting price only
   const handleSubmit1 = async (e) => {
     e.preventDefault();
+    setDisabled(true);
     console.log(startingPrice);
     freelancerId = user.result._id;
     try {
@@ -90,7 +93,7 @@ const PortfolioPage = () => {
   //handle sumbit for brand pics only
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setDisabled(true);
     freelancerId = user.result._id;
     try {
       const url = `https://brogrammers-knust.herokuapp.com/user/updatebrandpics/${freelancerId}`;
@@ -112,7 +115,9 @@ const PortfolioPage = () => {
     }
   };
   return (
-    <Box sx={{ minHeight: '78vh', marginLeft: 4, marginRight: 4 }}>
+    <Box
+      sx={{ minHeight: '78vh', marginLeft: '2.3rem', marginRight: '2.1rem' }}
+    >
       <Typography variant='h1' fontFamily='Nunito' marginTop={20} gutterBottom>
         Hello <span> </span>
         <span>StuLancer</span>
@@ -344,6 +349,7 @@ const PortfolioPage = () => {
               }}
               variant='contained'
               fullWidth
+              disabled={disabled}
               type='submit'
             >
               Sumbit
@@ -408,6 +414,7 @@ const PortfolioPage = () => {
               }}
               variant='contained'
               fullWidth
+              disabled={disabled}
               type='submit'
             >
               Sumbit

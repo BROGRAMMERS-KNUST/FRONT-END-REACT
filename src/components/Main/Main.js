@@ -7,9 +7,10 @@ const Main = () => {
   return (
     <Box
       sx={{
-        minHeight: '80vh',
-        marginLeft: 4,
-        marginRight: 4,
+        minHeight: '40vh',
+        marginLeft: '2rem',
+        marginRight: '2rem',
+        //backgroundColor: 'green',
       }}
     >
       <Typography

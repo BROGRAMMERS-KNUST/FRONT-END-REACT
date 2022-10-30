@@ -12,21 +12,20 @@ const LandingCarousel = () => {
   return (
     <Box
       sx={{
-        marginTop: 10,
-        marginLeft: 5,
-        marginRight: 5,
+        marginTop: '5.3rem',
+        marginLeft: '2.7rem',
+        marginRight: '2.3rem',
       }}
     >
       <Carousel autoPlay={true}>
         <Box
           sx={{
             background: `url(${bgpic})`,
-
             backgroundSize: 'cover',
             color: 'white',
-            height: '520px',
+            height: '32.5rem',
             width: '93vw',
-            borderRadius: '20px ',
+            borderRadius: '1.25rem ',
             marginTop: 1,
             marginBottom: 5,
             marginLeft: 0.5,
@@ -76,9 +75,9 @@ const LandingCarousel = () => {
             background: `url(${bgpic1})`,
             backgroundSize: 'cover',
             color: 'white',
-            height: '520px',
+            height: '32.5rem',
             width: '93vw',
-            borderRadius: '20px ',
+            borderRadius: '1.25rem ',
             marginTop: 1,
             marginBottom: 5,
             marginLeft: 0.5,
@@ -128,9 +127,9 @@ const LandingCarousel = () => {
             background: `url(${bgpic2})`,
             backgroundSize: 'cover',
             color: 'white',
-            height: '520px',
+            height: '32.5rem',
             width: '93vw',
-            borderRadius: '20px ',
+            borderRadius: '1.25rem ',
             marginTop: 1,
             marginBottom: 5,
             marginLeft: 0.5,
@@ -177,12 +176,11 @@ const LandingCarousel = () => {
         <Box
           sx={{
             background: `url(${bgpic3})`,
-
             backgroundSize: 'cover',
             color: 'white',
-            height: '520px',
+            height: '32.5rem',
             width: '93vw',
-            borderRadius: '20px ',
+            borderRadius: '1.25rem ',
             marginTop: 1,
             marginBottom: 5,
             marginLeft: 0.5,
@@ -232,9 +230,9 @@ const LandingCarousel = () => {
             background: `url(${bgpic4})`,
             backgroundSize: 'cover',
             color: 'white',
-            height: '520px',
+            height: '32.5rem',
             width: '93vw',
-            borderRadius: '20px ',
+            borderRadius: '1.25rem ',
             marginTop: 1,
             marginBottom: 5,
             marginLeft: 0.5,
@@ -284,9 +282,9 @@ const LandingCarousel = () => {
             background: `url(${bgpic5})`,
             backgroundSize: 'cover',
             color: 'white',
-            height: '520px',
+            height: '32.5rem',
             width: '93vw',
-            borderRadius: '20px ',
+            borderRadius: '1.25rem ',
             marginTop: 1,
             marginBottom: 5,
             marginLeft: 0.5,
