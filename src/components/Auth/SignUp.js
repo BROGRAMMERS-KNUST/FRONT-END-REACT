@@ -24,13 +24,16 @@ const SignUp = () => {
   };
 
   const handleFullNameChange = (e) => {
+    setDisabled(false);
     setFullName(e.target.value);
   };
   const handleEmailChange = (e) => {
+    setDisabled(false);
     setEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
+    setDisabled(false);
     setPassword(e.target.value);
   };
   const [disabled, setDisabled] = useState(false);
