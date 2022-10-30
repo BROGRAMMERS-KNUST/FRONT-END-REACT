@@ -20,6 +20,7 @@ const ResetPasswordHirer = () => {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [openerror, setOpenError] = useState(false);
+  const [disabled, setDisabled] = useState(false);
   const paperStyle = {
     padding: 20,
     fontFamily: 'Nunito',
@@ -32,10 +33,12 @@ const ResetPasswordHirer = () => {
   const resetpasswordData = { password: password };
 
   const handlePasswordChange = (e) => {
+    setDisabled(false);
     setPassword(e.target.value);
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setDisabled(true);
     console.log(resetpasswordData);
     try {
       const url = `https://brogrammers-knust.herokuapp.com/passwordrecovery/reset-password-hirer/${id}/${token}`;
@@ -87,6 +90,7 @@ const ResetPasswordHirer = () => {
             }}
             variant='contained'
             fullWidth
+            disabled={disabled}
             type='submit'
           >
             Sumbit

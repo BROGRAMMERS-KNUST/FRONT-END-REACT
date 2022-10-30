@@ -18,6 +18,7 @@ const ForgotPassword = () => {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [openerror, setOpenError] = useState(false);
+  const [disabled, setDisabled] = useState(false);
   const paperStyle = {
     padding: 20,
     fontFamily: 'Nunito',
@@ -31,9 +32,11 @@ const ForgotPassword = () => {
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
+    setDisabled(false);
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setDisabled(true);
     try {
       const url =
         'https://brogrammers-knust.herokuapp.com/passwordrecovery/forgot-password';
@@ -106,6 +109,7 @@ const ForgotPassword = () => {
             }}
             variant='contained'
             fullWidth
+            disabled={disabled}
             type='submit'
           >
             Sumbit

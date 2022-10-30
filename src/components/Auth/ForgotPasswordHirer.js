@@ -17,6 +17,7 @@ const ForgotPasswordHirer = () => {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [openerror, setOpenError] = useState(false);
+  const [disabled, setDisabled] = useState(false);
   const paperStyle = {
     padding: 20,
     fontFamily: 'Nunito',
@@ -30,8 +31,10 @@ const ForgotPasswordHirer = () => {
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
+    setDisabled(false);
   };
   const handleSubmit = async (e) => {
+    setDisabled(true);
     e.preventDefault();
     try {
       const url =
@@ -105,6 +108,7 @@ const ForgotPasswordHirer = () => {
             }}
             variant='contained'
             fullWidth
+            disabled={disabled}
             type='submit'
           >
             Sumbit
