@@ -21,6 +21,7 @@ const Feedback = () => {
   const [message, setMessage] = useState('');
   const [opensnack, setSnackOpen] = useState(false);
   const [openerror, setOpenError] = useState(false);
+  const [disabled, setDisabled] = useState(false);
   const feedbackData = {
     fullName: '',
     email: '',
@@ -28,6 +29,7 @@ const Feedback = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setDisabled(true);
     try {
       const url = 'https://brogrammers-knust.herokuapp.com/user/feedback';
       const { data } = await axios.post(url, feedbackData);
@@ -113,6 +115,7 @@ const Feedback = () => {
                 multiline
                 sx={{ marginBottom: 2 }}
                 onChange={(e) => {
+                  setDisabled(false);
                   feedbackData.fullName = e.target.value;
                 }}
               />
@@ -125,6 +128,7 @@ const Feedback = () => {
                 fullWidth
                 sx={{ marginBottom: 2 }}
                 onChange={(e) => {
+                  setDisabled(false);
                   feedbackData.email = e.target.value;
                 }}
               />
@@ -138,6 +142,7 @@ const Feedback = () => {
                 multiline
                 sx={{ marginBottom: 2 }}
                 onChange={(e) => {
+                  setDisabled(false);
                   feedbackData.feedback = e.target.value;
                 }}
               />
@@ -151,6 +156,7 @@ const Feedback = () => {
                 }}
                 variant='contained'
                 fullWidth
+                disabled={disabled}
                 type='submit'
               >
                 Submit

@@ -26,6 +26,7 @@ export default function Footer() {
   const [message, setMessage] = useState('');
   const [opensnack, setSnackOpen] = useState(false);
   const [openerror, setOpenError] = useState(false);
+  const [disabled, setDisabled] = useState(false);
   const feedbackData = {
     fullName: '',
     email: '',
@@ -33,8 +34,9 @@ export default function Footer() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setDisabled(true);
     try {
-      const url = 'http://localhost:5000/user/feedback';
+      const url = 'https://brogrammers-knust.herokuapp.com/user/feedback';
       const { data } = await axios.post(url, feedbackData);
 
       setMessage(data.message);
@@ -301,6 +303,7 @@ export default function Footer() {
                 multiline
                 sx={{ marginBottom: 2 }}
                 onChange={(e) => {
+                  setDisabled(false);
                   feedbackData.fullName = e.target.value;
                 }}
               />
@@ -313,6 +316,7 @@ export default function Footer() {
                 fullWidth
                 sx={{ marginBottom: 2 }}
                 onChange={(e) => {
+                  setDisabled(false);
                   feedbackData.email = e.target.value;
                 }}
               />
@@ -326,6 +330,7 @@ export default function Footer() {
                 multiline
                 sx={{ marginBottom: 2 }}
                 onChange={(e) => {
+                  setDisabled(false);
                   feedbackData.feedback = e.target.value;
                 }}
               />
@@ -339,6 +344,7 @@ export default function Footer() {
                 }}
                 variant='contained'
                 fullWidth
+                disabled={disabled}
                 type='submit'
               >
                 Submit
