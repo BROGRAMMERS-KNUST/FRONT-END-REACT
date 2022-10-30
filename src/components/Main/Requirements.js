@@ -126,7 +126,7 @@ const Requirements = () => {
               }}
             >
               <CheckCircleOutlineRounded color='secondary' />
-              Porfolio Link eg.Behance page,dribble page,Instagram page Link
+              Portfolio Link eg.Behance page,dribble page,Instagram page Link
             </Typography>
             <Typography
               variant='h6'
