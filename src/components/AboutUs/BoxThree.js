@@ -296,6 +296,17 @@ const BoxThree = () => {
             >
               Let me be your Spring Programmer and your Hardware Engineer
             </Typography>
+            <Stack direction='row' spacing={1}>
+              <Link
+                variant='inherit'
+                color='secondary'
+                target='_blank'
+                rel='noopener'
+                href='https://kwame_kusi.t.me/'
+              >
+                {<Telegram />}
+              </Link>
+            </Stack>
           </Stack>
 
           {/* BARNES' STACK */}

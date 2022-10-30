@@ -33,6 +33,7 @@ import Page404 from './components/Page404';
 import ResetPassword from './components/Auth/ResetPassword';
 import ForgotPasswordHirer from './components/Auth/ForgotPasswordHirer';
 import ResetPasswordHirer from './components/Auth/ResetPasswordHirer';
+import ChangePasswordHirer from './components/ChangePasswordHirer';
 
 function App() {
   return (
@@ -99,6 +100,10 @@ function App() {
 
             <Route path='/reset-password/:id/:token'>
               <ResetPassword />
+            </Route>
+
+            <Route path='/changepassword-hirer'>
+              <ChangePasswordHirer />
             </Route>
 
             <Route path='/reset-password-hirer/:id/:token'>

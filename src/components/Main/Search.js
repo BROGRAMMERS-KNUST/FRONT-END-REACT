@@ -104,7 +104,7 @@ const Search = () => {
           display: 'flex',
           alignItems: 'center',
           width: 700,
-          marginLeft: 45,
+          margin: 'auto',
           marginTop: 5,
           backgroundColor: 'white',
           borderRadius: '30px',

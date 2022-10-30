@@ -89,6 +89,7 @@ const FreelancerInfo = () => {
             inputProps={{ maxLength: 100 }}
             sx={{ marginBottom: 2 }}
             onChange={(e) => {
+              setDisabled(false);
               freelancerData.bio = e.target.value;
             }}
           />
@@ -101,6 +102,7 @@ const FreelancerInfo = () => {
             fullWidth
             multiline
             onChange={(e) => {
+              setDisabled(false);
               freelancerData.portfolioLink = e.target.value;
             }}
             sx={{ marginBottom: 2 }}
@@ -114,6 +116,7 @@ const FreelancerInfo = () => {
             fullWidth
             multiline
             onChange={(e) => {
+              setDisabled(false);
               freelancerData.telephoneNumber = e.target.value;
             }}
             sx={{ marginBottom: 2 }}
@@ -126,6 +129,7 @@ const FreelancerInfo = () => {
             required
             multiline
             onChange={(e) => {
+              setDisabled(false);
               freelancerData.whatsappLink = e.target.value;
             }}
             sx={{ marginBottom: 2 }}
@@ -141,6 +145,7 @@ const FreelancerInfo = () => {
               id='demo-simple-select-autowidth'
               fullWidth
               onChange={(e) => {
+                setDisabled(false);
                 freelancerData.service = e.target.value;
               }}
               label='service'

@@ -2,6 +2,7 @@ import {
   Alert,
   Button,
   Grid,
+  Link,
   Paper,
   Snackbar,
   TextField,
@@ -34,6 +35,9 @@ const UpdateProfileHirer = () => {
     margin: '100px auto',
   };
 
+  const inputStyle = {
+    marginBottom: 10,
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     hirerId = user.result._id;
@@ -69,7 +73,7 @@ const UpdateProfileHirer = () => {
             color='primary'
             sx={{ fontFamily: 'Nunito', fontWeight: '700', marginBottom: 3 }}
           >
-            Stulancer
+            Hirer
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>
@@ -105,6 +109,7 @@ const UpdateProfileHirer = () => {
 
           <input
             type='file'
+            style={inputStyle}
             onChange={(e) => {
               try {
                 Resizer.imageFileResizer(
@@ -126,9 +131,17 @@ const UpdateProfileHirer = () => {
               }
             }}
           />
+          {/* 
+          <Link
+            href='/changepassword-hirer'
+            sx={{ marginLeft: 0, marginBottom: 1, marginTop: 4 }}
+            underline='hover'
+          >
+            Change password
+          </Link> */}
           <Button
             sx={{
-              marginTop: 1.7,
+              marginTop: 1.5,
               marginBottom: 1,
               fontFamily: 'Nunito',
               fontWeight: '700',
