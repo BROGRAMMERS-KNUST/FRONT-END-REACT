@@ -6,40 +6,38 @@ import {
   Typography,
   Snackbar,
   Alert,
-} from '@mui/material';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import React from 'react';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-import axios from 'axios';
+} from "@mui/material";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import React from "react";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
+import axios from "axios";
 const FreelancerInfo = () => {
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
-  const dispatch = useDispatch();
+  const [user] = useState(JSON.parse(localStorage.getItem("profile")));
   const history = useHistory();
   const [open, setOpen] = useState(false);
   const [openerror, setOpenError] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [disabled, setDisabled] = useState(false);
   const freelancerData = {
-    bio: '',
-    portfolioLink: '',
-    telephoneNumber: '',
-    whatsappLink: '',
-    service: '',
-    specificService: '',
+    bio: "",
+    portfolioLink: "",
+    telephoneNumber: "",
+    whatsappLink: "",
+    service: "",
+    specificService: "",
   };
 
   let freelancerId = null;
   const paperStyle = {
     padding: 20,
-    fontFamily: 'Nunito',
-    fontWeight: '700',
+    fontFamily: "Nunito",
+    fontWeight: "700",
     width: 400,
-    margin: '100px auto',
+    margin: "100px auto",
   };
 
   const handleSubmit = async (e) => {
@@ -53,10 +51,10 @@ const FreelancerInfo = () => {
       setOpenError(false);
       setOpen(true);
       setTimeout(() => {
-        history.push('/otherinfo');
+        history.push("/otherinfo");
       }, 1600);
 
-      localStorage.setItem('profile', JSON.stringify(data));
+      localStorage.setItem("profile", JSON.stringify(data));
       console.log(freelancerId);
       console.log(freelancerData);
     } catch (error) {
@@ -69,20 +67,20 @@ const FreelancerInfo = () => {
   return (
     <Grid>
       <Paper style={paperStyle} elevation={6}>
-        <Grid item align='center'>
+        <Grid item align="center">
           <Typography
-            variant='h5'
-            color='primary'
-            sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
+            variant="h5"
+            color="primary"
+            sx={{ fontFamily: "Nunito", fontWeight: "700" }}
           >
             Stulancer
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
-            label='Bio'
-            placeholder='Enter your Bio, 100 characters maximum'
-            variant='standard'
+            label="Bio"
+            placeholder="Enter your Bio, 100 characters maximum"
+            variant="standard"
             required
             fullWidth
             multiline
@@ -95,9 +93,9 @@ const FreelancerInfo = () => {
           />
 
           <TextField
-            label='Portfolio Link'
-            placeholder='Enter Portfolio link'
-            variant='standard'
+            label="Portfolio Link"
+            placeholder="Enter Portfolio link"
+            variant="standard"
             required
             fullWidth
             multiline
@@ -108,10 +106,10 @@ const FreelancerInfo = () => {
             sx={{ marginBottom: 2 }}
           />
           <TextField
-            label='Telephone Number'
-            type='number'
-            placeholder='Enter Telephone number'
-            variant='standard'
+            label="Telephone Number"
+            type="number"
+            placeholder="Enter Telephone number"
+            variant="standard"
             required
             fullWidth
             multiline
@@ -122,9 +120,9 @@ const FreelancerInfo = () => {
             sx={{ marginBottom: 2 }}
           />
           <TextField
-            label='WhatsApp Link'
-            placeholder='Enter WhatsApp Link'
-            variant='standard'
+            label="WhatsApp Link"
+            placeholder="Enter WhatsApp Link"
+            variant="standard"
             fullWidth
             required
             multiline
@@ -136,31 +134,31 @@ const FreelancerInfo = () => {
           />
 
           <FormControl sx={{ marginRight: 2, minWidth: 360, marginBottom: 2 }}>
-            <InputLabel sx={{ marginLeft: -1.5 }} id='service'>
+            <InputLabel sx={{ marginLeft: -1.5 }} id="service">
               Service
             </InputLabel>
             <Select
-              labelId='service'
-              variant='standard'
-              id='demo-simple-select-autowidth'
+              labelId="service"
+              variant="standard"
+              id="demo-simple-select-autowidth"
               fullWidth
               onChange={(e) => {
                 setDisabled(false);
                 freelancerData.service = e.target.value;
               }}
-              label='service'
+              label="service"
             >
-              <MenuItem value='Photographer'>Photographer</MenuItem>
-              <MenuItem value='Web Developer'>Web Developer</MenuItem>
-              <MenuItem value='Caterer'>Caterer</MenuItem>
-              <MenuItem value='Graphic Designer'>Graphic Designer</MenuItem>
-              <MenuItem value='Author'>CV Writer</MenuItem>
+              <MenuItem value="Photographer">Photographer</MenuItem>
+              <MenuItem value="Web Developer">Web Developer</MenuItem>
+              <MenuItem value="Caterer">Caterer</MenuItem>
+              <MenuItem value="Graphic Designer">Graphic Designer</MenuItem>
+              <MenuItem value="Author">CV Writer</MenuItem>
             </Select>
           </FormControl>
           <TextField
-            label='Specific service'
-            placeholder='Enter specific service'
-            variant='standard'
+            label="Specific service"
+            placeholder="Enter specific service"
+            variant="standard"
             required
             fullWidth
             multiline
@@ -171,26 +169,26 @@ const FreelancerInfo = () => {
           />
 
           <Button
-            sx={{ marginBottom: 1, fontFamily: 'Nunito', fontWeight: '700' }}
-            variant='contained'
+            sx={{ marginBottom: 1, fontFamily: "Nunito", fontWeight: "700" }}
+            variant="contained"
             disabled={disabled}
             fullWidth
-            type='submit'
+            type="submit"
           >
             Sumbit
           </Button>
-          <Typography sx={{ fontFamily: 'Nunito' }} variant='caption'>
+          <Typography sx={{ fontFamily: "Nunito" }} variant="caption">
             More services will be added soon !
           </Typography>
         </form>
         <Snackbar open={open} autoHideDuration={1000}>
-          <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="success" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>
 
         <Snackbar open={openerror} autoHideDuration={10000}>
-          <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="error" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>

@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
+import React from "react";
+import { useState } from "react";
 import {
   Button,
   Typography,
@@ -8,28 +8,27 @@ import {
   TextField,
   Snackbar,
   Alert,
-} from '@mui/material';
-import { useDispatch } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
+} from "@mui/material";
+import { useHistory, useParams } from "react-router-dom";
 
-import axios from 'axios';
+import axios from "axios";
 
 const ResetPasswordHirer = () => {
   const history = useHistory();
   let { id, token } = useParams();
   const [open, setOpen] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [openerror, setOpenError] = useState(false);
   const [disabled, setDisabled] = useState(false);
   const paperStyle = {
     padding: 20,
-    fontFamily: 'Nunito',
-    fontWeight: '700',
+    fontFamily: "Nunito",
+    fontWeight: "700",
     width: 400,
-    margin: '100px auto',
+    margin: "100px auto",
   };
 
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
   const resetpasswordData = { password: password };
 
   const handlePasswordChange = (e) => {
@@ -41,14 +40,14 @@ const ResetPasswordHirer = () => {
     setDisabled(true);
     console.log(resetpasswordData);
     try {
-      const url = `https://brogrammers-knust.herokuapp.com/passwordrecovery/reset-password-hirer/${id}/${token}`;
+      const url = `${process.env.REACT_APP_API_URL}/passwordrecovery/reset-password-hirer/${id}/${token}`;
       const { data } = await axios.post(url, resetpasswordData);
       console.log(data);
       setMessage(data.message);
       setOpenError(false);
       setOpen(true);
       setTimeout(() => {
-        history.push('/');
+        history.push("/");
       }, 1500);
     } catch (error) {
       console.log(error);
@@ -60,53 +59,53 @@ const ResetPasswordHirer = () => {
   return (
     <Grid>
       <Paper style={paperStyle} elevation={6}>
-        <Grid item align='center'>
+        <Grid item align="center">
           <Typography
-            variant='h6'
-            color='primary'
-            sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
+            variant="h6"
+            color="primary"
+            sx={{ fontFamily: "Nunito", fontWeight: "700" }}
           >
             Hirer Password Reset
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
-            type='password'
-            label='Password'
-            placeholder='Enter your new password'
-            variant='standard'
+            type="password"
+            label="Password"
+            placeholder="Enter your new password"
+            variant="standard"
             required
             fullWidth
-            sx={{ marginTop: 4, marginBottom: 2, fontFamily: 'Nunito' }}
+            sx={{ marginTop: 4, marginBottom: 2, fontFamily: "Nunito" }}
             onChange={handlePasswordChange}
           />
 
           <Button
             sx={{
               marginBottom: 1,
-              fontFamily: 'Nunito',
-              fontWeight: '700',
+              fontFamily: "Nunito",
+              fontWeight: "700",
               marginTop: 2,
             }}
-            variant='contained'
+            variant="contained"
             fullWidth
             disabled={disabled}
-            type='submit'
+            type="submit"
           >
             Sumbit
           </Button>
-          <Typography sx={{ fontFamily: 'Nunito' }} variant='body2'>
+          <Typography sx={{ fontFamily: "Nunito" }} variant="body2">
             Reset your password
           </Typography>
         </form>
         <Snackbar open={open} autoHideDuration={10000}>
-          <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="success" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>
 
         <Snackbar open={openerror} autoHideDuration={10000}>
-          <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="error" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>

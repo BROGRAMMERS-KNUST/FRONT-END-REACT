@@ -7,30 +7,29 @@ import {
   Snackbar,
   TextField,
   Typography,
-} from '@mui/material';
+} from "@mui/material";
 
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { loginservicer } from '../../action/auth';
-import { useHistory } from 'react-router-dom';
-import { useState } from 'react';
-import axios from 'axios';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 const LoginServicer = () => {
   const paperStyle = {
     padding: 20,
-    fontFamily: 'Nunito',
-    fontWeight: '700',
+    fontFamily: "Nunito",
+    fontWeight: "700",
     width: 400,
-    margin: '0px auto',
+    margin: "0px auto",
   };
   const dispatch = useDispatch();
   let history = useHistory();
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [open, setOpen] = useState(false);
   const [openerror, setOpenError] = useState(false);
   const [disabled, setDisabled] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const loginData = { email: email, password: password };
 
   const handleEmailChange = (e) => {
@@ -47,15 +46,15 @@ const LoginServicer = () => {
     e.preventDefault();
     setDisabled(true);
     try {
-      const url = 'https://brogrammers-knust.herokuapp.com/user/loginservicer';
+      const url = `${process.env.REACT_APP_API_URL}/user/loginservicer`;
       const { data } = await axios.post(url, loginData);
       console.log(data);
       setMessage(data.message);
       setOpenError(false);
       setOpen(true);
       setTimeout(() => {
-        dispatch({ type: 'AUTH', data });
-        history.push('/portfoliopage');
+        dispatch({ type: "AUTH", data });
+        history.push("/portfoliopage");
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -68,70 +67,70 @@ const LoginServicer = () => {
   return (
     <Grid>
       <Paper style={paperStyle}>
-        <Grid item align='center'>
+        <Grid item align="center">
           <Typography
-            variant='h5'
-            color='primary'
-            sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
+            variant="h5"
+            color="primary"
+            sx={{ fontFamily: "Nunito", fontWeight: "700" }}
           >
             StuLancer
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
-            type='email'
-            label='Email'
-            placeholder='Enter email'
-            variant='standard'
+            type="email"
+            label="Email"
+            placeholder="Enter email"
+            variant="standard"
             required
             fullWidth
-            sx={{ marginTop: 4, marginBottom: 2, fontFamily: 'Nunito' }}
+            sx={{ marginTop: 4, marginBottom: 2, fontFamily: "Nunito" }}
             onChange={handleEmailChange}
           />
 
           <TextField
-            label='Password'
-            placeholder='Enter password'
-            variant='standard'
+            label="Password"
+            placeholder="Enter password"
+            variant="standard"
             fullWidth
             required
-            type='password'
+            type="password"
             sx={{ marginBottom: 3 }}
             onChange={handlePasswordChange}
           />
 
           <Button
-            sx={{ marginBottom: 1, fontFamily: 'Nunito', fontWeight: '700' }}
-            variant='contained'
+            sx={{ marginBottom: 1, fontFamily: "Nunito", fontWeight: "700" }}
+            variant="contained"
             fullWidth
-            type='submit'
+            type="submit"
             disabled={disabled}
           >
             Sign in
           </Button>
         </form>
         <Snackbar open={open} autoHideDuration={10000}>
-          <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="success" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>
 
         <Snackbar open={openerror} autoHideDuration={10000}>
-          <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="error" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>
         <Link
-          href='/passwordrecovery-servicer'
+          href="/passwordrecovery-servicer"
           sx={{ marginLeft: 12.5, marginBottom: 2, marginTop: 2 }}
-          underline='hover'
+          underline="hover"
         >
           Forgot password ?
         </Link>
         <br />
         <Typography
-          sx={{ fontFamily: 'Nunito', marginLeft: 3.5 }}
-          variant='caption'
+          sx={{ fontFamily: "Nunito", marginLeft: 3.5 }}
+          variant="caption"
         >
           By joining I agree to receive emails from StuLancer.
         </Typography>

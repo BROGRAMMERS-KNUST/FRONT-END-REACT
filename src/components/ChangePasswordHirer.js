@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
+import React from "react";
+import { useState } from "react";
 import {
   Button,
   Typography,
@@ -8,30 +8,30 @@ import {
   TextField,
   Snackbar,
   Alert,
-} from '@mui/material';
-import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import axios from 'axios';
+} from "@mui/material";
+import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import axios from "axios";
 
 const ChangePasswordHirer = () => {
   const history = useHistory();
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+  const [user] = useState(JSON.parse(localStorage.getItem("profile")));
   const [open, setOpen] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [openerror, setOpenError] = useState(false);
   const [disabled, setDisabled] = useState(false);
   const dispatch = useDispatch();
   let freelancerId = null;
   const paperStyle = {
     padding: 20,
-    fontFamily: 'Nunito',
-    fontWeight: '700',
+    fontFamily: "Nunito",
+    fontWeight: "700",
     width: 400,
-    margin: '100px auto',
+    margin: "100px auto",
   };
 
-  const [currentpassword, setCurrentPassword] = useState('');
-  const [newpassword, setNewPassword] = useState('');
+  const [currentpassword, setCurrentPassword] = useState("");
+  const [newpassword, setNewPassword] = useState("");
   const changepasswordData = {
     currentpassword: currentpassword,
     newpassword: newpassword,
@@ -57,9 +57,9 @@ const ChangePasswordHirer = () => {
       setMessage(data.message);
       setOpenError(false);
       setOpen(true);
-      dispatch({ type: 'LOGOUT' });
+      dispatch({ type: "LOGOUT" });
       setTimeout(() => {
-        history.push('/');
+        history.push("/");
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -72,61 +72,61 @@ const ChangePasswordHirer = () => {
   return (
     <Grid>
       <Paper style={paperStyle} elevation={6}>
-        <Grid item align='center'>
+        <Grid item align="center">
           <Typography
-            variant='h6'
-            color='primary'
-            sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
+            variant="h6"
+            color="primary"
+            sx={{ fontFamily: "Nunito", fontWeight: "700" }}
           >
             Change Password - Hirer
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
-            type='password'
-            label='Current Password'
-            placeholder='Enter current password'
-            variant='standard'
+            type="password"
+            label="Current Password"
+            placeholder="Enter current password"
+            variant="standard"
             required
             fullWidth
-            sx={{ marginTop: 4, marginBottom: 2, fontFamily: 'Nunito' }}
+            sx={{ marginTop: 4, marginBottom: 2, fontFamily: "Nunito" }}
             onChange={handleCurrentPasswordChange}
           />
 
           <TextField
-            type='password'
-            label='New Password'
-            placeholder='Enter new password'
-            variant='standard'
+            type="password"
+            label="New Password"
+            placeholder="Enter new password"
+            variant="standard"
             required
             fullWidth
-            sx={{ marginTop: 0, marginBottom: 2, fontFamily: 'Nunito' }}
+            sx={{ marginTop: 0, marginBottom: 2, fontFamily: "Nunito" }}
             onChange={handleNewPasswordChange}
           />
 
           <Button
             sx={{
               marginBottom: 1,
-              fontFamily: 'Nunito',
-              fontWeight: '700',
+              fontFamily: "Nunito",
+              fontWeight: "700",
               marginTop: 2,
             }}
-            variant='contained'
+            variant="contained"
             fullWidth
             disabled={disabled}
-            type='submit'
+            type="submit"
           >
             Sumbit
           </Button>
         </form>
         <Snackbar open={open} autoHideDuration={10000}>
-          <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="success" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>
 
         <Snackbar open={openerror} autoHideDuration={10000}>
-          <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="error" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>

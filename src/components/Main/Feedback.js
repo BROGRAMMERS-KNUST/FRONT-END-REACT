@@ -8,30 +8,28 @@ import {
   Snackbar,
   TextField,
   Typography,
-} from '@mui/material';
-import React, { useState } from 'react';
-import { Box } from '@mui/system';
-import { useDispatch } from 'react-redux';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import CloseIcon from '@mui/icons-material/Close';
-import axios from 'axios';
+} from "@mui/material";
+import React, { useState } from "react";
+import { Box } from "@mui/system";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import CloseIcon from "@mui/icons-material/Close";
+import axios from "axios";
 const Feedback = () => {
-  const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [opensnack, setSnackOpen] = useState(false);
   const [openerror, setOpenError] = useState(false);
   const [disabled, setDisabled] = useState(false);
   const feedbackData = {
-    fullName: '',
-    email: '',
-    feedback: '',
+    fullName: "",
+    email: "",
+    feedback: "",
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setDisabled(true);
     try {
-      const url = 'https://brogrammers-knust.herokuapp.com/user/feedback';
+      const url = `${process.env.REACT_APP_API_URL}/user/feedback`;
       const { data } = await axios.post(url, feedbackData);
 
       setMessage(data.message);
@@ -51,24 +49,24 @@ const Feedback = () => {
   };
   const paperStyle = {
     padding: 20,
-    fontFamily: 'Nunito',
-    fontWeight: '700',
+    fontFamily: "Nunito",
+    fontWeight: "700",
     width: 400,
-    margin: '100px auto',
+    margin: "100px auto",
   };
   return (
     <Box>
-      <Box sx={{ display: 'flex', marginTop: 2 }}>
+      <Box sx={{ display: "flex", marginTop: 2 }}>
         <Button
           sx={{
             marginTop: 0.8,
             borderRadius: 2,
-            fontFamily: 'Nunito',
-            fontWeight: '700',
+            fontFamily: "Nunito",
+            fontWeight: "700",
             padding: 1.5,
           }}
-          size='small'
-          variant='contained'
+          size="small"
+          variant="contained"
           endIcon={<KeyboardArrowRightIcon />}
           onClick={() => {
             setOpen(true);
@@ -92,13 +90,13 @@ const Feedback = () => {
             >
               <CloseIcon />
             </IconButton>
-            <Grid item align='center'>
+            <Grid item align="center">
               <Typography
-                variant='h5'
-                color='primary'
+                variant="h5"
+                color="primary"
                 sx={{
-                  fontFamily: 'Nunito',
-                  fontWeight: '700',
+                  fontFamily: "Nunito",
+                  fontWeight: "700",
                   marginBottom: 3,
                 }}
               >
@@ -107,9 +105,9 @@ const Feedback = () => {
             </Grid>
             <form onSubmit={handleSubmit}>
               <TextField
-                label='Full Name'
-                placeholder='Enter your fullname'
-                variant='standard'
+                label="Full Name"
+                placeholder="Enter your fullname"
+                variant="standard"
                 required
                 fullWidth
                 multiline
@@ -120,10 +118,10 @@ const Feedback = () => {
                 }}
               />
               <TextField
-                label='Email'
-                type='email'
-                placeholder='Enter your Email'
-                variant='standard'
+                label="Email"
+                type="email"
+                placeholder="Enter your Email"
+                variant="standard"
                 required
                 fullWidth
                 sx={{ marginBottom: 2 }}
@@ -134,9 +132,9 @@ const Feedback = () => {
               />
 
               <TextField
-                label='Feedback'
-                placeholder='Enter your Feedback'
-                variant='standard'
+                label="Feedback"
+                placeholder="Enter your Feedback"
+                variant="standard"
                 required
                 fullWidth
                 multiline
@@ -151,25 +149,25 @@ const Feedback = () => {
                 sx={{
                   marginTop: 1.7,
                   marginBottom: 1,
-                  fontFamily: 'Nunito',
-                  fontWeight: '700',
+                  fontFamily: "Nunito",
+                  fontWeight: "700",
                 }}
-                variant='contained'
+                variant="contained"
                 fullWidth
                 disabled={disabled}
-                type='submit'
+                type="submit"
               >
                 Submit
               </Button>
             </form>
             <Snackbar open={opensnack} autoHideDuration={10000}>
-              <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+              <Alert variant="filled" severity="success" sx={{ width: "100%" }}>
                 {message}
               </Alert>
             </Snackbar>
 
             <Snackbar open={openerror} autoHideDuration={10000}>
-              <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
+              <Alert variant="filled" severity="error" sx={{ width: "100%" }}>
                 {message}
               </Alert>
             </Snackbar>

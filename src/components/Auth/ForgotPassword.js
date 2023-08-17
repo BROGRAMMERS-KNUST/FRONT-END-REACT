@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
+import React from "react";
+import { useState } from "react";
 import {
   Button,
   Typography,
@@ -8,26 +8,26 @@ import {
   TextField,
   Snackbar,
   Alert,
-} from '@mui/material';
+} from "@mui/material";
 
-import { useHistory } from 'react-router-dom';
-import axios from 'axios';
-import emailjs from '@emailjs/browser';
+import { useHistory } from "react-router-dom";
+import axios from "axios";
+import emailjs from "@emailjs/browser";
 const ForgotPassword = () => {
   const history = useHistory();
   const [open, setOpen] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [openerror, setOpenError] = useState(false);
   const [disabled, setDisabled] = useState(false);
   const paperStyle = {
     padding: 20,
-    fontFamily: 'Nunito',
-    fontWeight: '700',
+    fontFamily: "Nunito",
+    fontWeight: "700",
     width: 400,
-    margin: '100px auto',
+    margin: "100px auto",
   };
 
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const forgotpasswordData = { email: email };
 
   const handleEmailChange = (e) => {
@@ -38,8 +38,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setDisabled(true);
     try {
-      const url =
-        'https://brogrammers-knust.herokuapp.com/passwordrecovery/forgot-password';
+      const url = `${process.env.REACT_APP_API_URL}/passwordrecovery/forgot-password`;
       const { data } = await axios.post(url, forgotpasswordData);
       console.log(`Message from Front End : ${data.message}`);
       console.log(data.link);
@@ -50,23 +49,23 @@ const ForgotPassword = () => {
       };
       emailjs
         .send(
-          'service_2uo0b8g',
-          'template_jbek2bm',
+          "service_2uo0b8g",
+          "template_jbek2bm",
           templateParams,
-          'NsLZvQfSLLBDu2zdp'
+          "NsLZvQfSLLBDu2zdp"
         )
         .then(
           function (response) {
-            console.log('SUCCESS!', response.status, response.text);
+            console.log("SUCCESS!", response.status, response.text);
             setMessage(data.message);
             setOpenError(false);
             setOpen(true);
             setTimeout(() => {
-              history.push('/');
+              history.push("/");
             }, 1500);
           },
           function (error) {
-            console.log('FAILED...', error);
+            console.log("FAILED...", error);
           }
         );
     } catch (error) {
@@ -79,53 +78,53 @@ const ForgotPassword = () => {
   return (
     <Grid>
       <Paper style={paperStyle} elevation={6}>
-        <Grid item align='center'>
+        <Grid item align="center">
           <Typography
-            variant='h6'
-            color='primary'
-            sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
+            variant="h6"
+            color="primary"
+            sx={{ fontFamily: "Nunito", fontWeight: "700" }}
           >
             StuLancer Password Recovery
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
-            type='email'
-            label='Email'
-            placeholder='Enter email'
-            variant='standard'
+            type="email"
+            label="Email"
+            placeholder="Enter email"
+            variant="standard"
             required
             fullWidth
-            sx={{ marginTop: 4, marginBottom: 2, fontFamily: 'Nunito' }}
+            sx={{ marginTop: 4, marginBottom: 2, fontFamily: "Nunito" }}
             onChange={handleEmailChange}
           />
 
           <Button
             sx={{
               marginBottom: 1,
-              fontFamily: 'Nunito',
-              fontWeight: '700',
+              fontFamily: "Nunito",
+              fontWeight: "700",
               marginTop: 2,
             }}
-            variant='contained'
+            variant="contained"
             fullWidth
             disabled={disabled}
-            type='submit'
+            type="submit"
           >
             Sumbit
           </Button>
-          <Typography sx={{ fontFamily: 'Nunito' }} variant='body2'>
+          <Typography sx={{ fontFamily: "Nunito" }} variant="body2">
             A recovery link will be sent to the email you have provided
           </Typography>
         </form>
         <Snackbar open={open} autoHideDuration={10000}>
-          <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="success" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>
 
         <Snackbar open={openerror} autoHideDuration={10000}>
-          <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="error" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>

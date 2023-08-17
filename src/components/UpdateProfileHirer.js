@@ -2,23 +2,22 @@ import {
   Alert,
   Button,
   Grid,
-  Link,
   Paper,
   Snackbar,
   TextField,
   Typography,
-} from '@mui/material';
-import Resizer from 'react-image-file-resizer';
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import axios from 'axios';
-import { useState } from 'react';
+} from "@mui/material";
+import Resizer from "react-image-file-resizer";
+import React from "react";
+import { useHistory } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
 const UpdateProfileHirer = () => {
-  const user = JSON.parse(localStorage.getItem('profile'));
+  const user = JSON.parse(localStorage.getItem("profile"));
   const history = useHistory();
   const [disabled, setDisabled] = useState(false);
   const [openerror, setOpenError] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [open, setOpen] = useState(false);
   const hirerData = {
     fullName: user.result.fullname,
@@ -29,10 +28,10 @@ const UpdateProfileHirer = () => {
   let hirerId = null;
   const paperStyle = {
     padding: 20,
-    fontFamily: 'Nunito',
-    fontWeight: '700',
+    fontFamily: "Nunito",
+    fontWeight: "700",
     width: 400,
-    margin: '100px auto',
+    margin: "100px auto",
   };
 
   const inputStyle = {
@@ -50,11 +49,11 @@ const UpdateProfileHirer = () => {
       setOpen(true);
       setTimeout(() => {
         localStorage.clear();
-        localStorage.setItem('profile', JSON.stringify(data));
-        history.push('/');
+        localStorage.setItem("profile", JSON.stringify(data));
+        history.push("/");
         window.location.reload();
       }, 1550);
-      localStorage.setItem('profile', JSON.stringify(data));
+      localStorage.setItem("profile", JSON.stringify(data));
       console.log(hirerId);
       console.log(hirerData);
     } catch (error) {
@@ -67,20 +66,20 @@ const UpdateProfileHirer = () => {
   return (
     <Grid>
       <Paper style={paperStyle} elevation={6}>
-        <Grid item align='center'>
+        <Grid item align="center">
           <Typography
-            variant='h5'
-            color='primary'
-            sx={{ fontFamily: 'Nunito', fontWeight: '700', marginBottom: 3 }}
+            variant="h5"
+            color="primary"
+            sx={{ fontFamily: "Nunito", fontWeight: "700", marginBottom: 3 }}
           >
             Hirer
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
-            label='Full Name'
-            placeholder='Enter your fullname'
-            variant='standard'
+            label="Full Name"
+            placeholder="Enter your fullname"
+            variant="standard"
             required
             fullWidth
             multiline
@@ -93,9 +92,9 @@ const UpdateProfileHirer = () => {
             inputProps={{ maxLength: 30 }}
           />
           <TextField
-            label='Email'
-            placeholder='Enter your email'
-            variant='standard'
+            label="Email"
+            placeholder="Enter your email"
+            variant="standard"
             required
             fullWidth
             multiline
@@ -108,7 +107,7 @@ const UpdateProfileHirer = () => {
           />
 
           <input
-            type='file'
+            type="file"
             style={inputStyle}
             onChange={(e) => {
               try {
@@ -116,13 +115,13 @@ const UpdateProfileHirer = () => {
                   e.target.files[0],
                   320,
                   250,
-                  'JPEG',
+                  "JPEG",
                   50,
                   0,
                   (uri) => {
                     hirerData.profilePic = uri;
                   },
-                  'base64',
+                  "base64",
                   200,
                   100
                 );
@@ -143,26 +142,26 @@ const UpdateProfileHirer = () => {
             sx={{
               marginTop: 1.5,
               marginBottom: 1,
-              fontFamily: 'Nunito',
-              fontWeight: '700',
+              fontFamily: "Nunito",
+              fontWeight: "700",
             }}
-            variant='contained'
+            variant="contained"
             disabled={disabled}
             fullWidth
-            type='submit'
+            type="submit"
           >
             Update profile
           </Button>
         </form>
 
         <Snackbar open={open} autoHideDuration={1000}>
-          <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="success" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>
 
         <Snackbar open={openerror} autoHideDuration={1000}>
-          <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="error" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>

@@ -11,41 +11,41 @@ import {
   TextField,
   Snackbar,
   Alert,
-} from '@mui/material';
-import React from 'react';
-import PortfolioPic from '../images/images_3.png';
-import { useState } from 'react';
-import Carousel from 'react-material-ui-carousel';
-import Resizer from 'react-image-file-resizer';
-import CloseIcon from '@mui/icons-material/Close';
-import PaidRoundedIcon from '@mui/icons-material/PaidRounded';
+} from "@mui/material";
+import React from "react";
+import PortfolioPic from "../images/images_3.png";
+import { useState } from "react";
+import Carousel from "react-material-ui-carousel";
+import Resizer from "react-image-file-resizer";
+import CloseIcon from "@mui/icons-material/Close";
+import PaidRoundedIcon from "@mui/icons-material/PaidRounded";
 
-import axios from 'axios';
+import axios from "axios";
 const PortfolioPage = () => {
-  document.title = 'StuLancer-Dashboard 👩‍💻';
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+  document.title = "StuLancer-Dashboard 👩‍💻";
+  const [user] = useState(JSON.parse(localStorage.getItem("profile")));
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
   const [opensnack, setOpenSnack] = useState(false);
   const [openerror, setOpenError] = useState(false);
   const [openerror1, setOpenError1] = useState(false);
   const [disabled, setDisabled] = useState(false);
-  const [message, setMessage] = useState('');
-  const [sPrice, setsPrice] = useState('');
+  const [message, setMessage] = useState("");
+  const [sPrice, setsPrice] = useState("");
   const paperStyle = {
-    padding: '1.25rem',
-    fontFamily: 'Nunito',
-    fontWeight: '700',
-    width: '25rem',
-    margin: '6rem auto',
+    padding: "1.25rem",
+    fontFamily: "Nunito",
+    fontWeight: "700",
+    width: "25rem",
+    margin: "6rem auto",
   };
 
   const paperStyle1 = {
-    padding: '1.25rem',
-    fontFamily: 'Nunito',
-    fontWeight: '700',
-    width: '25rem',
-    margin: '9rem auto',
+    padding: "1.25rem",
+    fontFamily: "Nunito",
+    fontWeight: "700",
+    width: "25rem",
+    margin: "9rem auto",
   };
   const freelancerData = {
     brandPic1: user.result.brandPic1,
@@ -80,7 +80,7 @@ const PortfolioPage = () => {
       setTimeout(() => {
         window.location.reload();
       }, 1530);
-      localStorage.setItem('profile', JSON.stringify(data));
+      localStorage.setItem("profile", JSON.stringify(data));
       console.log(freelancerId);
       console.log(startingPrice);
     } catch (error) {
@@ -96,7 +96,7 @@ const PortfolioPage = () => {
     setDisabled(true);
     freelancerId = user.result._id;
     try {
-      const url = `https://brogrammers-knust.herokuapp.com/user/updatebrandpics/${freelancerId}`;
+      const url = `${process.env.REACT_APP_API_URL}/user/updatebrandpics/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
       setOpenError(false);
@@ -105,7 +105,7 @@ const PortfolioPage = () => {
       setTimeout(() => {
         window.location.reload();
       }, 1530);
-      localStorage.setItem('profile', JSON.stringify(data));
+      localStorage.setItem("profile", JSON.stringify(data));
       console.log(freelancerId);
       console.log(freelancerData);
     } catch (error) {
@@ -116,66 +116,68 @@ const PortfolioPage = () => {
   };
   return (
     <Box
-      sx={{ minHeight: '78vh', marginLeft: '2.3rem', marginRight: '2.1rem' }}
+      sx={{ minHeight: "78vh", marginLeft: "2.3rem", marginRight: "2.1rem" }}
     >
-      <Typography variant='h1' fontFamily='Nunito' marginTop={20} gutterBottom>
+      <Typography variant="h1" fontFamily="Nunito" marginTop={20} gutterBottom>
         Hello <span> </span>
         <span>StuLancer</span>
         {/*<br /> <span className='highlight1'>Freelancer</span>*/}
         <br />
-        <span className='highlight1'>
-          {user.result.fullName.split(' ')[0]}
-          {user.result.fullName.split(' ')[0] ? (
-            <span className='emoji'> 👋</span>
+        <span className="highlight1">
+          {user.result.fullName.split(" ")[0]}
+          {user.result.fullName.split(" ")[0] ? (
+            <span className="emoji" role="img" aria-label="wave emoji">
+              👋
+            </span>
           ) : (
             <div></div>
           )}
         </span>
       </Typography>
-      <img className='PortfolioPic' src={PortfolioPic} alt='3D model' />
-      <Typography variant='h4' fontFamily='Nunito'>
+      <img className="PortfolioPic" src={PortfolioPic} alt="3D model" />
+      <Typography variant="h4" fontFamily="Nunito">
         Welcome to your portfolio page
       </Typography>
       <Grid container spacing={6} flexWrap>
         {/*First Grid box */}
         <Grid item>
-          <Tooltip title='Click to update Starting Price'>
+          <Tooltip title="Click to update Starting Price">
             <Box
               sx={{
-                backgroundColor: '#e14e67',
+                backgroundColor: "#e14e67",
                 width: 200,
                 borderRadius: 2,
                 boxShadow: 4,
                 marginTop: 6,
-                ':hover': { cursor: 'pointer' },
+                ":hover": { cursor: "pointer" },
               }}
               onClick={() => {
                 setOpen1(true);
               }}
             >
               <PaidRoundedIcon
-                sx={{ color: 'white', marginLeft: 1.5, marginTop: 2 }}
-                fontSize='large'
+                sx={{ color: "white", marginLeft: 1.5, marginTop: 2 }}
+                fontSize="large"
               />
 
               <Typography
-                variant='subtitle1'
-                sx={{ fontFamily: 'Nunito', marginLeft: 1.5, marginTop: 1 }}
-                color='white'
+                variant="subtitle1"
+                sx={{ fontFamily: "Nunito", marginLeft: 1.5, marginTop: 1 }}
+                color="white"
                 gutterBottom
               >
                 Starting Price
               </Typography>
               <Typography
-                variant='h5'
-                component='div'
+                variant="h5"
+                component="div"
                 sx={{
-                  fontFamily: 'Nunito',
-                  fontWeight: '700',
+                  fontFamily: "Nunito",
+                  fontWeight: "700",
                   marginLeft: 1.5,
                   paddingBottom: 2,
                 }}
-                color='white'
+                color="white"
               >
                 GHC {user.result.startingPrice}
               </Typography>
@@ -184,9 +186,9 @@ const PortfolioPage = () => {
         </Grid>
         <Grid sx={{ marginTop: 5.3 }} item>
           {/*First Grid box */}
-          <Tooltip title='click to update brand pictures'>
+          <Tooltip title="click to update brand pictures">
             <Card
-              sx={{ ':hover': { cursor: 'pointer' }, boxShadow: 4 }}
+              sx={{ ":hover": { cursor: "pointer" }, boxShadow: 4 }}
               onClick={() => {
                 setOpen(true);
               }}
@@ -202,7 +204,7 @@ const PortfolioPage = () => {
                     width: 320,
                     height: 150,
                     backgroundPositionY: -40,
-                    backgroundSize: 'cover',
+                    backgroundSize: "cover",
                     borderRadius: 1,
                   }}
                 />
@@ -213,7 +215,7 @@ const PortfolioPage = () => {
                     width: 320,
                     height: 150,
                     backgroundPositionY: -70,
-                    backgroundSize: 'cover',
+                    backgroundSize: "cover",
                     borderRadius: 1,
                   }}
                 />
@@ -224,7 +226,7 @@ const PortfolioPage = () => {
                     width: 320,
                     height: 150,
                     backgroundPositionY: -70,
-                    backgroundSize: 'cover',
+                    backgroundSize: "cover",
                     borderRadius: 1,
                   }}
                 />
@@ -250,37 +252,37 @@ const PortfolioPage = () => {
           >
             <CloseIcon />
           </IconButton>
-          <Grid item align='center'>
+          <Grid item align="center">
             <Typography
-              variant='h5'
-              color='primary'
-              sx={{ fontFamily: 'Nunito', fontWeight: '700', marginBottom: 3 }}
+              variant="h5"
+              color="primary"
+              sx={{ fontFamily: "Nunito", fontWeight: "700", marginBottom: 3 }}
             >
               Stulancer
             </Typography>
           </Grid>
           <form onSubmit={handleSubmit}>
             <Typography
-              sx={{ fontFamily: 'Nunito', color: '#666666', marginBottom: 3 }}
+              sx={{ fontFamily: "Nunito", color: "#666666", marginBottom: 3 }}
             >
               Upload 3 Branding Pics
             </Typography>
             <Box sx={{ marginBottom: 2 }}>
               <input
-                type='file'
+                type="file"
                 onChange={(e) => {
                   try {
                     Resizer.imageFileResizer(
                       e.target.files[0],
                       320,
                       150,
-                      'JPEG',
+                      "JPEG",
                       70,
                       0,
                       (uri) => {
                         freelancerData.brandPic1 = uri;
                       },
-                      'base64',
+                      "base64",
                       200,
                       100
                     );
@@ -292,20 +294,20 @@ const PortfolioPage = () => {
             </Box>
             <Box sx={{ marginBottom: 2 }}>
               <input
-                type='file'
+                type="file"
                 onChange={(e) => {
                   try {
                     Resizer.imageFileResizer(
                       e.target.files[0],
                       320,
                       250,
-                      'JPEG',
+                      "JPEG",
                       70,
                       0,
                       (uri) => {
                         freelancerData.brandPic2 = uri;
                       },
-                      'base64',
+                      "base64",
                       200,
                       100
                     );
@@ -317,20 +319,20 @@ const PortfolioPage = () => {
             </Box>
             <Box sx={{ marginBottom: 2 }}>
               <input
-                type='file'
+                type="file"
                 onChange={(e) => {
                   try {
                     Resizer.imageFileResizer(
                       e.target.files[0],
                       320,
                       250,
-                      'JPEG',
+                      "JPEG",
                       70,
                       0,
                       (uri) => {
                         freelancerData.brandPic3 = uri;
                       },
-                      'base64',
+                      "base64",
                       200,
                       100
                     );
@@ -344,25 +346,25 @@ const PortfolioPage = () => {
               sx={{
                 marginTop: 1,
                 marginBottom: 2,
-                fontFamily: 'Nunito',
-                fontWeight: '700',
+                fontFamily: "Nunito",
+                fontWeight: "700",
               }}
-              variant='contained'
+              variant="contained"
               fullWidth
               disabled={disabled}
-              type='submit'
+              type="submit"
             >
               Sumbit
             </Button>
           </form>
           <Snackbar open={opensnack} autoHideDuration={1000}>
-            <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+            <Alert variant="filled" severity="success" sx={{ width: "100%" }}>
               {message}
             </Alert>
           </Snackbar>
 
           <Snackbar open={openerror} autoHideDuration={1000}>
-            <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
+            <Alert variant="filled" severity="error" sx={{ width: "100%" }}>
               {message}
             </Alert>
           </Snackbar>
@@ -385,20 +387,20 @@ const PortfolioPage = () => {
           >
             <CloseIcon />
           </IconButton>
-          <Grid item align='center'>
+          <Grid item align="center">
             <Typography
-              variant='h5'
-              color='primary'
-              sx={{ fontFamily: 'Nunito', fontWeight: '700', marginBottom: 3 }}
+              variant="h5"
+              color="primary"
+              sx={{ fontFamily: "Nunito", fontWeight: "700", marginBottom: 3 }}
             >
               Stulancer
             </Typography>
           </Grid>
           <form onSubmit={handleSubmit1}>
             <TextField
-              label='Starting Price'
-              placeholder='Enter your starting price'
-              variant='standard'
+              label="Starting Price"
+              placeholder="Enter your starting price"
+              variant="standard"
               required
               fullWidth
               defaultValue={user.result.startingPrice}
@@ -409,24 +411,24 @@ const PortfolioPage = () => {
               sx={{
                 marginTop: 1,
                 marginBottom: 2,
-                fontFamily: 'Nunito',
-                fontWeight: '700',
+                fontFamily: "Nunito",
+                fontWeight: "700",
               }}
-              variant='contained'
+              variant="contained"
               fullWidth
               disabled={disabled}
-              type='submit'
+              type="submit"
             >
               Sumbit
             </Button>
           </form>
           <Snackbar open={opensnack} autoHideDuration={1000}>
-            <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+            <Alert variant="filled" severity="success" sx={{ width: "100%" }}>
               {message}
             </Alert>
           </Snackbar>
           <Snackbar open={openerror1} autoHideDuration={1000}>
-            <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
+            <Alert variant="filled" severity="error" sx={{ width: "100%" }}>
               {message}
             </Alert>
           </Snackbar>

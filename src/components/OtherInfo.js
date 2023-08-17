@@ -6,35 +6,34 @@ import {
   Typography,
   Alert,
   Snackbar,
-} from '@mui/material';
-import Resizer from 'react-image-file-resizer';
-import React from 'react';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-import axios from 'axios';
-import { Box } from '@mui/system';
+} from "@mui/material";
+import Resizer from "react-image-file-resizer";
+import React from "react";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
+import axios from "axios";
+import { Box } from "@mui/system";
 const OtherInfo = () => {
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+  const [user] = useState(JSON.parse(localStorage.getItem("profile")));
   const [open, setOpen] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [openerror, setOpenError] = useState(false);
-  const [sPrice, setsPrice] = useState('');
+  const [sPrice, setsPrice] = useState("");
   const history = useHistory();
   const freelancerData = {
     startingPrice: sPrice,
-    brandPic1: '',
-    brandPic2: '',
-    brandPic3: '',
+    brandPic1: "",
+    brandPic2: "",
+    brandPic3: "",
   };
 
   let freelancerId = null;
   const paperStyle = {
     padding: 20,
-    fontFamily: 'Nunito',
-    fontWeight: '700',
+    fontFamily: "Nunito",
+    fontWeight: "700",
     width: 400,
-    margin: '100px auto',
+    margin: "100px auto",
   };
   const handleStartingPriceChange = (e) => {
     setsPrice(e.target.value);
@@ -45,15 +44,15 @@ const OtherInfo = () => {
     freelancerId = user.result._id;
 
     try {
-      const url = `https://brogrammers-knust.herokuapp.com/user/signupservicesp/${freelancerId}`;
+      const url = `${process.env.REACT_APP_API_URL}/user/signupservicesp/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
       setOpenError(false);
       setOpen(true);
       setTimeout(() => {
-        history.push('/portfoliopage');
+        history.push("/portfoliopage");
       }, 1530);
-      localStorage.setItem('profile', JSON.stringify(data));
+      localStorage.setItem("profile", JSON.stringify(data));
       console.log(freelancerId);
       console.log(freelancerData);
     } catch (error) {
@@ -66,20 +65,20 @@ const OtherInfo = () => {
   return (
     <Grid>
       <Paper style={paperStyle} elevation={6}>
-        <Grid item align='center'>
+        <Grid item align="center">
           <Typography
-            variant='h5'
-            color='primary'
-            sx={{ fontFamily: 'Nunito', fontWeight: '700' }}
+            variant="h5"
+            color="primary"
+            sx={{ fontFamily: "Nunito", fontWeight: "700" }}
           >
             Stulancer
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
-            label='Starting Price (GHC)'
-            placeholder='Enter your Starting Price'
-            variant='standard'
+            label="Starting Price (GHC)"
+            placeholder="Enter your Starting Price"
+            variant="standard"
             required
             fullWidth
             multiline
@@ -88,27 +87,27 @@ const OtherInfo = () => {
           />
 
           <Typography
-            sx={{ fontFamily: 'Nunito', color: '#666666', marginBottom: 1 }}
+            sx={{ fontFamily: "Nunito", color: "#666666", marginBottom: 1 }}
           >
             Upload 3 Branding Pics
           </Typography>
           <Box sx={{ marginBottom: 2 }}>
             <input
               required
-              type='file'
+              type="file"
               onChange={(e) => {
                 try {
                   Resizer.imageFileResizer(
                     e.target.files[0],
                     320,
                     150,
-                    'JPEG',
+                    "JPEG",
                     70,
                     0,
                     (uri) => {
                       freelancerData.brandPic1 = uri;
                     },
-                    'base64',
+                    "base64",
                     200,
                     100
                   );
@@ -121,20 +120,20 @@ const OtherInfo = () => {
           <Box sx={{ marginBottom: 2 }}>
             <input
               required
-              type='file'
+              type="file"
               onChange={(e) => {
                 try {
                   Resizer.imageFileResizer(
                     e.target.files[0],
                     320,
                     250,
-                    'JPEG',
+                    "JPEG",
                     70,
                     0,
                     (uri) => {
                       freelancerData.brandPic2 = uri;
                     },
-                    'base64',
+                    "base64",
                     200,
                     100
                   );
@@ -147,20 +146,20 @@ const OtherInfo = () => {
           <Box sx={{ marginBottom: 2 }}>
             <input
               required
-              type='file'
+              type="file"
               onChange={(e) => {
                 try {
                   Resizer.imageFileResizer(
                     e.target.files[0],
                     320,
                     250,
-                    'JPEG',
+                    "JPEG",
                     70,
                     0,
                     (uri) => {
                       freelancerData.brandPic3 = uri;
                     },
-                    'base64',
+                    "base64",
                     200,
                     100
                   );
@@ -171,21 +170,21 @@ const OtherInfo = () => {
             />
           </Box>
           <Button
-            sx={{ marginBottom: 1, fontFamily: 'Nunito', fontWeight: '700' }}
-            variant='contained'
+            sx={{ marginBottom: 1, fontFamily: "Nunito", fontWeight: "700" }}
+            variant="contained"
             fullWidth
-            type='submit'
+            type="submit"
           >
             Sumbit
           </Button>
         </form>
         <Snackbar open={open} autoHideDuration={1000}>
-          <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="success" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>
         <Snackbar open={openerror} autoHideDuration={1000}>
-          <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
+          <Alert variant="filled" severity="error" sx={{ width: "100%" }}>
             {message}
           </Alert>
         </Snackbar>
