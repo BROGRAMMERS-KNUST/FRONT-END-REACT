@@ -9,12 +9,12 @@ import {
 } from "@mui/material";
 import Resizer from "react-image-file-resizer";
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 const UpdateProfileHirer = () => {
   const user = JSON.parse(localStorage.getItem("profile"));
-  const history = useHistory();
+  const navigate = useNavigate();
   const [disabled, setDisabled] = useState(false);
   const [openerror, setOpenError] = useState(false);
   const [message, setMessage] = useState("");
@@ -50,7 +50,7 @@ const UpdateProfileHirer = () => {
       setTimeout(() => {
         localStorage.clear();
         localStorage.setItem("profile", JSON.stringify(data));
-        history.push("/");
+        navigate("/");
         window.location.reload();
       }, 1550);
       localStorage.setItem("profile", JSON.stringify(data));

@@ -10,7 +10,7 @@ import {
 import Resizer from "react-image-file-resizer";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 const SignUpService = () => {
   const paperStyle = {
@@ -21,7 +21,7 @@ const SignUpService = () => {
     margin: "0 auto",
   };
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [openerror, setOpenError] = useState(false);
@@ -69,7 +69,7 @@ const SignUpService = () => {
       setOpen(true);
       setTimeout(() => {
         dispatch({ type: "AUTHSERVICE", data });
-        history.push("/freelancerinfo");
+        navigate("/freelancerinfo");
         window.location.reload();
       }, 1480);
     } catch (error) {

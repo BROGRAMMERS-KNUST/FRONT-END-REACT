@@ -6,24 +6,24 @@ import {
   Snackbar,
   TextField,
   Typography,
-} from '@mui/material';
-import Resizer from 'react-image-file-resizer';
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import { useState } from 'react';
+} from "@mui/material";
+import Resizer from "react-image-file-resizer";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import { useState } from "react";
 
-import axios from 'axios';
+import axios from "axios";
 const UpdateProfile = () => {
-  const user = JSON.parse(localStorage.getItem('profile'));
-  const history = useHistory();
+  const user = JSON.parse(localStorage.getItem("profile"));
+  const navigate = useNavigate();
   const [disabled, setDisabled] = useState(false);
   const [open, setOpen] = useState(false);
   const [openerror, setOpenError] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const freelancerData = {
     fullName: user.result.fullname,
     bio: user.result.bio,
@@ -36,11 +36,11 @@ const UpdateProfile = () => {
 
   let freelancerId = null;
   const paperStyle = {
-    padding: '1.25rem',
-    fontFamily: 'Nunito',
-    fontWeight: '700',
-    width: '25rem',
-    margin: '6rem auto',
+    padding: "1.25rem",
+    fontFamily: "Nunito",
+    fontWeight: "700",
+    width: "25rem",
+    margin: "6rem auto",
   };
 
   const handleSubmit = async (e) => {
@@ -54,10 +54,10 @@ const UpdateProfile = () => {
       setOpenError(false);
       setOpen(true);
       setTimeout(() => {
-        history.push('/portfoliopage');
+        navigate("/portfoliopage");
         window.location.reload();
       }, 1550);
-      localStorage.setItem('profile', JSON.stringify(data));
+      localStorage.setItem("profile", JSON.stringify(data));
       console.log(freelancerId);
       console.log(freelancerData);
     } catch (error) {
@@ -70,20 +70,20 @@ const UpdateProfile = () => {
   return (
     <Grid>
       <Paper style={paperStyle} elevation={6}>
-        <Grid item align='center'>
+        <Grid item align="center">
           <Typography
-            variant='h5'
-            color='primary'
-            sx={{ fontFamily: 'Nunito', fontWeight: '700', marginBottom: 3 }}
+            variant="h5"
+            color="primary"
+            sx={{ fontFamily: "Nunito", fontWeight: "700", marginBottom: 3 }}
           >
             Stulancer
           </Typography>
         </Grid>
         <form onSubmit={handleSubmit}>
           <TextField
-            label='Full Name'
-            placeholder='Enter your fullname'
-            variant='standard'
+            label="Full Name"
+            placeholder="Enter your fullname"
+            variant="standard"
             required
             fullWidth
             multiline
@@ -96,9 +96,9 @@ const UpdateProfile = () => {
             inputProps={{ maxLength: 30 }}
           />
           <TextField
-            label='Bio'
-            placeholder='Enter your Bio'
-            variant='standard'
+            label="Bio"
+            placeholder="Enter your Bio"
+            variant="standard"
             required
             fullWidth
             multiline
@@ -111,9 +111,9 @@ const UpdateProfile = () => {
           />
 
           <TextField
-            label='Portfolio Link'
-            placeholder='Enter Portfolio link'
-            variant='standard'
+            label="Portfolio Link"
+            placeholder="Enter Portfolio link"
+            variant="standard"
             required
             fullWidth
             multiline
@@ -125,10 +125,10 @@ const UpdateProfile = () => {
             sx={{ marginBottom: 2 }}
           />
           <TextField
-            label='Telephone Number'
-            type='number'
-            placeholder='Enter Telephone number'
-            variant='standard'
+            label="Telephone Number"
+            type="number"
+            placeholder="Enter Telephone number"
+            variant="standard"
             required
             fullWidth
             defaultValue={user.result.telephoneNumber}
@@ -140,9 +140,9 @@ const UpdateProfile = () => {
             sx={{ marginBottom: 2 }}
           />
           <TextField
-            label='WhatsApp Link'
-            placeholder='Enter WhatsApp Link'
-            variant='standard'
+            label="WhatsApp Link"
+            placeholder="Enter WhatsApp Link"
+            variant="standard"
             fullWidth
             multiline
             defaultValue={user.result.whatsappLink}
@@ -154,33 +154,33 @@ const UpdateProfile = () => {
           />
 
           <FormControl sx={{ marginRight: 2, minWidth: 360, marginBottom: 2 }}>
-            <InputLabel sx={{ marginLeft: -1.9, marginTop: 1.3 }} id='service'>
+            <InputLabel sx={{ marginLeft: -1.9, marginTop: 1.3 }} id="service">
               Service
             </InputLabel>
             <Select
-              labelId='service'
-              variant='standard'
-              id='demo-simple-select-autowidth'
+              labelId="service"
+              variant="standard"
+              id="demo-simple-select-autowidth"
               fullWidth
               onChange={(e) => {
                 setDisabled(false);
                 freelancerData.service = e.target.value;
               }}
-              label='service'
+              label="service"
             >
-              <MenuItem value='Photographer'>Photographer</MenuItem>
-              <MenuItem value='Web Developer'>Web Developer</MenuItem>
-              <MenuItem value='Caterer'>Caterer</MenuItem>
-              <MenuItem value='Graphic Designer'>Graphic Designer</MenuItem>
-              <MenuItem value='Author'>CV Writer</MenuItem>
-              <MenuItem value='Other'>Other</MenuItem>
+              <MenuItem value="Photographer">Photographer</MenuItem>
+              <MenuItem value="Web Developer">Web Developer</MenuItem>
+              <MenuItem value="Caterer">Caterer</MenuItem>
+              <MenuItem value="Graphic Designer">Graphic Designer</MenuItem>
+              <MenuItem value="Author">CV Writer</MenuItem>
+              <MenuItem value="Other">Other</MenuItem>
             </Select>
           </FormControl>
 
           <TextField
-            label='Specific service'
-            placeholder='Enter specific service'
-            variant='standard'
+            label="Specific service"
+            placeholder="Enter specific service"
+            variant="standard"
             required
             defaultValue={user.result.specificService}
             fullWidth
@@ -192,20 +192,20 @@ const UpdateProfile = () => {
             sx={{ marginBottom: 2 }}
           />
           <input
-            type='file'
+            type="file"
             onChange={(e) => {
               try {
                 Resizer.imageFileResizer(
                   e.target.files[0],
                   320,
                   250,
-                  'JPEG',
+                  "JPEG",
                   50,
                   0,
                   (uri) => {
                     freelancerData.profilePic = uri;
                   },
-                  'base64',
+                  "base64",
                   200,
                   100
                 );
@@ -218,24 +218,24 @@ const UpdateProfile = () => {
             sx={{
               marginTop: 1.7,
               marginBottom: 1,
-              fontFamily: 'Nunito',
-              fontWeight: '700',
+              fontFamily: "Nunito",
+              fontWeight: "700",
             }}
-            variant='contained'
+            variant="contained"
             disabled={disabled}
             fullWidth
-            type='submit'
+            type="submit"
           >
             Update profile
           </Button>
           <Snackbar open={open} autoHideDuration={1000}>
-            <Alert variant='filled' severity='success' sx={{ width: '100%' }}>
+            <Alert variant="filled" severity="success" sx={{ width: "100%" }}>
               {message}
             </Alert>
           </Snackbar>
 
           <Snackbar open={openerror} autoHideDuration={1000}>
-            <Alert variant='filled' severity='error' sx={{ width: '100%' }}>
+            <Alert variant="filled" severity="error" sx={{ width: "100%" }}>
               {message}
             </Alert>
           </Snackbar>

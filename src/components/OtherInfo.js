@@ -10,7 +10,7 @@ import {
 import Resizer from "react-image-file-resizer";
 import React from "react";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Box } from "@mui/system";
 const OtherInfo = () => {
@@ -19,7 +19,7 @@ const OtherInfo = () => {
   const [message, setMessage] = useState("");
   const [openerror, setOpenError] = useState(false);
   const [sPrice, setsPrice] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate();
   const freelancerData = {
     startingPrice: sPrice,
     brandPic1: "",
@@ -50,7 +50,7 @@ const OtherInfo = () => {
       setOpenError(false);
       setOpen(true);
       setTimeout(() => {
-        history.push("/portfoliopage");
+        navigate("/portfoliopage");
       }, 1530);
       localStorage.setItem("profile", JSON.stringify(data));
       console.log(freelancerId);

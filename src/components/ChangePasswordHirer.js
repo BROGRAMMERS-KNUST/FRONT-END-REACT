@@ -9,12 +9,12 @@ import {
   Snackbar,
   Alert,
 } from "@mui/material";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 
 const ChangePasswordHirer = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [user] = useState(JSON.parse(localStorage.getItem("profile")));
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
@@ -59,7 +59,7 @@ const ChangePasswordHirer = () => {
       setOpen(true);
       dispatch({ type: "LOGOUT" });
       setTimeout(() => {
-        history.push("/");
+        navigate("/");
         window.location.reload();
       }, 1500);
     } catch (error) {

@@ -9,11 +9,11 @@ import {
   Snackbar,
   Alert,
 } from "@mui/material";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import emailjs from "@emailjs/browser";
 const ForgotPasswordHirer = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [openerror, setOpenError] = useState(false);
@@ -60,7 +60,7 @@ const ForgotPasswordHirer = () => {
             setOpenError(false);
             setOpen(true);
             setTimeout(() => {
-              history.push("/");
+              navigate("/");
             }, 1500);
           },
           function (error) {

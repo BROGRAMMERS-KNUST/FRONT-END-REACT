@@ -1,10 +1,10 @@
-import StulancerComp from '../components/StulancerComp';
-import { useSelector } from 'react-redux';
+import StulancerComp from "../components/StulancerComp";
+import { useSelector } from "react-redux";
 
-import React, { useEffect } from 'react';
-import { CircularProgress, Grid, Typography, Box } from '@mui/material';
-import { useDispatch } from 'react-redux';
-import { getProfiles } from '../action/posts';
+import React, { useEffect } from "react";
+import { CircularProgress, Grid, Typography, Box } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { getProfiles } from "../action/posts";
 
 function StulancersAvailable(service) {
   const { stulancers } = useSelector((state) => state.posts);
@@ -12,11 +12,11 @@ function StulancersAvailable(service) {
 
   useEffect(() => {
     dispatch(getProfiles(service));
-  }, [dispatch]);
+  }, [dispatch, service]);
 
   return !stulancers ? (
     <Box sx={{ marginTop: 4, marginLeft: 2 }}>
-      <Typography variant='h5' sx={{ fontFamily: 'Nunito' }}>
+      <Typography variant="h5" sx={{ fontFamily: "Nunito" }}>
         Loading Stulancers...
       </Typography>
       <CircularProgress />
@@ -26,14 +26,14 @@ function StulancersAvailable(service) {
       sx={{
         marginTop: 4,
         marginBottom: 4,
-        marginLeft: '0.9rem',
-        marginRight: '0.9rem',
+        marginLeft: "0.9rem",
+        marginRight: "0.9rem",
       }}
     >
       <Typography
-        color='primary'
-        variant='h5'
-        sx={{ marginTop: 1, marginBottom: 2, fontFamily: 'Nunito' }}
+        color="primary"
+        variant="h5"
+        sx={{ marginTop: 1, marginBottom: 2, fontFamily: "Nunito" }}
       >
         Stulancers Available
       </Typography>

@@ -13,11 +13,11 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import React from "react";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 const FreelancerInfo = () => {
   const [user] = useState(JSON.parse(localStorage.getItem("profile")));
-  const history = useHistory();
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [openerror, setOpenError] = useState(false);
   const [message, setMessage] = useState("");
@@ -51,7 +51,7 @@ const FreelancerInfo = () => {
       setOpenError(false);
       setOpen(true);
       setTimeout(() => {
-        history.push("/otherinfo");
+        navigate("/otherinfo");
       }, 1600);
 
       localStorage.setItem("profile", JSON.stringify(data));

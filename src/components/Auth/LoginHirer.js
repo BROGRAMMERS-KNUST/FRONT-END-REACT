@@ -11,7 +11,7 @@ import {
 
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 const LoginHirer = () => {
@@ -23,7 +23,7 @@ const LoginHirer = () => {
     margin: "0px auto",
   };
   const dispatch = useDispatch();
-  let history = useHistory();
+  const navigate = useNavigate();
   const [message, setMessage] = useState("");
   const [messageerror, setMessageError] = useState("");
   const [open, setOpen] = useState(false);
@@ -54,7 +54,7 @@ const LoginHirer = () => {
       setOpen(true);
       setTimeout(() => {
         dispatch({ type: "AUTH", data });
-        history.push("/");
+        navigate("/");
         window.location.reload();
       }, 1500);
     } catch (error) {

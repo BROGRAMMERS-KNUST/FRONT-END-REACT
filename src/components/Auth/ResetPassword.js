@@ -9,12 +9,12 @@ import {
   Snackbar,
   Alert,
 } from "@mui/material";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import axios from "axios";
 
 const ResetPassword = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   let { id, token } = useParams();
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
@@ -47,7 +47,7 @@ const ResetPassword = () => {
       setOpenError(false);
       setOpen(true);
       setTimeout(() => {
-        history.push("/");
+        navigate("/");
       }, 1500);
     } catch (error) {
       console.log(error);

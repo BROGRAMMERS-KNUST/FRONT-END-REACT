@@ -13,31 +13,31 @@ import {
   Toolbar,
   Tooltip,
   Typography,
-} from '@mui/material';
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-import LoginInBoth from '../LogInBoth';
-import SignInOut from './SignInOut';
-import WorkIcon from '@mui/icons-material/Work';
+} from "@mui/material";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import LoginInBoth from "../LogInBoth";
+import SignInOut from "./SignInOut";
+import WorkIcon from "@mui/icons-material/Work";
 
 function Header() {
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
-  const history = useHistory();
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [opensnack, setOpenSnack] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
   //FUNCTION FOR LOGGING OUT
   const handleLogout = () => {
-    setMessage('Logged Out ');
+    setMessage("Logged Out ");
     setOpenSnack(true);
-    dispatch({ type: 'LOGOUT' });
+    dispatch({ type: "LOGOUT" });
     try {
       setTimeout(() => {
-        history.push('/');
+        navigate("/");
         window.location.reload();
 
         setUser(null);
@@ -51,61 +51,61 @@ function Header() {
   return (
     <Box>
       <AppBar
-        sx={{ backdropFilter: 'blur(30px)', backgroundColor: 'white' }}
+        sx={{ backdropFilter: "blur(30px)", backgroundColor: "white" }}
         elevation={1}
       >
         <Toolbar>
           <Typography
             marginLeft={2}
-            color='primary'
-            variant='h2'
+            color="primary"
+            variant="h2"
             fontSize={30}
             sx={{ flexGrow: 1 }}
-            fontFamily='Nunito'
-            fontWeight='700'
+            fontFamily="Nunito"
+            fontWeight="700"
             letterSpacing={2}
           >
             <Button
-              href='/'
-              sx={{ fontSize: '30px', fontFamily: 'Nunito', fontWeight: 700 }}
+              href="/"
+              sx={{ fontSize: "30px", fontFamily: "Nunito", fontWeight: 700 }}
             >
-              <Box sx={{ display: 'flex' }}>STULANCER</Box>
+              <Box sx={{ display: "flex" }}>STULANCER</Box>
             </Button>
           </Typography>
 
           {/*CHECKS IF USER IS LOGGED IN AND DECIDES TYPE OF HEADER*/}
           {user ? (
             <div>
-              <Stack direction='row' spacing={2}>
+              <Stack direction="row" spacing={2}>
                 <Avatar
                   alt={user.result.fullName.charAt(0)}
                   src={user.result.profilePic}
-                  sx={{ marginTop: 0.5, bgcolor: 'orange' }}
+                  sx={{ marginTop: 0.5, bgcolor: "orange" }}
                 />
 
-                {user.result.serviceType === 'servicer' ? (
+                {user.result.serviceType === "servicer" ? (
                   <div>
-                    <Stack direction='row' spacing={2}>
-                      <Tabs textColor='secondary'>
-                        <Tooltip title='Click to update profile'>
+                    <Stack direction="row" spacing={2}>
+                      <Tabs textColor="secondary">
+                        <Tooltip title="Click to update profile">
                           <Tab
-                            href='/updateprofile'
+                            href="/updateprofile"
                             sx={{
-                              fontFamily: 'Nunito',
-                              fontWeight: '700',
+                              fontFamily: "Nunito",
+                              fontWeight: "700",
                             }}
-                            label={user.result.fullName.split(' ')[0]}
+                            label={user.result.fullName.split(" ")[0]}
                           />
                         </Tooltip>
                       </Tabs>
 
-                      <Tabs textColor='secondary'>
-                        <Tooltip title='Visit your dashboard'>
+                      <Tabs textColor="secondary">
+                        <Tooltip title="Visit your dashboard">
                           <Tab
-                            href='/portfoliopage'
+                            href="/portfoliopage"
                             sx={{}}
                             label={
-                              <WorkIcon fontSize='medium' color='primary' />
+                              <WorkIcon fontSize="medium" color="primary" />
                             }
                           />
                         </Tooltip>
@@ -116,15 +116,15 @@ function Header() {
                         onClick={() => {
                           handleLogout();
                         }}
-                        color='primary'
+                        color="primary"
                         sx={{
                           borderRadius: 5,
                           marginRight: 2,
-                          fontFamily: 'Nunito',
-                          fontWeight: '700',
+                          fontFamily: "Nunito",
+                          fontWeight: "700",
                         }}
-                        size='large'
-                        variant='outlined'
+                        size="large"
+                        variant="outlined"
                       >
                         Log out
                       </Button>
@@ -132,16 +132,16 @@ function Header() {
                   </div>
                 ) : (
                   <div>
-                    <Stack direction='row' spacing={2}>
-                      <Tabs textColor='secondary'>
-                        <Tooltip title='Click to update profile'>
+                    <Stack direction="row" spacing={2}>
+                      <Tabs textColor="secondary">
+                        <Tooltip title="Click to update profile">
                           <Tab
-                            href='/updateprofilehirer'
+                            href="/updateprofilehirer"
                             sx={{
-                              fontFamily: 'Nunito',
-                              fontWeight: '700',
+                              fontFamily: "Nunito",
+                              fontWeight: "700",
                             }}
-                            label={user.result.fullName.split(' ')[0]}
+                            label={user.result.fullName.split(" ")[0]}
                           />
                         </Tooltip>
                       </Tabs>
@@ -151,15 +151,15 @@ function Header() {
                         onClick={() => {
                           handleLogout();
                         }}
-                        color='primary'
+                        color="primary"
                         sx={{
                           borderRadius: 5,
                           marginRight: 2,
-                          fontFamily: 'Nunito',
-                          fontWeight: '700',
+                          fontFamily: "Nunito",
+                          fontWeight: "700",
                         }}
-                        size='large'
-                        variant='outlined'
+                        size="large"
+                        variant="outlined"
                       >
                         Log out
                       </Button>
@@ -178,14 +178,14 @@ function Header() {
                 disableElevation
                 sx={{
                   borderRadius: 5,
-                  backgroundColor: '#ffc400',
-                  ':hover': { backgroundColor: '#DFAE0C' },
+                  backgroundColor: "#ffc400",
+                  ":hover": { backgroundColor: "#DFAE0C" },
                   marginRight: 2,
-                  fontFamily: 'Nunito',
-                  fontWeight: '700',
+                  fontFamily: "Nunito",
+                  fontWeight: "700",
                 }}
-                size='large'
-                variant='contained'
+                size="large"
+                variant="contained"
               >
                 Join
               </Button>
@@ -195,28 +195,28 @@ function Header() {
                 onClick={() => {
                   setOpenLogin(true);
                 }}
-                color='secondary'
+                color="secondary"
                 sx={{
                   borderRadius: 5,
                   marginRight: 2,
-                  fontFamily: 'Nunito',
-                  fontWeight: '700',
+                  fontFamily: "Nunito",
+                  fontWeight: "700",
                 }}
-                size='large'
-                variant='outlined'
+                size="large"
+                variant="outlined"
               >
                 Login
               </Button>
             </div>
           )}
-          <Tabs textColor='secondary'>
+          <Tabs textColor="secondary">
             <Tab
-              href='/about-us'
+              href="/about-us"
               sx={{
-                fontFamily: 'Nunito',
-                fontWeight: '700',
+                fontFamily: "Nunito",
+                fontWeight: "700",
               }}
-              label='About us'
+              label="About us"
             />
           </Tabs>
         </Toolbar>
@@ -240,7 +240,7 @@ function Header() {
         <LoginInBoth />
       </Modal>
       <Snackbar open={opensnack} autoHideDuration={1000}>
-        <Alert variant='filled' severity='info' sx={{ width: '100%' }}>
+        <Alert variant="filled" severity="info" sx={{ width: "100%" }}>
           {message}
         </Alert>
       </Snackbar>
