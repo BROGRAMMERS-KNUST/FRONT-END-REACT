@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
-import { Box, Typography, Stack, Container, Grid } from '@mui/material';
+import React, { useState } from "react";
+import { Box, Typography, Stack, Container, Grid } from "@mui/material";
 import {
   CheckCircleOutline,
   GitHub,
   Groups,
   People,
   Twitter,
-} from '@mui/icons-material';
-import axios from 'axios';
-import { useEffect } from 'react';
+} from "@mui/icons-material";
+import axios from "axios";
+import { useEffect } from "react";
 
 const BoxTwo = () => {
   const [numberofStuLancers, setnumberofStuLancers] = useState(0);
 
   const getNumberofStuLancers = async () => {
     try {
-      const url = 'https://brogrammers-knust.herokuapp.com/user/getnumber';
+      const url = `${process.env.REACT_APP_API_URL}/user/getnumber`;
       const { data } = await axios.get(url);
       setnumberofStuLancers(data.result.toString());
-      console.log(`Number of StuLancers is ${data.result.toString()}`);
     } catch (error) {
       console.log(error);
     }
@@ -30,35 +29,35 @@ const BoxTwo = () => {
 
   return (
     <Box
-      bgcolor='#F5F5F5'
+      bgcolor="#F5F5F5"
       sx={{
-        color: 'primary',
-        height: '100vh',
-        padding: '15px',
+        color: "primary",
+        height: "100vh",
+        padding: "15px",
       }}
     >
-      <Stack direction='row' spacing={25} marginTop={10} marginLeft={10}>
+      <Stack direction="row" spacing={25} marginTop={10} marginLeft={10}>
         <Container>
           <Typography
             sx={{
-              fontFamily: 'Nunito',
-              fontWeight: '700',
+              fontFamily: "Nunito",
+              fontWeight: "700",
             }}
-            variant='h3'
+            variant="h3"
           >
             Our Ultimate Goal
           </Typography>
           <Typography
-            variant='body1'
+            variant="body1"
             marginTop={1}
-            color='primary'
-            fontWeight='bold'
+            color="primary"
+            fontWeight="bold"
             sx={{
-              fontFamily: 'Nunito',
-              fontWeight: '700',
+              fontFamily: "Nunito",
+              fontWeight: "700",
             }}
           >
-            {' '}
+            {" "}
             We aim high trying to design the most effective and efficient
             freelancing platform for KNUST students.
             <br />
@@ -68,70 +67,70 @@ const BoxTwo = () => {
             This will serve as a platform for students to practise what they
             have learnt and gain experience. <br />
             <br />
-            <span className='bold'>
+            <span className="bold">
               We plan on doing all that cultivating our values:
-            </span>{' '}
+            </span>{" "}
             <br />
           </Typography>
           <Container>
             <Typography
-              variant='body1'
-              fontWeight='bold'
+              variant="body1"
+              fontWeight="bold"
               marginTop={1}
-              color='primary'
+              color="primary"
               sx={{
-                fontFamily: 'Nunito',
+                fontFamily: "Nunito",
               }}
             >
-              <CheckCircleOutline color='secondary' />
+              <CheckCircleOutline color="secondary" />
               Customer obsessed. Our customers come first at all times.
             </Typography>
             <Typography
-              variant='body1'
-              fontWeight='bold'
+              variant="body1"
+              fontWeight="bold"
               marginTop={1}
-              color='primary'
+              color="primary"
               sx={{
-                fontFamily: 'Nunito',
+                fontFamily: "Nunito",
               }}
             >
-              <CheckCircleOutline color='secondary' />
+              <CheckCircleOutline color="secondary" />
               Transparency. Most of our work is public
             </Typography>
             <Typography
-              variant='body1'
-              fontWeight='bold'
+              variant="body1"
+              fontWeight="bold"
               marginTop={1}
-              color='primary'
+              color="primary"
               sx={{
-                fontFamily: 'Nunito',
+                fontFamily: "Nunito",
               }}
             >
-              <CheckCircleOutline color='secondary' />
+              <CheckCircleOutline color="secondary" />
               Freedom. We work from anywhere in the world.
             </Typography>
             <Typography
-              variant='body1'
-              fontWeight='bold'
+              variant="body1"
+              fontWeight="bold"
               marginTop={1}
-              color='primary'
+              color="primary"
               sx={{
-                fontFamily: 'Nunito',
+                fontFamily: "Nunito",
               }}
             >
-              <CheckCircleOutline color='secondary' />
+              <CheckCircleOutline color="secondary" />
               Autonomy. We want to create a safe, high-trust team.
             </Typography>
             <Typography
-              variant='body1'
-              fontWeight='bold'
+              variant="body1"
+              fontWeight="bold"
               marginTop={1}
-              color='primary'
+              color="primary"
               sx={{
-                fontFamily: 'Nunito',
+                fontFamily: "Nunito",
               }}
             >
-              <CheckCircleOutline color='secondary' />
+              <CheckCircleOutline color="secondary" />
               Excellence. We're aiming high, and we know it.
             </Typography>
           </Container>
@@ -141,94 +140,94 @@ const BoxTwo = () => {
             <Grid item marginTop={5}>
               <Typography
                 sx={{
-                  fontFamily: 'Nunito',
+                  fontFamily: "Nunito",
                 }}
-                variant='h4'
-                fontWeight='bold'
-                color='secondary'
+                variant="h4"
+                fontWeight="bold"
+                color="secondary"
               >
                 {numberofStuLancers}
               </Typography>
               <People />
               <Typography
                 sx={{
-                  fontFamily: 'Nunito',
+                  fontFamily: "Nunito",
                 }}
-                variant='boby3'
-                fontWeight='bold'
-                color='primary'
+                variant="boby3"
+                fontWeight="bold"
+                color="primary"
               >
-                {'  '}Number of Stulancers
+                {"  "}Number of Stulancers
               </Typography>
             </Grid>
             <Grid item marginTop={5}>
               <Typography
                 sx={{
-                  fontFamily: 'Nunito',
+                  fontFamily: "Nunito",
                 }}
-                variant='h4'
-                fontWeight='bold'
-                color='secondary'
+                variant="h4"
+                fontWeight="bold"
+                color="secondary"
               >
                 10
               </Typography>
               <Twitter />
               <Typography
                 sx={{
-                  fontFamily: 'Nunito',
+                  fontFamily: "Nunito",
                 }}
-                variant='boby3'
-                fontWeight='bold'
-                color='primary'
+                variant="boby3"
+                fontWeight="bold"
+                color="primary"
               >
-                {'  '}Followers on Twitter
+                {"  "}Followers on Twitter
               </Typography>
             </Grid>
 
             <Grid item marginTop={5}>
               <Typography
                 sx={{
-                  fontFamily: 'Nunito',
+                  fontFamily: "Nunito",
                 }}
-                variant='h4'
-                fontWeight='bold'
-                color='secondary'
+                variant="h4"
+                fontWeight="bold"
+                color="secondary"
               >
                 10
               </Typography>
               <GitHub />
               <Typography
                 sx={{
-                  fontFamily: 'Nunito',
+                  fontFamily: "Nunito",
                 }}
-                variant='boby3'
-                fontWeight='bold'
-                color='primary'
+                variant="boby3"
+                fontWeight="bold"
+                color="primary"
               >
-                {'  '}Stars on GitHub
+                {"  "}Stars on GitHub
               </Typography>
             </Grid>
             <Grid item marginTop={5}>
               <Typography
                 sx={{
-                  fontFamily: 'Nunito',
+                  fontFamily: "Nunito",
                 }}
-                variant='h4'
-                fontWeight='bold'
-                color='secondary'
+                variant="h4"
+                fontWeight="bold"
+                color="secondary"
               >
                 11
               </Typography>
               <Groups />
               <Typography
                 sx={{
-                  fontFamily: 'Nunito',
+                  fontFamily: "Nunito",
                 }}
-                variant='boby3'
-                fontWeight='bold'
-                color='primary'
+                variant="boby3"
+                fontWeight="bold"
+                color="primary"
               >
-                {'  '}Contributers
+                {"  "}Contributers
               </Typography>
             </Grid>
           </Grid>
