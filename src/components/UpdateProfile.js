@@ -58,8 +58,6 @@ const UpdateProfile = () => {
         window.location.reload();
       }, 1550);
       localStorage.setItem("profile", JSON.stringify(data));
-      console.log(freelancerId);
-      console.log(freelancerData);
     } catch (error) {
       console.log(error);
       setMessage(error.response.data.message);
