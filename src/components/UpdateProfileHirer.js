@@ -42,7 +42,7 @@ const UpdateProfileHirer = () => {
     hirerId = user.result._id;
     setDisabled(true);
     try {
-      const url = `${process.env.REACT_APP_API_URL}/${hirerId}`;
+      const url = `${process.env.REACT_APP_API_URL}/user/updatehirer${hirerId}`;
       const { data } = await axios.patch(url, hirerData);
       setMessage(data.message);
       setOpenError(false);
