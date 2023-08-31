@@ -45,7 +45,7 @@ const FreelancerInfo = () => {
     setDisabled(true);
     freelancerId = user.result._id;
     try {
-      const url = `${process.env.REACT_APP_API_URL}/signupservicesp/${freelancerId}`;
+      const url = `${process.env.REACT_APP_API_URL}/updateservice/${freelancerId}`;
       const { data } = await axios.patch(url, freelancerData);
       setMessage(data.message);
       setOpenError(false);
